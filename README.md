@@ -1,2 +1,2 @@
-# xfg-frame-archetype - DDD 脚手架
+# Joyboycc的 MMarket项目学习
 
