@@ -32,7 +32,8 @@ VALUES (1, 101, 'user_credit_random', '1,100', '用户积分【优先透彻规�
         '2023-12-09 11:12:39');
 
 
-# 转储表 strategy
+# 策略表 strategy：
+# 解释：每个活动可能会对应于一个具体的策略，每个策略会包含当前策略中具体的奖品信息等。
 # ------------------------------------------------------------
 DROP TABLE IF EXISTS `strategy`;
 
@@ -51,7 +52,7 @@ CREATE TABLE `strategy`
 INSERT INTO `strategy` (`id`, `strategy_id`, `strategy_desc`, `create_time`, `update_time`)
 VALUES (1, 100001, '抽奖策略', '2023-12-09 09:37:19', '2023-12-09 09:37:19');
 
-# 转储表 strategy_award
+# 奖品对应的抽奖策略的具体信息表： strategy_award
 # ------------------------------------------------------------
 DROP TABLE IF EXISTS `strategy_award`;
 
@@ -66,7 +67,7 @@ CREATE TABLE `strategy_award`
     `award_count_surplus` int(8)              NOT NULL DEFAULT '0' COMMENT '奖品库存剩余',
     `award_rate`          decimal(6, 4)       NOT NULL COMMENT '奖品中奖概率',
     `rule_models`         varchar(256)                 DEFAULT NULL COMMENT '规则模型，rule配置的模型同步到此表，便于使用',
-    `sort`                int(2)              NOT NULL DEFAULT '0' COMMENT '排序',
+    `sort`                int(2)              NOT NULL DEFAULT '0' COMMENT '排序 - 前端展示顺序',
     `create_time`         datetime            NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
     `update_time`         datetime            NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '修改时间',
     PRIMARY KEY (`id`),
@@ -96,7 +97,8 @@ VALUES (1, 100001, 101, '随机积分', NULL, 80000, 80000, 80.0000, 'rule_rando
         '2023-12-09 09:46:39', '2023-12-09 12:20:50');
 
 
-# 转储表 strategy_rule
+# 抽奖规则表： strategy_rule
+# 举例：一个奖品在抽奖三次以后才可以解锁
 # ------------------------------------------------------------
 DROP TABLE IF EXISTS `strategy_rule`;
 
@@ -107,7 +109,7 @@ CREATE TABLE `strategy_rule`
     `award_id`    int(8)                       DEFAULT NULL COMMENT '抽奖奖品ID【规则类型为策略，则不需要奖品ID】',
     `rule_type`   tinyint(1)          NOT NULL DEFAULT '0' COMMENT '抽象规则类型；1-策略规则、2-奖品规则',
     `rule_model`  varchar(16)         NOT NULL COMMENT '抽奖规则类型【rule_random - 随机值计算、rule_lock - 抽奖几次后解锁、rule_luck_award - 幸运奖(兜底奖品)】',
-    `rule_value`  varchar(64)         NOT NULL COMMENT '抽奖规则比值',
+    `rule_value`  varchar(64)         NOT NULL COMMENT '抽奖规则比值 - 举例：如果是抽奖3次后解锁，这里就需要配置为3',
     `rule_desc`   varchar(128)        NOT NULL COMMENT '抽奖规则描述',
     `create_time` datetime            NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
     `update_time` datetime            NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
