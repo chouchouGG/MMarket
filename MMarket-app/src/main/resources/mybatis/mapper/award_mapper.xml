@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.learn.infrastructure.persistent.dao.IAwardDao">
+
+    <!-- resultMap 用于解决属性名和字段名不匹配的问题，用于建立不同名称之间映射 -->
+    <!-- id只要是一个唯一的标识符即可 -->
+    <resultMap id="dataMap" type="cn.learn.infrastructure.persistent.po.AwardPO">
+        <id property="id" column="id"/>
+        <result property="awardId" column="award_id"/>
+        <result property="awardKey" column="award_key"/>
+        <result property="awardConfig" column="award_config"/>
+        <result property="awardDesc" column="award_desc"/>
+        <result property="createTime" column="create_time"/>
+        <result property="updateTime" column="update_time"/>
+    </resultMap>
+
+    <select id="queryAwardList" resultMap="dataMap">
+        select *
+        from award
+        limit 5
+    </select>
+
+</mapper>
