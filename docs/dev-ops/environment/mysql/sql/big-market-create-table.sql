@@ -65,7 +65,7 @@ CREATE TABLE `strategy_award`
     `award_subtitle`      varchar(128)                 DEFAULT NULL COMMENT '抽奖奖品副标题',
     `award_count`         int(8)              NOT NULL DEFAULT '0' COMMENT '奖品库存总量',
     `award_count_surplus` int(8)              NOT NULL DEFAULT '0' COMMENT '奖品库存剩余',
-    `award_rate`          decimal(6, 4)       NOT NULL COMMENT '奖品中奖概率',
+    `award_rate`          decimal(6, 4)       NOT NULL COMMENT '奖品中奖概率，等同于award_probability',
     `rule_models`         varchar(256)                 DEFAULT NULL COMMENT '规则模型，rule配置的模型同步到此表，便于使用',
     `sort`                int(2)              NOT NULL DEFAULT '0' COMMENT '排序 - 前端展示顺序',
     `create_time`         datetime            NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
