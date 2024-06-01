@@ -42,6 +42,7 @@ CREATE TABLE `strategy`
     `id`            bigint(11) unsigned NOT NULL AUTO_INCREMENT COMMENT '自增ID',
     `strategy_id`   bigint(8)           NOT NULL COMMENT '抽奖策略ID',
     `strategy_desc` varchar(128)        NOT NULL COMMENT '抽奖策略描述',
+    `rule_models`   varchar(256)                 DEFAULT NULL COMMENT '规则模型，rule配置的模型同步到此表，便于使用',
     `create_time`   datetime            NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
     `update_time`   datetime            NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
     PRIMARY KEY (`id`),
@@ -49,8 +50,10 @@ CREATE TABLE `strategy`
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8mb4;
 
-INSERT INTO `strategy` (`id`, `strategy_id`, `strategy_desc`, `create_time`, `update_time`)
-VALUES (1, 100001, '抽奖策略', '2023-12-09 09:37:19', '2023-12-09 09:37:19');
+INSERT INTO `strategy` (`id`, `strategy_id`, `strategy_desc`, `rule_models`, `create_time`, `update_time`)
+VALUES (1, 100001, '抽奖策略', 'rule_weight,rule_blacklist', '2023-12-09 09:37:19', '2023-12-09 18:06:34'),
+       (2, 100002, '抽奖策略', 'rule_weight,rule_blacklist', '2024-05-31 01:10:06', '2024-05-31 01:10:06');
+
 
 # 奖品对应的抽奖策略的具体信息表： strategy_award
 # ------------------------------------------------------------
@@ -141,7 +144,9 @@ VALUES (1, 100001, 101, 2, 'rule_random', '1,1000', '随机积分策略', '2023-
         '2023-12-09 12:56:00'),
        (12, 100001, 106, 2, 'rule_luck_award', '1,60', '兜底奖品60以内随机积分', '2023-12-09 10:30:43',
         '2023-12-09 12:56:00'),
-       (13, 100001, NULL, 1, 'rule_weight', '6000,102,103,104,105,106,107,108,109', '消耗6000分，必中奖范围',
+       (13, 100001, NULL, 1, 'rule_weight',
+        '4000:102,103,104,105 5000:102,103,104,105,106,107 6000:102,103,104,105,106,107,108,109',
+        '消耗6000分，必中奖范围',
         '2023-12-09 10:30:43', '2023-12-09 12:58:21'),
        (14, 100001, NULL, 1, 'rule_blacklist', '1', '黑名单抽奖，积分兜底', '2023-12-09 12:59:45',
         '2023-12-09 13:42:23');

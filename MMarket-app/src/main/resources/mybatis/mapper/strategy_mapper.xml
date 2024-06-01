@@ -6,6 +6,7 @@
         <id property="id" column="id"/>
         <result property="strategyId" column="strategy_id"/>
         <result property="strategyDesc" column="strategy_desc"/>
+        <result property="ruleModels" column="rule_models"/>
         <result property="createTime" column="create_time"/>
         <result property="updateTime" column="update_time"/>
     </resultMap>
@@ -14,6 +15,11 @@
         select *
         from strategy
         limit 5
+    </select>
+    <select id="queryStrategyByStrategyId" parameterType="java.lang.Long" resultMap="dataMap">
+        select *
+        from strategy
+        where strategy_id = #{strategyId}
     </select>
 
 </mapper>

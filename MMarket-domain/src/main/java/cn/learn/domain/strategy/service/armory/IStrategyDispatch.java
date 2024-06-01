@@ -8,10 +8,18 @@ package cn.learn.domain.strategy.service.armory;
  **/
 public interface IStrategyDispatch {
     /**
-     * 获取抽奖策略装配的随机结果
+     * 基于【默认抽奖表】获取一个随机奖品
      *
      * @param strategyId 策略ID
      * @return 抽奖结果
      */
     Integer getRandomAwardId(Long strategyId);
+
+    /**
+     * 基于【幸运值抽奖表】获取一个随机奖品
+     * @param strategyId
+     * @param ruleWeightValue
+     * @return
+     */
+    Integer getRandomAwardId(Long strategyId, String ruleWeightValue);
 }

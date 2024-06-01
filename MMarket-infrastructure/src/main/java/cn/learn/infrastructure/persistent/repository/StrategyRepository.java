@@ -1,14 +1,17 @@
 package cn.learn.infrastructure.persistent.repository;
 
 import cn.learn.domain.strategy.model.entity.StrategyAwardEntity;
+import cn.learn.domain.strategy.model.entity.StrategyEntity;
+import cn.learn.domain.strategy.model.entity.StrategyRuleEntity;
 import cn.learn.domain.strategy.respository.IStrategyRepository;
 import cn.learn.infrastructure.persistent.dao.IStrategyAwardDao;
+import cn.learn.infrastructure.persistent.dao.IStrategyDao;
+import cn.learn.infrastructure.persistent.dao.IStrategyRuleDao;
 import cn.learn.infrastructure.persistent.po.StrategyAwardPO;
+import cn.learn.infrastructure.persistent.po.StrategyPO;
+import cn.learn.infrastructure.persistent.po.StrategyRulePO;
 import cn.learn.infrastructure.persistent.redis.IRedisService;
 import cn.learn.types.common.Constants;
-import org.apache.ibatis.annotations.Mapper;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
 
 import javax.annotation.Resource;
@@ -38,9 +41,15 @@ import java.util.Map;
 @Repository
 public class StrategyRepository implements IStrategyRepository {
 
+    @Resource
+    private IStrategyDao strategyDao;
+
 //    @Autowired
     @Resource
     private IStrategyAwardDao strategyAwardDao;
+
+    @Resource
+    private IStrategyRuleDao strategyRuleDao;
 
     /** redisClient 客户端 */
     @Resource
@@ -84,26 +93,72 @@ public class StrategyRepository implements IStrategyRepository {
 
     /**
      * 缓存【当前策略的随机数范围】和【随机数的映射表】
-     * @param strategyId
+     * @param key
      * @param size
      * @param strategyAwardSearchRateTable 映射表
      */
     @Override
-    public void storeStrategyAwardSearchRateTable(Long strategyId, Integer size, Map<Integer, Integer> strategyAwardSearchRateTable) {
-        // 1. 存储抽奖策略范围值【当前策略的随机数范围】，如 10000，用于生成 1000 以内的随机数
-        redisService.setValue(Constants.RedisKey.STRATEGY_RATE_RANGE_KEY + strategyId, size);
-        // 2. 存储【随机数的映射表】
-        Map<Integer, Integer> cacheRateTable = redisService.getMap(Constants.RedisKey.STRATEGY_RATE_TABLE_KEY + strategyId);
+    public void storeStrategyAwardSearchRateTable(String key, Integer size, Map<Integer, Integer> strategyAwardSearchRateTable) {
+        // 1. 缓存抽奖策略范围值【当前策略的随机数范围】，如 10000，用于生成 1000 以内的随机数
+        redisService.setValue(Constants.RedisKey.STRATEGY_RATE_RANGE_KEY + key, size);
+        // 2. 缓存【抽奖表】
+        Map<Integer, Integer> cacheRateTable = redisService.getMap(Constants.RedisKey.STRATEGY_RATE_TABLE_KEY + key);
         cacheRateTable.putAll(strategyAwardSearchRateTable);
     }
 
     @Override
     public int getRateRange(Long strategyId) {
-        return redisService.getValue(Constants.RedisKey.STRATEGY_RATE_RANGE_KEY + strategyId);
+        return getRateRange(String.valueOf(strategyId));
     }
+
     @Override
-    public Integer getStrategyAwardAssemble(Long strategyId, int random) {
+    public int getRateRange(String key) {
+        return redisService.getValue(Constants.RedisKey.STRATEGY_RATE_RANGE_KEY + key);
+    }
+
+    @Override
+    public Integer getStrategyAwardAssemble(String strategyId, Integer random) {
         return redisService.getFromMap(Constants.RedisKey.STRATEGY_RATE_TABLE_KEY + strategyId, random);
+    }
+
+    @Override
+    public StrategyEntity queryStrategyEntityByStrategyId(Long strategyId) {
+        // 优先从缓存获取
+        String cacheKey = Constants.RedisKey.STRATEGY_KEY + strategyId;
+        StrategyEntity strategyEntity = redisService.getValue(cacheKey);
+        if (null != strategyEntity) {
+            return strategyEntity;
+        }
+        // redis 不命中，查 mysql
+        StrategyPO strategy = strategyDao.queryStrategyByStrategyId(strategyId);
+        // PO 对象转换为 Entity 对象
+        strategyEntity = StrategyEntity.builder()
+                .strategyId(strategy.getStrategyId())
+                .strategyDesc(strategy.getStrategyDesc())
+                .ruleModels(strategy.getRuleModels())
+                .build();
+        // 重新设置 redis 缓存
+        redisService.setValue(cacheKey, strategyEntity);
+        // 返回查询结果
+        return strategyEntity;
+    }
+
+    @Override
+    public StrategyRuleEntity queryStrategyRule(Long strategyId, String ruleModel) {
+        // 将要查询的信息装在对象中
+        StrategyRulePO strategyRule = new StrategyRulePO();
+        strategyRule.setStrategyId(strategyId);
+        strategyRule.setRuleModel(ruleModel);
+        // 查询数据库（这里为了🎯🎯🎯简化逻辑没有走缓存，直接走库）
+        StrategyRulePO strategyRuleRes = strategyRuleDao.queryStrategyRule(strategyRule);
+        return StrategyRuleEntity.builder()
+                .strategyId(strategyRuleRes.getStrategyId())
+                .awardId(strategyRuleRes.getAwardId())
+                .ruleType(strategyRuleRes.getRuleType())
+                .ruleModel(strategyRuleRes.getRuleModel())
+                .ruleValue(strategyRuleRes.getRuleValue())
+                .ruleDesc(strategyRuleRes.getRuleDesc())
+                .build();
     }
 }
 
