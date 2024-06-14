@@ -24,11 +24,19 @@ public class StrategyEntity {
     /** 规则模型 */
     private String ruleModels;
 
+    public String[] getSeperatedRuleModels() {
+        if (ruleModels == null || ruleModels.isEmpty()) {
+            return null;
+        }
+        return ruleModels.split(Constants.SPLIT);
+    }
+
+
     public boolean getRuleWeight() {
-        if (ruleModels == null) {
+        String[] rules = this.getSeperatedRuleModels();
+        if (rules == null) {
             return false;
         }
-        String[] rules = ruleModels.split(Constants.SPLIT);
         for (String rule : rules) {
             if (Constants.RuleModel.RULE_WEIGHT.equals(rule)) {
                 return true;
