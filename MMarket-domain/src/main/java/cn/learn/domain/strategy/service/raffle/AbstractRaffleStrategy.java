@@ -46,7 +46,8 @@ public abstract class AbstractRaffleStrategy implements IRaffleStrategy {
         String[] ruleModels = strategy.getSeperatedRuleModels();
 
         // 3. 抽奖前 - 规则过滤
-        RuleActionEntity<RuleActionEntity.RaffleBeforeEntity> ruleActionEntity = this.doCheckRaffleBeforeLogic(raffleFactorEntity, ruleModels);
+        RuleActionEntity<RuleActionEntity.RaffleBeforeEntity> ruleActionEntity =
+                this.doCheckRaffleBeforeLogic(raffleFactorEntity, ruleModels);
 
         // note：规则引擎的核心处理逻辑: 判断规则过滤之后的结果是否【接管 TAKE_OVER】
         if (RuleLogicCheckTypeVO.TAKE_OVER.getCode().equals(ruleActionEntity.getCode())) {
