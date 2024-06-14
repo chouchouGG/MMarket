@@ -16,6 +16,7 @@ import org.apache.commons.lang3.StringUtils;
 /**
  * @program: MMarket
  * @description: 抽奖策略抽象类，定义抽奖的标准流程，可以认为是规则引擎
+ * note: 【模板方法模式】
  * @author: chouchouGG
  * @create: 2024-06-13 14:37
  **/
