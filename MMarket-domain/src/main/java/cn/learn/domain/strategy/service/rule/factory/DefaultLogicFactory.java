@@ -62,6 +62,16 @@ public class DefaultLogicFactory {
         return (Map<String, ILogicFilter<T>>) (Map<?, ?>) logicFilterMap;
     }
 
+    public <T extends RuleActionEntity.RaffleEntity> ILogicFilter<T> createFilter(String logicModel) {
+        if (LogicModel.RULE_WIGHT.getCode().equals(logicModel)) {
+            return (ILogicFilter<T>) logicFilterMap.get(LogicModel.RULE_WIGHT.getCode());
+        }
+        if (LogicModel.RULE_BLACKLIST.getCode().equals(logicModel)) {
+            return (ILogicFilter<T>) logicFilterMap.get(LogicModel.RULE_BLACKLIST.getCode());
+        }
+        throw new RuntimeException("不存在的过滤器类型");
+    }
+
     @Getter
     @AllArgsConstructor
     public enum LogicModel {

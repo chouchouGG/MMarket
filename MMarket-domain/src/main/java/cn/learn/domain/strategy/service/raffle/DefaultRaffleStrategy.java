@@ -39,7 +39,7 @@ public class DefaultRaffleStrategy extends AbstractRaffleStrategy{
     @Override
     protected RuleActionEntity<RuleActionEntity.RaffleBeforeEntity> doCheckRaffleBeforeLogic(RaffleFactorEntity raffleFactorEntity, String... logics) {
 
-        Map<String, ILogicFilter<RuleActionEntity.RaffleBeforeEntity>> logicFilterGroup = logicFactory.openLogicFilter();
+//        Map<String, ILogicFilter<RuleActionEntity.RaffleBeforeEntity>> logicFilterGroup = logicFactory.openLogicFilter();
 
 //        // 黑名单规则优先过滤
 //        String ruleBackList = Arrays.stream(logics)
@@ -58,7 +58,8 @@ public class DefaultRaffleStrategy extends AbstractRaffleStrategy{
 
         if (isSetBackList) {
             // 1. 从过滤器映射中获取【黑名单过滤器】
-            ILogicFilter<RuleActionEntity.RaffleBeforeEntity> logicFilter = logicFilterGroup.get(Constants.RuleModel.RULE_BLACKLIST);
+            ILogicFilter<RuleActionEntity.RaffleBeforeEntity> logicFilter = logicFactory.createFilter(DefaultLogicFactory.LogicModel.RULE_BLACKLIST.getCode());
+//            ILogicFilter<RuleActionEntity.RaffleBeforeEntity> logicFilter = logicFilterGroup.get(Constants.RuleModel.RULE_BLACKLIST);
 //            RuleMatterEntity ruleMatterEntity = new RuleMatterEntity();
 //            ruleMatterEntity.setUserId(raffleFactorEntity.getUserId());
 //            ruleMatterEntity.setAwardId(ruleMatterEntity.getAwardId());
@@ -88,7 +89,8 @@ public class DefaultRaffleStrategy extends AbstractRaffleStrategy{
 
         RuleActionEntity<RuleActionEntity.RaffleBeforeEntity> ruleActionEntity = null;
         for (String ruleModel : ruleList) {
-            ILogicFilter<RuleActionEntity.RaffleBeforeEntity> logicFilter = logicFilterGroup.get(ruleModel);
+//            ILogicFilter<RuleActionEntity.RaffleBeforeEntity> logicFilter = logicFilterGroup.get(ruleModel);
+            ILogicFilter<RuleActionEntity.RaffleBeforeEntity> logicFilter = logicFactory.createFilter(ruleModel);
             RuleMatterEntity ruleMatterEntity = new RuleMatterEntity();
             ruleMatterEntity.setUserId(raffleFactorEntity.getUserId());
             ruleMatterEntity.setAwardId(ruleMatterEntity.getAwardId());
