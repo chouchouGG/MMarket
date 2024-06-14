@@ -1,2 +1,2 @@
-# Joyboycc的 MMarket项目
+# MMarket项目——用户促活营销平台
 
