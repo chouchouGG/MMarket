@@ -1,33 +1,15 @@
-24-06-01.18:24:43.514 [main            ] INFO  StrategyArmoryDispatchTest - Starting StrategyArmoryDispatchTest using Java 1.8.0_402 on wyh-machine with PID 28308 (started by 98389 in E:\Java_code\MMarket\MMarket-app)
-24-06-01.18:24:43.517 [main            ] INFO  StrategyArmoryDispatchTest - The following 1 profile is active: "dev"
-24-06-01.18:24:45.075 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-24-06-01.18:24:45.081 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-24-06-01.18:24:45.137 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 14 ms. Found 0 Redis repository interfaces.
-24-06-01.18:24:48.404 [main            ] INFO  Version                - Redisson 3.23.4
-24-06-01.18:24:51.140 [redisson-netty-2-8] INFO  MasterPubSubConnectionPool - 1 connections initialized for 117.72.77.81/117.72.77.81:16379
-24-06-01.18:24:52.985 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 117.72.77.81/117.72.77.81:16379
-24-06-01.18:24:55.379 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-24-06-01.18:24:55.497 [main            ] INFO  StrategyArmoryDispatchTest - Started StrategyArmoryDispatchTest in 12.574 seconds (JVM running for 13.999)
-24-06-01.18:24:56.462 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Starting...
-24-06-01.18:25:00.495 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Start completed.
-24-06-01.18:25:06.227 [main            ] INFO  StrategyArmoryDispatchTest - test_assembleLotteryStrategy 测试结果：true
-24-06-01.18:25:06.873 [main            ] INFO  StrategyArmoryDispatchTest - 测试结果：102 - 4000 策略配置
-24-06-01.18:25:07.515 [main            ] INFO  StrategyArmoryDispatchTest - 测试结果：102 - 5000 策略配置
-24-06-01.18:25:08.143 [main            ] INFO  StrategyArmoryDispatchTest - 测试结果：103 - 6000 策略配置
-24-06-01.18:25:08.525 [SpringApplicationShutdownHook] INFO  HikariDataSource       - Retail_HikariCP - Shutdown initiated...
-24-06-01.18:25:09.828 [SpringApplicationShutdownHook] INFO  HikariDataSource       - Retail_HikariCP - Shutdown completed.
-24-06-01.18:32:26.906 [main            ] INFO  StrategyArmoryDispatchTest - Starting StrategyArmoryDispatchTest using Java 1.8.0_402 on wyh-machine with PID 7188 (started by 98389 in E:\Java_code\MMarket\MMarket-app)
-24-06-01.18:32:26.907 [main            ] INFO  StrategyArmoryDispatchTest - The following 1 profile is active: "dev"
-24-06-01.18:32:28.353 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-24-06-01.18:32:28.358 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-24-06-01.18:32:28.411 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 23 ms. Found 0 Redis repository interfaces.
-24-06-01.18:32:31.660 [main            ] INFO  Version                - Redisson 3.23.4
-24-06-01.18:32:33.859 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 117.72.77.81/117.72.77.81:16379
-24-06-01.18:32:36.524 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 117.72.77.81/117.72.77.81:16379
-24-06-01.18:32:39.956 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-24-06-01.18:32:40.085 [main            ] INFO  StrategyArmoryDispatchTest - Started StrategyArmoryDispatchTest in 13.869 seconds (JVM running for 17.019)
-24-06-01.18:32:40.485 [main            ] ERROR TestContextManager     - Caught exception while allowing TestExecutionListener [org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@45b4c3a9] to prepare test instance [cn.learn.test.domain.StrategyArmoryDispatchTest@714f1a44]
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'cn.learn.test.domain.StrategyArmoryDispatchTest': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationNotAllowedException: Error creating bean with name 'strategyArmoryDispatch': Singleton bean creation not allowed while singletons of this factory are in destruction (Do not request a bean from a BeanFactory in a destroy method implementation!)
+24-06-14.17:03:54.916 [main            ] INFO  RaffleStrategyTest     - Starting RaffleStrategyTest using Java 1.8.0_402 on wyh-machine with PID 27844 (started by 98389 in E:\Java_code\MMarket\MMarket-app)
+24-06-14.17:03:54.917 [main            ] INFO  RaffleStrategyTest     - The following 1 profile is active: "dev"
+24-06-14.17:03:55.792 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-06-14.17:03:55.799 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-06-14.17:03:55.832 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 15 ms. Found 0 Redis repository interfaces.
+24-06-14.17:03:57.952 [main            ] INFO  Version                - Redisson 3.23.4
+24-06-14.17:03:59.485 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 117.72.77.81/117.72.77.81:16379
+24-06-14.17:04:00.435 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 117.72.77.81/117.72.77.81:16379
+24-06-14.17:04:02.274 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-06-14.17:04:02.337 [main            ] INFO  RaffleStrategyTest     - Started RaffleStrategyTest in 7.801 seconds (JVM running for 8.632)
+24-06-14.17:04:02.440 [main            ] ERROR TestContextManager     - Caught exception while allowing TestExecutionListener [org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@4988d8b8] to prepare test instance [cn.learn.test.domain.RaffleStrategyTest@2e1add6f]
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'cn.learn.test.domain.RaffleStrategyTest': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'cn.learn.domain.strategy.service.IRaffleStrategy' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@javax.annotation.Resource(shareable=true, lookup=, name=, description=, authenticationType=CONTAINER, type=class java.lang.Object, mappedName=)}
 	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:332)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireBeanProperties(AbstractAutowireCapableBeanFactory.java:417)
@@ -58,12 +40,9 @@ org.springframework.beans.factory.BeanCreationException: Error creating bean wit
 	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
 	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:232)
 	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:55)
-Caused by: org.springframework.beans.factory.BeanCreationNotAllowedException: Error creating bean with name 'strategyArmoryDispatch': Singleton bean creation not allowed while singletons of this factory are in destruction (Do not request a bean from a BeanFactory in a destroy method implementation!)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:220)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
-	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391)
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'cn.learn.domain.strategy.service.IRaffleStrategy' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@javax.annotation.Resource(shareable=true, lookup=, name=, description=, authenticationType=CONTAINER, type=class java.lang.Object, mappedName=)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:1801)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1357)
 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311)
 	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:544)
 	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:520)
@@ -72,51 +51,405 @@ Caused by: org.springframework.beans.factory.BeanCreationNotAllowedException: Er
 	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
 	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:329)
 	... 29 common frames omitted
-24-06-01.18:33:23.644 [main            ] INFO  StrategyArmoryDispatchTest - Starting StrategyArmoryDispatchTest using Java 1.8.0_402 on wyh-machine with PID 29084 (started by 98389 in E:\Java_code\MMarket\MMarket-app)
-24-06-01.18:33:23.648 [main            ] INFO  StrategyArmoryDispatchTest - The following 1 profile is active: "dev"
-24-06-01.18:33:24.900 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-24-06-01.18:33:24.905 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-24-06-01.18:33:24.947 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 15 ms. Found 0 Redis repository interfaces.
-24-06-01.18:33:27.913 [main            ] INFO  Version                - Redisson 3.23.4
-24-06-01.18:33:29.991 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 117.72.77.81/117.72.77.81:16379
-24-06-01.18:33:32.595 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 117.72.77.81/117.72.77.81:16379
-24-06-01.18:33:35.695 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-24-06-01.18:33:35.813 [main            ] INFO  StrategyArmoryDispatchTest - Started StrategyArmoryDispatchTest in 12.811 seconds (JVM running for 14.389)
-24-06-01.18:36:53.705 [main            ] INFO  StrategyArmoryDispatchTest - Starting StrategyArmoryDispatchTest using Java 1.8.0_402 on wyh-machine with PID 18872 (started by 98389 in E:\Java_code\MMarket\MMarket-app)
-24-06-01.18:36:53.707 [main            ] INFO  StrategyArmoryDispatchTest - The following 1 profile is active: "dev"
-24-06-01.18:36:54.916 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-24-06-01.18:36:54.921 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-24-06-01.18:36:54.961 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 16 ms. Found 0 Redis repository interfaces.
-24-06-01.18:36:57.828 [main            ] INFO  Version                - Redisson 3.23.4
-24-06-01.18:37:00.416 [redisson-netty-2-6] INFO  MasterPubSubConnectionPool - 1 connections initialized for 117.72.77.81/117.72.77.81:16379
-24-06-01.18:37:02.378 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 117.72.77.81/117.72.77.81:16379
-24-06-01.18:37:05.434 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-24-06-01.18:37:05.539 [main            ] INFO  StrategyArmoryDispatchTest - Started StrategyArmoryDispatchTest in 12.436 seconds (JVM running for 14.594)
-24-06-01.19:03:08.010 [redisson-timer-4-1] ERROR PingConnectionHandler  - Unable to send PING command over channel: [id: 0x970f20b4, L:/192.168.1.8:52330 - R:117.72.77.81/117.72.77.81:16379]
-org.redisson.client.RedisTimeoutException: Command execution timeout for command: (PING), params: [], Redis client: [addr=redis://117.72.77.81:16379]
-	at org.redisson.client.RedisConnection.lambda$async$0(RedisConnection.java:256)
-	at io.netty.util.HashedWheelTimer$HashedWheelTimeout.run(HashedWheelTimer.java:715)
-	at io.netty.util.concurrent.ImmediateExecutor.execute(ImmediateExecutor.java:34)
-	at io.netty.util.HashedWheelTimer$HashedWheelTimeout.expire(HashedWheelTimer.java:703)
-	at io.netty.util.HashedWheelTimer$HashedWheelBucket.expireTimeouts(HashedWheelTimer.java:790)
-	at io.netty.util.HashedWheelTimer$Worker.run(HashedWheelTimer.java:503)
-	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
-	at java.lang.Thread.run(Thread.java:750)
-24-06-01.20:04:25.992 [main            ] INFO  StrategyArmoryDispatchTest - Starting StrategyArmoryDispatchTest using Java 1.8.0_402 on wyh-machine with PID 23800 (started by 98389 in E:\Java_code\MMarket\MMarket-app)
-24-06-01.20:04:25.995 [main            ] INFO  StrategyArmoryDispatchTest - The following 1 profile is active: "dev"
-24-06-01.20:04:27.353 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-24-06-01.20:04:27.358 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-24-06-01.20:04:27.404 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 16 ms. Found 0 Redis repository interfaces.
-24-06-01.20:04:30.270 [main            ] INFO  Version                - Redisson 3.23.4
-24-06-01.20:04:32.239 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for 117.72.77.81/117.72.77.81:16379
-24-06-01.20:04:34.919 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 117.72.77.81/117.72.77.81:16379
-24-06-01.20:04:37.525 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-24-06-01.20:04:37.625 [main            ] INFO  StrategyArmoryDispatchTest - Started StrategyArmoryDispatchTest in 12.215 seconds (JVM running for 13.492)
-24-06-01.20:04:40.083 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Starting...
-24-06-01.20:04:44.021 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Start completed.
-24-06-01.20:04:46.693 [main            ] INFO  StrategyArmoryDispatchTest - test_assembleLotteryStrategy 测试结果：true
-24-06-01.20:04:47.333 [main            ] INFO  StrategyArmoryDispatchTest - 测试结果：103 - 4000 策略配置
-24-06-01.20:04:48.003 [main            ] INFO  StrategyArmoryDispatchTest - 测试结果：102 - 5000 策略配置
-24-06-01.20:04:48.645 [main            ] INFO  StrategyArmoryDispatchTest - 测试结果：106 - 6000 策略配置
-24-06-01.20:04:49.499 [SpringApplicationShutdownHook] INFO  HikariDataSource       - Retail_HikariCP - Shutdown initiated...
-24-06-01.20:04:50.472 [SpringApplicationShutdownHook] INFO  HikariDataSource       - Retail_HikariCP - Shutdown completed.
+24-06-14.17:06:16.233 [main            ] INFO  RaffleStrategyTest     - Starting RaffleStrategyTest using Java 1.8.0_402 on wyh-machine with PID 8820 (started by 98389 in E:\Java_code\MMarket\MMarket-app)
+24-06-14.17:06:16.233 [main            ] INFO  RaffleStrategyTest     - The following 1 profile is active: "dev"
+24-06-14.17:06:16.969 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-06-14.17:06:16.972 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-06-14.17:06:17.003 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 9 ms. Found 0 Redis repository interfaces.
+24-06-14.17:06:18.760 [main            ] INFO  Version                - Redisson 3.23.4
+24-06-14.17:06:19.990 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 117.72.77.81/117.72.77.81:16379
+24-06-14.17:06:20.599 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 117.72.77.81/117.72.77.81:16379
+24-06-14.17:06:22.455 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-06-14.17:06:22.526 [main            ] INFO  RaffleStrategyTest     - Started RaffleStrategyTest in 6.656 seconds (JVM running for 7.403)
+24-06-14.17:06:23.098 [main            ] INFO  RuleBackListLogicFilter - 规则过滤-黑名单 userId:joyboy strategyId:100001 ruleModel:rule_blacklist logicMode:rule_blacklist
+24-06-14.17:06:23.133 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Starting...
+24-06-14.17:06:24.582 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Start completed.
+24-06-14.17:06:24.861 [SpringApplicationShutdownHook] INFO  HikariDataSource       - Retail_HikariCP - Shutdown initiated...
+24-06-14.17:06:25.723 [SpringApplicationShutdownHook] INFO  HikariDataSource       - Retail_HikariCP - Shutdown completed.
+24-06-14.17:09:23.849 [main            ] INFO  RaffleStrategyTest     - Starting RaffleStrategyTest using Java 1.8.0_402 on wyh-machine with PID 29316 (started by 98389 in E:\Java_code\MMarket\MMarket-app)
+24-06-14.17:09:23.850 [main            ] INFO  RaffleStrategyTest     - The following 1 profile is active: "dev"
+24-06-14.17:09:24.583 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-06-14.17:09:24.586 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-06-14.17:09:24.610 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 13 ms. Found 0 Redis repository interfaces.
+24-06-14.17:09:26.396 [main            ] INFO  Version                - Redisson 3.23.4
+24-06-14.17:09:27.582 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for 117.72.77.81/117.72.77.81:16379
+24-06-14.17:09:28.286 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 117.72.77.81/117.72.77.81:16379
+24-06-14.17:09:30.065 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-06-14.17:09:30.123 [main            ] INFO  RaffleStrategyTest     - Started RaffleStrategyTest in 6.618 seconds (JVM running for 7.37)
+24-06-14.17:09:30.589 [main            ] INFO  RuleBackListLogicFilter - 规则过滤-黑名单 userId:joyboy strategyId:100001 ruleModel:rule_blacklist logicMode:rule_blacklist
+24-06-14.17:09:30.622 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Starting...
+24-06-14.17:09:31.747 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Start completed.
+24-06-14.17:09:31.858 [main            ] INFO  RuleWeightLogicFilter  - 规则过滤-权重范围 userId:joyboy strategyId:100001 ruleModel:rule_weight
+24-06-14.17:09:31.946 [main            ] INFO  DefaultRaffleStrategy  - 抽奖前规则过滤 userId: joyboy ruleModel: rule_weight code: 0001 info: 接管；后续的流程，受规则引擎执行结果影响
+24-06-14.17:09:32.288 [main            ] INFO  RaffleStrategyTest     - 请求参数：{"strategyId":100001,"userId":"joyboy"}
+24-06-14.17:09:32.291 [main            ] INFO  RaffleStrategyTest     - 测试结果：{"awardId":103}
+24-06-14.17:09:32.401 [SpringApplicationShutdownHook] INFO  HikariDataSource       - Retail_HikariCP - Shutdown initiated...
+24-06-14.17:09:32.594 [SpringApplicationShutdownHook] INFO  HikariDataSource       - Retail_HikariCP - Shutdown completed.
+24-06-14.17:12:50.005 [main            ] INFO  RaffleStrategyTest     - Starting RaffleStrategyTest using Java 1.8.0_402 on wyh-machine with PID 28780 (started by 98389 in E:\Java_code\MMarket\MMarket-app)
+24-06-14.17:12:50.006 [main            ] INFO  RaffleStrategyTest     - The following 1 profile is active: "dev"
+24-06-14.17:12:50.856 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-06-14.17:12:50.858 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-06-14.17:12:50.887 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 17 ms. Found 0 Redis repository interfaces.
+24-06-14.17:12:52.761 [main            ] INFO  Version                - Redisson 3.23.4
+24-06-14.17:12:53.904 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for 117.72.77.81/117.72.77.81:16379
+24-06-14.17:12:54.413 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 117.72.77.81/117.72.77.81:16379
+24-06-14.17:12:56.053 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-06-14.17:12:56.133 [main            ] INFO  RaffleStrategyTest     - Started RaffleStrategyTest in 6.479 seconds (JVM running for 7.375)
+24-06-14.17:12:56.700 [main            ] INFO  RuleBackListLogicFilter - 规则过滤-黑名单 userId:joyboy strategyId:100001 ruleModel:rule_blacklist logicMode:rule_blacklist
+24-06-14.17:12:56.730 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Starting...
+24-06-14.17:12:57.815 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Start completed.
+24-06-14.17:12:57.933 [main            ] INFO  RuleWeightLogicFilter  - 规则过滤-权重范围 userId:joyboy strategyId:100001 ruleModel:rule_weight
+24-06-14.17:12:58.002 [main            ] INFO  DefaultRaffleStrategy  - 抽奖前规则过滤 userId: joyboy ruleModel: rule_weight code: 0001 info: 接管；后续的流程，受规则引擎执行结果影响
+24-06-14.17:12:58.179 [SpringApplicationShutdownHook] INFO  HikariDataSource       - Retail_HikariCP - Shutdown initiated...
+24-06-14.17:12:58.595 [SpringApplicationShutdownHook] INFO  HikariDataSource       - Retail_HikariCP - Shutdown completed.
+24-06-14.17:15:07.375 [main            ] INFO  RaffleStrategyTest     - Starting RaffleStrategyTest using Java 1.8.0_402 on wyh-machine with PID 13480 (started by 98389 in E:\Java_code\MMarket\MMarket-app)
+24-06-14.17:15:07.376 [main            ] INFO  RaffleStrategyTest     - The following 1 profile is active: "dev"
+24-06-14.17:15:08.136 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-06-14.17:15:08.138 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-06-14.17:15:08.163 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 14 ms. Found 0 Redis repository interfaces.
+24-06-14.17:15:09.985 [main            ] INFO  Version                - Redisson 3.23.4
+24-06-14.17:15:11.224 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 117.72.77.81/117.72.77.81:16379
+24-06-14.17:15:11.980 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 117.72.77.81/117.72.77.81:16379
+24-06-14.17:15:13.634 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-06-14.17:15:13.687 [main            ] INFO  RaffleStrategyTest     - Started RaffleStrategyTest in 6.656 seconds (JVM running for 7.386)
+24-06-14.17:15:14.165 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Starting...
+24-06-14.17:15:15.244 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Start completed.
+24-06-14.17:15:15.484 [main            ] INFO  RuleBackListLogicFilter - 规则过滤-黑名单 userId:joyboy strategyId:100001 ruleModel:rule_blacklist logicMode:rule_blacklist
+24-06-14.17:15:15.598 [main            ] INFO  RuleWeightLogicFilter  - 规则过滤-权重范围 userId:joyboy strategyId:100001 ruleModel:rule_weight
+24-06-14.17:15:15.670 [main            ] INFO  DefaultRaffleStrategy  - 抽奖前规则过滤 userId: joyboy ruleModel: rule_weight code: 0001 info: 接管；后续的流程，受规则引擎执行结果影响
+24-06-14.17:15:15.895 [SpringApplicationShutdownHook] INFO  HikariDataSource       - Retail_HikariCP - Shutdown initiated...
+24-06-14.17:15:16.095 [SpringApplicationShutdownHook] INFO  HikariDataSource       - Retail_HikariCP - Shutdown completed.
+24-06-14.17:25:25.980 [main            ] INFO  RaffleStrategyTest     - Starting RaffleStrategyTest using Java 1.8.0_402 on wyh-machine with PID 15040 (started by 98389 in E:\Java_code\MMarket\MMarket-app)
+24-06-14.17:25:25.980 [main            ] INFO  RaffleStrategyTest     - The following 1 profile is active: "dev"
+24-06-14.17:25:26.725 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-06-14.17:25:26.728 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-06-14.17:25:26.771 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 24 ms. Found 0 Redis repository interfaces.
+24-06-14.17:25:28.530 [main            ] INFO  Version                - Redisson 3.23.4
+24-06-14.17:25:29.729 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 117.72.77.81/117.72.77.81:16379
+24-06-14.17:25:30.293 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 117.72.77.81/117.72.77.81:16379
+24-06-14.17:25:32.112 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-06-14.17:25:32.161 [main            ] INFO  RaffleStrategyTest     - Started RaffleStrategyTest in 6.53 seconds (JVM running for 7.262)
+24-06-14.17:25:32.635 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Starting...
+24-06-14.17:25:33.706 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Start completed.
+24-06-14.17:25:35.018 [main            ] INFO  RaffleStrategyTest     - 策略装配结果：true
+24-06-14.17:25:35.020 [main            ] INFO  RaffleStrategyTest     - 当前用户幸运值为：40500
+24-06-14.17:25:35.088 [main            ] INFO  RuleBackListLogicFilter - 规则过滤-黑名单 userId:joyboy strategyId:100001 ruleModel:rule_blacklist logicMode:rule_blacklist
+24-06-14.17:25:35.239 [main            ] INFO  RuleWeightLogicFilter  - 规则过滤-权重范围 userId:joyboy strategyId:100001 ruleModel:rule_weight
+24-06-14.17:25:35.309 [main            ] INFO  DefaultRaffleStrategy  - 抽奖前规则过滤 userId: joyboy ruleModel: rule_weight code: 0001 info: 接管；后续的流程，受规则引擎执行结果影响
+24-06-14.17:25:35.587 [main            ] INFO  RaffleStrategyTest     - 请求参数：{"strategyId":100001,"userId":"joyboy"}
+24-06-14.17:25:35.590 [main            ] INFO  RaffleStrategyTest     - 测试结果：{"awardId":108}
+24-06-14.17:25:35.694 [SpringApplicationShutdownHook] INFO  HikariDataSource       - Retail_HikariCP - Shutdown initiated...
+24-06-14.17:25:36.355 [SpringApplicationShutdownHook] INFO  HikariDataSource       - Retail_HikariCP - Shutdown completed.
+24-06-14.17:26:56.288 [main            ] INFO  RaffleStrategyTest     - Starting RaffleStrategyTest using Java 1.8.0_402 on wyh-machine with PID 34540 (started by 98389 in E:\Java_code\MMarket\MMarket-app)
+24-06-14.17:26:56.289 [main            ] INFO  RaffleStrategyTest     - The following 1 profile is active: "dev"
+24-06-14.17:26:57.021 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-06-14.17:26:57.025 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-06-14.17:26:57.046 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 10 ms. Found 0 Redis repository interfaces.
+24-06-14.17:26:58.827 [main            ] INFO  Version                - Redisson 3.23.4
+24-06-14.17:27:00.032 [redisson-netty-2-6] INFO  MasterPubSubConnectionPool - 1 connections initialized for 117.72.77.81/117.72.77.81:16379
+24-06-14.17:27:00.532 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 117.72.77.81/117.72.77.81:16379
+24-06-14.17:27:02.122 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-06-14.17:27:02.178 [main            ] INFO  RaffleStrategyTest     - Started RaffleStrategyTest in 6.219 seconds (JVM running for 6.937)
+24-06-14.17:27:03.040 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Starting...
+24-06-14.17:27:04.071 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Start completed.
+24-06-14.17:27:04.596 [main            ] INFO  RaffleStrategyTest     - 策略装配结果：true
+24-06-14.17:27:04.598 [main            ] INFO  RaffleStrategyTest     - 当前用户幸运值为：40500
+24-06-14.17:27:04.659 [main            ] INFO  RuleBackListLogicFilter - 规则过滤-黑名单 userId:joyboy strategyId:100001 ruleModel:rule_blacklist logicMode:rule_blacklist
+24-06-14.17:27:04.802 [main            ] INFO  RuleWeightLogicFilter  - 规则过滤-权重范围 userId:joyboy strategyId:100001 ruleModel:rule_weight
+24-06-14.17:27:04.869 [main            ] INFO  DefaultRaffleStrategy  - 抽奖前规则过滤 userId: joyboy ruleModel: rule_weight code: 0001 info: 接管；后续的流程，受规则引擎执行结果影响
+24-06-14.17:27:05.131 [main            ] INFO  RaffleStrategyTest     - 请求参数：{"strategyId":100001,"userId":"joyboy"}
+24-06-14.17:27:05.133 [main            ] INFO  RaffleStrategyTest     - 测试结果：{"awardId":108}
+24-06-14.17:27:05.235 [SpringApplicationShutdownHook] INFO  HikariDataSource       - Retail_HikariCP - Shutdown initiated...
+24-06-14.17:27:05.421 [SpringApplicationShutdownHook] INFO  HikariDataSource       - Retail_HikariCP - Shutdown completed.
+24-06-14.17:29:33.159 [main            ] INFO  RaffleStrategyTest     - Starting RaffleStrategyTest using Java 1.8.0_402 on wyh-machine with PID 28960 (started by 98389 in E:\Java_code\MMarket\MMarket-app)
+24-06-14.17:29:33.162 [main            ] INFO  RaffleStrategyTest     - The following 1 profile is active: "dev"
+24-06-14.17:29:34.048 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-06-14.17:29:34.052 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-06-14.17:29:34.093 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 11 ms. Found 0 Redis repository interfaces.
+24-06-14.17:29:36.106 [main            ] INFO  Version                - Redisson 3.23.4
+24-06-14.17:29:37.416 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 117.72.77.81/117.72.77.81:16379
+24-06-14.17:29:37.914 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 117.72.77.81/117.72.77.81:16379
+24-06-14.17:29:39.826 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-06-14.17:29:39.906 [main            ] INFO  RaffleStrategyTest     - Started RaffleStrategyTest in 7.139 seconds (JVM running for 7.972)
+24-06-14.17:29:40.981 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Starting...
+24-06-14.17:29:42.105 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Start completed.
+24-06-14.17:29:42.674 [main            ] INFO  RaffleStrategyTest     - 策略装配结果：true
+24-06-14.17:29:42.677 [main            ] INFO  RaffleStrategyTest     - 当前用户幸运值为：40500
+24-06-14.17:29:42.749 [main            ] INFO  RuleBackListLogicFilter - 规则过滤-黑名单 userId:joyboy strategyId:100001 ruleModel:rule_blacklist logicMode:rule_blacklist
+24-06-14.17:29:42.910 [main            ] INFO  RuleWeightLogicFilter  - 规则过滤-权重范围 userId:joyboy strategyId:100001 ruleModel:rule_weight
+24-06-14.17:29:42.987 [main            ] INFO  DefaultRaffleStrategy  - 抽奖前规则过滤 userId: joyboy ruleModel: rule_weight code: 0001 info: 接管；后续的流程，受规则引擎执行结果影响
+24-06-14.17:29:43.302 [main            ] INFO  RaffleStrategyTest     - 测试结果：{"awardId":109}
+24-06-14.17:29:43.364 [main            ] INFO  RuleBackListLogicFilter - 规则过滤-黑名单 userId:joyboy strategyId:100001 ruleModel:rule_blacklist logicMode:rule_blacklist
+24-06-14.17:29:43.440 [main            ] INFO  RuleWeightLogicFilter  - 规则过滤-权重范围 userId:joyboy strategyId:100001 ruleModel:rule_weight
+24-06-14.17:29:43.509 [main            ] INFO  DefaultRaffleStrategy  - 抽奖前规则过滤 userId: joyboy ruleModel: rule_weight code: 0001 info: 接管；后续的流程，受规则引擎执行结果影响
+24-06-14.17:29:43.635 [main            ] INFO  RaffleStrategyTest     - 测试结果：{"awardId":109}
+24-06-14.17:29:43.704 [main            ] INFO  RuleBackListLogicFilter - 规则过滤-黑名单 userId:joyboy strategyId:100001 ruleModel:rule_blacklist logicMode:rule_blacklist
+24-06-14.17:29:43.782 [main            ] INFO  RuleWeightLogicFilter  - 规则过滤-权重范围 userId:joyboy strategyId:100001 ruleModel:rule_weight
+24-06-14.17:29:43.864 [main            ] INFO  DefaultRaffleStrategy  - 抽奖前规则过滤 userId: joyboy ruleModel: rule_weight code: 0001 info: 接管；后续的流程，受规则引擎执行结果影响
+24-06-14.17:29:43.992 [main            ] INFO  RaffleStrategyTest     - 测试结果：{"awardId":109}
+24-06-14.17:29:44.053 [main            ] INFO  RuleBackListLogicFilter - 规则过滤-黑名单 userId:joyboy strategyId:100001 ruleModel:rule_blacklist logicMode:rule_blacklist
+24-06-14.17:29:44.121 [main            ] INFO  RuleWeightLogicFilter  - 规则过滤-权重范围 userId:joyboy strategyId:100001 ruleModel:rule_weight
+24-06-14.17:29:44.187 [main            ] INFO  DefaultRaffleStrategy  - 抽奖前规则过滤 userId: joyboy ruleModel: rule_weight code: 0001 info: 接管；后续的流程，受规则引擎执行结果影响
+24-06-14.17:29:44.310 [main            ] INFO  RaffleStrategyTest     - 测试结果：{"awardId":108}
+24-06-14.17:29:44.378 [main            ] INFO  RuleBackListLogicFilter - 规则过滤-黑名单 userId:joyboy strategyId:100001 ruleModel:rule_blacklist logicMode:rule_blacklist
+24-06-14.17:29:44.447 [main            ] INFO  RuleWeightLogicFilter  - 规则过滤-权重范围 userId:joyboy strategyId:100001 ruleModel:rule_weight
+24-06-14.17:29:44.513 [main            ] INFO  DefaultRaffleStrategy  - 抽奖前规则过滤 userId: joyboy ruleModel: rule_weight code: 0001 info: 接管；后续的流程，受规则引擎执行结果影响
+24-06-14.17:29:44.634 [main            ] INFO  RaffleStrategyTest     - 测试结果：{"awardId":108}
+24-06-14.17:29:44.747 [SpringApplicationShutdownHook] INFO  HikariDataSource       - Retail_HikariCP - Shutdown initiated...
+24-06-14.17:29:45.336 [SpringApplicationShutdownHook] INFO  HikariDataSource       - Retail_HikariCP - Shutdown completed.
+24-06-14.17:29:54.809 [main            ] INFO  RaffleStrategyTest     - Starting RaffleStrategyTest using Java 1.8.0_402 on wyh-machine with PID 14596 (started by 98389 in E:\Java_code\MMarket\MMarket-app)
+24-06-14.17:29:54.810 [main            ] INFO  RaffleStrategyTest     - The following 1 profile is active: "dev"
+24-06-14.17:29:55.527 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-06-14.17:29:55.534 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-06-14.17:29:55.568 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 20 ms. Found 0 Redis repository interfaces.
+24-06-14.17:29:57.337 [main            ] INFO  Version                - Redisson 3.23.4
+24-06-14.17:29:58.488 [redisson-netty-2-6] INFO  MasterPubSubConnectionPool - 1 connections initialized for 117.72.77.81/117.72.77.81:16379
+24-06-14.17:29:59.089 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 117.72.77.81/117.72.77.81:16379
+24-06-14.17:30:00.877 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-06-14.17:30:00.928 [main            ] INFO  RaffleStrategyTest     - Started RaffleStrategyTest in 6.455 seconds (JVM running for 7.16)
+24-06-14.17:30:01.853 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Starting...
+24-06-14.17:30:03.106 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Start completed.
+24-06-14.17:30:03.703 [main            ] INFO  RaffleStrategyTest     - 策略装配结果：true
+24-06-14.17:30:03.706 [main            ] INFO  RaffleStrategyTest     - 当前用户幸运值为：40500
+24-06-14.17:30:03.805 [main            ] INFO  RuleBackListLogicFilter - 规则过滤-黑名单 userId:joyboy strategyId:100001 ruleModel:rule_blacklist logicMode:rule_blacklist
+24-06-14.17:30:03.971 [main            ] INFO  RuleWeightLogicFilter  - 规则过滤-权重范围 userId:joyboy strategyId:100001 ruleModel:rule_weight
+24-06-14.17:30:04.044 [main            ] INFO  DefaultRaffleStrategy  - 抽奖前规则过滤 userId: joyboy ruleModel: rule_weight code: 0001 info: 接管；后续的流程，受规则引擎执行结果影响
+24-06-14.17:30:04.318 [main            ] INFO  RaffleStrategyTest     - 第{i}次测试结果：{"awardId":108}
+24-06-14.17:30:04.415 [main            ] INFO  RuleBackListLogicFilter - 规则过滤-黑名单 userId:joyboy strategyId:100001 ruleModel:rule_blacklist logicMode:rule_blacklist
+24-06-14.17:30:04.505 [main            ] INFO  RuleWeightLogicFilter  - 规则过滤-权重范围 userId:joyboy strategyId:100001 ruleModel:rule_weight
+24-06-14.17:30:04.587 [main            ] INFO  DefaultRaffleStrategy  - 抽奖前规则过滤 userId: joyboy ruleModel: rule_weight code: 0001 info: 接管；后续的流程，受规则引擎执行结果影响
+24-06-14.17:30:04.739 [main            ] INFO  RaffleStrategyTest     - 第{i}次测试结果：{"awardId":109}
+24-06-14.17:30:04.802 [main            ] INFO  RuleBackListLogicFilter - 规则过滤-黑名单 userId:joyboy strategyId:100001 ruleModel:rule_blacklist logicMode:rule_blacklist
+24-06-14.17:30:04.871 [main            ] INFO  RuleWeightLogicFilter  - 规则过滤-权重范围 userId:joyboy strategyId:100001 ruleModel:rule_weight
+24-06-14.17:30:04.959 [main            ] INFO  DefaultRaffleStrategy  - 抽奖前规则过滤 userId: joyboy ruleModel: rule_weight code: 0001 info: 接管；后续的流程，受规则引擎执行结果影响
+24-06-14.17:30:05.082 [main            ] INFO  RaffleStrategyTest     - 第{i}次测试结果：{"awardId":108}
+24-06-14.17:30:05.145 [main            ] INFO  RuleBackListLogicFilter - 规则过滤-黑名单 userId:joyboy strategyId:100001 ruleModel:rule_blacklist logicMode:rule_blacklist
+24-06-14.17:30:05.217 [main            ] INFO  RuleWeightLogicFilter  - 规则过滤-权重范围 userId:joyboy strategyId:100001 ruleModel:rule_weight
+24-06-14.17:30:05.286 [main            ] INFO  DefaultRaffleStrategy  - 抽奖前规则过滤 userId: joyboy ruleModel: rule_weight code: 0001 info: 接管；后续的流程，受规则引擎执行结果影响
+24-06-14.17:30:05.409 [main            ] INFO  RaffleStrategyTest     - 第{i}次测试结果：{"awardId":109}
+24-06-14.17:30:05.476 [main            ] INFO  RuleBackListLogicFilter - 规则过滤-黑名单 userId:joyboy strategyId:100001 ruleModel:rule_blacklist logicMode:rule_blacklist
+24-06-14.17:30:05.547 [main            ] INFO  RuleWeightLogicFilter  - 规则过滤-权重范围 userId:joyboy strategyId:100001 ruleModel:rule_weight
+24-06-14.17:30:05.619 [main            ] INFO  DefaultRaffleStrategy  - 抽奖前规则过滤 userId: joyboy ruleModel: rule_weight code: 0001 info: 接管；后续的流程，受规则引擎执行结果影响
+24-06-14.17:30:05.738 [main            ] INFO  RaffleStrategyTest     - 第{i}次测试结果：{"awardId":108}
+24-06-14.17:30:05.843 [SpringApplicationShutdownHook] INFO  HikariDataSource       - Retail_HikariCP - Shutdown initiated...
+24-06-14.17:30:06.353 [SpringApplicationShutdownHook] INFO  HikariDataSource       - Retail_HikariCP - Shutdown completed.
+24-06-14.17:30:28.975 [main            ] INFO  RaffleStrategyTest     - Starting RaffleStrategyTest using Java 1.8.0_402 on wyh-machine with PID 36488 (started by 98389 in E:\Java_code\MMarket\MMarket-app)
+24-06-14.17:30:28.976 [main            ] INFO  RaffleStrategyTest     - The following 1 profile is active: "dev"
+24-06-14.17:30:29.735 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-06-14.17:30:29.738 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-06-14.17:30:29.763 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 9 ms. Found 0 Redis repository interfaces.
+24-06-14.17:30:31.537 [main            ] INFO  Version                - Redisson 3.23.4
+24-06-14.17:30:32.696 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 117.72.77.81/117.72.77.81:16379
+24-06-14.17:30:33.252 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 117.72.77.81/117.72.77.81:16379
+24-06-14.17:30:34.951 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-06-14.17:30:35.007 [main            ] INFO  RaffleStrategyTest     - Started RaffleStrategyTest in 6.379 seconds (JVM running for 7.104)
+24-06-14.17:30:35.869 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Starting...
+24-06-14.17:30:36.845 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Start completed.
+24-06-14.17:30:37.386 [main            ] INFO  RaffleStrategyTest     - 策略装配结果：true
+24-06-14.17:30:37.388 [main            ] INFO  RaffleStrategyTest     - 当前用户幸运值为：40500
+24-06-14.17:30:37.453 [main            ] INFO  RuleBackListLogicFilter - 规则过滤-黑名单 userId:joyboy strategyId:100001 ruleModel:rule_blacklist logicMode:rule_blacklist
+24-06-14.17:30:37.603 [main            ] INFO  RuleWeightLogicFilter  - 规则过滤-权重范围 userId:joyboy strategyId:100001 ruleModel:rule_weight
+24-06-14.17:30:37.669 [main            ] INFO  DefaultRaffleStrategy  - 抽奖前规则过滤 userId: joyboy ruleModel: rule_weight code: 0001 info: 接管；后续的流程，受规则引擎执行结果影响
+24-06-14.17:30:37.936 [main            ] INFO  RaffleStrategyTest     - 第0次测试结果：{"awardId":109}
+24-06-14.17:30:38.013 [main            ] INFO  RuleBackListLogicFilter - 规则过滤-黑名单 userId:joyboy strategyId:100001 ruleModel:rule_blacklist logicMode:rule_blacklist
+24-06-14.17:30:38.081 [main            ] INFO  RuleWeightLogicFilter  - 规则过滤-权重范围 userId:joyboy strategyId:100001 ruleModel:rule_weight
+24-06-14.17:30:38.147 [main            ] INFO  DefaultRaffleStrategy  - 抽奖前规则过滤 userId: joyboy ruleModel: rule_weight code: 0001 info: 接管；后续的流程，受规则引擎执行结果影响
+24-06-14.17:30:38.267 [main            ] INFO  RaffleStrategyTest     - 第1次测试结果：{"awardId":108}
+24-06-14.17:30:38.325 [main            ] INFO  RuleBackListLogicFilter - 规则过滤-黑名单 userId:joyboy strategyId:100001 ruleModel:rule_blacklist logicMode:rule_blacklist
+24-06-14.17:30:38.422 [main            ] INFO  RuleWeightLogicFilter  - 规则过滤-权重范围 userId:joyboy strategyId:100001 ruleModel:rule_weight
+24-06-14.17:30:38.485 [main            ] INFO  DefaultRaffleStrategy  - 抽奖前规则过滤 userId: joyboy ruleModel: rule_weight code: 0001 info: 接管；后续的流程，受规则引擎执行结果影响
+24-06-14.17:30:38.609 [main            ] INFO  RaffleStrategyTest     - 第2次测试结果：{"awardId":109}
+24-06-14.17:30:38.699 [main            ] INFO  RuleBackListLogicFilter - 规则过滤-黑名单 userId:joyboy strategyId:100001 ruleModel:rule_blacklist logicMode:rule_blacklist
+24-06-14.17:30:38.781 [main            ] INFO  RuleWeightLogicFilter  - 规则过滤-权重范围 userId:joyboy strategyId:100001 ruleModel:rule_weight
+24-06-14.17:30:38.846 [main            ] INFO  DefaultRaffleStrategy  - 抽奖前规则过滤 userId: joyboy ruleModel: rule_weight code: 0001 info: 接管；后续的流程，受规则引擎执行结果影响
+24-06-14.17:30:38.969 [main            ] INFO  RaffleStrategyTest     - 第3次测试结果：{"awardId":108}
+24-06-14.17:30:39.034 [main            ] INFO  RuleBackListLogicFilter - 规则过滤-黑名单 userId:joyboy strategyId:100001 ruleModel:rule_blacklist logicMode:rule_blacklist
+24-06-14.17:30:39.106 [main            ] INFO  RuleWeightLogicFilter  - 规则过滤-权重范围 userId:joyboy strategyId:100001 ruleModel:rule_weight
+24-06-14.17:30:39.174 [main            ] INFO  DefaultRaffleStrategy  - 抽奖前规则过滤 userId: joyboy ruleModel: rule_weight code: 0001 info: 接管；后续的流程，受规则引擎执行结果影响
+24-06-14.17:30:39.331 [main            ] INFO  RaffleStrategyTest     - 第4次测试结果：{"awardId":109}
+24-06-14.17:30:39.442 [SpringApplicationShutdownHook] INFO  HikariDataSource       - Retail_HikariCP - Shutdown initiated...
+24-06-14.17:30:40.042 [SpringApplicationShutdownHook] INFO  HikariDataSource       - Retail_HikariCP - Shutdown completed.
+24-06-14.17:33:05.064 [main            ] INFO  RaffleStrategyTest     - Starting RaffleStrategyTest using Java 1.8.0_402 on wyh-machine with PID 20124 (started by 98389 in E:\Java_code\MMarket\MMarket-app)
+24-06-14.17:33:05.065 [main            ] INFO  RaffleStrategyTest     - The following 1 profile is active: "dev"
+24-06-14.17:33:05.729 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-06-14.17:33:05.732 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-06-14.17:33:05.759 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 9 ms. Found 0 Redis repository interfaces.
+24-06-14.17:33:07.328 [main            ] INFO  Version                - Redisson 3.23.4
+24-06-14.17:33:08.475 [redisson-netty-2-6] INFO  MasterPubSubConnectionPool - 1 connections initialized for 117.72.77.81/117.72.77.81:16379
+24-06-14.17:33:09.179 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 117.72.77.81/117.72.77.81:16379
+24-06-14.17:33:10.696 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-06-14.17:33:10.747 [main            ] INFO  RaffleStrategyTest     - Started RaffleStrategyTest in 5.973 seconds (JVM running for 6.707)
+24-06-14.17:33:11.639 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Starting...
+24-06-14.17:33:12.667 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Start completed.
+24-06-14.17:33:13.197 [main            ] INFO  RaffleStrategyTest     - 策略装配结果：true
+24-06-14.17:33:13.200 [main            ] INFO  RaffleStrategyTest     - 当前用户幸运值为：40500
+24-06-14.17:33:13.267 [main            ] INFO  RuleBackListLogicFilter - 规则过滤-黑名单 userId:user003 strategyId:100001 ruleModel:rule_blacklist logicMode:rule_blacklist
+24-06-14.17:33:13.534 [main            ] INFO  RaffleStrategyTest     - 请求参数：{"strategyId":100001,"userId":"user003"}
+24-06-14.17:33:13.537 [main            ] INFO  RaffleStrategyTest     - 测试结果：{"awardId":100}
+24-06-14.17:33:13.646 [SpringApplicationShutdownHook] INFO  HikariDataSource       - Retail_HikariCP - Shutdown initiated...
+24-06-14.17:33:14.042 [SpringApplicationShutdownHook] INFO  HikariDataSource       - Retail_HikariCP - Shutdown completed.
+24-06-14.17:44:20.639 [main            ] INFO  RaffleStrategyTest     - Starting RaffleStrategyTest using Java 1.8.0_402 on wyh-machine with PID 30124 (started by 98389 in E:\Java_code\MMarket\MMarket-app)
+24-06-14.17:44:20.640 [main            ] INFO  RaffleStrategyTest     - The following 1 profile is active: "dev"
+24-06-14.17:44:21.292 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-06-14.17:44:21.296 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-06-14.17:44:21.319 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 11 ms. Found 0 Redis repository interfaces.
+24-06-14.17:44:22.918 [main            ] INFO  Version                - Redisson 3.23.4
+24-06-14.17:44:24.056 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 117.72.77.81/117.72.77.81:16379
+24-06-14.17:44:24.570 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 117.72.77.81/117.72.77.81:16379
+24-06-14.17:44:25.906 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-06-14.17:44:25.957 [main            ] INFO  RaffleStrategyTest     - Started RaffleStrategyTest in 5.628 seconds (JVM running for 6.418)
+24-06-14.17:44:26.725 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Starting...
+24-06-14.17:44:27.709 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Start completed.
+24-06-14.17:44:28.231 [main            ] INFO  RaffleStrategyTest     - 策略装配结果：true
+24-06-14.17:44:28.232 [main            ] INFO  RaffleStrategyTest     - 当前用户幸运值为：40500
+24-06-14.17:44:28.296 [main            ] INFO  RuleBackListLogicFilter - 规则过滤-黑名单 userId:joyboy strategyId:100001 ruleModel:rule_blacklist logicMode:rule_blacklist
+24-06-14.17:44:28.378 [main            ] INFO  RuleWeightLogicFilter  - 规则过滤-权重范围 userId:joyboy strategyId:100001 ruleModel:rule_weight
+24-06-14.17:44:28.447 [main            ] INFO  DefaultRaffleStrategy  - 抽奖前规则过滤 userId: joyboy ruleModel: rule_weight code: 0001 info: 接管；后续的流程，受规则引擎执行结果影响
+24-06-14.17:44:28.685 [main            ] INFO  RaffleStrategyTest     - 第0次测试结果：{"awardId":108}
+24-06-14.17:44:28.758 [main            ] INFO  RuleBackListLogicFilter - 规则过滤-黑名单 userId:joyboy strategyId:100001 ruleModel:rule_blacklist logicMode:rule_blacklist
+24-06-14.17:44:28.831 [main            ] INFO  RuleWeightLogicFilter  - 规则过滤-权重范围 userId:joyboy strategyId:100001 ruleModel:rule_weight
+24-06-14.17:44:28.896 [main            ] INFO  DefaultRaffleStrategy  - 抽奖前规则过滤 userId: joyboy ruleModel: rule_weight code: 0001 info: 接管；后续的流程，受规则引擎执行结果影响
+24-06-14.17:44:29.034 [main            ] INFO  RaffleStrategyTest     - 第1次测试结果：{"awardId":108}
+24-06-14.17:44:29.094 [main            ] INFO  RuleBackListLogicFilter - 规则过滤-黑名单 userId:joyboy strategyId:100001 ruleModel:rule_blacklist logicMode:rule_blacklist
+24-06-14.17:44:29.161 [main            ] INFO  RuleWeightLogicFilter  - 规则过滤-权重范围 userId:joyboy strategyId:100001 ruleModel:rule_weight
+24-06-14.17:44:29.226 [main            ] INFO  DefaultRaffleStrategy  - 抽奖前规则过滤 userId: joyboy ruleModel: rule_weight code: 0001 info: 接管；后续的流程，受规则引擎执行结果影响
+24-06-14.17:44:29.399 [main            ] INFO  RaffleStrategyTest     - 第2次测试结果：{"awardId":108}
+24-06-14.17:44:29.470 [main            ] INFO  RuleBackListLogicFilter - 规则过滤-黑名单 userId:joyboy strategyId:100001 ruleModel:rule_blacklist logicMode:rule_blacklist
+24-06-14.17:44:29.547 [main            ] INFO  RuleWeightLogicFilter  - 规则过滤-权重范围 userId:joyboy strategyId:100001 ruleModel:rule_weight
+24-06-14.17:44:29.626 [main            ] INFO  DefaultRaffleStrategy  - 抽奖前规则过滤 userId: joyboy ruleModel: rule_weight code: 0001 info: 接管；后续的流程，受规则引擎执行结果影响
+24-06-14.17:44:29.765 [main            ] INFO  RaffleStrategyTest     - 第3次测试结果：{"awardId":109}
+24-06-14.17:44:29.835 [main            ] INFO  RuleBackListLogicFilter - 规则过滤-黑名单 userId:joyboy strategyId:100001 ruleModel:rule_blacklist logicMode:rule_blacklist
+24-06-14.17:44:29.912 [main            ] INFO  RuleWeightLogicFilter  - 规则过滤-权重范围 userId:joyboy strategyId:100001 ruleModel:rule_weight
+24-06-14.17:44:29.998 [main            ] INFO  DefaultRaffleStrategy  - 抽奖前规则过滤 userId: joyboy ruleModel: rule_weight code: 0001 info: 接管；后续的流程，受规则引擎执行结果影响
+24-06-14.17:44:30.121 [main            ] INFO  RaffleStrategyTest     - 第4次测试结果：{"awardId":109}
+24-06-14.17:44:30.224 [SpringApplicationShutdownHook] INFO  HikariDataSource       - Retail_HikariCP - Shutdown initiated...
+24-06-14.17:44:30.539 [SpringApplicationShutdownHook] INFO  HikariDataSource       - Retail_HikariCP - Shutdown completed.
+24-06-14.18:32:17.372 [main            ] INFO  RaffleStrategyTest     - Starting RaffleStrategyTest using Java 1.8.0_402 on wyh-machine with PID 15076 (started by 98389 in E:\Java_code\MMarket\MMarket-app)
+24-06-14.18:32:17.373 [main            ] INFO  RaffleStrategyTest     - The following 1 profile is active: "dev"
+24-06-14.18:32:18.414 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-06-14.18:32:18.417 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-06-14.18:32:18.448 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 15 ms. Found 0 Redis repository interfaces.
+24-06-14.18:32:20.673 [main            ] INFO  Version                - Redisson 3.23.4
+24-06-14.18:32:21.866 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 117.72.77.81/117.72.77.81:16379
+24-06-14.18:32:22.114 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 117.72.77.81/117.72.77.81:16379
+24-06-14.18:32:23.942 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-06-14.18:32:24.019 [main            ] INFO  RaffleStrategyTest     - Started RaffleStrategyTest in 7.031 seconds (JVM running for 7.913)
+24-06-14.18:32:24.723 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Starting...
+24-06-14.18:32:25.392 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Start completed.
+24-06-14.18:32:25.644 [main            ] INFO  RaffleStrategyTest     - 策略装配结果：true
+24-06-14.18:32:25.649 [main            ] INFO  RaffleStrategyTest     - 当前用户幸运值为：40500
+24-06-14.18:32:25.686 [main            ] INFO  RuleBackListLogicFilter - 规则过滤-黑名单 userId:user003 strategyId:100001 ruleModel:rule_blacklist logicMode:rule_blacklist
+24-06-14.18:32:25.902 [main            ] INFO  RaffleStrategyTest     - 请求参数：{"strategyId":100001,"userId":"user003"}
+24-06-14.18:32:25.904 [main            ] INFO  RaffleStrategyTest     - 测试结果：{"awardId":100}
+24-06-14.18:32:25.966 [SpringApplicationShutdownHook] INFO  HikariDataSource       - Retail_HikariCP - Shutdown initiated...
+24-06-14.18:32:26.082 [SpringApplicationShutdownHook] INFO  HikariDataSource       - Retail_HikariCP - Shutdown completed.
+24-06-14.18:40:33.408 [main            ] INFO  RaffleStrategyTest     - Starting RaffleStrategyTest using Java 1.8.0_402 on wyh-machine with PID 29780 (started by 98389 in E:\Java_code\MMarket\MMarket-app)
+24-06-14.18:40:33.408 [main            ] INFO  RaffleStrategyTest     - The following 1 profile is active: "dev"
+24-06-14.18:40:34.197 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-06-14.18:40:34.204 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-06-14.18:40:34.225 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 9 ms. Found 0 Redis repository interfaces.
+24-06-14.18:40:35.953 [main            ] INFO  Version                - Redisson 3.23.4
+24-06-14.18:40:36.996 [redisson-netty-2-6] INFO  MasterPubSubConnectionPool - 1 connections initialized for 117.72.77.81/117.72.77.81:16379
+24-06-14.18:40:37.232 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 117.72.77.81/117.72.77.81:16379
+24-06-14.18:40:39.029 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-06-14.18:40:39.080 [main            ] INFO  RaffleStrategyTest     - Started RaffleStrategyTest in 6.026 seconds (JVM running for 6.765)
+24-06-14.18:40:39.629 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Starting...
+24-06-14.18:40:40.211 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Start completed.
+24-06-14.18:40:40.438 [main            ] INFO  RaffleStrategyTest     - 策略装配结果：true
+24-06-14.18:40:40.442 [main            ] INFO  RaffleStrategyTest     - 当前用户幸运值为：40500
+24-06-14.18:40:40.476 [main            ] INFO  RuleBackListLogicFilter - 规则过滤-黑名单 userId:joyboy strategyId:100001 ruleModel:rule_blacklist info:【抽奖前规则】黑名单规则过滤，命中黑名单则直接返回
+24-06-14.18:40:40.521 [main            ] INFO  RuleWeightLogicFilter  - 规则过滤-权重 userId:joyboy strategyId:100001 ruleModel:rule_weight
+24-06-14.18:40:40.552 [main            ] INFO  DefaultRaffleStrategy  - 抽奖前规则过滤 userId: joyboy ruleModel: rule_weight code: 0001 info: 接管；后续的流程，受规则引擎执行结果影响
+24-06-14.18:40:40.745 [main            ] INFO  RaffleStrategyTest     - 第0次测试结果：{"awardId":108}
+24-06-14.18:40:40.775 [main            ] INFO  RuleBackListLogicFilter - 规则过滤-黑名单 userId:joyboy strategyId:100001 ruleModel:rule_blacklist info:【抽奖前规则】黑名单规则过滤，命中黑名单则直接返回
+24-06-14.18:40:40.805 [main            ] INFO  RuleWeightLogicFilter  - 规则过滤-权重 userId:joyboy strategyId:100001 ruleModel:rule_weight
+24-06-14.18:40:40.841 [main            ] INFO  DefaultRaffleStrategy  - 抽奖前规则过滤 userId: joyboy ruleModel: rule_weight code: 0001 info: 接管；后续的流程，受规则引擎执行结果影响
+24-06-14.18:40:40.892 [main            ] INFO  RaffleStrategyTest     - 第1次测试结果：{"awardId":108}
+24-06-14.18:40:40.920 [main            ] INFO  RuleBackListLogicFilter - 规则过滤-黑名单 userId:joyboy strategyId:100001 ruleModel:rule_blacklist info:【抽奖前规则】黑名单规则过滤，命中黑名单则直接返回
+24-06-14.18:40:40.957 [main            ] INFO  RuleWeightLogicFilter  - 规则过滤-权重 userId:joyboy strategyId:100001 ruleModel:rule_weight
+24-06-14.18:40:40.990 [main            ] INFO  DefaultRaffleStrategy  - 抽奖前规则过滤 userId: joyboy ruleModel: rule_weight code: 0001 info: 接管；后续的流程，受规则引擎执行结果影响
+24-06-14.18:40:41.055 [main            ] INFO  RaffleStrategyTest     - 第2次测试结果：{"awardId":108}
+24-06-14.18:40:41.083 [main            ] INFO  RuleBackListLogicFilter - 规则过滤-黑名单 userId:joyboy strategyId:100001 ruleModel:rule_blacklist info:【抽奖前规则】黑名单规则过滤，命中黑名单则直接返回
+24-06-14.18:40:41.114 [main            ] INFO  RuleWeightLogicFilter  - 规则过滤-权重 userId:joyboy strategyId:100001 ruleModel:rule_weight
+24-06-14.18:40:41.145 [main            ] INFO  DefaultRaffleStrategy  - 抽奖前规则过滤 userId: joyboy ruleModel: rule_weight code: 0001 info: 接管；后续的流程，受规则引擎执行结果影响
+24-06-14.18:40:41.196 [main            ] INFO  RaffleStrategyTest     - 第3次测试结果：{"awardId":108}
+24-06-14.18:40:41.227 [main            ] INFO  RuleBackListLogicFilter - 规则过滤-黑名单 userId:joyboy strategyId:100001 ruleModel:rule_blacklist info:【抽奖前规则】黑名单规则过滤，命中黑名单则直接返回
+24-06-14.18:40:41.260 [main            ] INFO  RuleWeightLogicFilter  - 规则过滤-权重 userId:joyboy strategyId:100001 ruleModel:rule_weight
+24-06-14.18:40:41.294 [main            ] INFO  DefaultRaffleStrategy  - 抽奖前规则过滤 userId: joyboy ruleModel: rule_weight code: 0001 info: 接管；后续的流程，受规则引擎执行结果影响
+24-06-14.18:40:41.354 [main            ] INFO  RaffleStrategyTest     - 第4次测试结果：{"awardId":108}
+24-06-14.18:40:41.423 [SpringApplicationShutdownHook] INFO  HikariDataSource       - Retail_HikariCP - Shutdown initiated...
+24-06-14.18:40:41.720 [SpringApplicationShutdownHook] INFO  HikariDataSource       - Retail_HikariCP - Shutdown completed.
+24-06-14.18:41:20.264 [main            ] INFO  RaffleStrategyTest     - Starting RaffleStrategyTest using Java 1.8.0_402 on wyh-machine with PID 29624 (started by 98389 in E:\Java_code\MMarket\MMarket-app)
+24-06-14.18:41:20.264 [main            ] INFO  RaffleStrategyTest     - The following 1 profile is active: "dev"
+24-06-14.18:41:21.019 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-06-14.18:41:21.022 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-06-14.18:41:21.042 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 9 ms. Found 0 Redis repository interfaces.
+24-06-14.18:41:22.845 [main            ] INFO  Version                - Redisson 3.23.4
+24-06-14.18:41:23.969 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 117.72.77.81/117.72.77.81:16379
+24-06-14.18:41:24.210 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 117.72.77.81/117.72.77.81:16379
+24-06-14.18:41:25.937 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-06-14.18:41:26.020 [main            ] INFO  RaffleStrategyTest     - Started RaffleStrategyTest in 6.095 seconds (JVM running for 6.841)
+24-06-14.18:41:26.708 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Starting...
+24-06-14.18:41:27.291 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Start completed.
+24-06-14.18:41:27.528 [main            ] INFO  RaffleStrategyTest     - 策略装配结果：true
+24-06-14.18:41:27.529 [main            ] INFO  RaffleStrategyTest     - 当前用户幸运值为：40500
+24-06-14.18:41:27.562 [main            ] INFO  RuleBackListLogicFilter - 规则过滤-黑名单 userId:user003 strategyId:100001 ruleModel:rule_blacklist info:【抽奖前规则】黑名单规则过滤，命中黑名单则直接返回
+24-06-14.18:41:27.742 [main            ] INFO  RaffleStrategyTest     - 请求参数：{"strategyId":100001,"userId":"user003"}
+24-06-14.18:41:27.744 [main            ] INFO  RaffleStrategyTest     - 测试结果：{"awardId":100}
+24-06-14.18:41:27.805 [SpringApplicationShutdownHook] INFO  HikariDataSource       - Retail_HikariCP - Shutdown initiated...
+24-06-14.18:41:27.991 [SpringApplicationShutdownHook] INFO  HikariDataSource       - Retail_HikariCP - Shutdown completed.
+24-06-14.19:00:29.481 [main            ] INFO  RaffleStrategyTest     - Starting RaffleStrategyTest using Java 1.8.0_402 on wyh-machine with PID 7144 (started by 98389 in E:\Java_code\MMarket\MMarket-app)
+24-06-14.19:00:29.482 [main            ] INFO  RaffleStrategyTest     - The following 1 profile is active: "dev"
+24-06-14.19:00:30.326 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-06-14.19:00:30.329 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-06-14.19:00:30.360 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 11 ms. Found 0 Redis repository interfaces.
+24-06-14.19:00:32.341 [main            ] INFO  Version                - Redisson 3.23.4
+24-06-14.19:00:33.551 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 117.72.77.81/117.72.77.81:16379
+24-06-14.19:00:33.804 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 117.72.77.81/117.72.77.81:16379
+24-06-14.19:00:35.620 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-06-14.19:00:35.678 [main            ] INFO  RaffleStrategyTest     - Started RaffleStrategyTest in 6.592 seconds (JVM running for 7.414)
+24-06-14.19:00:36.324 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Starting...
+24-06-14.19:00:36.944 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Start completed.
+24-06-14.19:00:37.172 [main            ] INFO  RaffleStrategyTest     - 策略装配结果：true
+24-06-14.19:00:37.174 [main            ] INFO  RaffleStrategyTest     - 当前用户幸运值为：40500
+24-06-14.19:00:37.204 [main            ] INFO  RuleBackListLogicFilter - 规则过滤-黑名单 userId:joyboy strategyId:100001 ruleModel:rule_blacklist info:【抽奖前规则】黑名单规则过滤，命中黑名单则直接返回
+24-06-14.19:00:37.256 [main            ] INFO  RuleWeightLogicFilter  - 规则过滤-权重 userId:joyboy strategyId:100001 ruleModel:rule_weight
+24-06-14.19:00:37.286 [main            ] INFO  DefaultRaffleStrategy  - 抽奖前规则过滤 userId: joyboy ruleModel: rule_weight code: 0001 info: 接管；后续的流程，受规则引擎执行结果影响
+24-06-14.19:00:37.515 [main            ] INFO  RaffleStrategyTest     - 第0次测试结果：{"awardId":109}
+24-06-14.19:00:37.546 [main            ] INFO  RuleBackListLogicFilter - 规则过滤-黑名单 userId:joyboy strategyId:100001 ruleModel:rule_blacklist info:【抽奖前规则】黑名单规则过滤，命中黑名单则直接返回
+24-06-14.19:00:37.578 [main            ] INFO  RuleWeightLogicFilter  - 规则过滤-权重 userId:joyboy strategyId:100001 ruleModel:rule_weight
+24-06-14.19:00:37.608 [main            ] INFO  DefaultRaffleStrategy  - 抽奖前规则过滤 userId: joyboy ruleModel: rule_weight code: 0001 info: 接管；后续的流程，受规则引擎执行结果影响
+24-06-14.19:00:37.665 [main            ] INFO  RaffleStrategyTest     - 第1次测试结果：{"awardId":108}
+24-06-14.19:00:37.693 [main            ] INFO  RuleBackListLogicFilter - 规则过滤-黑名单 userId:joyboy strategyId:100001 ruleModel:rule_blacklist info:【抽奖前规则】黑名单规则过滤，命中黑名单则直接返回
+24-06-14.19:00:37.723 [main            ] INFO  RuleWeightLogicFilter  - 规则过滤-权重 userId:joyboy strategyId:100001 ruleModel:rule_weight
+24-06-14.19:00:37.752 [main            ] INFO  DefaultRaffleStrategy  - 抽奖前规则过滤 userId: joyboy ruleModel: rule_weight code: 0001 info: 接管；后续的流程，受规则引擎执行结果影响
+24-06-14.19:00:37.811 [main            ] INFO  RaffleStrategyTest     - 第2次测试结果：{"awardId":109}
+24-06-14.19:00:37.840 [main            ] INFO  RuleBackListLogicFilter - 规则过滤-黑名单 userId:joyboy strategyId:100001 ruleModel:rule_blacklist info:【抽奖前规则】黑名单规则过滤，命中黑名单则直接返回
+24-06-14.19:00:37.872 [main            ] INFO  RuleWeightLogicFilter  - 规则过滤-权重 userId:joyboy strategyId:100001 ruleModel:rule_weight
+24-06-14.19:00:37.904 [main            ] INFO  DefaultRaffleStrategy  - 抽奖前规则过滤 userId: joyboy ruleModel: rule_weight code: 0001 info: 接管；后续的流程，受规则引擎执行结果影响
+24-06-14.19:00:37.959 [main            ] INFO  RaffleStrategyTest     - 第3次测试结果：{"awardId":108}
+24-06-14.19:00:37.989 [main            ] INFO  RuleBackListLogicFilter - 规则过滤-黑名单 userId:joyboy strategyId:100001 ruleModel:rule_blacklist info:【抽奖前规则】黑名单规则过滤，命中黑名单则直接返回
+24-06-14.19:00:38.019 [main            ] INFO  RuleWeightLogicFilter  - 规则过滤-权重 userId:joyboy strategyId:100001 ruleModel:rule_weight
+24-06-14.19:00:38.049 [main            ] INFO  DefaultRaffleStrategy  - 抽奖前规则过滤 userId: joyboy ruleModel: rule_weight code: 0001 info: 接管；后续的流程，受规则引擎执行结果影响
+24-06-14.19:00:38.106 [main            ] INFO  RaffleStrategyTest     - 第4次测试结果：{"awardId":108}
+24-06-14.19:00:38.166 [SpringApplicationShutdownHook] INFO  HikariDataSource       - Retail_HikariCP - Shutdown initiated...
+24-06-14.19:00:38.448 [SpringApplicationShutdownHook] INFO  HikariDataSource       - Retail_HikariCP - Shutdown completed.
+24-06-14.19:00:49.296 [main            ] INFO  RaffleStrategyTest     - Starting RaffleStrategyTest using Java 1.8.0_402 on wyh-machine with PID 32864 (started by 98389 in E:\Java_code\MMarket\MMarket-app)
+24-06-14.19:00:49.297 [main            ] INFO  RaffleStrategyTest     - The following 1 profile is active: "dev"
+24-06-14.19:00:50.007 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-06-14.19:00:50.010 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-06-14.19:00:50.039 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 11 ms. Found 0 Redis repository interfaces.
+24-06-14.19:00:51.830 [main            ] INFO  Version                - Redisson 3.23.4
+24-06-14.19:00:52.998 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 117.72.77.81/117.72.77.81:16379
+24-06-14.19:00:53.248 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 117.72.77.81/117.72.77.81:16379
+24-06-14.19:00:54.924 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-06-14.19:00:54.979 [main            ] INFO  RaffleStrategyTest     - Started RaffleStrategyTest in 6.024 seconds (JVM running for 6.748)
+24-06-14.19:00:55.568 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Starting...
+24-06-14.19:00:56.132 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Start completed.
+24-06-14.19:00:56.368 [main            ] INFO  RaffleStrategyTest     - 策略装配结果：true
+24-06-14.19:00:56.369 [main            ] INFO  RaffleStrategyTest     - 当前用户幸运值为：40500
+24-06-14.19:00:56.404 [main            ] INFO  RuleBackListLogicFilter - 规则过滤-黑名单 userId:user003 strategyId:100001 ruleModel:rule_blacklist info:【抽奖前规则】黑名单规则过滤，命中黑名单则直接返回
+24-06-14.19:00:56.584 [main            ] INFO  RaffleStrategyTest     - 请求参数：{"strategyId":100001,"userId":"user003"}
+24-06-14.19:00:56.590 [main            ] INFO  RaffleStrategyTest     - 测试结果：{"awardId":100}
+24-06-14.19:00:56.646 [SpringApplicationShutdownHook] INFO  HikariDataSource       - Retail_HikariCP - Shutdown initiated...
+24-06-14.19:00:56.856 [SpringApplicationShutdownHook] INFO  HikariDataSource       - Retail_HikariCP - Shutdown completed.
