@@ -6,9 +6,11 @@ import cn.learn.domain.strategy.service.rule.ILogicFilter;
 import cn.learn.types.common.Constants;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.annotation.AnnotationUtils;
 import org.springframework.stereotype.Service;
+import org.yaml.snakeyaml.scanner.Constant;
 
 import java.util.List;
 import java.util.Map;
@@ -20,6 +22,7 @@ import java.util.concurrent.ConcurrentHashMap;
  *               进行统一的管理，更方便的使用预定义的各种规则过滤器。
  */
 @Service
+@Slf4j
 public class DefaultLogicFactory {
 
     /**
@@ -64,10 +67,20 @@ public class DefaultLogicFactory {
 
     public <T extends RuleActionEntity.RaffleEntity> ILogicFilter<T> createFilter(String logicModel) {
         if (LogicModel.RULE_WIGHT.getCode().equals(logicModel)) {
+            log.info("创建 RULE_WIGHT 过滤器");
             return (ILogicFilter<T>) logicFilterMap.get(LogicModel.RULE_WIGHT.getCode());
         }
         if (LogicModel.RULE_BLACKLIST.getCode().equals(logicModel)) {
+            log.info("创建 RULE_BLACKLIST 过滤器");
             return (ILogicFilter<T>) logicFilterMap.get(LogicModel.RULE_BLACKLIST.getCode());
+        }
+        if (LogicModel.RULE_LOCK.getCode().equals(logicModel)) {
+            log.info("创建 RULE_LOCK 过滤器");
+            return (ILogicFilter<T>) logicFilterMap.get(LogicModel.RULE_LOCK.getCode());
+        }
+        if (LogicModel.RULE_LUCK_AWARD.getCode().equals(logicModel)) {
+            log.info("创建 RULE_LUCK_AWARD 过滤器");
+            return (ILogicFilter<T>) logicFilterMap.get(LogicModel.RULE_LUCK_AWARD.getCode());
         }
         throw new RuntimeException("不存在的过滤器类型");
     }
@@ -76,12 +89,23 @@ public class DefaultLogicFactory {
     @AllArgsConstructor
     public enum LogicModel {
 
-        RULE_WIGHT(Constants.RuleModel.RULE_WEIGHT, "【抽奖前规则】根据抽奖权重返回可抽奖范围KEY"),
-        RULE_BLACKLIST(Constants.RuleModel.RULE_BLACKLIST, "【抽奖前规则】黑名单规则过滤，命中黑名单则直接返回"),
+        RULE_WIGHT(Constants.RuleModel.RULE_WEIGHT, "【抽奖前规则】根据抽奖权重返回可抽奖范围KEY", "before"),
+        RULE_BLACKLIST(Constants.RuleModel.RULE_BLACKLIST, "【抽奖前规则】黑名单规则过滤，命中黑名单则直接返回", "before"),
+        RULE_LOCK(Constants.RuleModel.RULE_LOCK, "【抽奖中规则】抽奖n次后，对应奖品可解锁抽奖", "center"),
+        RULE_LUCK_AWARD(Constants.RuleModel.RULE_LUCK_AWARD, "【抽奖后规则】幸运奖兜底规则", "after"),
         ;
 
         private final String code;
         private final String info;
+        private final String type;
+
+        public static boolean isCenter(String code){
+            return "center".equals(LogicModel.valueOf(code.toUpperCase()).type);
+        }
+
+        public static boolean isAfter(String code){
+            return "after".equals(LogicModel.valueOf(code.toUpperCase()).type);
+        }
 
     }
 

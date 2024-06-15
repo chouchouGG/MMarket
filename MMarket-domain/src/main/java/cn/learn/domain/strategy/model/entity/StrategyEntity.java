@@ -22,7 +22,7 @@ public class StrategyEntity {
     /** 抽奖策略描述 */
     private String strategyDesc;
     /** 规则模型 */
-    private String ruleModels;
+    private String ruleModels; // note：策略中配置的规则都是前置规则
 
     public String[] getSeperatedRuleModels() {
         if (ruleModels == null || ruleModels.isEmpty()) {

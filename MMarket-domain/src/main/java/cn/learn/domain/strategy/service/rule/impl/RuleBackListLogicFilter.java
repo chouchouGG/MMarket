@@ -49,7 +49,8 @@ public class RuleBackListLogicFilter implements ILogicFilter<RuleActionEntity.Ra
 
         // 数据案例；100:user001,user002,user003
         String[] splitRuleValue = ruleValue.split(Constants.COLON);
-        Integer awardId = Integer.parseInt(splitRuleValue[0]);  // note：黑名单用户的默认奖品ID
+        // note：黑名单用户的默认奖品ID
+        Integer awardId = Integer.parseInt(splitRuleValue[0]);
         String[] userBlackIds = splitRuleValue[1].split(Constants.SPLIT);
         for (String userBlackId : userBlackIds) {
             if (userId.equals(userBlackId)) {

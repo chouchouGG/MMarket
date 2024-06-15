@@ -3,6 +3,7 @@ package cn.learn.domain.strategy.respository;
 import cn.learn.domain.strategy.model.entity.StrategyAwardEntity;
 import cn.learn.domain.strategy.model.entity.StrategyEntity;
 import cn.learn.domain.strategy.model.entity.StrategyRuleEntity;
+import cn.learn.domain.strategy.model.vo.StrategyAwardRuleModelVO;
 
 import java.util.List;
 import java.util.Map;
@@ -51,4 +52,7 @@ public interface IStrategyRepository {
      * 从 mysql 中查询 rule_value
      */
     String queryStrategyRuleValue(Long strategyId, Integer awardId, String ruleModel);
+
+
+    StrategyAwardRuleModelVO queryStrategyAwardRuleModelVO(Long strategyId, Integer awardId);
 }

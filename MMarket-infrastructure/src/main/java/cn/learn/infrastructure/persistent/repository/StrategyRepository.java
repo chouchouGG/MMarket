@@ -3,6 +3,7 @@ package cn.learn.infrastructure.persistent.repository;
 import cn.learn.domain.strategy.model.entity.StrategyAwardEntity;
 import cn.learn.domain.strategy.model.entity.StrategyEntity;
 import cn.learn.domain.strategy.model.entity.StrategyRuleEntity;
+import cn.learn.domain.strategy.model.vo.StrategyAwardRuleModelVO;
 import cn.learn.domain.strategy.respository.IStrategyRepository;
 import cn.learn.infrastructure.persistent.dao.IStrategyAwardDao;
 import cn.learn.infrastructure.persistent.dao.IStrategyDao;
@@ -170,6 +171,17 @@ public class StrategyRepository implements IStrategyRepository {
                 .build();
 
         return strategyRuleDao.queryStrategyRuleValue(strategyRule);
+    }
+
+    @Override
+    public StrategyAwardRuleModelVO queryStrategyAwardRuleModelVO(Long strategyId, Integer awardId) {
+        StrategyAwardPO strategyAwardPO = new StrategyAwardPO();
+        strategyAwardPO.setStrategyId(strategyId);
+        strategyAwardPO.setAwardId(awardId);
+        String ruleModels = strategyAwardDao.queryStrategyAwardRuleModelVO(strategyAwardPO);
+        return StrategyAwardRuleModelVO.builder()
+                .ruleModels(ruleModels)
+                .build();
     }
 }
 

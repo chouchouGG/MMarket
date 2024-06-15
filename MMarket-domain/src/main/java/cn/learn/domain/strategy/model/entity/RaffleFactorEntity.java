@@ -20,4 +20,7 @@ public class RaffleFactorEntity {
     private String userId;
     /** 策略ID */
     private Long strategyId;
+    // 奖品ID（抽奖中使用）
+    @Builder.Default
+    private Integer awardId = null;
 }

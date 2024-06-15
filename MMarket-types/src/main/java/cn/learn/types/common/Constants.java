@@ -1,5 +1,8 @@
 package cn.learn.types.common;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+
 public class Constants {
 
     public final static String SPLIT = ",";
@@ -28,6 +31,25 @@ public class Constants {
         public static final String RULE_BLACKLIST = "rule_blacklist";
 
     }
+
+    /**
+     * fixme：枚举类适用的场景：
+     *  1. 需要类型安全。
+     *  2. 需要附加方法、属性。
+     *  3. 需要描述性信息的常量。
+     */
+//    @Getter
+//    @AllArgsConstructor
+//    public enum RuleModel {
+//        RULE_RANDOM("rule_random"),
+//        RULE_LOCK("rule_lock"),
+//        RULE_LUCK_AWARD("rule_luck_award"),
+//        RULE_WEIGHT("rule_weight"),
+//        RULE_BLACKLIST("rule_blacklist")
+//        ;
+//
+//         private final String name;
+//    }
 
 
 }

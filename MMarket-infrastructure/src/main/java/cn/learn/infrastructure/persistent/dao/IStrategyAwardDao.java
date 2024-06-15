@@ -19,4 +19,6 @@ public interface IStrategyAwardDao {
     List<StrategyAwardPO> queryStrategyAwardList();
 
     List<StrategyAwardPO> queryStrategyAwardListByStrategyId(Long strategyId);
+
+    String queryStrategyAwardRuleModelVO(StrategyAwardPO strategyAwardPO);
 }

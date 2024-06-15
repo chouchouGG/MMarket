@@ -4,6 +4,7 @@ import cn.learn.domain.strategy.model.entity.RaffleAwardEntity;
 import cn.learn.domain.strategy.model.entity.RaffleFactorEntity;
 import cn.learn.domain.strategy.service.IRaffleStrategy;
 import cn.learn.domain.strategy.service.armory.StrategyArmoryDispatch;
+import cn.learn.domain.strategy.service.rule.impl.RuleLockLogicFilter;
 import cn.learn.domain.strategy.service.rule.impl.RuleWeightLogicFilter;
 import com.alibaba.fastjson.JSON;
 import lombok.extern.slf4j.Slf4j;
@@ -36,11 +37,13 @@ public class RaffleStrategyTest {
     @Resource
     private RuleWeightLogicFilter ruleWeightLogicFilter;
 
+    @Resource
+    private RuleLockLogicFilter ruleLockLogicFilter;
+
     @Before
     public void setUp() {
-        long strategy_ID = 100001L;
-        boolean success = strategyArmory.assembleLotteryStrategy(strategy_ID);
-        log.info("策略装配结果：{}", success);
+        log.info("策略装配结果：{}", strategyArmory.assembleLotteryStrategy(100001L));
+        log.info("策略装配结果：{}", strategyArmory.assembleLotteryStrategy(100003L));
 
         long lucky_value = 40500L;
         ReflectionTestUtils.setField(ruleWeightLogicFilter, "userScore", lucky_value);
@@ -74,6 +77,28 @@ public class RaffleStrategyTest {
 
         log.info("请求参数：{}", JSON.toJSONString(raffleFactorEntity));
         log.info("测试结果：{}", JSON.toJSONString(raffleAwardEntity));
+    }
+
+    @Test
+    public void test_raffle_center_rule_lock() {
+        // mock测试，设置用户的抽奖次数
+        long numberOfRaffle = 2L;
+        log.info("用户已经完成的抽奖次数: {}次", numberOfRaffle);
+        ReflectionTestUtils.setField(ruleLockLogicFilter, "userRaffleCount", numberOfRaffle);
+
+        RaffleFactorEntity raffleFactorEntity = RaffleFactorEntity.builder()
+                .userId("joyboy")
+                .strategyId(100003L)
+                .build();
+
+
+        log.info("请求参数：{}", JSON.toJSONString(raffleFactorEntity));
+        // 连续抽奖 5 次
+        for (int i = 0; i < 5; i++) {
+            RaffleAwardEntity raffleAwardEntity = raffleStrategy.performRaffle(raffleFactorEntity);
+            // log.info("请求参数：{}", JSON.toJSONString(raffleFactorEntity));
+            log.info("第{}次测试结果：{}", i, JSON.toJSONString(raffleAwardEntity));
+        }
     }
 
 }
