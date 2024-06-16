@@ -1,3 +1,4 @@
+/*
 package cn.learn.domain.strategy.service.rule.filter.impl;
 
 import cn.learn.domain.strategy.model.entity.RuleActionEntity;
@@ -14,12 +15,14 @@ import org.springframework.stereotype.Component;
 import javax.annotation.Resource;
 import java.util.*;
 
+*/
 /**
  * @program: MMarket
- * @description: 权重规则过滤器
+ * @description: 权重规则过滤器 ---> 已重构
  * @author: chouchouGG
  * @create: 2024-06-14 13:12
- **/
+ **//*
+
 @Slf4j
 @Component
 @LogicStrategy(logicMode = DefaultLogicFactory.LogicModel.RULE_WIGHT)
@@ -29,16 +32,18 @@ public class RuleWeightLogicFilter implements ILogicFilter<RuleActionEntity.Raff
     private IStrategyRepository repository;
 
     // fixme: 当前测试阶段使用的是固定值
-    private final Long userScore = 4500L;
+    private final Long userScore = 0L;
 
-    /**
+    */
+/**
      * 权重规则过滤；
      * 1. 权重规则格式；4000:102,103,104,105 5000:102,103,104,105,106,107 6000:102,103,104,105,106,107,108,109
      * 2. 解析数据格式；判断哪个范围符合用户的特定抽奖范围
      *
      * @param ruleMatterEntity 规则物料实体对象
      * @return 规则过滤结果
-     */
+     *//*
+
     @Override
     public RuleActionEntity filter(RuleMatterEntity ruleMatterEntity) {
         String userId = ruleMatterEntity.getUserId();
@@ -117,3 +122,4 @@ public class RuleWeightLogicFilter implements ILogicFilter<RuleActionEntity.Raff
         return ruleValueMap;
     }
 }
+*/
