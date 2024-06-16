@@ -1,7 +1,7 @@
-package cn.learn.domain.strategy.service.rule.impl;
+package cn.learn.domain.strategy.service.rule.filter.impl;
 
 import cn.learn.domain.strategy.model.entity.RuleActionEntity;
-import cn.learn.domain.strategy.service.rule.ILogicFilter;
+import cn.learn.domain.strategy.service.rule.filter.ILogicFilter;
 import lombok.extern.slf4j.Slf4j;
 
 /**

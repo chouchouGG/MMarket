@@ -9,7 +9,7 @@ import cn.learn.domain.strategy.model.vo.StrategyAwardRuleModelVO;
 import cn.learn.domain.strategy.respository.IStrategyRepository;
 import cn.learn.domain.strategy.service.IRaffleStrategy;
 import cn.learn.domain.strategy.service.armory.IStrategyDispatch;
-import cn.learn.domain.strategy.service.rule.factory.DefaultLogicFactory;
+import cn.learn.domain.strategy.service.rule.filter.factory.DefaultLogicFactory;
 import cn.learn.types.enums.ResponseCode;
 import cn.learn.types.exception.AppException;
 import lombok.extern.slf4j.Slf4j;
@@ -49,6 +49,7 @@ public abstract class AbstractRaffleStrategy implements IRaffleStrategy {
         StrategyEntity strategy = repository.queryStrategyEntityByStrategyId(strategyId);
         String[] ruleModelsBefore = strategy.getSeperatedRuleModels();
 
+        // >>> fixme：使用责任链模式重构部分：起始 ========================================================================
         // 3. 抽奖前 - 规则过滤
         RuleActionEntity<RuleActionEntity.RaffleBeforeEntity> ruleActionEntity =
                 this.doCheckRaffleBeforeLogic(raffleFactorEntity, ruleModelsBefore);
@@ -73,6 +74,7 @@ public abstract class AbstractRaffleStrategy implements IRaffleStrategy {
                         .build();
             }
         }
+        // <<< fixme：使用责任链模式重构部分：结束 ========================================================================
 
         // 4. 过滤完毕，进行【默认抽奖】流程
         // note：规则引擎的默认抽奖方式
@@ -85,10 +87,10 @@ public abstract class AbstractRaffleStrategy implements IRaffleStrategy {
         raffleFactorEntity.setAwardId(awardId);
         String[] ruleModelsCenter = strategyAwardRuleModelVO.raffleCenterRuleModelList();
         RuleActionEntity<RuleActionEntity.RaffleCenterEntity> ruleActionCenterEntity =
-                this.doCheckRaffleCenterLogic(raffleFactorEntity,ruleModelsCenter);
+                this.doCheckRaffleCenterLogic(raffleFactorEntity, ruleModelsCenter);
 
         // note: 判断抽奖中的规则过滤是否捕获到当前抽奖流程，如果捕获到，则由规则引擎进行接管
-        if (RuleLogicCheckTypeVO.TAKE_OVER.getCode().equals(ruleActionCenterEntity.getCode())){
+        if (RuleLogicCheckTypeVO.TAKE_OVER.getCode().equals(ruleActionCenterEntity.getCode())) {
             log.info("【临时日志】中奖中规则拦截，通过抽奖后规则 rule_luck_award 走兜底奖励。");
             return RaffleAwardEntity.builder()
                     .awardDesc("抽奖中规则拦截，通过抽奖后规则 rule_luck_award 走兜底奖励。")

@@ -1,6 +1,6 @@
 package cn.learn.domain.strategy.model.vo;
 
-import cn.learn.domain.strategy.service.rule.factory.DefaultLogicFactory;
+import cn.learn.domain.strategy.service.rule.filter.factory.DefaultLogicFactory;
 import cn.learn.types.common.Constants;
 import lombok.*;
 

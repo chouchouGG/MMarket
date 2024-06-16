@@ -1,4 +1,4 @@
-package cn.learn.domain.strategy.service.rule;
+package cn.learn.domain.strategy.service.rule.filter;
 
 import cn.learn.domain.strategy.model.entity.RuleActionEntity;
 import cn.learn.domain.strategy.model.entity.RuleMatterEntity;
