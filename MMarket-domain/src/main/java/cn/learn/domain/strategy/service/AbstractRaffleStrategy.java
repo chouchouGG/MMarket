@@ -1,19 +1,19 @@
-package cn.learn.domain.strategy.service.raffle;
+package cn.learn.domain.strategy.service;
 
-import cn.learn.domain.strategy.model.entity.RaffleAwardEntity;
-import cn.learn.domain.strategy.model.entity.RaffleFactorEntity;
-import cn.learn.domain.strategy.model.entity.RuleActionEntity;
-import cn.learn.domain.strategy.model.entity.StrategyEntity;
+import cn.learn.domain.strategy.model.entity.*;
 import cn.learn.domain.strategy.model.vo.RuleLogicCheckTypeVO;
 import cn.learn.domain.strategy.model.vo.StrategyAwardRuleModelVO;
 import cn.learn.domain.strategy.respository.IStrategyRepository;
 import cn.learn.domain.strategy.service.IRaffleStrategy;
 import cn.learn.domain.strategy.service.armory.IStrategyDispatch;
+import cn.learn.domain.strategy.service.rule.chain.ILogicChain;
+import cn.learn.domain.strategy.service.rule.chain.factory.DefaultChainFactory;
 import cn.learn.domain.strategy.service.rule.filter.factory.DefaultLogicFactory;
 import cn.learn.types.enums.ResponseCode;
 import cn.learn.types.exception.AppException;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
+import org.springframework.beans.factory.annotation.Autowired;
 
 /**
  * @program: MMarket
@@ -29,14 +29,19 @@ public abstract class AbstractRaffleStrategy implements IRaffleStrategy {
     protected IStrategyRepository repository;
     // 策略调度服务 -> 只负责抽奖处理，通过新增接口的方式，隔离职责，不需要使用方关心或者调用抽奖的初始化
     protected IStrategyDispatch strategyDispatch;
+    // 抽奖的责任链工厂类 -> 从抽奖的规则中，解耦出前置规则为责任链处理
+    private final DefaultChainFactory defaultChainFactory;
 
-    public AbstractRaffleStrategy(IStrategyRepository repository, IStrategyDispatch strategyDispatch) {
+    @Autowired
+    public AbstractRaffleStrategy(IStrategyRepository repository, IStrategyDispatch strategyDispatch, DefaultChainFactory defaultChainFactory) {
         this.repository = repository;
         this.strategyDispatch = strategyDispatch;
+        this.defaultChainFactory = defaultChainFactory;
     }
 
     @Override
     public RaffleAwardEntity performRaffle(RaffleFactorEntity raffleFactorEntity) {
+
         // 1. 参数校验: 检查 raffleFactorEntity 中的 userId 和 strategyId 是否为空
         String userId = raffleFactorEntity.getUserId();
         Long strategyId = raffleFactorEntity.getStrategyId();
@@ -45,11 +50,25 @@ public abstract class AbstractRaffleStrategy implements IRaffleStrategy {
                     ResponseCode.ILLEGAL_PARAMETER.getInfo());
         }
 
+        // 2. 获取抽奖责任链 - 进行前置规则的责任链处理
+        ILogicChain LogicChain = defaultChainFactory.openLogicChain(strategyId);
+
+        LogicChainContext.LogicChainContextBuilder builder = LogicChainContext.builder();
+        builder.userId(userId);
+        builder.strategyId(strategyId);
+        builder.awardId(raffleFactorEntity.getAwardId());
+        LogicChainContext context = builder.build();
+
+        // 3. 通过责任链获得，奖品ID
+        LogicChainContext ret = LogicChain.process(context);
+        Integer awardId = ret.getAwardId();
+
+/** ==================== 【已重构的部分】 ====================
+        // >>> fixme：使用责任链模式重构部分：起始 ========================================================================
         // 2. 策略查询
         StrategyEntity strategy = repository.queryStrategyEntityByStrategyId(strategyId);
         String[] ruleModelsBefore = strategy.getSeperatedRuleModels();
 
-        // >>> fixme：使用责任链模式重构部分：起始 ========================================================================
         // 3. 抽奖前 - 规则过滤
         RuleActionEntity<RuleActionEntity.RaffleBeforeEntity> ruleActionEntity =
                 this.doCheckRaffleBeforeLogic(raffleFactorEntity, ruleModelsBefore);
@@ -74,16 +93,17 @@ public abstract class AbstractRaffleStrategy implements IRaffleStrategy {
                         .build();
             }
         }
-        // <<< fixme：使用责任链模式重构部分：结束 ========================================================================
 
-        // 4. 过滤完毕，进行【默认抽奖】流程
+        // 4. 前置规则过滤完毕，进行【默认抽奖】流程
         // note：规则引擎的默认抽奖方式
         Integer awardId = strategyDispatch.getRandomAwardId(strategyId);
+        // <<< fixme：使用责任链模式重构部分：结束 ========================================================================
+*/
 
-        // 5. 查询奖品规则，包括：【1. 抽奖中（拿到奖品ID时，过滤规则），2. 抽奖后（扣减完奖品库存后过滤，抽奖中拦截和无库存则走兜底）】
+        // 4. 查询奖品规则，包括：【1. 抽奖中（拿到奖品ID时，过滤规则），2. 抽奖后（扣减完奖品库存后过滤，抽奖中拦截和无库存则走兜底）】
         StrategyAwardRuleModelVO strategyAwardRuleModelVO = repository.queryStrategyAwardRuleModelVO(strategyId, awardId);
 
-        // 6. 抽奖中 - 规则过滤
+        // 5. 抽奖中 - 规则过滤
         raffleFactorEntity.setAwardId(awardId);
         String[] ruleModelsCenter = strategyAwardRuleModelVO.raffleCenterRuleModelList();
         RuleActionEntity<RuleActionEntity.RaffleCenterEntity> ruleActionCenterEntity =
@@ -102,6 +122,8 @@ public abstract class AbstractRaffleStrategy implements IRaffleStrategy {
                 .build();
     }
 
+    // fixme：通过责任链模式进行重构
+    @Deprecated
     protected abstract RuleActionEntity<RuleActionEntity.RaffleBeforeEntity> doCheckRaffleBeforeLogic(RaffleFactorEntity raffleFactorEntity, String... logics);
 
     protected abstract RuleActionEntity<RuleActionEntity.RaffleCenterEntity> doCheckRaffleCenterLogic(RaffleFactorEntity raffleFactorEntity, String... logics);

@@ -1,4 +1,3 @@
-/*
 package cn.learn.domain.strategy.service.rule.filter.impl;
 
 import cn.learn.domain.strategy.model.entity.RuleActionEntity;
@@ -15,17 +14,17 @@ import org.springframework.stereotype.Component;
 import javax.annotation.Resource;
 import java.util.*;
 
-*/
 /**
  * @program: MMarket
  * @description: 权重规则过滤器 ---> 已重构
  * @author: chouchouGG
  * @create: 2024-06-14 13:12
- **//*
+ **/
 
 @Slf4j
 @Component
 @LogicStrategy(logicMode = DefaultLogicFactory.LogicModel.RULE_WIGHT)
+@Deprecated
 public class RuleWeightLogicFilter implements ILogicFilter<RuleActionEntity.RaffleBeforeEntity> {
 
     @Resource
@@ -34,7 +33,6 @@ public class RuleWeightLogicFilter implements ILogicFilter<RuleActionEntity.Raff
     // fixme: 当前测试阶段使用的是固定值
     private final Long userScore = 0L;
 
-    */
 /**
      * 权重规则过滤；
      * 1. 权重规则格式；4000:102,103,104,105 5000:102,103,104,105,106,107 6000:102,103,104,105,106,107,108,109
@@ -42,7 +40,8 @@ public class RuleWeightLogicFilter implements ILogicFilter<RuleActionEntity.Raff
      *
      * @param ruleMatterEntity 规则物料实体对象
      * @return 规则过滤结果
-     *//*
+ **/
+
 
     @Override
     public RuleActionEntity filter(RuleMatterEntity ruleMatterEntity) {
@@ -51,11 +50,8 @@ public class RuleWeightLogicFilter implements ILogicFilter<RuleActionEntity.Raff
         Integer awardId = ruleMatterEntity.getAwardId();
         String ruleModel = ruleMatterEntity.getRuleModel();
 
-        log.info("规则过滤-权重 userId:{} strategyId:{} ruleModel:{}",
-                userId,
-                strategyId,
-                ruleModel,
-                DefaultLogicFactory.LogicModel.RULE_WIGHT.getInfo());
+        log.info("规则过滤-权重 userId:{} strategyId:{} ruleModel:{} info:{}",
+                userId, strategyId, ruleModel, DefaultLogicFactory.LogicModel.RULE_WIGHT.getInfo());
 
         String ruleValue = repository.queryStrategyRuleValue(strategyId, awardId, ruleModel);
 
@@ -122,4 +118,3 @@ public class RuleWeightLogicFilter implements ILogicFilter<RuleActionEntity.Raff
         return ruleValueMap;
     }
 }
-*/

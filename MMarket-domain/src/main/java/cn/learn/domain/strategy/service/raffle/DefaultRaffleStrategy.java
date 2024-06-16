@@ -5,7 +5,9 @@ import cn.learn.domain.strategy.model.entity.RuleActionEntity;
 import cn.learn.domain.strategy.model.entity.RuleMatterEntity;
 import cn.learn.domain.strategy.model.vo.RuleLogicCheckTypeVO;
 import cn.learn.domain.strategy.respository.IStrategyRepository;
+import cn.learn.domain.strategy.service.AbstractRaffleStrategy;
 import cn.learn.domain.strategy.service.armory.IStrategyDispatch;
+import cn.learn.domain.strategy.service.rule.chain.factory.DefaultChainFactory;
 import cn.learn.domain.strategy.service.rule.filter.ILogicFilter;
 import cn.learn.domain.strategy.service.rule.filter.factory.DefaultLogicFactory;
 import cn.learn.types.common.Constants;
@@ -30,11 +32,14 @@ public class DefaultRaffleStrategy extends AbstractRaffleStrategy {
     @Resource
     private DefaultLogicFactory logicFactory;
 
-    public DefaultRaffleStrategy(IStrategyRepository repository, IStrategyDispatch strategyDispatch) {
-        super(repository, strategyDispatch);
+    public DefaultRaffleStrategy(IStrategyRepository repository, IStrategyDispatch strategyDispatch, DefaultChainFactory defaultChainFactory) {
+        super(repository, strategyDispatch, defaultChainFactory);
     }
 
+
+    //  fixme：通过责任链模式进行重构
     @Override
+    @Deprecated
     protected RuleActionEntity<RuleActionEntity.RaffleBeforeEntity> doCheckRaffleBeforeLogic(RaffleFactorEntity raffleFactorEntity, String... logics) {
         if (logics == null || 0 == logics.length) {
             return RuleActionEntity.<RuleActionEntity.RaffleBeforeEntity>builder()

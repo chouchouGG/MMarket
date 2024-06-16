@@ -152,6 +152,9 @@ public class StrategyRepository implements IStrategyRepository {
         strategyRule.setRuleModel(ruleModel);
         // 查询数据库（这里为了🎯🎯🎯简化逻辑没有走缓存，直接走库）
         StrategyRulePO strategyRuleRes = strategyRuleDao.queryStrategyRule(strategyRule);
+        if (strategyRuleRes == null) {
+            return null;
+        }
         return StrategyRuleEntity.builder()
                 .strategyId(strategyRuleRes.getStrategyId())
                 .awardId(strategyRuleRes.getAwardId())

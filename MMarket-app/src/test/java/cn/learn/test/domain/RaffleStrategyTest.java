@@ -5,6 +5,7 @@ import cn.learn.domain.strategy.model.entity.RaffleFactorEntity;
 import cn.learn.domain.strategy.service.IRaffleStrategy;
 import cn.learn.domain.strategy.service.armory.StrategyArmoryDispatch;
 import cn.learn.domain.strategy.service.rule.filter.impl.RuleLockLogicFilter;
+//import cn.learn.domain.strategy.service.rule.filter.impl.RuleWeightLogicFilter;
 import cn.learn.domain.strategy.service.rule.filter.impl.RuleWeightLogicFilter;
 import com.alibaba.fastjson.JSON;
 import lombok.extern.slf4j.Slf4j;
@@ -33,13 +34,16 @@ public class RaffleStrategyTest {
     @Resource
     private IRaffleStrategy raffleStrategy;
 
+    /* fixme: 使用责任链重构后会出现报错，所以先注释起来 */
     // note：用作mock测试（仿真测试），实际情况中用户的积分（幸运值）是变化的，这里用固定值进行模拟。
     @Resource
+    @Deprecated
     private RuleWeightLogicFilter ruleWeightLogicFilter;
 
     @Resource
     private RuleLockLogicFilter ruleLockLogicFilter;
 
+    /* fixme: 使用责任链重构后会出现报错，所以先注释起来 */
     @Before
     public void setUp() {
         log.info("策略装配结果：{}", strategyArmory.assembleLotteryStrategy(100001L));

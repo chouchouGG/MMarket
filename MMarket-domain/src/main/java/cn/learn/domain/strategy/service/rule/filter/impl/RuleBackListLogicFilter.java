@@ -1,4 +1,3 @@
-/*
 package cn.learn.domain.strategy.service.rule.filter.impl;
 
 import cn.learn.domain.strategy.model.entity.RuleActionEntity;
@@ -14,16 +13,17 @@ import org.springframework.stereotype.Component;
 
 import javax.annotation.Resource;
 
-*/
-/**
+/*
  * @author Fuzhengwei bugstack.cn @小傅哥
  * @description 【抽奖前规则】黑名单用户过滤规则 -> 已重构
  * @create 2024-01-06 13:19
- *//*
+
+*/
 
 @Slf4j
 @Component
 @LogicStrategy(logicMode = DefaultLogicFactory.LogicModel.RULE_BLACKLIST) // 自定义注解，
+@Deprecated
 public class RuleBackListLogicFilter implements ILogicFilter<RuleActionEntity.RaffleBeforeEntity> {
 
     @Resource
@@ -78,4 +78,3 @@ public class RuleBackListLogicFilter implements ILogicFilter<RuleActionEntity.Ra
     }
 
 }
-*/
