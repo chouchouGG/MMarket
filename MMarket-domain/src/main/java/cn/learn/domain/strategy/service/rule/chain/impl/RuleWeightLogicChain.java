@@ -46,7 +46,7 @@ public class RuleWeightLogicChain extends AbstractLogicChain {
 
         String ruleValue = repository.queryStrategyRuleValue(strategyId, null, ruleModelName);
 
-        // 1. 根据用户ID查询用户抽奖消耗的积分值，本章节我们先写死为固定的值。后续需要从数据库中查询。
+        // 1. 解析权重规则值 4000:102,103,104,105 拆解为；4000 -> 4000:102,103,104,105 便于比对判断
         Map<Long, String> analyticalValueGroup = getAnalyticalValue(ruleValue);
         if (null == analyticalValueGroup || analyticalValueGroup.isEmpty()) {
             log.info("【策略{}】的权重规则配置信息为空，请检查数据库配置。", strategyId);

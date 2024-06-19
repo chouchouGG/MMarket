@@ -8,6 +8,7 @@ import cn.learn.domain.strategy.service.annotation.LogicStrategy;
 import cn.learn.domain.strategy.service.rule.filter.ILogicFilter;
 import cn.learn.domain.strategy.service.rule.filter.factory.DefaultLogicFactory;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.Resource;
@@ -43,7 +44,17 @@ public class RuleLockLogicFilter implements ILogicFilter<RuleActionEntity.Raffle
 
         // 获取数据库中配置的奖品解锁规则模型的解锁次数
         String ruleValue = repository.queryStrategyRuleValue(strategyId, awardId, ruleModel);
-        long unlockThreshold = Long.parseLong(ruleValue);
+        if (StringUtils.isBlank(ruleValue)) {
+            // 添加日志记录信息
+            log.warn("解锁规则中配置的 ruleValue 规则值为空， strategyId: {}, awardId: {}, ruleModel: {}", strategyId, awardId, ruleModel);
+        }
+
+        long unlockThreshold = 0L;
+        try {
+            unlockThreshold = Long.parseLong(ruleValue);
+        } catch (Exception e) {
+            throw new RuntimeException("规则过滤-解锁规则中配置的 ruleValue 规则值为: " + ruleValue + " ，配置不正确");
+        }
 
         if (userRaffleCount >= unlockThreshold) {
             // 用户抽奖次数 >= 奖品解锁的阈值，则放行
