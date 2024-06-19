@@ -1,4 +1,4 @@
-package cn.learn.domain.strategy.service.rule.chain;
+package cn.learn.domain.strategy.service.rule.chain.logicChain;
 
 /**
  * @program: MMarket

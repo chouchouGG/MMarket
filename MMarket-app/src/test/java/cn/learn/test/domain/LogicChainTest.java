@@ -2,7 +2,7 @@ package cn.learn.test.domain;
 
 import cn.learn.domain.strategy.model.entity.LogicChainContext;
 import cn.learn.domain.strategy.service.armory.IStrategyArmory;
-import cn.learn.domain.strategy.service.rule.chain.ILogicChain;
+import cn.learn.domain.strategy.service.rule.chain.logicChain.ILogicChain;
 import cn.learn.domain.strategy.service.rule.chain.factory.DefaultChainFactory;
 import cn.learn.domain.strategy.service.rule.chain.impl.RuleWeightLogicChain;
 import lombok.extern.slf4j.Slf4j;

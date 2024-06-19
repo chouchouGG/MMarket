@@ -1,6 +1,8 @@
 package cn.learn.domain.strategy.service.rule.chain;
 
 import cn.learn.domain.strategy.model.entity.LogicChainContext;
+import cn.learn.domain.strategy.service.rule.chain.logicChain.ILogicChain;
+import cn.learn.domain.strategy.service.rule.chain.logicChain.ILogicChainAware;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 

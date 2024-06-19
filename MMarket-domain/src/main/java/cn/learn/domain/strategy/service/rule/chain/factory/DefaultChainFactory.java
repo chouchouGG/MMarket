@@ -2,7 +2,7 @@ package cn.learn.domain.strategy.service.rule.chain.factory;
 
 import cn.learn.domain.strategy.model.entity.StrategyEntity;
 import cn.learn.domain.strategy.respository.IStrategyRepository;
-import cn.learn.domain.strategy.service.rule.chain.ILogicChain;
+import cn.learn.domain.strategy.service.rule.chain.logicChain.ILogicChain;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
