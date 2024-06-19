@@ -26,9 +26,7 @@ import java.util.*;
 @Service
 public class StrategyArmoryDispatch implements IStrategyArmory, IStrategyDispatch {
 
-    /* NOTE: DDD 架构中，需要获取数据库中的某些值时，不用像 MVC 架构中直接
-        去调用 DAO 层的接口，而是交给 infrastructure 基础层去完成。*/
-
+    /* NOTE: DDD 架构中，需要获取数据库中的某些值时，不用像 MVC 架构中直接去调用 DAO 层的接口，而是交给 infrastructure 基础层去完成。*/
     @Resource
     private IStrategyRepository strategyRepository;
 
@@ -50,7 +48,7 @@ public class StrategyArmoryDispatch implements IStrategyArmory, IStrategyDispatc
                 .map(StrategyAwardEntity::getAwardRate)
                 .reduce(BigDecimal.ZERO, BigDecimal::add);
 
-//        // fixme: 概率装载的算法需要改进
+//        // fixme【已修改】: 概率装载的算法需要改进
 //        BigDecimal remainder = minAwardProbability.remainder(BigDecimal.ONE);
 //        // step: 小数点需要向右移动的次数
 //        int step = 0;
@@ -60,7 +58,7 @@ public class StrategyArmoryDispatch implements IStrategyArmory, IStrategyDispatc
 //        }
 
         // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-        // fixme: 如下是xfg计算【策略奖品查找表】的方式，存在问题，如果两个商品概率分别为 0.3 和 0.7，
+        // fixme【已修改】: 如下是xfg计算【策略奖品查找表】的方式，存在问题，如果两个商品概率分别为 0.3 和 0.7，
             最终【策略奖品查找表】的两件奖品的概率会变成 40% 和 60%，也就是说不能做到和给定的概率精确相等。
         // 4. 用 1 % 0.0001 获得概率范围，百分位、千分位、万分位
         BigDecimal rateRange = totalAwardProbability.divide(minAwardProbability, 0, RoundingMode.CEILING);
@@ -99,8 +97,6 @@ public class StrategyArmoryDispatch implements IStrategyArmory, IStrategyDispatc
 
     /**
      * note: 抽奖策略装配分为两部分：1. 装配默认抽奖表，2. 装配幸运值抽奖表（权重抽奖表）
-     * @param strategyId
-     * @return
      */
     @Override
     public boolean assembleLotteryStrategy(Long strategyId) {
@@ -113,8 +109,8 @@ public class StrategyArmoryDispatch implements IStrategyArmory, IStrategyDispatc
         // 获取策略实体
         StrategyEntity strategyEntity = strategyRepository.queryStrategyEntityByStrategyId(strategyId);
         // 判断当前策略是否设置了权重规则
-        boolean isSettedRuleWeight = strategyEntity.getRuleWeight();
-        if (!isSettedRuleWeight) {
+        boolean isSetRuleWeight = strategyEntity.getRuleWeight();
+        if (!isSetRuleWeight) {
             // 当前策略没有设置权重规则，则直接返回，无需装配【幸运值抽奖表】（权重抽奖表）
             return true;
         }
@@ -144,45 +140,70 @@ public class StrategyArmoryDispatch implements IStrategyArmory, IStrategyDispatc
         return true;
     }
 
-
-    // 统一的装配逻辑
+    /**
+     * 组装抽奖策略
+     *
+     * @param key                     缓存的键
+     * @param strategyAwardEntities   奖品实体列表
+     */
     private void assembleLotteryStrategy(String key, List<StrategyAwardEntity> strategyAwardEntities) {
-        // 1. 获取最小概率值
-        BigDecimal minAwardRate = strategyAwardEntities.stream()
-                .map(StrategyAwardEntity::getAwardRate)
-                .min(BigDecimal::compareTo)
-                .orElse(BigDecimal.ZERO);
+        // 1. 获取最小概率值和概率值总和
+        BigDecimal minAwardRate = getMinAwardRate(strategyAwardEntities);
 
-        // 2. 获取概率值总和
-        BigDecimal totalAwardRate = strategyAwardEntities.stream()
-                .map(StrategyAwardEntity::getAwardRate)
-                .reduce(BigDecimal.ZERO, BigDecimal::add);
+        // 2. 获取最小奖品概率的标度，用于后续计算
+        int stepToMove = getAwardRateScale(minAwardRate);
 
-        // 3. 用 1 % 0.0001 获得概率范围，百分位、千分位、万分位
-        BigDecimal rateRange = totalAwardRate.divide(minAwardRate, 0, RoundingMode.CEILING);
+        // 3. 生成奖品概率查找表
+        List<Integer> awardRateTable = getAwardRateSearchTable(strategyAwardEntities, stepToMove);
 
-        // 4. 生成策略奖品概率查找表「这里指需要在list集合中，存放上对应的奖品占位即可，占位越多等于概率越高」
-        List<Integer> strategyAwardSearchRateTables = new ArrayList<>(rateRange.intValue());
-        for (StrategyAwardEntity strategyAward : strategyAwardEntities) {
-            Integer awardId = strategyAward.getAwardId();
-            BigDecimal awardRate = strategyAward.getAwardRate();
+        // 4. 对存储的奖品进行乱序操作，以确保随机性
+        Collections.shuffle(awardRateTable);
+
+        // fixme: 直接使用 ArrayList 的下标作为映射是不是也可以？就不用放到 Map 里了？
+        // 5. 生成映射表，key值对应概率值，通过概率来获得对应的奖品ID
+        Map<Integer, Integer> shuffleStrategyAwardSearchRateTable = new LinkedHashMap<>();
+        for (int i = 0; i < awardRateTable.size(); i++) {
+            shuffleStrategyAwardSearchRateTable.put(i, awardRateTable.get(i));
+        }
+
+        // 6. 缓存，将映射表存放到 Redis
+        strategyRepository.storeStrategyAwardSearchRateTable(key, shuffleStrategyAwardSearchRateTable.size(), shuffleStrategyAwardSearchRateTable);
+    }
+
+    /**
+     * 生成奖品概率查找表
+     *
+     * @param strategyAwardEntities 奖品实体列表
+     * @param stepToMove            小数点需要向右移动的次数
+     * @return 奖品概率查找表
+     */
+    private static List<Integer> getAwardRateSearchTable(List<StrategyAwardEntity> strategyAwardEntities, int stepToMove) {
+        // 参数校验
+        if (strategyAwardEntities == null || strategyAwardEntities.isEmpty()) {
+            throw new IllegalArgumentException("strategyAwardEntities 不能为 null 或空");
+        }
+        if (stepToMove < 0) {
+            throw new IllegalArgumentException("stepToMove 为负数");
+        }
+
+
+        int room = 0;
+        // 计算总的占位空间
+        for (StrategyAwardEntity awardEntity : strategyAwardEntities) {
+            room += awardEntity.getAwardRate().movePointRight(stepToMove).intValue();
+        }
+
+        // 4. 生成奖品概率表，需要在list集合中存放对应的奖品占位，空间换时间
+        List<Integer> awardRateTable = new ArrayList<>(room);
+        for (StrategyAwardEntity awardEntity : strategyAwardEntities) {
+            Integer awardId = awardEntity.getAwardId();
             // 计算出每个概率值需要存放到查找表的数量，循环填充
-            for (int i = 0; i < rateRange.multiply(awardRate).setScale(0, RoundingMode.CEILING).intValue(); i++) {
-                strategyAwardSearchRateTables.add(awardId);
+            int count = awardEntity.getAwardRate().movePointRight(stepToMove).intValue();
+            for (int i = 0; i < count; i++) {
+                awardRateTable.add(awardId);
             }
         }
-
-        // 5. 对存储的奖品进行乱序操作
-        Collections.shuffle(strategyAwardSearchRateTables);
-
-        // 6. 生成出Map集合，key值，对应的就是后续的概率值。通过概率来获得对应的奖品ID
-        Map<Integer, Integer> shuffleStrategyAwardSearchRateTable = new LinkedHashMap<>();
-        for (int i = 0; i < strategyAwardSearchRateTables.size(); i++) {
-            shuffleStrategyAwardSearchRateTable.put(i, strategyAwardSearchRateTables.get(i));
-        }
-
-        // 7. 存放到 Redis
-        strategyRepository.storeStrategyAwardSearchRateTable(key, shuffleStrategyAwardSearchRateTable.size(), shuffleStrategyAwardSearchRateTable);
+        return awardRateTable;
     }
 
     @Override
@@ -209,4 +230,51 @@ public class StrategyArmoryDispatch implements IStrategyArmory, IStrategyDispatc
         /* fixme: 如果【奖品映射表】（策略奖品查找表）已经被 redis 淘汰出内存，那么如下结果可能返回 null */
         return strategyRepository.getStrategyAwardAssemble(key, random);
     }
+
+    /**
+     * 获取最小的奖励概率值
+     *
+     * @param strategyAwardEntities 奖励实体列表
+     * @return 最小的奖励概率值，如果列表为空或 null，则返回 BigDecimal.ZERO
+     */
+    private static BigDecimal getMinAwardRate(List<StrategyAwardEntity> strategyAwardEntities) {
+        // 1. 检查集合是否为空或空列表
+        if (strategyAwardEntities == null || strategyAwardEntities.isEmpty()) {
+            return BigDecimal.ZERO;
+        }
+
+        // 2. 初始化最小概率值为列表的第一个元素的概率值
+        BigDecimal minAwardRate = strategyAwardEntities.get(0).getAwardRate();
+
+        // 3. 遍历剩余的元素，寻找最小的概率值
+        int size = strategyAwardEntities.size();
+        for (int i = 1; i < size; i++) {
+            StrategyAwardEntity entity = strategyAwardEntities.get(i);
+            BigDecimal awardRate = entity.getAwardRate();
+            // 4. 更新最小概率值
+            if (awardRate.compareTo(minAwardRate) < 0) {
+                minAwardRate = awardRate;
+            }
+        }
+        // 5. 返回最小的概率值
+        return minAwardRate;
+    }
+
+
+    /**
+     * 转换小数为整数，并返回小数点向右移动的次数，即小数的标度scale。
+     *
+     * @param value 要转换的小数
+     * @return 小数点向右移动的次数
+     */
+    private static int getAwardRateScale(BigDecimal value) {
+        // scale: 小数点需要向右移动的次数
+        int scale = 0;
+        while (value.remainder(BigDecimal.ONE).compareTo(BigDecimal.ZERO) != 0) {
+            value = value.movePointRight(1);
+            scale++;
+        }
+        return scale;
+    }
+
 }

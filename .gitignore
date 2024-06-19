@@ -2,6 +2,7 @@ target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
+/MMarket-app/data/log/
 
 ### IntelliJ IDEA ###
 .idea/modules.xml
@@ -11,6 +12,7 @@ target/
 *.iws
 *.iml
 *.ipr
+
 
 ### Eclipse ###
 .apt_generated
@@ -38,4 +40,4 @@ build/
 .DS_Store
 /data/
 /.idea/
-/MMarket-app/data/log/
+
