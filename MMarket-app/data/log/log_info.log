@@ -1,89 +1,104 @@
-24-06-19.13:05:31.920 [main            ] INFO  StrategyArmoryDispatchTest - Starting StrategyArmoryDispatchTest using Java 1.8.0_402 on wyh-machine with PID 19824 (started by 98389 in E:\Java_code\MMarket\MMarket-app)
-24-06-19.13:05:31.922 [main            ] INFO  StrategyArmoryDispatchTest - The following 1 profile is active: "dev"
-24-06-19.13:05:33.984 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-24-06-19.13:05:33.990 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-24-06-19.13:05:34.038 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 24 ms. Found 0 Redis repository interfaces.
-24-06-19.13:05:37.111 [main            ] INFO  Version                - Redisson 3.23.4
-24-06-19.13:05:38.896 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for 117.72.77.81/117.72.77.81:16379
-24-06-19.13:05:39.306 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 117.72.77.81/117.72.77.81:16379
-24-06-19.13:05:42.362 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-24-06-19.13:05:42.469 [main            ] INFO  StrategyArmoryDispatchTest - Started StrategyArmoryDispatchTest in 11.534 seconds (JVM running for 13.347)
-24-06-19.13:05:43.335 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Starting...
-24-06-19.13:05:44.668 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Start completed.
-24-06-19.13:05:45.006 [SpringApplicationShutdownHook] INFO  HikariDataSource       - Retail_HikariCP - Shutdown initiated...
-24-06-19.13:05:45.389 [SpringApplicationShutdownHook] INFO  HikariDataSource       - Retail_HikariCP - Shutdown completed.
-24-06-19.13:08:19.922 [main            ] INFO  StrategyArmoryDispatchTest - Starting StrategyArmoryDispatchTest using Java 1.8.0_402 on wyh-machine with PID 11872 (started by 98389 in E:\Java_code\MMarket\MMarket-app)
-24-06-19.13:08:19.923 [main            ] INFO  StrategyArmoryDispatchTest - The following 1 profile is active: "dev"
-24-06-19.13:08:21.250 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-24-06-19.13:08:21.255 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-24-06-19.13:08:21.301 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 22 ms. Found 0 Redis repository interfaces.
-24-06-19.13:08:24.296 [main            ] INFO  Version                - Redisson 3.23.4
-24-06-19.13:08:26.101 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 117.72.77.81/117.72.77.81:16379
-24-06-19.13:08:26.929 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 117.72.77.81/117.72.77.81:16379
-24-06-19.13:08:30.112 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-24-06-19.13:08:30.229 [main            ] INFO  StrategyArmoryDispatchTest - Started StrategyArmoryDispatchTest in 10.861 seconds (JVM running for 12.017)
-24-06-19.13:08:31.347 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Starting...
-24-06-19.13:08:32.452 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Start completed.
-24-06-19.13:08:33.010 [main            ] INFO  StrategyArmoryDispatchTest - test_assembleLotteryStrategy 测试结果：true
-24-06-19.13:08:33.114 [main            ] INFO  StrategyArmoryDispatchTest - 第 0 次随机抽取的奖品id为：109
-24-06-19.13:08:33.223 [main            ] INFO  StrategyArmoryDispatchTest - 第 1 次随机抽取的奖品id为：108
-24-06-19.13:08:33.357 [main            ] INFO  StrategyArmoryDispatchTest - 第 2 次随机抽取的奖品id为：101
-24-06-19.13:08:33.485 [main            ] INFO  StrategyArmoryDispatchTest - 第 3 次随机抽取的奖品id为：108
-24-06-19.13:08:33.587 [main            ] INFO  StrategyArmoryDispatchTest - 第 4 次随机抽取的奖品id为：102
-24-06-19.13:08:33.678 [SpringApplicationShutdownHook] INFO  HikariDataSource       - Retail_HikariCP - Shutdown initiated...
-24-06-19.13:08:34.193 [SpringApplicationShutdownHook] INFO  HikariDataSource       - Retail_HikariCP - Shutdown completed.
-24-06-19.13:09:52.569 [main            ] INFO  StrategyArmoryDispatchTest - Starting StrategyArmoryDispatchTest using Java 1.8.0_402 on wyh-machine with PID 35336 (started by 98389 in E:\Java_code\MMarket\MMarket-app)
-24-06-19.13:09:52.570 [main            ] INFO  StrategyArmoryDispatchTest - The following 1 profile is active: "dev"
-24-06-19.13:09:53.774 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-24-06-19.13:09:53.778 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-24-06-19.13:09:53.836 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 32 ms. Found 0 Redis repository interfaces.
-24-06-19.13:09:56.981 [main            ] INFO  Version                - Redisson 3.23.4
-24-06-19.13:09:58.922 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 117.72.77.81/117.72.77.81:16379
-24-06-19.13:09:59.344 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 117.72.77.81/117.72.77.81:16379
-24-06-19.13:10:02.444 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-24-06-19.13:10:02.541 [main            ] INFO  StrategyArmoryDispatchTest - Started StrategyArmoryDispatchTest in 10.443 seconds (JVM running for 17.592)
-24-06-19.13:10:03.670 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Starting...
-24-06-19.13:10:05.454 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Start completed.
-24-06-19.13:10:05.931 [main            ] INFO  StrategyArmoryDispatchTest - test_assembleLotteryStrategy 测试结果：true
-24-06-19.13:10:06.045 [main            ] INFO  StrategyArmoryDispatchTest - 第 0 次随机抽取的奖品id为：104
-24-06-19.13:10:06.147 [main            ] INFO  StrategyArmoryDispatchTest - 第 1 次随机抽取的奖品id为：101
-24-06-19.13:10:06.287 [main            ] INFO  StrategyArmoryDispatchTest - 第 2 次随机抽取的奖品id为：108
-24-06-19.13:10:06.404 [main            ] INFO  StrategyArmoryDispatchTest - 第 3 次随机抽取的奖品id为：103
-24-06-19.13:10:06.507 [main            ] INFO  StrategyArmoryDispatchTest - 第 4 次随机抽取的奖品id为：104
-24-06-19.13:10:06.603 [SpringApplicationShutdownHook] INFO  HikariDataSource       - Retail_HikariCP - Shutdown initiated...
-24-06-19.13:10:06.786 [SpringApplicationShutdownHook] INFO  HikariDataSource       - Retail_HikariCP - Shutdown completed.
-24-06-19.13:11:30.396 [main            ] INFO  StrategyArmoryDispatchTest - Starting StrategyArmoryDispatchTest using Java 1.8.0_402 on wyh-machine with PID 11760 (started by 98389 in E:\Java_code\MMarket\MMarket-app)
-24-06-19.13:11:30.400 [main            ] INFO  StrategyArmoryDispatchTest - The following 1 profile is active: "dev"
-24-06-19.13:11:31.780 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-24-06-19.13:11:31.785 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-24-06-19.13:11:31.832 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 24 ms. Found 0 Redis repository interfaces.
-24-06-19.13:11:34.872 [main            ] INFO  Version                - Redisson 3.23.4
-24-06-19.13:11:36.664 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 117.72.77.81/117.72.77.81:16379
-24-06-19.13:11:37.369 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 117.72.77.81/117.72.77.81:16379
-24-06-19.13:11:40.478 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-24-06-19.13:11:40.582 [main            ] INFO  StrategyArmoryDispatchTest - Started StrategyArmoryDispatchTest in 10.744 seconds (JVM running for 11.945)
-24-06-19.13:11:41.860 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Starting...
-24-06-19.13:11:42.950 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Start completed.
-24-06-19.13:11:43.423 [main            ] INFO  StrategyArmoryDispatchTest - test_assembleLotteryStrategy 测试结果：true
-24-06-19.13:11:43.524 [main            ] INFO  StrategyArmoryDispatchTest - 测试结果：102 - 4000 策略配置
-24-06-19.13:11:43.624 [main            ] INFO  StrategyArmoryDispatchTest - 测试结果：102 - 5000 策略配置
-24-06-19.13:11:43.787 [SpringApplicationShutdownHook] INFO  HikariDataSource       - Retail_HikariCP - Shutdown initiated...
-24-06-19.13:11:44.182 [SpringApplicationShutdownHook] INFO  HikariDataSource       - Retail_HikariCP - Shutdown completed.
-24-06-19.13:13:00.735 [main            ] INFO  StrategyArmoryDispatchTest - Starting StrategyArmoryDispatchTest using Java 1.8.0_402 on wyh-machine with PID 23636 (started by 98389 in E:\Java_code\MMarket\MMarket-app)
-24-06-19.13:13:00.736 [main            ] INFO  StrategyArmoryDispatchTest - The following 1 profile is active: "dev"
-24-06-19.13:13:01.970 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-24-06-19.13:13:01.974 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-24-06-19.13:13:02.018 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 21 ms. Found 0 Redis repository interfaces.
-24-06-19.13:13:04.869 [main            ] INFO  Version                - Redisson 3.23.4
-24-06-19.13:13:06.550 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 117.72.77.81/117.72.77.81:16379
-24-06-19.13:13:07.391 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 117.72.77.81/117.72.77.81:16379
-24-06-19.13:13:10.580 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-24-06-19.13:13:10.670 [main            ] INFO  StrategyArmoryDispatchTest - Started StrategyArmoryDispatchTest in 10.487 seconds (JVM running for 11.683)
-24-06-19.13:13:11.932 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Starting...
-24-06-19.13:13:12.960 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Start completed.
-24-06-19.13:13:13.408 [main            ] INFO  StrategyArmoryDispatchTest - test_assembleLotteryStrategy 测试结果：true
-24-06-19.13:13:13.524 [main            ] INFO  StrategyArmoryDispatchTest - 测试结果：104 - 4000 策略配置
-24-06-19.13:13:13.629 [main            ] INFO  StrategyArmoryDispatchTest - 测试结果：102 - 5000 策略配置
-24-06-19.13:13:13.736 [main            ] INFO  StrategyArmoryDispatchTest - 测试结果：108 - 6000 策略配置
-24-06-19.13:13:13.828 [SpringApplicationShutdownHook] INFO  HikariDataSource       - Retail_HikariCP - Shutdown initiated...
-24-06-19.13:13:14.042 [SpringApplicationShutdownHook] INFO  HikariDataSource       - Retail_HikariCP - Shutdown completed.
+24-06-20.15:20:25.251 [main            ] INFO  LogicChainTest         - Starting LogicChainTest using Java 1.8.0_402 on wyh-machine with PID 22620 (started by 98389 in E:\Java_code\MMarket\MMarket-app)
+24-06-20.15:20:25.252 [main            ] INFO  LogicChainTest         - The following 1 profile is active: "dev"
+24-06-20.15:20:26.287 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-06-20.15:20:26.291 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-06-20.15:20:26.343 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 25 ms. Found 0 Redis repository interfaces.
+24-06-20.15:20:28.232 [main            ] INFO  Version                - Redisson 3.23.4
+24-06-20.15:20:29.356 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 117.72.77.81/117.72.77.81:16379
+24-06-20.15:20:30.862 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 117.72.77.81/117.72.77.81:16379
+24-06-20.15:20:32.703 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-06-20.15:20:32.757 [main            ] INFO  LogicChainTest         - Started LogicChainTest in 7.972 seconds (JVM running for 8.882)
+24-06-20.15:20:33.904 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Starting...
+24-06-20.15:20:35.046 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Start completed.
+24-06-20.15:20:35.561 [main            ] INFO  LogicChainTest         - 测试结果：true
+24-06-20.15:20:36.105 [main            ] INFO  LogicChainTest         - 测试结果：true
+24-06-20.15:20:36.981 [main            ] INFO  LogicChainTest         - 测试结果：true
+24-06-20.15:20:37.045 [main            ] INFO  RuleWeightLogicChain   - 抽奖责任链-权重开始 userId: joyboy strategyId: 100001 ruleModel: rule_weight
+24-06-20.15:20:37.117 [main            ] INFO  RuleWeightLogicChain   - 当前用户的积分为0，将采取权重规则：null
+24-06-20.15:20:37.117 [main            ] INFO  RuleWeightLogicChain   - 抽奖责任链-【权重节点】 userId: joyboy strategyId: 100001 ruleModel: rule_weight
+24-06-20.15:20:37.117 [main            ] INFO  BlackListLogicChain    - 抽奖责任链-黑名单开始 userId: joyboy strategyId: 100001 ruleModel: rule_blacklist
+24-06-20.15:20:37.179 [main            ] INFO  BlackListLogicChain    - 抽奖责任链-【黑名单节点】 userId: joyboy strategyId: 100001 ruleModel: rule_blacklist awardId: 100
+24-06-20.15:20:37.300 [main            ] INFO  DefaultLogicChain      - 抽奖责任链-【默认处理节点】 userId: joyboy strategyId: 100001 ruleModel: default awardId: 101
+24-06-20.15:20:37.300 [main            ] INFO  LogicChainTest         - 测试结果：101
+24-06-20.15:20:37.300 [main            ] INFO  RuleWeightLogicChain   - 抽奖责任链-权重开始 userId: joyboy strategyId: 100001 ruleModel: rule_weight
+24-06-20.15:20:37.648 [main            ] INFO  RuleWeightLogicChain   - 当前用户的积分为0，将采取权重规则：null
+24-06-20.15:20:37.648 [main            ] INFO  RuleWeightLogicChain   - 抽奖责任链-【权重节点】 userId: joyboy strategyId: 100001 ruleModel: rule_weight
+24-06-20.15:20:37.648 [main            ] INFO  BlackListLogicChain    - 抽奖责任链-黑名单开始 userId: joyboy strategyId: 100001 ruleModel: rule_blacklist
+24-06-20.15:20:37.720 [main            ] INFO  BlackListLogicChain    - 抽奖责任链-【黑名单节点】 userId: joyboy strategyId: 100001 ruleModel: rule_blacklist awardId: 100
+24-06-20.15:20:37.864 [main            ] INFO  DefaultLogicChain      - 抽奖责任链-【默认处理节点】 userId: joyboy strategyId: 100001 ruleModel: default awardId: 107
+24-06-20.15:20:37.864 [main            ] INFO  LogicChainTest         - 测试结果：107
+24-06-20.15:20:37.864 [main            ] INFO  RuleWeightLogicChain   - 抽奖责任链-权重开始 userId: joyboy strategyId: 100001 ruleModel: rule_weight
+24-06-20.15:20:37.934 [main            ] INFO  RuleWeightLogicChain   - 当前用户的积分为0，将采取权重规则：null
+24-06-20.15:20:37.935 [main            ] INFO  RuleWeightLogicChain   - 抽奖责任链-【权重节点】 userId: joyboy strategyId: 100001 ruleModel: rule_weight
+24-06-20.15:20:37.935 [main            ] INFO  BlackListLogicChain    - 抽奖责任链-黑名单开始 userId: joyboy strategyId: 100001 ruleModel: rule_blacklist
+24-06-20.15:20:37.993 [main            ] INFO  BlackListLogicChain    - 抽奖责任链-【黑名单节点】 userId: joyboy strategyId: 100001 ruleModel: rule_blacklist awardId: 100
+24-06-20.15:20:38.101 [main            ] INFO  DefaultLogicChain      - 抽奖责任链-【默认处理节点】 userId: joyboy strategyId: 100001 ruleModel: default awardId: 107
+24-06-20.15:20:38.102 [main            ] INFO  LogicChainTest         - 测试结果：107
+24-06-20.15:20:38.102 [main            ] INFO  RuleWeightLogicChain   - 抽奖责任链-权重开始 userId: joyboy strategyId: 100001 ruleModel: rule_weight
+24-06-20.15:20:38.163 [main            ] INFO  RuleWeightLogicChain   - 当前用户的积分为0，将采取权重规则：null
+24-06-20.15:20:38.163 [main            ] INFO  RuleWeightLogicChain   - 抽奖责任链-【权重节点】 userId: joyboy strategyId: 100001 ruleModel: rule_weight
+24-06-20.15:20:38.163 [main            ] INFO  BlackListLogicChain    - 抽奖责任链-黑名单开始 userId: joyboy strategyId: 100001 ruleModel: rule_blacklist
+24-06-20.15:20:38.230 [main            ] INFO  BlackListLogicChain    - 抽奖责任链-【黑名单节点】 userId: joyboy strategyId: 100001 ruleModel: rule_blacklist awardId: 100
+24-06-20.15:20:38.344 [main            ] INFO  DefaultLogicChain      - 抽奖责任链-【默认处理节点】 userId: joyboy strategyId: 100001 ruleModel: default awardId: 103
+24-06-20.15:20:38.344 [main            ] INFO  LogicChainTest         - 测试结果：103
+24-06-20.15:20:38.345 [main            ] INFO  RuleWeightLogicChain   - 抽奖责任链-权重开始 userId: joyboy strategyId: 100001 ruleModel: rule_weight
+24-06-20.15:20:38.411 [main            ] INFO  RuleWeightLogicChain   - 当前用户的积分为0，将采取权重规则：null
+24-06-20.15:20:38.412 [main            ] INFO  RuleWeightLogicChain   - 抽奖责任链-【权重节点】 userId: joyboy strategyId: 100001 ruleModel: rule_weight
+24-06-20.15:20:38.412 [main            ] INFO  BlackListLogicChain    - 抽奖责任链-黑名单开始 userId: joyboy strategyId: 100001 ruleModel: rule_blacklist
+24-06-20.15:20:38.488 [main            ] INFO  BlackListLogicChain    - 抽奖责任链-【黑名单节点】 userId: joyboy strategyId: 100001 ruleModel: rule_blacklist awardId: 100
+24-06-20.15:20:38.601 [main            ] INFO  DefaultLogicChain      - 抽奖责任链-【默认处理节点】 userId: joyboy strategyId: 100001 ruleModel: default awardId: 104
+24-06-20.15:20:38.601 [main            ] INFO  LogicChainTest         - 测试结果：104
+24-06-20.15:20:38.707 [SpringApplicationShutdownHook] INFO  HikariDataSource       - Retail_HikariCP - Shutdown initiated...
+24-06-20.15:20:39.359 [SpringApplicationShutdownHook] INFO  HikariDataSource       - Retail_HikariCP - Shutdown completed.
+24-06-20.15:26:06.114 [main            ] INFO  LogicChainTest         - Starting LogicChainTest using Java 1.8.0_402 on wyh-machine with PID 2584 (started by 98389 in E:\Java_code\MMarket\MMarket-app)
+24-06-20.15:26:06.114 [main            ] INFO  LogicChainTest         - The following 1 profile is active: "dev"
+24-06-20.15:26:06.830 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-06-20.15:26:06.832 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-06-20.15:26:06.858 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 10 ms. Found 0 Redis repository interfaces.
+24-06-20.15:26:08.552 [main            ] INFO  Version                - Redisson 3.23.4
+24-06-20.15:26:09.598 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 117.72.77.81/117.72.77.81:16379
+24-06-20.15:26:10.113 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 117.72.77.81/117.72.77.81:16379
+24-06-20.15:26:11.771 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-06-20.15:26:11.829 [main            ] INFO  LogicChainTest         - Started LogicChainTest in 6.03 seconds (JVM running for 6.732)
+24-06-20.15:26:12.563 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Starting...
+24-06-20.15:26:13.488 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Start completed.
+24-06-20.15:26:14.330 [main            ] INFO  LogicChainTest         - 测试结果：true
+24-06-20.15:26:14.559 [main            ] INFO  LogicChainTest         - 测试结果：true
+24-06-20.15:26:14.909 [main            ] INFO  LogicChainTest         - 测试结果：true
+24-06-20.15:26:14.985 [main            ] INFO  RuleWeightLogicChain   - 抽奖责任链-权重开始 userId: joyboy strategyId: 100001 ruleModel: rule_weight
+24-06-20.15:26:15.130 [main            ] INFO  RuleWeightLogicChain   - 当前用户的积分为0，将采取权重规则：null
+24-06-20.15:26:15.130 [main            ] INFO  RuleWeightLogicChain   - 抽奖责任链-【权重节点】 userId: joyboy strategyId: 100001 ruleModel: rule_weight awardId: 没有参与权重抽奖
+24-06-20.15:26:15.130 [main            ] INFO  BlackListLogicChain    - 抽奖责任链-黑名单开始 userId: joyboy strategyId: 100001 ruleModel: rule_blacklist
+24-06-20.15:26:15.190 [main            ] INFO  BlackListLogicChain    - 抽奖责任链-【黑名单节点】 userId: joyboy strategyId: 100001 ruleModel: rule_blacklist awardId: 100
+24-06-20.15:26:15.325 [main            ] INFO  DefaultLogicChain      - 抽奖责任链-【默认处理节点】 userId: joyboy strategyId: 100001 ruleModel: default awardId: 102
+24-06-20.15:26:15.326 [main            ] INFO  LogicChainTest         - 测试结果：102
+24-06-20.15:26:15.326 [main            ] INFO  RuleWeightLogicChain   - 抽奖责任链-权重开始 userId: joyboy strategyId: 100001 ruleModel: rule_weight
+24-06-20.15:26:15.390 [main            ] INFO  RuleWeightLogicChain   - 当前用户的积分为0，将采取权重规则：null
+24-06-20.15:26:15.391 [main            ] INFO  RuleWeightLogicChain   - 抽奖责任链-【权重节点】 userId: joyboy strategyId: 100001 ruleModel: rule_weight awardId: 没有参与权重抽奖
+24-06-20.15:26:15.391 [main            ] INFO  BlackListLogicChain    - 抽奖责任链-黑名单开始 userId: joyboy strategyId: 100001 ruleModel: rule_blacklist
+24-06-20.15:26:15.452 [main            ] INFO  BlackListLogicChain    - 抽奖责任链-【黑名单节点】 userId: joyboy strategyId: 100001 ruleModel: rule_blacklist awardId: 100
+24-06-20.15:26:15.569 [main            ] INFO  DefaultLogicChain      - 抽奖责任链-【默认处理节点】 userId: joyboy strategyId: 100001 ruleModel: default awardId: 101
+24-06-20.15:26:15.569 [main            ] INFO  LogicChainTest         - 测试结果：101
+24-06-20.15:26:15.569 [main            ] INFO  RuleWeightLogicChain   - 抽奖责任链-权重开始 userId: joyboy strategyId: 100001 ruleModel: rule_weight
+24-06-20.15:26:15.634 [main            ] INFO  RuleWeightLogicChain   - 当前用户的积分为0，将采取权重规则：null
+24-06-20.15:26:15.634 [main            ] INFO  RuleWeightLogicChain   - 抽奖责任链-【权重节点】 userId: joyboy strategyId: 100001 ruleModel: rule_weight awardId: 没有参与权重抽奖
+24-06-20.15:26:15.634 [main            ] INFO  BlackListLogicChain    - 抽奖责任链-黑名单开始 userId: joyboy strategyId: 100001 ruleModel: rule_blacklist
+24-06-20.15:26:15.707 [main            ] INFO  BlackListLogicChain    - 抽奖责任链-【黑名单节点】 userId: joyboy strategyId: 100001 ruleModel: rule_blacklist awardId: 100
+24-06-20.15:26:15.833 [main            ] INFO  DefaultLogicChain      - 抽奖责任链-【默认处理节点】 userId: joyboy strategyId: 100001 ruleModel: default awardId: 101
+24-06-20.15:26:15.833 [main            ] INFO  LogicChainTest         - 测试结果：101
+24-06-20.15:26:15.833 [main            ] INFO  RuleWeightLogicChain   - 抽奖责任链-权重开始 userId: joyboy strategyId: 100001 ruleModel: rule_weight
+24-06-20.15:26:15.897 [main            ] INFO  RuleWeightLogicChain   - 当前用户的积分为0，将采取权重规则：null
+24-06-20.15:26:15.898 [main            ] INFO  RuleWeightLogicChain   - 抽奖责任链-【权重节点】 userId: joyboy strategyId: 100001 ruleModel: rule_weight awardId: 没有参与权重抽奖
+24-06-20.15:26:15.898 [main            ] INFO  BlackListLogicChain    - 抽奖责任链-黑名单开始 userId: joyboy strategyId: 100001 ruleModel: rule_blacklist
+24-06-20.15:26:15.966 [main            ] INFO  BlackListLogicChain    - 抽奖责任链-【黑名单节点】 userId: joyboy strategyId: 100001 ruleModel: rule_blacklist awardId: 100
+24-06-20.15:26:16.075 [main            ] INFO  DefaultLogicChain      - 抽奖责任链-【默认处理节点】 userId: joyboy strategyId: 100001 ruleModel: default awardId: 101
+24-06-20.15:26:16.075 [main            ] INFO  LogicChainTest         - 测试结果：101
+24-06-20.15:26:16.075 [main            ] INFO  RuleWeightLogicChain   - 抽奖责任链-权重开始 userId: joyboy strategyId: 100001 ruleModel: rule_weight
+24-06-20.15:26:16.160 [main            ] INFO  RuleWeightLogicChain   - 当前用户的积分为0，将采取权重规则：null
+24-06-20.15:26:16.160 [main            ] INFO  RuleWeightLogicChain   - 抽奖责任链-【权重节点】 userId: joyboy strategyId: 100001 ruleModel: rule_weight awardId: 没有参与权重抽奖
+24-06-20.15:26:16.160 [main            ] INFO  BlackListLogicChain    - 抽奖责任链-黑名单开始 userId: joyboy strategyId: 100001 ruleModel: rule_blacklist
+24-06-20.15:26:16.239 [main            ] INFO  BlackListLogicChain    - 抽奖责任链-【黑名单节点】 userId: joyboy strategyId: 100001 ruleModel: rule_blacklist awardId: 100
+24-06-20.15:26:16.351 [main            ] INFO  DefaultLogicChain      - 抽奖责任链-【默认处理节点】 userId: joyboy strategyId: 100001 ruleModel: default awardId: 102
+24-06-20.15:26:16.351 [main            ] INFO  LogicChainTest         - 测试结果：102
+24-06-20.15:26:16.456 [SpringApplicationShutdownHook] INFO  HikariDataSource       - Retail_HikariCP - Shutdown initiated...
+24-06-20.15:26:17.058 [SpringApplicationShutdownHook] INFO  HikariDataSource       - Retail_HikariCP - Shutdown completed.

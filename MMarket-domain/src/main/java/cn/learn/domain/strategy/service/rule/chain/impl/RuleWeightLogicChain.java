@@ -80,8 +80,8 @@ public class RuleWeightLogicChain extends AbstractLogicChain {
         }
 
         // 5. 过滤其他责任链，（后续有默认抽奖规则过滤节点进行默认抽奖）
-        log.info("抽奖责任链-【权重节点】 userId: {} strategyId: {} ruleModel: {}",
-                userId, strategyId, ruleModelName);
+        log.info("抽奖责任链-【权重节点】 userId: {} strategyId: {} ruleModel: {} awardId: {}",
+                userId, strategyId, ruleModelName, "没有参与权重抽奖");
         context.setStatus(LogicChainContext.ProcessStatus.CONTINUE);
         return context;
     }

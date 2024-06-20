@@ -51,7 +51,7 @@ public class BlackListLogicChain extends AbstractLogicChain {
 
         context.setStatus(LogicChainContext.ProcessStatus.CONTINUE);
         log.info("抽奖责任链-【黑名单节点】 userId: {} strategyId: {} ruleModel: {} awardId: {}",
-                userId, strategyId, ruleModelName, awardId);
+                userId, strategyId, ruleModelName, "没有在黑名单规则中");
         return context;
     }
 }
