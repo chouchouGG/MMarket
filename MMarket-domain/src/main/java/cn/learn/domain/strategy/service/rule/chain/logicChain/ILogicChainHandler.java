@@ -1,6 +1,6 @@
 package cn.learn.domain.strategy.service.rule.chain.logicChain;
 
-import cn.learn.domain.strategy.model.entity.LogicChainContext;
+import cn.learn.domain.strategy.model.entity.ProcessingContext;
 
 /**
  * @author 98389
@@ -20,13 +20,13 @@ public interface ILogicChainHandler extends ILogicChainArmory {
      * 1. 调用当前责任链节点的处理方法
      * 2. 根据具体的业务逻辑自定义是否调用下一个责任链节点的处理流程
      */
-    LogicChainContext process(LogicChainContext context);
+    ProcessingContext process(ProcessingContext context);
 
     /**
      * 当前责任链节点的具体处理过程
      *
      * @return 奖品ID
      */
-    LogicChainContext handle(LogicChainContext context);
+    ProcessingContext handle(ProcessingContext context);
 
 }

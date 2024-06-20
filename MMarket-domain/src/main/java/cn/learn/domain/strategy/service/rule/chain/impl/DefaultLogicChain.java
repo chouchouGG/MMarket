@@ -1,7 +1,6 @@
 package cn.learn.domain.strategy.service.rule.chain.impl;
 
-import cn.learn.domain.strategy.model.entity.LogicChainContext;
-import cn.learn.domain.strategy.model.entity.RaffleFactorEntity;
+import cn.learn.domain.strategy.model.entity.ProcessingContext;
 import cn.learn.domain.strategy.service.armory.IStrategyDispatch;
 import cn.learn.domain.strategy.service.rule.chain.AbstractLogicChain;
 import cn.learn.types.common.Constants;
@@ -24,7 +23,7 @@ public class DefaultLogicChain extends AbstractLogicChain {
     IStrategyDispatch strategyDispatch;
 
     @Override
-    public LogicChainContext handle(LogicChainContext context) {
+    public ProcessingContext handle(ProcessingContext context) {
         Long strategyId = context.getStrategyId();
         String userId = context.getUserId();
         String ruleModelName = getRuleModelName();
@@ -32,7 +31,7 @@ public class DefaultLogicChain extends AbstractLogicChain {
         // 默认抽奖方式
         Integer awardId = strategyDispatch.getRandomAwardId(strategyId);
         context.setAwardId(awardId);
-        context.setStatus(LogicChainContext.ProcessStatus.CONTINUE);
+        context.setStatus(ProcessingContext.ProcessStatus.CONTINUE);
 
         log.info("抽奖责任链-【默认处理节点】 userId: {} strategyId: {} ruleModel: {} awardId: {}",
                 userId, strategyId, ruleModelName, awardId);

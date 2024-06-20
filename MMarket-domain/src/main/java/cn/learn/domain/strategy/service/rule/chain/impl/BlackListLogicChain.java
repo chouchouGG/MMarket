@@ -1,7 +1,6 @@
 package cn.learn.domain.strategy.service.rule.chain.impl;
 
-import cn.learn.domain.strategy.model.entity.LogicChainContext;
-import cn.learn.domain.strategy.model.entity.RaffleFactorEntity;
+import cn.learn.domain.strategy.model.entity.ProcessingContext;
 import cn.learn.domain.strategy.respository.IStrategyRepository;
 import cn.learn.domain.strategy.service.rule.chain.AbstractLogicChain;
 import cn.learn.types.common.Constants;
@@ -24,7 +23,7 @@ public class BlackListLogicChain extends AbstractLogicChain {
     IStrategyRepository repository;
 
     @Override
-    public LogicChainContext handle(LogicChainContext context) {
+    public ProcessingContext handle(ProcessingContext context) {
         Long strategyId = context.getStrategyId();
         String userId = context.getUserId();
         String ruleModelName = getRuleModelName();
@@ -41,7 +40,7 @@ public class BlackListLogicChain extends AbstractLogicChain {
         String[] userBlackIds = splitRuleValue[1].split(Constants.SPLIT);
         for (String id : userBlackIds) {
             if (userId.equals(id)) {
-                context.setStatus(LogicChainContext.ProcessStatus.TERMINATED);
+                context.setStatus(ProcessingContext.ProcessStatus.TERMINATED);
                 context.setAwardId(awardId);
                 log.info("抽奖责任链-【黑名单节点】 userId: {} strategyId: {} ruleModel: {} awardId: {}",
                         userId, strategyId, ruleModelName, awardId);
@@ -49,7 +48,7 @@ public class BlackListLogicChain extends AbstractLogicChain {
             }
         }
 
-        context.setStatus(LogicChainContext.ProcessStatus.CONTINUE);
+        context.setStatus(ProcessingContext.ProcessStatus.CONTINUE);
         log.info("抽奖责任链-【黑名单节点】 userId: {} strategyId: {} ruleModel: {} awardId: {}",
                 userId, strategyId, ruleModelName, "没有在黑名单规则中");
         return context;

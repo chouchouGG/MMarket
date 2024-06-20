@@ -1,6 +1,6 @@
 package cn.learn.domain.strategy.service.rule.chain;
 
-import cn.learn.domain.strategy.model.entity.LogicChainContext;
+import cn.learn.domain.strategy.model.entity.ProcessingContext;
 import cn.learn.domain.strategy.service.rule.chain.logicChain.ILogicChain;
 import cn.learn.domain.strategy.service.rule.chain.logicChain.ILogicChainAware;
 import lombok.extern.slf4j.Slf4j;
@@ -25,12 +25,12 @@ public abstract class AbstractLogicChain implements ILogicChain, ILogicChainAwar
     }
 
     @Override
-     public LogicChainContext process(LogicChainContext context) {
+     public ProcessingContext process(ProcessingContext context) {
          // 1. 调用当前节点的处理方法
-        LogicChainContext ret = handle(context);
+        ProcessingContext ret = handle(context);
 
         // 2. 根据流程的状态 status 决定是否继续传递请求
-         if (context.getStatus() == LogicChainContext.ProcessStatus.CONTINUE && next != null) {
+         if (context.getStatus() == ProcessingContext.ProcessStatus.CONTINUE && next != null) {
              return next.process(context);
          }
 

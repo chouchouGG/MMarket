@@ -1,11 +1,10 @@
 package cn.learn.domain.strategy.model.entity;
 
-import jdk.nashorn.internal.ir.ContinueNode;
 import lombok.*;
 
 /**
  * @program: MMarket
- * @description: 封装责任链节点处理过程中所需的所有参数和状态。
+ * @description: 封装责任链节点处理过程中所需的所有参数和状态。在增添了决策树的组合模式后也用于决策树中保存状态和控制程序执行流。
  * @author: chouchouGG
  * @create: 2024-06-16 14:11
  **/
@@ -13,7 +12,7 @@ import lombok.*;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class LogicChainContext {
+public class ProcessingContext {
 
     private String userId;
     private Long strategyId;

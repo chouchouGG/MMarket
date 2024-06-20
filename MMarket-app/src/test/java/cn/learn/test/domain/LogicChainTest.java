@@ -1,6 +1,6 @@
 package cn.learn.test.domain;
 
-import cn.learn.domain.strategy.model.entity.LogicChainContext;
+import cn.learn.domain.strategy.model.entity.ProcessingContext;
 import cn.learn.domain.strategy.service.armory.IStrategyArmory;
 import cn.learn.domain.strategy.service.rule.chain.logicChain.ILogicChain;
 import cn.learn.domain.strategy.service.rule.chain.factory.DefaultChainFactory;
@@ -43,7 +43,7 @@ public class LogicChainTest {
     @Test
     public void test_LogicChain_rule_blacklist() {
         ILogicChain logicChain = defaultChainFactory.openLogicChain(100001L);
-        LogicChainContext context = LogicChainContext.builder().userId("user001").strategyId(100001L).build();
+        ProcessingContext context = ProcessingContext.builder().userId("user001").strategyId(100001L).build();
 
         // 连续测试5次
         for (int i = 0; i < 5; i++) {
@@ -62,7 +62,7 @@ public class LogicChainTest {
 
         long strategyID = 100001L;
         ILogicChain logicChain = defaultChainFactory.openLogicChain(strategyID);
-        LogicChainContext context = LogicChainContext.builder().userId("joyboy").strategyId(strategyID).build();
+        ProcessingContext context = ProcessingContext.builder().userId("joyboy").strategyId(strategyID).build();
 
         // 连续测试5次
         for (int i = 0; i < 5; i++) {
@@ -76,7 +76,7 @@ public class LogicChainTest {
     public void test_LogicChain_rule_default() {
         long strategyID = 100001L;
         ILogicChain logicChain = defaultChainFactory.openLogicChain(strategyID);
-        LogicChainContext context = LogicChainContext.builder().userId("joyboy").strategyId(strategyID).build();
+        ProcessingContext context = ProcessingContext.builder().userId("joyboy").strategyId(strategyID).build();
 
         // 连续测试5次
         for (int i = 0; i < 5; i++) {

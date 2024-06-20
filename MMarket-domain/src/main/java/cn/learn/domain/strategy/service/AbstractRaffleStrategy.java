@@ -51,14 +51,14 @@ public abstract class AbstractRaffleStrategy implements IRaffleStrategy {
         // 2. 获取抽奖责任链 - 进行前置规则的责任链处理
         ILogicChain LogicChain = defaultChainFactory.openLogicChain(strategyId);
 
-        LogicChainContext.LogicChainContextBuilder builder = LogicChainContext.builder();
+        ProcessingContext.LogicChainContextBuilder builder = ProcessingContext.builder();
         builder.userId(userId);
         builder.strategyId(strategyId);
         builder.awardId(raffleFactorEntity.getAwardId());
-        LogicChainContext context = builder.build();
+        ProcessingContext context = builder.build();
 
         // 3. 通过责任链获得，奖品ID
-        LogicChainContext ret = LogicChain.process(context);
+        ProcessingContext ret = LogicChain.process(context);
         Integer awardId = ret.getAwardId();
 
 /** ==================== 【已重构的部分】 ====================
