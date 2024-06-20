@@ -43,7 +43,8 @@ public class DefaultChainFactory {
         }
 
         // 2. 按照配置顺序装填用户配置的责任链
-        // rule_blacklist、rule_weight 「注意此数据从Redis缓存中获取，如果更新库表，记得在测试阶段手动处理缓存」
+        // fixme：可以提供一个策略规则的优先级表，用于依照各个规则的优先级生成责任链节点，而无需关心配置的策略规则顺序对责任链节点的影响
+        // rule_weight,rule_blacklist 「注意此数据从Redis缓存中获取，如果更新库表，记得在测试阶段手动处理缓存」
         ILogicChain logicChain = logicChainGroup.get(ruleModels[0]);
         ILogicChain current = logicChain;
         for (int i = 1; i < ruleModels.length; i++) {
