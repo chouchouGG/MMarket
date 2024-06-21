@@ -1,104 +1,143 @@
-24-06-20.15:20:25.251 [main            ] INFO  LogicChainTest         - Starting LogicChainTest using Java 1.8.0_402 on wyh-machine with PID 22620 (started by 98389 in E:\Java_code\MMarket\MMarket-app)
-24-06-20.15:20:25.252 [main            ] INFO  LogicChainTest         - The following 1 profile is active: "dev"
-24-06-20.15:20:26.287 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-24-06-20.15:20:26.291 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-24-06-20.15:20:26.343 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 25 ms. Found 0 Redis repository interfaces.
-24-06-20.15:20:28.232 [main            ] INFO  Version                - Redisson 3.23.4
-24-06-20.15:20:29.356 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 117.72.77.81/117.72.77.81:16379
-24-06-20.15:20:30.862 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 117.72.77.81/117.72.77.81:16379
-24-06-20.15:20:32.703 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-24-06-20.15:20:32.757 [main            ] INFO  LogicChainTest         - Started LogicChainTest in 7.972 seconds (JVM running for 8.882)
-24-06-20.15:20:33.904 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Starting...
-24-06-20.15:20:35.046 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Start completed.
-24-06-20.15:20:35.561 [main            ] INFO  LogicChainTest         - 测试结果：true
-24-06-20.15:20:36.105 [main            ] INFO  LogicChainTest         - 测试结果：true
-24-06-20.15:20:36.981 [main            ] INFO  LogicChainTest         - 测试结果：true
-24-06-20.15:20:37.045 [main            ] INFO  RuleWeightLogicChain   - 抽奖责任链-权重开始 userId: joyboy strategyId: 100001 ruleModel: rule_weight
-24-06-20.15:20:37.117 [main            ] INFO  RuleWeightLogicChain   - 当前用户的积分为0，将采取权重规则：null
-24-06-20.15:20:37.117 [main            ] INFO  RuleWeightLogicChain   - 抽奖责任链-【权重节点】 userId: joyboy strategyId: 100001 ruleModel: rule_weight
-24-06-20.15:20:37.117 [main            ] INFO  BlackListLogicChain    - 抽奖责任链-黑名单开始 userId: joyboy strategyId: 100001 ruleModel: rule_blacklist
-24-06-20.15:20:37.179 [main            ] INFO  BlackListLogicChain    - 抽奖责任链-【黑名单节点】 userId: joyboy strategyId: 100001 ruleModel: rule_blacklist awardId: 100
-24-06-20.15:20:37.300 [main            ] INFO  DefaultLogicChain      - 抽奖责任链-【默认处理节点】 userId: joyboy strategyId: 100001 ruleModel: default awardId: 101
-24-06-20.15:20:37.300 [main            ] INFO  LogicChainTest         - 测试结果：101
-24-06-20.15:20:37.300 [main            ] INFO  RuleWeightLogicChain   - 抽奖责任链-权重开始 userId: joyboy strategyId: 100001 ruleModel: rule_weight
-24-06-20.15:20:37.648 [main            ] INFO  RuleWeightLogicChain   - 当前用户的积分为0，将采取权重规则：null
-24-06-20.15:20:37.648 [main            ] INFO  RuleWeightLogicChain   - 抽奖责任链-【权重节点】 userId: joyboy strategyId: 100001 ruleModel: rule_weight
-24-06-20.15:20:37.648 [main            ] INFO  BlackListLogicChain    - 抽奖责任链-黑名单开始 userId: joyboy strategyId: 100001 ruleModel: rule_blacklist
-24-06-20.15:20:37.720 [main            ] INFO  BlackListLogicChain    - 抽奖责任链-【黑名单节点】 userId: joyboy strategyId: 100001 ruleModel: rule_blacklist awardId: 100
-24-06-20.15:20:37.864 [main            ] INFO  DefaultLogicChain      - 抽奖责任链-【默认处理节点】 userId: joyboy strategyId: 100001 ruleModel: default awardId: 107
-24-06-20.15:20:37.864 [main            ] INFO  LogicChainTest         - 测试结果：107
-24-06-20.15:20:37.864 [main            ] INFO  RuleWeightLogicChain   - 抽奖责任链-权重开始 userId: joyboy strategyId: 100001 ruleModel: rule_weight
-24-06-20.15:20:37.934 [main            ] INFO  RuleWeightLogicChain   - 当前用户的积分为0，将采取权重规则：null
-24-06-20.15:20:37.935 [main            ] INFO  RuleWeightLogicChain   - 抽奖责任链-【权重节点】 userId: joyboy strategyId: 100001 ruleModel: rule_weight
-24-06-20.15:20:37.935 [main            ] INFO  BlackListLogicChain    - 抽奖责任链-黑名单开始 userId: joyboy strategyId: 100001 ruleModel: rule_blacklist
-24-06-20.15:20:37.993 [main            ] INFO  BlackListLogicChain    - 抽奖责任链-【黑名单节点】 userId: joyboy strategyId: 100001 ruleModel: rule_blacklist awardId: 100
-24-06-20.15:20:38.101 [main            ] INFO  DefaultLogicChain      - 抽奖责任链-【默认处理节点】 userId: joyboy strategyId: 100001 ruleModel: default awardId: 107
-24-06-20.15:20:38.102 [main            ] INFO  LogicChainTest         - 测试结果：107
-24-06-20.15:20:38.102 [main            ] INFO  RuleWeightLogicChain   - 抽奖责任链-权重开始 userId: joyboy strategyId: 100001 ruleModel: rule_weight
-24-06-20.15:20:38.163 [main            ] INFO  RuleWeightLogicChain   - 当前用户的积分为0，将采取权重规则：null
-24-06-20.15:20:38.163 [main            ] INFO  RuleWeightLogicChain   - 抽奖责任链-【权重节点】 userId: joyboy strategyId: 100001 ruleModel: rule_weight
-24-06-20.15:20:38.163 [main            ] INFO  BlackListLogicChain    - 抽奖责任链-黑名单开始 userId: joyboy strategyId: 100001 ruleModel: rule_blacklist
-24-06-20.15:20:38.230 [main            ] INFO  BlackListLogicChain    - 抽奖责任链-【黑名单节点】 userId: joyboy strategyId: 100001 ruleModel: rule_blacklist awardId: 100
-24-06-20.15:20:38.344 [main            ] INFO  DefaultLogicChain      - 抽奖责任链-【默认处理节点】 userId: joyboy strategyId: 100001 ruleModel: default awardId: 103
-24-06-20.15:20:38.344 [main            ] INFO  LogicChainTest         - 测试结果：103
-24-06-20.15:20:38.345 [main            ] INFO  RuleWeightLogicChain   - 抽奖责任链-权重开始 userId: joyboy strategyId: 100001 ruleModel: rule_weight
-24-06-20.15:20:38.411 [main            ] INFO  RuleWeightLogicChain   - 当前用户的积分为0，将采取权重规则：null
-24-06-20.15:20:38.412 [main            ] INFO  RuleWeightLogicChain   - 抽奖责任链-【权重节点】 userId: joyboy strategyId: 100001 ruleModel: rule_weight
-24-06-20.15:20:38.412 [main            ] INFO  BlackListLogicChain    - 抽奖责任链-黑名单开始 userId: joyboy strategyId: 100001 ruleModel: rule_blacklist
-24-06-20.15:20:38.488 [main            ] INFO  BlackListLogicChain    - 抽奖责任链-【黑名单节点】 userId: joyboy strategyId: 100001 ruleModel: rule_blacklist awardId: 100
-24-06-20.15:20:38.601 [main            ] INFO  DefaultLogicChain      - 抽奖责任链-【默认处理节点】 userId: joyboy strategyId: 100001 ruleModel: default awardId: 104
-24-06-20.15:20:38.601 [main            ] INFO  LogicChainTest         - 测试结果：104
-24-06-20.15:20:38.707 [SpringApplicationShutdownHook] INFO  HikariDataSource       - Retail_HikariCP - Shutdown initiated...
-24-06-20.15:20:39.359 [SpringApplicationShutdownHook] INFO  HikariDataSource       - Retail_HikariCP - Shutdown completed.
-24-06-20.15:26:06.114 [main            ] INFO  LogicChainTest         - Starting LogicChainTest using Java 1.8.0_402 on wyh-machine with PID 2584 (started by 98389 in E:\Java_code\MMarket\MMarket-app)
-24-06-20.15:26:06.114 [main            ] INFO  LogicChainTest         - The following 1 profile is active: "dev"
-24-06-20.15:26:06.830 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-24-06-20.15:26:06.832 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-24-06-20.15:26:06.858 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 10 ms. Found 0 Redis repository interfaces.
-24-06-20.15:26:08.552 [main            ] INFO  Version                - Redisson 3.23.4
-24-06-20.15:26:09.598 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 117.72.77.81/117.72.77.81:16379
-24-06-20.15:26:10.113 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 117.72.77.81/117.72.77.81:16379
-24-06-20.15:26:11.771 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-24-06-20.15:26:11.829 [main            ] INFO  LogicChainTest         - Started LogicChainTest in 6.03 seconds (JVM running for 6.732)
-24-06-20.15:26:12.563 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Starting...
-24-06-20.15:26:13.488 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Start completed.
-24-06-20.15:26:14.330 [main            ] INFO  LogicChainTest         - 测试结果：true
-24-06-20.15:26:14.559 [main            ] INFO  LogicChainTest         - 测试结果：true
-24-06-20.15:26:14.909 [main            ] INFO  LogicChainTest         - 测试结果：true
-24-06-20.15:26:14.985 [main            ] INFO  RuleWeightLogicChain   - 抽奖责任链-权重开始 userId: joyboy strategyId: 100001 ruleModel: rule_weight
-24-06-20.15:26:15.130 [main            ] INFO  RuleWeightLogicChain   - 当前用户的积分为0，将采取权重规则：null
-24-06-20.15:26:15.130 [main            ] INFO  RuleWeightLogicChain   - 抽奖责任链-【权重节点】 userId: joyboy strategyId: 100001 ruleModel: rule_weight awardId: 没有参与权重抽奖
-24-06-20.15:26:15.130 [main            ] INFO  BlackListLogicChain    - 抽奖责任链-黑名单开始 userId: joyboy strategyId: 100001 ruleModel: rule_blacklist
-24-06-20.15:26:15.190 [main            ] INFO  BlackListLogicChain    - 抽奖责任链-【黑名单节点】 userId: joyboy strategyId: 100001 ruleModel: rule_blacklist awardId: 100
-24-06-20.15:26:15.325 [main            ] INFO  DefaultLogicChain      - 抽奖责任链-【默认处理节点】 userId: joyboy strategyId: 100001 ruleModel: default awardId: 102
-24-06-20.15:26:15.326 [main            ] INFO  LogicChainTest         - 测试结果：102
-24-06-20.15:26:15.326 [main            ] INFO  RuleWeightLogicChain   - 抽奖责任链-权重开始 userId: joyboy strategyId: 100001 ruleModel: rule_weight
-24-06-20.15:26:15.390 [main            ] INFO  RuleWeightLogicChain   - 当前用户的积分为0，将采取权重规则：null
-24-06-20.15:26:15.391 [main            ] INFO  RuleWeightLogicChain   - 抽奖责任链-【权重节点】 userId: joyboy strategyId: 100001 ruleModel: rule_weight awardId: 没有参与权重抽奖
-24-06-20.15:26:15.391 [main            ] INFO  BlackListLogicChain    - 抽奖责任链-黑名单开始 userId: joyboy strategyId: 100001 ruleModel: rule_blacklist
-24-06-20.15:26:15.452 [main            ] INFO  BlackListLogicChain    - 抽奖责任链-【黑名单节点】 userId: joyboy strategyId: 100001 ruleModel: rule_blacklist awardId: 100
-24-06-20.15:26:15.569 [main            ] INFO  DefaultLogicChain      - 抽奖责任链-【默认处理节点】 userId: joyboy strategyId: 100001 ruleModel: default awardId: 101
-24-06-20.15:26:15.569 [main            ] INFO  LogicChainTest         - 测试结果：101
-24-06-20.15:26:15.569 [main            ] INFO  RuleWeightLogicChain   - 抽奖责任链-权重开始 userId: joyboy strategyId: 100001 ruleModel: rule_weight
-24-06-20.15:26:15.634 [main            ] INFO  RuleWeightLogicChain   - 当前用户的积分为0，将采取权重规则：null
-24-06-20.15:26:15.634 [main            ] INFO  RuleWeightLogicChain   - 抽奖责任链-【权重节点】 userId: joyboy strategyId: 100001 ruleModel: rule_weight awardId: 没有参与权重抽奖
-24-06-20.15:26:15.634 [main            ] INFO  BlackListLogicChain    - 抽奖责任链-黑名单开始 userId: joyboy strategyId: 100001 ruleModel: rule_blacklist
-24-06-20.15:26:15.707 [main            ] INFO  BlackListLogicChain    - 抽奖责任链-【黑名单节点】 userId: joyboy strategyId: 100001 ruleModel: rule_blacklist awardId: 100
-24-06-20.15:26:15.833 [main            ] INFO  DefaultLogicChain      - 抽奖责任链-【默认处理节点】 userId: joyboy strategyId: 100001 ruleModel: default awardId: 101
-24-06-20.15:26:15.833 [main            ] INFO  LogicChainTest         - 测试结果：101
-24-06-20.15:26:15.833 [main            ] INFO  RuleWeightLogicChain   - 抽奖责任链-权重开始 userId: joyboy strategyId: 100001 ruleModel: rule_weight
-24-06-20.15:26:15.897 [main            ] INFO  RuleWeightLogicChain   - 当前用户的积分为0，将采取权重规则：null
-24-06-20.15:26:15.898 [main            ] INFO  RuleWeightLogicChain   - 抽奖责任链-【权重节点】 userId: joyboy strategyId: 100001 ruleModel: rule_weight awardId: 没有参与权重抽奖
-24-06-20.15:26:15.898 [main            ] INFO  BlackListLogicChain    - 抽奖责任链-黑名单开始 userId: joyboy strategyId: 100001 ruleModel: rule_blacklist
-24-06-20.15:26:15.966 [main            ] INFO  BlackListLogicChain    - 抽奖责任链-【黑名单节点】 userId: joyboy strategyId: 100001 ruleModel: rule_blacklist awardId: 100
-24-06-20.15:26:16.075 [main            ] INFO  DefaultLogicChain      - 抽奖责任链-【默认处理节点】 userId: joyboy strategyId: 100001 ruleModel: default awardId: 101
-24-06-20.15:26:16.075 [main            ] INFO  LogicChainTest         - 测试结果：101
-24-06-20.15:26:16.075 [main            ] INFO  RuleWeightLogicChain   - 抽奖责任链-权重开始 userId: joyboy strategyId: 100001 ruleModel: rule_weight
-24-06-20.15:26:16.160 [main            ] INFO  RuleWeightLogicChain   - 当前用户的积分为0，将采取权重规则：null
-24-06-20.15:26:16.160 [main            ] INFO  RuleWeightLogicChain   - 抽奖责任链-【权重节点】 userId: joyboy strategyId: 100001 ruleModel: rule_weight awardId: 没有参与权重抽奖
-24-06-20.15:26:16.160 [main            ] INFO  BlackListLogicChain    - 抽奖责任链-黑名单开始 userId: joyboy strategyId: 100001 ruleModel: rule_blacklist
-24-06-20.15:26:16.239 [main            ] INFO  BlackListLogicChain    - 抽奖责任链-【黑名单节点】 userId: joyboy strategyId: 100001 ruleModel: rule_blacklist awardId: 100
-24-06-20.15:26:16.351 [main            ] INFO  DefaultLogicChain      - 抽奖责任链-【默认处理节点】 userId: joyboy strategyId: 100001 ruleModel: default awardId: 102
-24-06-20.15:26:16.351 [main            ] INFO  LogicChainTest         - 测试结果：102
-24-06-20.15:26:16.456 [SpringApplicationShutdownHook] INFO  HikariDataSource       - Retail_HikariCP - Shutdown initiated...
-24-06-20.15:26:17.058 [SpringApplicationShutdownHook] INFO  HikariDataSource       - Retail_HikariCP - Shutdown completed.
+24-06-21.14:54:57.637 [main            ] INFO  LogicTreeTest          - Starting LogicTreeTest using Java 1.8.0_402 on wyh-machine with PID 27692 (started by 98389 in E:\Java_code\MMarket\MMarket-app)
+24-06-21.14:54:57.638 [main            ] INFO  LogicTreeTest          - The following 1 profile is active: "dev"
+24-06-21.14:54:58.559 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-06-21.14:54:58.562 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-06-21.14:54:58.596 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 18 ms. Found 0 Redis repository interfaces.
+24-06-21.14:55:00.634 [main            ] INFO  Version                - Redisson 3.23.4
+24-06-21.14:55:01.822 [redisson-netty-2-6] INFO  MasterPubSubConnectionPool - 1 connections initialized for 117.72.77.81/117.72.77.81:16379
+24-06-21.14:55:02.101 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 117.72.77.81/117.72.77.81:16379
+24-06-21.14:55:03.909 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-06-21.14:55:03.973 [main            ] INFO  LogicTreeTest          - Started LogicTreeTest in 6.702 seconds (JVM running for 7.664)
+24-06-21.14:55:04.373 [main            ] INFO  DailyLimitNode         - 【每日限额节点】- 暂未实现，默认通过【CONTINUE】
+24-06-21.14:55:04.374 [main            ] INFO  WinFrequencyNode       - 【中奖频率节点】- 暂未实现，默认通过【CONTINUE】
+24-06-21.14:55:04.374 [main            ] INFO  RuleLockNode           - 【奖品解锁节点】-现阶段未编写具体逻辑，默认通过【Continue】
+24-06-21.14:55:04.374 [main            ] INFO  RuleStockNode          - 【库存扣减节点】-现阶段未编写具体逻辑，默认通过【TERMINATED】，库存不够哦
+24-06-21.14:55:04.374 [main            ] INFO  RuleDecisionTreeEngine - 最终决策树节点：rule_stock 处理结果信息: 【终止处理】，不再调用后续责任链节点
+24-06-21.14:55:04.541 [main            ] INFO  LogicTreeTest          - 测试结果：{"awardId":100,"ruleModel":"rule_stock","status":"TERMINATED","strategyId":100001,"userId":"joyboy"}
+24-06-21.15:30:23.337 [main            ] INFO  LogicTreeTest          - Starting LogicTreeTest using Java 1.8.0_402 on wyh-machine with PID 29416 (started by 98389 in E:\Java_code\MMarket\MMarket-app)
+24-06-21.15:30:23.338 [main            ] INFO  LogicTreeTest          - The following 1 profile is active: "dev"
+24-06-21.15:30:24.105 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-06-21.15:30:24.107 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-06-21.15:30:24.132 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 14 ms. Found 0 Redis repository interfaces.
+24-06-21.15:30:25.899 [main            ] INFO  Version                - Redisson 3.23.4
+24-06-21.15:30:26.991 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 117.72.77.81/117.72.77.81:16379
+24-06-21.15:30:27.276 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 117.72.77.81/117.72.77.81:16379
+24-06-21.15:30:29.129 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-06-21.15:30:29.189 [main            ] INFO  LogicTreeTest          - Started LogicTreeTest in 6.195 seconds (JVM running for 6.925)
+24-06-21.15:30:29.520 [main            ] INFO  DailyLimitNode         - 【每日限额节点】- 暂未实现，默认通过【CONTINUE】
+24-06-21.15:30:29.520 [main            ] INFO  WinFrequencyNode       - 【中奖频率节点】- 暂未实现，默认通过【CONTINUE】
+24-06-21.15:30:29.520 [main            ] INFO  RuleLockNode           - 【奖品解锁节点】-现阶段未编写具体逻辑，默认通过【Continue】
+24-06-21.15:30:29.520 [main            ] INFO  RuleStockNode          - 【库存扣减节点】- 开始检查库存...
+24-06-21.15:30:29.520 [main            ] INFO  RuleStockNode          - 【库存扣减节点】- 现阶段未编写具体逻辑，默认通过【TERMINATED】，库存不够哦
+24-06-21.15:30:29.520 [main            ] INFO  RuleStockNode          - 【库存扣减节点】- ...库存检查结束
+24-06-21.15:30:29.520 [main            ] INFO  RuleDecisionTreeEngine - 最终决策树节点：rule_stock 处理结果信息: 【终止处理】，不再调用后续责任链节点
+24-06-21.15:30:29.664 [main            ] INFO  LogicTreeTest          - 测试结果：{"awardId":100,"ruleModel":"rule_stock","status":"TERMINATED","strategyId":100001,"userId":"joyboy"}
+24-06-21.15:36:56.185 [main            ] INFO  LogicTreeTest          - Starting LogicTreeTest using Java 1.8.0_402 on wyh-machine with PID 6156 (started by 98389 in E:\Java_code\MMarket\MMarket-app)
+24-06-21.15:36:56.185 [main            ] INFO  LogicTreeTest          - The following 1 profile is active: "dev"
+24-06-21.15:36:57.029 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-06-21.15:36:57.031 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-06-21.15:36:57.058 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 15 ms. Found 0 Redis repository interfaces.
+24-06-21.15:36:58.878 [main            ] INFO  Version                - Redisson 3.23.4
+24-06-21.15:37:00.066 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 117.72.77.81/117.72.77.81:16379
+24-06-21.15:37:00.349 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 117.72.77.81/117.72.77.81:16379
+24-06-21.15:37:02.146 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-06-21.15:37:02.208 [main            ] INFO  LogicTreeTest          - Started LogicTreeTest in 6.392 seconds (JVM running for 7.092)
+24-06-21.15:37:02.544 [main            ] INFO  DailyLimitNode         - 【每日限额节点】- 暂未实现，默认通过【CONTINUE】
+24-06-21.15:37:02.544 [main            ] INFO  WinFrequencyNode       - 【中奖频率节点】- 暂未实现，默认通过【CONTINUE】
+24-06-21.15:37:02.544 [main            ] INFO  RuleLockNode           - 【奖品解锁节点】-现阶段未编写具体逻辑，默认通过【Continue】
+24-06-21.15:37:02.544 [main            ] INFO  RuleStockNode          - 【库存扣减节点】- 开始检查库存...
+24-06-21.15:37:02.544 [main            ] INFO  RuleStockNode          - 【库存扣减节点】- 现阶段未编写具体逻辑，默认通过【TERMINATED】，库存不够哦
+24-06-21.15:37:02.545 [main            ] INFO  RuleStockNode          - 【库存扣减节点】- ...库存检查结束
+24-06-21.15:37:02.545 [main            ] INFO  RuleDecisionTreeEngine - 最终决策树节点：rule_stock 处理结果信息: 【终止处理】，不再调用后续责任链节点
+24-06-21.15:37:02.673 [main            ] INFO  LogicTreeTest          - 测试结果：{"awardId":100,"ruleModel":"rule_stock","status":"TERMINATED","strategyId":100001,"userId":"joyboy"}
+24-06-21.15:56:23.330 [main            ] INFO  LogicTreeTest          - Starting LogicTreeTest using Java 1.8.0_402 on wyh-machine with PID 24760 (started by 98389 in E:\Java_code\MMarket\MMarket-app)
+24-06-21.15:56:23.331 [main            ] INFO  LogicTreeTest          - The following 1 profile is active: "dev"
+24-06-21.15:56:24.202 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-06-21.15:56:24.205 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-06-21.15:56:24.237 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 19 ms. Found 0 Redis repository interfaces.
+24-06-21.15:56:26.128 [main            ] INFO  Version                - Redisson 3.23.4
+24-06-21.15:56:27.346 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 117.72.77.81/117.72.77.81:16379
+24-06-21.15:56:27.622 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 117.72.77.81/117.72.77.81:16379
+24-06-21.15:56:29.407 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-06-21.15:56:29.477 [main            ] INFO  LogicTreeTest          - Started LogicTreeTest in 6.505 seconds (JVM running for 7.375)
+24-06-21.15:56:29.864 [main            ] INFO  DailyLimitNode         - 【每日限额节点】- 暂未实现，默认通过【CONTINUE】
+24-06-21.15:56:29.864 [main            ] INFO  WinFrequencyNode       - 【中奖频率节点】- 暂未实现，默认通过【CONTINUE】
+24-06-21.15:56:29.864 [main            ] INFO  RuleLockNode           - 【奖品解锁节点】-现阶段未编写具体逻辑，默认通过【Continue】
+24-06-21.15:56:29.864 [main            ] INFO  RuleStockNode          - 【库存扣减节点】- 开始检查库存...
+24-06-21.15:56:29.864 [main            ] INFO  RuleStockNode          - 【库存扣减节点】- 现阶段未编写具体逻辑，默认通过【TERMINATED】，库存不够哦
+24-06-21.15:56:29.864 [main            ] INFO  RuleStockNode          - 【库存扣减节点】- ...库存检查结束
+24-06-21.15:56:29.864 [main            ] INFO  RuleDecisionTreeEngine - 最终决策树节点：rule_stock 处理结果信息: 【终止处理】，不再调用后续责任链节点
+24-06-21.15:56:30.029 [main            ] INFO  LogicTreeTest          - 测试结果：{"awardId":100,"ruleModel":"rule_stock","status":"TERMINATED","strategyId":100001,"userId":"joyboy"}
+24-06-21.16:17:01.213 [main            ] INFO  LogicTreeTest          - Starting LogicTreeTest using Java 1.8.0_402 on wyh-machine with PID 29408 (started by 98389 in E:\Java_code\MMarket\MMarket-app)
+24-06-21.16:17:01.214 [main            ] INFO  LogicTreeTest          - The following 1 profile is active: "dev"
+24-06-21.16:17:01.940 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-06-21.16:17:01.942 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-06-21.16:17:01.973 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 13 ms. Found 0 Redis repository interfaces.
+24-06-21.16:17:03.736 [main            ] INFO  Version                - Redisson 3.23.4
+24-06-21.16:17:04.890 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for 117.72.77.81/117.72.77.81:16379
+24-06-21.16:17:05.165 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 117.72.77.81/117.72.77.81:16379
+24-06-21.16:17:07.006 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-06-21.16:17:07.071 [main            ] INFO  LogicTreeTest          - Started LogicTreeTest in 6.181 seconds (JVM running for 6.884)
+24-06-21.16:17:07.394 [main            ] INFO  DailyLimitNode         - 【每日限额节点】- 暂未实现，默认通过【CONTINUE】
+24-06-21.16:17:07.394 [main            ] INFO  WinFrequencyNode       - 【中奖频率节点】- 暂未实现，默认通过【CONTINUE】
+24-06-21.16:17:07.394 [main            ] INFO  RuleLockNode           - 【奖品解锁节点】-现阶段未编写具体逻辑，默认通过【Continue】
+24-06-21.16:17:07.394 [main            ] INFO  RuleStockNode          - 【库存扣减节点】- 开始检查库存...
+24-06-21.16:17:07.394 [main            ] INFO  RuleStockNode          - 【库存扣减节点】- 现阶段未编写具体逻辑，默认通过【TERMINATED】，库存不够哦
+24-06-21.16:17:07.394 [main            ] INFO  RuleStockNode          - 【库存扣减节点】- ...库存检查结束
+24-06-21.16:17:07.394 [main            ] INFO  RuleDecisionTreeEngine - 最终决策树节点：rule_stock 处理结果信息: 【终止处理】，不再调用后续责任链节点
+24-06-21.16:17:07.536 [main            ] INFO  LogicTreeTest          - 测试结果：{"awardId":100,"ruleModel":"rule_stock","status":"TERMINATED","strategyId":100001,"userId":"joyboy"}
+24-06-21.16:19:19.722 [main            ] INFO  LogicTreeTest          - Starting LogicTreeTest using Java 1.8.0_402 on wyh-machine with PID 28568 (started by 98389 in E:\Java_code\MMarket\MMarket-app)
+24-06-21.16:19:19.723 [main            ] INFO  LogicTreeTest          - The following 1 profile is active: "dev"
+24-06-21.16:19:20.459 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-06-21.16:19:20.461 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-06-21.16:19:20.490 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 14 ms. Found 0 Redis repository interfaces.
+24-06-21.16:19:22.204 [main            ] INFO  Version                - Redisson 3.23.4
+24-06-21.16:19:23.263 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 117.72.77.81/117.72.77.81:16379
+24-06-21.16:19:23.561 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 117.72.77.81/117.72.77.81:16379
+24-06-21.16:19:25.275 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-06-21.16:19:25.332 [main            ] INFO  LogicTreeTest          - Started LogicTreeTest in 5.945 seconds (JVM running for 6.635)
+24-06-21.16:19:25.717 [main            ] INFO  DailyLimitNode         - 【每日限额节点】- 暂未实现，默认通过【CONTINUE】
+24-06-21.16:19:25.717 [main            ] INFO  WinFrequencyNode       - 【中奖频率节点】- 暂未实现，默认通过【CONTINUE】
+24-06-21.16:19:25.717 [main            ] INFO  RuleLockNode           - 【奖品解锁节点】-现阶段未编写具体逻辑，默认通过【Continue】
+24-06-21.16:19:25.717 [main            ] INFO  RuleStockNode          - 【库存扣减节点】- 开始检查库存...
+24-06-21.16:19:25.717 [main            ] INFO  RuleStockNode          - 【库存扣减节点】- 现阶段未编写具体逻辑，默认通过【TERMINATED】，库存不够哦
+24-06-21.16:19:25.717 [main            ] INFO  RuleStockNode          - 【库存扣减节点】- ...库存检查结束
+24-06-21.16:19:25.717 [main            ] INFO  RuleDecisionTreeEngine - 最终决策树节点：rule_stock 处理结果信息: 【终止处理】，不再调用后续责任链节点
+24-06-21.16:19:25.881 [main            ] INFO  LogicTreeTest          - 测试结果：{"awardId":100,"ruleModel":"rule_stock","status":"TERMINATED","strategyId":100001,"userId":"joyboy"}
+24-06-21.16:20:05.462 [main            ] INFO  LogicTreeTest          - Starting LogicTreeTest using Java 1.8.0_402 on wyh-machine with PID 12324 (started by 98389 in E:\Java_code\MMarket\MMarket-app)
+24-06-21.16:20:05.463 [main            ] INFO  LogicTreeTest          - The following 1 profile is active: "dev"
+24-06-21.16:20:06.268 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-06-21.16:20:06.271 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-06-21.16:20:06.315 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 26 ms. Found 0 Redis repository interfaces.
+24-06-21.16:20:08.164 [main            ] INFO  Version                - Redisson 3.23.4
+24-06-21.16:20:09.259 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 117.72.77.81/117.72.77.81:16379
+24-06-21.16:20:09.595 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 117.72.77.81/117.72.77.81:16379
+24-06-21.16:20:11.691 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-06-21.16:20:11.751 [main            ] INFO  LogicTreeTest          - Started LogicTreeTest in 6.648 seconds (JVM running for 7.919)
+24-06-21.16:20:12.139 [main            ] INFO  DailyLimitNode         - 【每日限额节点】- 暂未实现，默认通过【CONTINUE】
+24-06-21.16:20:12.139 [main            ] INFO  WinFrequencyNode       - 【中奖频率节点】- 暂未实现，默认通过【CONTINUE】
+24-06-21.16:20:12.139 [main            ] INFO  RuleLockNode           - 【奖品解锁节点】-现阶段未编写具体逻辑，默认通过【Continue】
+24-06-21.16:20:12.139 [main            ] INFO  RuleStockNode          - 【库存扣减节点】- 开始检查库存...
+24-06-21.16:20:12.139 [main            ] INFO  RuleStockNode          - 【库存扣减节点】- 现阶段未编写具体逻辑，默认通过【TERMINATED】，库存不够哦
+24-06-21.16:20:12.139 [main            ] INFO  RuleStockNode          - 【库存扣减节点】- ...库存检查结束
+24-06-21.16:20:35.756 [main            ] INFO  RuleDecisionTreeEngine - 最终决策树节点：rule_stock 处理结果信息: 【终止处理】，不再调用后续责任链节点
+24-06-21.16:21:31.927 [main            ] INFO  LogicTreeTest          - 测试结果：{"awardId":100,"ruleModel":"rule_stock","status":"TERMINATED","strategyId":100001,"userId":"joyboy"}
+24-06-21.16:22:10.863 [main            ] INFO  LogicTreeTest          - Starting LogicTreeTest using Java 1.8.0_402 on wyh-machine with PID 30384 (started by 98389 in E:\Java_code\MMarket\MMarket-app)
+24-06-21.16:22:10.864 [main            ] INFO  LogicTreeTest          - The following 1 profile is active: "dev"
+24-06-21.16:22:11.585 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-06-21.16:22:11.587 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-06-21.16:22:11.614 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 15 ms. Found 0 Redis repository interfaces.
+24-06-21.16:22:13.301 [main            ] INFO  Version                - Redisson 3.23.4
+24-06-21.16:22:14.338 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 117.72.77.81/117.72.77.81:16379
+24-06-21.16:22:14.630 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 117.72.77.81/117.72.77.81:16379
+24-06-21.16:22:16.324 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-06-21.16:22:16.384 [main            ] INFO  LogicTreeTest          - Started LogicTreeTest in 5.859 seconds (JVM running for 6.556)
+24-06-21.16:22:16.705 [main            ] INFO  DailyLimitNode         - 【每日限额节点】- 暂未实现，默认通过【CONTINUE】
+24-06-21.16:22:16.705 [main            ] INFO  WinFrequencyNode       - 【中奖频率节点】- 暂未实现，默认通过【CONTINUE】
+24-06-21.16:22:16.705 [main            ] INFO  RuleLockNode           - 【奖品解锁节点】-现阶段未编写具体逻辑，默认通过【Continue】
+24-06-21.16:22:16.705 [main            ] INFO  RuleStockNode          - 【库存扣减节点】- 开始检查库存...
+24-06-21.16:22:16.705 [main            ] INFO  RuleStockNode          - 【库存扣减节点】- 现阶段未编写具体逻辑，默认通过【TERMINATED】，库存不够哦
+24-06-21.16:22:16.705 [main            ] INFO  RuleStockNode          - 【库存扣减节点】- ...库存检查结束
+24-06-21.16:22:16.705 [main            ] INFO  RuleDecisionTreeEngine - 最终决策树节点：rule_stock 处理结果信息: 【终止处理】，不再调用后续责任链节点
+24-06-21.16:22:16.706 [main            ] INFO  RuleLuckAwardNode      - 【兜底奖励节点】-现阶段未编写具体逻辑，默认终止【TERMINATED】
+24-06-21.16:22:16.845 [main            ] INFO  LogicTreeTest          - 测试结果：{"awardId":101,"ruleModel":"rule_luck_award","status":"TERMINATED","strategyId":100001,"userId":"joyboy"}

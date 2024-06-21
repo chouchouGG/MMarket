@@ -1,8 +1,10 @@
 package cn.learn.domain.strategy.service.rule.tree;
 
+import cn.learn.domain.strategy.model.entity.ProcessingContext;
+
 /**
  * @program: MMarket
- * @description:
+ * @description: 【组合模式】的接口
  * @author: chouchouGG
  * @create: 2024-06-19 15:41
  **/
@@ -16,7 +18,7 @@ public interface ILogicTreeNode {
      *
      */
 
-    void
+    void execute(ProcessingContext context);
 
 
 }

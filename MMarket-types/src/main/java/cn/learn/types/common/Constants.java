@@ -33,6 +33,15 @@ public class Constants {
         public static final String RULE_BLACKLIST = "rule_blacklist";
         // 默认的兜底规则
         public static final String DEFAULT = "default";
+        // 库存规则
+        public static final String RULE_STOCK = "rule_stock";
+        // 中奖频率规则
+        public static final String RULE_WIN_FREQUENCY = "rule_win_frequency";
+        // 每日限额规则
+        public static final String RULE_DAILY_LIMIT = "rule_daily_limit";
+        // 奖品类型限制规则
+        public static final String PRIZE_TYPE_RESTRICTION = "prize_type_restriction";
+
     }
 
     /**
