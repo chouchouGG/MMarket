@@ -15,7 +15,8 @@ public enum ResponseCode {
     STRATEGY_RULE_WEIGHT_IS_NULL("ERR_BIZ_001", "业务异常，策略规则中 rule_weight 权重规则已适用但未配置"),
 
 
-    RULE_NOT_DEFINED("0003", "未定义规则对应的决策树节点")
+    RULE_NOT_DEFINED("0003", "未定义规则对应的决策树节点"),
+    PARSE_ERROR("parse error", "解析数据失败")
     ;
 
     private String code;
