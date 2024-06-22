@@ -20,13 +20,11 @@ public interface ILogicChainHandler extends ILogicChainArmory {
      * 1. 调用当前责任链节点的处理方法
      * 2. 根据具体的业务逻辑自定义是否调用下一个责任链节点的处理流程
      */
-    ProcessingContext process(ProcessingContext context);
+    void process(ProcessingContext context);
 
     /**
      * 当前责任链节点的具体处理过程
-     *
-     * @return 奖品ID
      */
-    ProcessingContext handle(ProcessingContext context);
+    void handle(ProcessingContext context);
 
 }

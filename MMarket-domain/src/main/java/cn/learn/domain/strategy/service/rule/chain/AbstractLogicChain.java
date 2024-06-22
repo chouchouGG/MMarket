@@ -25,16 +25,17 @@ public abstract class AbstractLogicChain implements ILogicChain, ILogicChainAwar
     }
 
     @Override
-     public ProcessingContext process(ProcessingContext context) {
+     public void process(ProcessingContext context) {
          // 1. 调用当前节点的处理方法
-        ProcessingContext ret = handle(context);
+        handle(context);
 
         // 2. 根据流程的状态 status 决定是否继续传递请求
          if (context.getStatus() == ProcessingContext.ProcessStatus.CONTINUE && next != null) {
-             return next.process(context);
+             next.process(context);
+             return;
          }
 
-         return ret;
+         return;
     }
 
     @Override

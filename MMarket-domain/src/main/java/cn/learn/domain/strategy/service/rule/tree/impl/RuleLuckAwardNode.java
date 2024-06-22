@@ -18,10 +18,13 @@ public class RuleLuckAwardNode implements ILogicTreeNode {
 
     @Override
     public void execute(ProcessingContext context) {
-        log.info("【兜底奖励节点】- 发放兜底奖品，默认终止【TERMINATED】");
         context.setAwardId(101);
         context.setRuleModel(RULE_LUCK_AWARD);
         context.setStatus(ProcessingContext.ProcessStatus.TERMINATED);
+        context.setResultDesc("发放兜底奖品，默认终止【TERMINATED】");
+
+        log.info("抽奖决策树-【兜底奖励节点】 规则模型：{} 奖品ID：{} 执行状态：{} 结果描述：{}",
+                context.getRuleModel(), context.getAwardId(), context.getStatus(), context.getResultDesc());
         return;
     }
 }

@@ -182,9 +182,7 @@ public class StrategyRepository implements IStrategyRepository {
         strategyAwardPO.setStrategyId(strategyId);
         strategyAwardPO.setAwardId(awardId);
         String ruleModels = strategyAwardDao.queryStrategyAwardRuleModelVO(strategyAwardPO);
-        return StrategyAwardRuleModelVO.builder()
-                .ruleModels(ruleModels)
-                .build();
+        return StrategyAwardRuleModelVO.builder().ruleModels(ruleModels).build();
     }
 }
 

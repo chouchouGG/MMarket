@@ -7,7 +7,7 @@ import lombok.NoArgsConstructor;
 
 /**
  * @program: MMarket
- * @description: 抽奖计算因子实体
+ * @description: 抽奖的参数实体类
  * @author: chouchouGG
  * @create: 2024-06-13 14:24
  **/
@@ -16,11 +16,11 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class RaffleFactorEntity {
-    /** 用户ID */
+
+    // 用户ID
     private String userId;
-    /** 策略ID */
+
+    // 策略ID
     private Long strategyId;
-    // 奖品ID（抽奖中使用）
-    @Builder.Default
-    private Integer awardId = null;
+
 }

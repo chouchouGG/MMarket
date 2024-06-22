@@ -36,8 +36,8 @@ public class LogicChainTest {
     public void setUp() {
         // 策略装配 100001、100002、100003
         log.info("测试结果：{}", strategyArmory.assembleLotteryStrategy(100001L));
-        log.info("测试结果：{}", strategyArmory.assembleLotteryStrategy(100002L));
-        log.info("测试结果：{}", strategyArmory.assembleLotteryStrategy(100003L));
+//        log.info("测试结果：{}", strategyArmory.assembleLotteryStrategy(100002L));
+//        log.info("测试结果：{}", strategyArmory.assembleLotteryStrategy(100003L));
     }
 
     @Test
@@ -47,7 +47,7 @@ public class LogicChainTest {
 
         // 连续测试5次
         for (int i = 0; i < 5; i++) {
-            context = logicChain.process(context);
+            logicChain.process(context);
             Integer awardId = context.getAwardId();
             log.info("测试结果：{}", awardId);
         }
@@ -66,7 +66,7 @@ public class LogicChainTest {
 
         // 连续测试5次
         for (int i = 0; i < 5; i++) {
-            context = logicChain.process(context);
+            logicChain.process(context);
             Integer awardId = context.getAwardId();
             log.info("测试结果：{}", awardId);
         }
@@ -80,7 +80,7 @@ public class LogicChainTest {
 
         // 连续测试5次
         for (int i = 0; i < 5; i++) {
-            context = logicChain.process(context);
+            logicChain.process(context);
             Integer awardId = context.getAwardId();
             log.info("测试结果：{}", awardId);
         }

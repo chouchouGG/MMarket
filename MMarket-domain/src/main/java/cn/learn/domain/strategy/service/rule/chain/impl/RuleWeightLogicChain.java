@@ -28,7 +28,7 @@ public class RuleWeightLogicChain extends AbstractLogicChain {
     protected IStrategyDispatch strategyDispatch;
 
     // fixme: 当前测试阶段使用的是固定值,根据用户ID查询用户抽奖消耗的积分值，本章节我们先写死为固定的值。后续需要从数据库中查询。
-    private final Long userScore = 0L;
+    public final Long userScore = 0L;
 
     /**
      * 权重责任链过滤；
@@ -36,12 +36,12 @@ public class RuleWeightLogicChain extends AbstractLogicChain {
      * 2. 解析数据格式；判断哪个范围符合用户的特定抽奖范围
      */
     @Override
-    public ProcessingContext handle(ProcessingContext context) {
+    public void handle(ProcessingContext context) {
         Long strategyId = context.getStrategyId();
         String userId = context.getUserId();
         String ruleModelName = getRuleModelName();
 
-        log.info("抽奖责任链-权重开始 userId: {} strategyId: {} ruleModel: {}", userId, strategyId, ruleModelName);
+        log.info("用户【{}】，参与抽奖活动【{}】，进行【{}】", userId, strategyId, ruleModelName);
 
         String ruleValue = repository.queryStrategyRuleValue(strategyId, null, ruleModelName);
 
@@ -50,7 +50,7 @@ public class RuleWeightLogicChain extends AbstractLogicChain {
         if (null == analyticalValueGroup || analyticalValueGroup.isEmpty()) {
             log.info("【策略{}】的权重规则配置信息为空，请检查数据库配置。", strategyId);
             context.setStatus(ProcessingContext.ProcessStatus.TERMINATED);
-            return context;
+            return;
         }
 
         // 2. 转换Keys值，并默认排序
@@ -70,19 +70,23 @@ public class RuleWeightLogicChain extends AbstractLogicChain {
         // 4. 权重抽奖
         if (null != prevValue) {
             Integer awardId = strategyDispatch.getRandomAwardId(strategyId, analyticalValueGroup.get(prevValue));
-            log.info("抽奖责任链-【权重节点】 userId: {} strategyId: {} ruleModel: {} awardId: {}",
-                    userId, strategyId, ruleModelName, awardId);
             // fixme: 权重抽中了也应该继续后续过滤流程（解锁、兜底...），而xfg在这里直接进行了返回
             context.setStatus(ProcessingContext.ProcessStatus.TERMINATED);
             context.setAwardId(awardId);
-            return context;
+            context.setRuleModel(ruleModelName);
+            context.setResultDesc("参与权重抽奖，直接返回");
+            log.info("抽奖责任链-【权重规则节点】 规则模型：{} 奖品ID：{} 执行状态：{} 结果描述：{}",
+                    context.getRuleModel(), context.getAwardId(), context.getStatus(), context.getResultDesc());
+            return;
         }
 
         // 5. 过滤其他责任链，（后续有默认抽奖规则过滤节点进行默认抽奖）
-        log.info("抽奖责任链-【权重节点】 userId: {} strategyId: {} ruleModel: {} awardId: {}",
-                userId, strategyId, ruleModelName, "没有参与权重抽奖");
         context.setStatus(ProcessingContext.ProcessStatus.CONTINUE);
-        return context;
+        context.setRuleModel(ruleModelName);
+        context.setResultDesc("没有参与权重抽奖");
+        log.info("抽奖责任链-【权重规则节点】 规则模型：{} 奖品ID：{} 执行状态：{} 结果描述：{}",
+                context.getRuleModel(), context.getAwardId(), context.getStatus(), context.getResultDesc());
+        return;
     }
 
     private Map<Long, String> getAnalyticalValue(String ruleValue) {

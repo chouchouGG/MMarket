@@ -23,18 +23,21 @@ public class DefaultLogicChain extends AbstractLogicChain {
     IStrategyDispatch strategyDispatch;
 
     @Override
-    public ProcessingContext handle(ProcessingContext context) {
+    public void handle(ProcessingContext context) {
         Long strategyId = context.getStrategyId();
         String userId = context.getUserId();
         String ruleModelName = getRuleModelName();
+
+        log.info("用户【{}】，参与抽奖活动【{}】，进行【{}】", userId, strategyId, ruleModelName);
 
         // 默认抽奖方式
         Integer awardId = strategyDispatch.getRandomAwardId(strategyId);
         context.setAwardId(awardId);
         context.setStatus(ProcessingContext.ProcessStatus.CONTINUE);
-
-        log.info("抽奖责任链-【默认处理节点】 userId: {} strategyId: {} ruleModel: {} awardId: {}",
-                userId, strategyId, ruleModelName, awardId);
-        return context;
+        context.setRuleModel(ruleModelName);
+        context.setResultDesc("用户参与默认抽奖规则，从默认的奖品规则中抽取奖品");
+        log.info("抽奖责任链-【默认抽奖节点】 规则模型：{} 奖品ID：{} 执行状态：{} 结果描述：{}",
+                context.getRuleModel(), context.getAwardId(), context.getStatus(), context.getResultDesc());
+        return;
     }
 }

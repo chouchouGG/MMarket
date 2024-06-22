@@ -25,13 +25,14 @@ public class LogicTreeTest {
     @Test
     public void test_tree_rule() {
 
-        IDecisionTreeEngine treeEngine = defaultTreeFactory.openLogicTree();
-
         ProcessingContext context = ProcessingContext.builder()
                 .userId("joyboy")
                 .strategyId(100001L)
                 .status(ProcessingContext.ProcessStatus.CONTINUE)
                 .awardId(100).build();
+
+        IDecisionTreeEngine treeEngine = defaultTreeFactory.openLogicTree(context.getStrategyId(), context.getAwardId());
+
 
         treeEngine.process(context);
 

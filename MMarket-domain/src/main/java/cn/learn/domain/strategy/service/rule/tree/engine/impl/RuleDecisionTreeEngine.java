@@ -1,7 +1,6 @@
 package cn.learn.domain.strategy.service.rule.tree.engine.impl;
 
 import cn.learn.domain.strategy.model.entity.ProcessingContext;
-import cn.learn.domain.strategy.model.vo.RuleTreeNodeLineVO;
 import cn.learn.domain.strategy.service.rule.tree.ILogicTreeNode;
 import cn.learn.domain.strategy.service.rule.tree.engine.IDecisionTreeEngine;
 import cn.learn.domain.strategy.service.rule.tree.factory.DefaultTreeFactory;
@@ -59,28 +58,13 @@ public class RuleDecisionTreeEngine implements IDecisionTreeEngine {
                 context.getStatus().getInfo());
 
         // note：当前的设计是，只要context的流程处理状态为【终止】，一律走兜底策略的逻辑
-        if (context.getStatus() == ProcessingContext.ProcessStatus.TERMINATED) {
+        if (context.isNeedsFallbackAward()) {
             ILogicTreeNode luckAwardNode = defaultTreeFactory.getSpecificTreeNode(RULE_LUCK_AWARD);
             luckAwardNode.execute(context);
         }
 
-
+        return;
 
     }
 
-
-    // fixme: 这一段的逻辑暂时未知
-    public boolean decisionLogic(String matterValue, RuleTreeNodeLineVO nodeLine) {
-        switch (nodeLine.getRuleLimitType()) {
-            case EQUAL:
-                return matterValue.equals(nodeLine.getRuleLimitValue().getCode());
-            // 以下规则暂时不需要实现
-            case GT:
-            case LT:
-            case GE:
-            case LE:
-            default:
-                return false;
-        }
-    }
 }

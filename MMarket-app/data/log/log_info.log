@@ -1,143 +1,1147 @@
-24-06-21.14:54:57.637 [main            ] INFO  LogicTreeTest          - Starting LogicTreeTest using Java 1.8.0_402 on wyh-machine with PID 27692 (started by 98389 in E:\Java_code\MMarket\MMarket-app)
-24-06-21.14:54:57.638 [main            ] INFO  LogicTreeTest          - The following 1 profile is active: "dev"
-24-06-21.14:54:58.559 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-24-06-21.14:54:58.562 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-24-06-21.14:54:58.596 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 18 ms. Found 0 Redis repository interfaces.
-24-06-21.14:55:00.634 [main            ] INFO  Version                - Redisson 3.23.4
-24-06-21.14:55:01.822 [redisson-netty-2-6] INFO  MasterPubSubConnectionPool - 1 connections initialized for 117.72.77.81/117.72.77.81:16379
-24-06-21.14:55:02.101 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 117.72.77.81/117.72.77.81:16379
-24-06-21.14:55:03.909 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-24-06-21.14:55:03.973 [main            ] INFO  LogicTreeTest          - Started LogicTreeTest in 6.702 seconds (JVM running for 7.664)
-24-06-21.14:55:04.373 [main            ] INFO  DailyLimitNode         - 【每日限额节点】- 暂未实现，默认通过【CONTINUE】
-24-06-21.14:55:04.374 [main            ] INFO  WinFrequencyNode       - 【中奖频率节点】- 暂未实现，默认通过【CONTINUE】
-24-06-21.14:55:04.374 [main            ] INFO  RuleLockNode           - 【奖品解锁节点】-现阶段未编写具体逻辑，默认通过【Continue】
-24-06-21.14:55:04.374 [main            ] INFO  RuleStockNode          - 【库存扣减节点】-现阶段未编写具体逻辑，默认通过【TERMINATED】，库存不够哦
-24-06-21.14:55:04.374 [main            ] INFO  RuleDecisionTreeEngine - 最终决策树节点：rule_stock 处理结果信息: 【终止处理】，不再调用后续责任链节点
-24-06-21.14:55:04.541 [main            ] INFO  LogicTreeTest          - 测试结果：{"awardId":100,"ruleModel":"rule_stock","status":"TERMINATED","strategyId":100001,"userId":"joyboy"}
-24-06-21.15:30:23.337 [main            ] INFO  LogicTreeTest          - Starting LogicTreeTest using Java 1.8.0_402 on wyh-machine with PID 29416 (started by 98389 in E:\Java_code\MMarket\MMarket-app)
-24-06-21.15:30:23.338 [main            ] INFO  LogicTreeTest          - The following 1 profile is active: "dev"
-24-06-21.15:30:24.105 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-24-06-21.15:30:24.107 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-24-06-21.15:30:24.132 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 14 ms. Found 0 Redis repository interfaces.
-24-06-21.15:30:25.899 [main            ] INFO  Version                - Redisson 3.23.4
-24-06-21.15:30:26.991 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 117.72.77.81/117.72.77.81:16379
-24-06-21.15:30:27.276 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 117.72.77.81/117.72.77.81:16379
-24-06-21.15:30:29.129 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-24-06-21.15:30:29.189 [main            ] INFO  LogicTreeTest          - Started LogicTreeTest in 6.195 seconds (JVM running for 6.925)
-24-06-21.15:30:29.520 [main            ] INFO  DailyLimitNode         - 【每日限额节点】- 暂未实现，默认通过【CONTINUE】
-24-06-21.15:30:29.520 [main            ] INFO  WinFrequencyNode       - 【中奖频率节点】- 暂未实现，默认通过【CONTINUE】
-24-06-21.15:30:29.520 [main            ] INFO  RuleLockNode           - 【奖品解锁节点】-现阶段未编写具体逻辑，默认通过【Continue】
-24-06-21.15:30:29.520 [main            ] INFO  RuleStockNode          - 【库存扣减节点】- 开始检查库存...
-24-06-21.15:30:29.520 [main            ] INFO  RuleStockNode          - 【库存扣减节点】- 现阶段未编写具体逻辑，默认通过【TERMINATED】，库存不够哦
-24-06-21.15:30:29.520 [main            ] INFO  RuleStockNode          - 【库存扣减节点】- ...库存检查结束
-24-06-21.15:30:29.520 [main            ] INFO  RuleDecisionTreeEngine - 最终决策树节点：rule_stock 处理结果信息: 【终止处理】，不再调用后续责任链节点
-24-06-21.15:30:29.664 [main            ] INFO  LogicTreeTest          - 测试结果：{"awardId":100,"ruleModel":"rule_stock","status":"TERMINATED","strategyId":100001,"userId":"joyboy"}
-24-06-21.15:36:56.185 [main            ] INFO  LogicTreeTest          - Starting LogicTreeTest using Java 1.8.0_402 on wyh-machine with PID 6156 (started by 98389 in E:\Java_code\MMarket\MMarket-app)
-24-06-21.15:36:56.185 [main            ] INFO  LogicTreeTest          - The following 1 profile is active: "dev"
-24-06-21.15:36:57.029 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-24-06-21.15:36:57.031 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-24-06-21.15:36:57.058 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 15 ms. Found 0 Redis repository interfaces.
-24-06-21.15:36:58.878 [main            ] INFO  Version                - Redisson 3.23.4
-24-06-21.15:37:00.066 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 117.72.77.81/117.72.77.81:16379
-24-06-21.15:37:00.349 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 117.72.77.81/117.72.77.81:16379
-24-06-21.15:37:02.146 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-24-06-21.15:37:02.208 [main            ] INFO  LogicTreeTest          - Started LogicTreeTest in 6.392 seconds (JVM running for 7.092)
-24-06-21.15:37:02.544 [main            ] INFO  DailyLimitNode         - 【每日限额节点】- 暂未实现，默认通过【CONTINUE】
-24-06-21.15:37:02.544 [main            ] INFO  WinFrequencyNode       - 【中奖频率节点】- 暂未实现，默认通过【CONTINUE】
-24-06-21.15:37:02.544 [main            ] INFO  RuleLockNode           - 【奖品解锁节点】-现阶段未编写具体逻辑，默认通过【Continue】
-24-06-21.15:37:02.544 [main            ] INFO  RuleStockNode          - 【库存扣减节点】- 开始检查库存...
-24-06-21.15:37:02.544 [main            ] INFO  RuleStockNode          - 【库存扣减节点】- 现阶段未编写具体逻辑，默认通过【TERMINATED】，库存不够哦
-24-06-21.15:37:02.545 [main            ] INFO  RuleStockNode          - 【库存扣减节点】- ...库存检查结束
-24-06-21.15:37:02.545 [main            ] INFO  RuleDecisionTreeEngine - 最终决策树节点：rule_stock 处理结果信息: 【终止处理】，不再调用后续责任链节点
-24-06-21.15:37:02.673 [main            ] INFO  LogicTreeTest          - 测试结果：{"awardId":100,"ruleModel":"rule_stock","status":"TERMINATED","strategyId":100001,"userId":"joyboy"}
-24-06-21.15:56:23.330 [main            ] INFO  LogicTreeTest          - Starting LogicTreeTest using Java 1.8.0_402 on wyh-machine with PID 24760 (started by 98389 in E:\Java_code\MMarket\MMarket-app)
-24-06-21.15:56:23.331 [main            ] INFO  LogicTreeTest          - The following 1 profile is active: "dev"
-24-06-21.15:56:24.202 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-24-06-21.15:56:24.205 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-24-06-21.15:56:24.237 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 19 ms. Found 0 Redis repository interfaces.
-24-06-21.15:56:26.128 [main            ] INFO  Version                - Redisson 3.23.4
-24-06-21.15:56:27.346 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 117.72.77.81/117.72.77.81:16379
-24-06-21.15:56:27.622 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 117.72.77.81/117.72.77.81:16379
-24-06-21.15:56:29.407 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-24-06-21.15:56:29.477 [main            ] INFO  LogicTreeTest          - Started LogicTreeTest in 6.505 seconds (JVM running for 7.375)
-24-06-21.15:56:29.864 [main            ] INFO  DailyLimitNode         - 【每日限额节点】- 暂未实现，默认通过【CONTINUE】
-24-06-21.15:56:29.864 [main            ] INFO  WinFrequencyNode       - 【中奖频率节点】- 暂未实现，默认通过【CONTINUE】
-24-06-21.15:56:29.864 [main            ] INFO  RuleLockNode           - 【奖品解锁节点】-现阶段未编写具体逻辑，默认通过【Continue】
-24-06-21.15:56:29.864 [main            ] INFO  RuleStockNode          - 【库存扣减节点】- 开始检查库存...
-24-06-21.15:56:29.864 [main            ] INFO  RuleStockNode          - 【库存扣减节点】- 现阶段未编写具体逻辑，默认通过【TERMINATED】，库存不够哦
-24-06-21.15:56:29.864 [main            ] INFO  RuleStockNode          - 【库存扣减节点】- ...库存检查结束
-24-06-21.15:56:29.864 [main            ] INFO  RuleDecisionTreeEngine - 最终决策树节点：rule_stock 处理结果信息: 【终止处理】，不再调用后续责任链节点
-24-06-21.15:56:30.029 [main            ] INFO  LogicTreeTest          - 测试结果：{"awardId":100,"ruleModel":"rule_stock","status":"TERMINATED","strategyId":100001,"userId":"joyboy"}
-24-06-21.16:17:01.213 [main            ] INFO  LogicTreeTest          - Starting LogicTreeTest using Java 1.8.0_402 on wyh-machine with PID 29408 (started by 98389 in E:\Java_code\MMarket\MMarket-app)
-24-06-21.16:17:01.214 [main            ] INFO  LogicTreeTest          - The following 1 profile is active: "dev"
-24-06-21.16:17:01.940 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-24-06-21.16:17:01.942 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-24-06-21.16:17:01.973 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 13 ms. Found 0 Redis repository interfaces.
-24-06-21.16:17:03.736 [main            ] INFO  Version                - Redisson 3.23.4
-24-06-21.16:17:04.890 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for 117.72.77.81/117.72.77.81:16379
-24-06-21.16:17:05.165 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 117.72.77.81/117.72.77.81:16379
-24-06-21.16:17:07.006 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-24-06-21.16:17:07.071 [main            ] INFO  LogicTreeTest          - Started LogicTreeTest in 6.181 seconds (JVM running for 6.884)
-24-06-21.16:17:07.394 [main            ] INFO  DailyLimitNode         - 【每日限额节点】- 暂未实现，默认通过【CONTINUE】
-24-06-21.16:17:07.394 [main            ] INFO  WinFrequencyNode       - 【中奖频率节点】- 暂未实现，默认通过【CONTINUE】
-24-06-21.16:17:07.394 [main            ] INFO  RuleLockNode           - 【奖品解锁节点】-现阶段未编写具体逻辑，默认通过【Continue】
-24-06-21.16:17:07.394 [main            ] INFO  RuleStockNode          - 【库存扣减节点】- 开始检查库存...
-24-06-21.16:17:07.394 [main            ] INFO  RuleStockNode          - 【库存扣减节点】- 现阶段未编写具体逻辑，默认通过【TERMINATED】，库存不够哦
-24-06-21.16:17:07.394 [main            ] INFO  RuleStockNode          - 【库存扣减节点】- ...库存检查结束
-24-06-21.16:17:07.394 [main            ] INFO  RuleDecisionTreeEngine - 最终决策树节点：rule_stock 处理结果信息: 【终止处理】，不再调用后续责任链节点
-24-06-21.16:17:07.536 [main            ] INFO  LogicTreeTest          - 测试结果：{"awardId":100,"ruleModel":"rule_stock","status":"TERMINATED","strategyId":100001,"userId":"joyboy"}
-24-06-21.16:19:19.722 [main            ] INFO  LogicTreeTest          - Starting LogicTreeTest using Java 1.8.0_402 on wyh-machine with PID 28568 (started by 98389 in E:\Java_code\MMarket\MMarket-app)
-24-06-21.16:19:19.723 [main            ] INFO  LogicTreeTest          - The following 1 profile is active: "dev"
-24-06-21.16:19:20.459 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-24-06-21.16:19:20.461 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-24-06-21.16:19:20.490 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 14 ms. Found 0 Redis repository interfaces.
-24-06-21.16:19:22.204 [main            ] INFO  Version                - Redisson 3.23.4
-24-06-21.16:19:23.263 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 117.72.77.81/117.72.77.81:16379
-24-06-21.16:19:23.561 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 117.72.77.81/117.72.77.81:16379
-24-06-21.16:19:25.275 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-24-06-21.16:19:25.332 [main            ] INFO  LogicTreeTest          - Started LogicTreeTest in 5.945 seconds (JVM running for 6.635)
-24-06-21.16:19:25.717 [main            ] INFO  DailyLimitNode         - 【每日限额节点】- 暂未实现，默认通过【CONTINUE】
-24-06-21.16:19:25.717 [main            ] INFO  WinFrequencyNode       - 【中奖频率节点】- 暂未实现，默认通过【CONTINUE】
-24-06-21.16:19:25.717 [main            ] INFO  RuleLockNode           - 【奖品解锁节点】-现阶段未编写具体逻辑，默认通过【Continue】
-24-06-21.16:19:25.717 [main            ] INFO  RuleStockNode          - 【库存扣减节点】- 开始检查库存...
-24-06-21.16:19:25.717 [main            ] INFO  RuleStockNode          - 【库存扣减节点】- 现阶段未编写具体逻辑，默认通过【TERMINATED】，库存不够哦
-24-06-21.16:19:25.717 [main            ] INFO  RuleStockNode          - 【库存扣减节点】- ...库存检查结束
-24-06-21.16:19:25.717 [main            ] INFO  RuleDecisionTreeEngine - 最终决策树节点：rule_stock 处理结果信息: 【终止处理】，不再调用后续责任链节点
-24-06-21.16:19:25.881 [main            ] INFO  LogicTreeTest          - 测试结果：{"awardId":100,"ruleModel":"rule_stock","status":"TERMINATED","strategyId":100001,"userId":"joyboy"}
-24-06-21.16:20:05.462 [main            ] INFO  LogicTreeTest          - Starting LogicTreeTest using Java 1.8.0_402 on wyh-machine with PID 12324 (started by 98389 in E:\Java_code\MMarket\MMarket-app)
-24-06-21.16:20:05.463 [main            ] INFO  LogicTreeTest          - The following 1 profile is active: "dev"
-24-06-21.16:20:06.268 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-24-06-21.16:20:06.271 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-24-06-21.16:20:06.315 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 26 ms. Found 0 Redis repository interfaces.
-24-06-21.16:20:08.164 [main            ] INFO  Version                - Redisson 3.23.4
-24-06-21.16:20:09.259 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 117.72.77.81/117.72.77.81:16379
-24-06-21.16:20:09.595 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 117.72.77.81/117.72.77.81:16379
-24-06-21.16:20:11.691 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-24-06-21.16:20:11.751 [main            ] INFO  LogicTreeTest          - Started LogicTreeTest in 6.648 seconds (JVM running for 7.919)
-24-06-21.16:20:12.139 [main            ] INFO  DailyLimitNode         - 【每日限额节点】- 暂未实现，默认通过【CONTINUE】
-24-06-21.16:20:12.139 [main            ] INFO  WinFrequencyNode       - 【中奖频率节点】- 暂未实现，默认通过【CONTINUE】
-24-06-21.16:20:12.139 [main            ] INFO  RuleLockNode           - 【奖品解锁节点】-现阶段未编写具体逻辑，默认通过【Continue】
-24-06-21.16:20:12.139 [main            ] INFO  RuleStockNode          - 【库存扣减节点】- 开始检查库存...
-24-06-21.16:20:12.139 [main            ] INFO  RuleStockNode          - 【库存扣减节点】- 现阶段未编写具体逻辑，默认通过【TERMINATED】，库存不够哦
-24-06-21.16:20:12.139 [main            ] INFO  RuleStockNode          - 【库存扣减节点】- ...库存检查结束
-24-06-21.16:20:35.756 [main            ] INFO  RuleDecisionTreeEngine - 最终决策树节点：rule_stock 处理结果信息: 【终止处理】，不再调用后续责任链节点
-24-06-21.16:21:31.927 [main            ] INFO  LogicTreeTest          - 测试结果：{"awardId":100,"ruleModel":"rule_stock","status":"TERMINATED","strategyId":100001,"userId":"joyboy"}
-24-06-21.16:22:10.863 [main            ] INFO  LogicTreeTest          - Starting LogicTreeTest using Java 1.8.0_402 on wyh-machine with PID 30384 (started by 98389 in E:\Java_code\MMarket\MMarket-app)
-24-06-21.16:22:10.864 [main            ] INFO  LogicTreeTest          - The following 1 profile is active: "dev"
-24-06-21.16:22:11.585 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-24-06-21.16:22:11.587 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-24-06-21.16:22:11.614 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 15 ms. Found 0 Redis repository interfaces.
-24-06-21.16:22:13.301 [main            ] INFO  Version                - Redisson 3.23.4
-24-06-21.16:22:14.338 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 117.72.77.81/117.72.77.81:16379
-24-06-21.16:22:14.630 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 117.72.77.81/117.72.77.81:16379
-24-06-21.16:22:16.324 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-24-06-21.16:22:16.384 [main            ] INFO  LogicTreeTest          - Started LogicTreeTest in 5.859 seconds (JVM running for 6.556)
-24-06-21.16:22:16.705 [main            ] INFO  DailyLimitNode         - 【每日限额节点】- 暂未实现，默认通过【CONTINUE】
-24-06-21.16:22:16.705 [main            ] INFO  WinFrequencyNode       - 【中奖频率节点】- 暂未实现，默认通过【CONTINUE】
-24-06-21.16:22:16.705 [main            ] INFO  RuleLockNode           - 【奖品解锁节点】-现阶段未编写具体逻辑，默认通过【Continue】
-24-06-21.16:22:16.705 [main            ] INFO  RuleStockNode          - 【库存扣减节点】- 开始检查库存...
-24-06-21.16:22:16.705 [main            ] INFO  RuleStockNode          - 【库存扣减节点】- 现阶段未编写具体逻辑，默认通过【TERMINATED】，库存不够哦
-24-06-21.16:22:16.705 [main            ] INFO  RuleStockNode          - 【库存扣减节点】- ...库存检查结束
-24-06-21.16:22:16.705 [main            ] INFO  RuleDecisionTreeEngine - 最终决策树节点：rule_stock 处理结果信息: 【终止处理】，不再调用后续责任链节点
-24-06-21.16:22:16.706 [main            ] INFO  RuleLuckAwardNode      - 【兜底奖励节点】-现阶段未编写具体逻辑，默认终止【TERMINATED】
-24-06-21.16:22:16.845 [main            ] INFO  LogicTreeTest          - 测试结果：{"awardId":101,"ruleModel":"rule_luck_award","status":"TERMINATED","strategyId":100001,"userId":"joyboy"}
+24-06-22.06:53:35.206 [main            ] INFO  RaffleStrategyTest     - Starting RaffleStrategyTest using Java 1.8.0_402 on wyh-machine with PID 6692 (started by 98389 in E:\Java_code\MMarket\MMarket-app)
+24-06-22.06:53:35.207 [main            ] INFO  RaffleStrategyTest     - The following 1 profile is active: "dev"
+24-06-22.06:53:36.151 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-06-22.06:53:36.154 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-06-22.06:53:36.189 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 14 ms. Found 0 Redis repository interfaces.
+24-06-22.06:53:38.393 [main            ] INFO  Version                - Redisson 3.23.4
+24-06-22.06:53:39.521 [redisson-netty-2-6] INFO  MasterPubSubConnectionPool - 1 connections initialized for 117.72.77.81/117.72.77.81:16379
+24-06-22.06:53:39.753 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 117.72.77.81/117.72.77.81:16379
+24-06-22.06:53:41.673 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-06-22.06:53:41.743 [main            ] INFO  RaffleStrategyTest     - Started RaffleStrategyTest in 6.947 seconds (JVM running for 7.749)
+24-06-22.06:53:42.366 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Starting...
+24-06-22.06:53:42.978 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Start completed.
+24-06-22.06:53:43.197 [main            ] INFO  RaffleStrategyTest     - 策略装配结果：true
+24-06-22.06:53:43.468 [main            ] INFO  RaffleStrategyTest     - 策略装配结果：true
+24-06-22.06:53:43.471 [main            ] INFO  RaffleStrategyTest     - 当前用户幸运值为：40500
+24-06-22.06:53:43.475 [main            ] INFO  RaffleStrategyTest     - 用户已经完成的抽奖次数: 2次
+24-06-22.06:53:43.631 [main            ] INFO  RaffleStrategyTest     - 请求参数：{"strategyId":100001,"userId":"joyboy"}
+24-06-22.06:53:43.663 [main            ] INFO  RuleWeightLogicChain   - 抽奖责任链-权重开始 userId: joyboy strategyId: 100001 ruleModel: rule_weight
+24-06-22.06:53:43.713 [main            ] INFO  RuleWeightLogicChain   - 当前用户的积分为0，将采取权重规则：null
+24-06-22.06:53:43.713 [main            ] INFO  RuleWeightLogicChain   - 抽奖责任链-【权重节点】 userId: joyboy strategyId: 100001 ruleModel: rule_weight awardId: 没有参与权重抽奖
+24-06-22.06:53:43.714 [main            ] INFO  BlackListLogicChain    - 抽奖责任链-黑名单开始 userId: joyboy strategyId: 100001 ruleModel: rule_blacklist
+24-06-22.06:53:43.740 [main            ] INFO  BlackListLogicChain    - 抽奖责任链-【黑名单节点】 userId: joyboy strategyId: 100001 ruleModel: rule_blacklist awardId: 没有在黑名单规则中
+24-06-22.06:53:43.795 [main            ] INFO  DefaultLogicChain      - 抽奖责任链-【默认处理节点】 userId: joyboy strategyId: 100001 ruleModel: default awardId: 103
+24-06-22.06:53:43.795 [main            ] INFO  AbstractRaffleStrategy - 抽奖策略计算-责任链：用户ID: joyboy 策略ID: 100001 奖品ID: 103 规则模型: null 处理状态: 【继续处理流程】 结果描述: null
+24-06-22.06:53:43.823 [main            ] INFO  DailyLimitNode         - 【每日限额节点】- 暂未实现，默认通过【CONTINUE】
+24-06-22.06:53:43.823 [main            ] INFO  WinFrequencyNode       - 【中奖频率节点】- 暂未实现，默认通过【CONTINUE】
+24-06-22.06:53:43.823 [main            ] INFO  RuleLockNode           - 【奖品解锁节点】-现阶段未编写具体逻辑，默认通过【Continue】
+24-06-22.06:53:43.823 [main            ] INFO  RuleStockNode          - 【库存扣减节点】- 开始检查库存...
+24-06-22.06:53:43.823 [main            ] INFO  RuleStockNode          - 【库存扣减节点】- 现阶段未编写具体逻辑，默认通过【TERMINATED】，库存不够哦
+24-06-22.06:53:43.823 [main            ] INFO  RuleStockNode          - 【库存扣减节点】- ...库存检查结束
+24-06-22.06:53:43.823 [main            ] INFO  RuleDecisionTreeEngine - 最终决策树节点：rule_stock 处理结果信息: 【终止处理流程】
+24-06-22.06:53:43.823 [main            ] INFO  RuleLuckAwardNode      - 【兜底奖励节点】- 发放兜底奖品，默认终止【TERMINATED】
+24-06-22.06:53:43.823 [main            ] INFO  AbstractRaffleStrategy - 抽奖策略计算-规则树：用户ID: joyboy 策略ID: 100001 奖品ID: 101 规则模型: rule_luck_award 处理状态: 【终止处理流程】 结果描述: null
+24-06-22.06:53:43.826 [main            ] INFO  RaffleStrategyTest     - 第0次测试结果：{"awardId":101}
+24-06-22.06:53:43.855 [main            ] INFO  RuleWeightLogicChain   - 抽奖责任链-权重开始 userId: joyboy strategyId: 100001 ruleModel: rule_weight
+24-06-22.06:53:43.883 [main            ] INFO  RuleWeightLogicChain   - 当前用户的积分为0，将采取权重规则：null
+24-06-22.06:53:43.883 [main            ] INFO  RuleWeightLogicChain   - 抽奖责任链-【权重节点】 userId: joyboy strategyId: 100001 ruleModel: rule_weight awardId: 没有参与权重抽奖
+24-06-22.06:53:43.883 [main            ] INFO  BlackListLogicChain    - 抽奖责任链-黑名单开始 userId: joyboy strategyId: 100001 ruleModel: rule_blacklist
+24-06-22.06:53:43.910 [main            ] INFO  BlackListLogicChain    - 抽奖责任链-【黑名单节点】 userId: joyboy strategyId: 100001 ruleModel: rule_blacklist awardId: 没有在黑名单规则中
+24-06-22.06:53:43.962 [main            ] INFO  DefaultLogicChain      - 抽奖责任链-【默认处理节点】 userId: joyboy strategyId: 100001 ruleModel: default awardId: 101
+24-06-22.06:53:43.962 [main            ] INFO  AbstractRaffleStrategy - 抽奖策略计算-责任链：用户ID: joyboy 策略ID: 100001 奖品ID: 101 规则模型: null 处理状态: 【继续处理流程】 结果描述: null
+24-06-22.06:53:43.991 [main            ] INFO  DailyLimitNode         - 【每日限额节点】- 暂未实现，默认通过【CONTINUE】
+24-06-22.06:53:43.991 [main            ] INFO  WinFrequencyNode       - 【中奖频率节点】- 暂未实现，默认通过【CONTINUE】
+24-06-22.06:53:43.991 [main            ] INFO  RuleLockNode           - 【奖品解锁节点】-现阶段未编写具体逻辑，默认通过【Continue】
+24-06-22.06:53:43.991 [main            ] INFO  RuleStockNode          - 【库存扣减节点】- 开始检查库存...
+24-06-22.06:53:43.991 [main            ] INFO  RuleStockNode          - 【库存扣减节点】- 现阶段未编写具体逻辑，默认通过【TERMINATED】，库存不够哦
+24-06-22.06:53:43.991 [main            ] INFO  RuleStockNode          - 【库存扣减节点】- ...库存检查结束
+24-06-22.06:53:43.991 [main            ] INFO  RuleDecisionTreeEngine - 最终决策树节点：rule_stock 处理结果信息: 【终止处理流程】
+24-06-22.06:53:43.991 [main            ] INFO  RuleLuckAwardNode      - 【兜底奖励节点】- 发放兜底奖品，默认终止【TERMINATED】
+24-06-22.06:53:43.991 [main            ] INFO  AbstractRaffleStrategy - 抽奖策略计算-规则树：用户ID: joyboy 策略ID: 100001 奖品ID: 101 规则模型: rule_luck_award 处理状态: 【终止处理流程】 结果描述: null
+24-06-22.06:53:43.991 [main            ] INFO  RaffleStrategyTest     - 第1次测试结果：{"awardId":101}
+24-06-22.06:53:44.019 [main            ] INFO  RuleWeightLogicChain   - 抽奖责任链-权重开始 userId: joyboy strategyId: 100001 ruleModel: rule_weight
+24-06-22.06:53:44.047 [main            ] INFO  RuleWeightLogicChain   - 当前用户的积分为0，将采取权重规则：null
+24-06-22.06:53:44.047 [main            ] INFO  RuleWeightLogicChain   - 抽奖责任链-【权重节点】 userId: joyboy strategyId: 100001 ruleModel: rule_weight awardId: 没有参与权重抽奖
+24-06-22.06:53:44.047 [main            ] INFO  BlackListLogicChain    - 抽奖责任链-黑名单开始 userId: joyboy strategyId: 100001 ruleModel: rule_blacklist
+24-06-22.06:53:44.076 [main            ] INFO  BlackListLogicChain    - 抽奖责任链-【黑名单节点】 userId: joyboy strategyId: 100001 ruleModel: rule_blacklist awardId: 没有在黑名单规则中
+24-06-22.06:53:44.128 [main            ] INFO  DefaultLogicChain      - 抽奖责任链-【默认处理节点】 userId: joyboy strategyId: 100001 ruleModel: default awardId: 105
+24-06-22.06:53:44.129 [main            ] INFO  AbstractRaffleStrategy - 抽奖策略计算-责任链：用户ID: joyboy 策略ID: 100001 奖品ID: 105 规则模型: null 处理状态: 【继续处理流程】 结果描述: null
+24-06-22.06:53:44.156 [main            ] INFO  DailyLimitNode         - 【每日限额节点】- 暂未实现，默认通过【CONTINUE】
+24-06-22.06:53:44.156 [main            ] INFO  WinFrequencyNode       - 【中奖频率节点】- 暂未实现，默认通过【CONTINUE】
+24-06-22.06:53:44.156 [main            ] INFO  RuleLockNode           - 【奖品解锁节点】-现阶段未编写具体逻辑，默认通过【Continue】
+24-06-22.06:53:44.156 [main            ] INFO  RuleStockNode          - 【库存扣减节点】- 开始检查库存...
+24-06-22.06:53:44.156 [main            ] INFO  RuleStockNode          - 【库存扣减节点】- 现阶段未编写具体逻辑，默认通过【TERMINATED】，库存不够哦
+24-06-22.06:53:44.156 [main            ] INFO  RuleStockNode          - 【库存扣减节点】- ...库存检查结束
+24-06-22.06:53:44.156 [main            ] INFO  RuleDecisionTreeEngine - 最终决策树节点：rule_stock 处理结果信息: 【终止处理流程】
+24-06-22.06:53:44.156 [main            ] INFO  RuleLuckAwardNode      - 【兜底奖励节点】- 发放兜底奖品，默认终止【TERMINATED】
+24-06-22.06:53:44.156 [main            ] INFO  AbstractRaffleStrategy - 抽奖策略计算-规则树：用户ID: joyboy 策略ID: 100001 奖品ID: 101 规则模型: rule_luck_award 处理状态: 【终止处理流程】 结果描述: null
+24-06-22.06:53:44.156 [main            ] INFO  RaffleStrategyTest     - 第2次测试结果：{"awardId":101}
+24-06-22.06:53:44.181 [main            ] INFO  RuleWeightLogicChain   - 抽奖责任链-权重开始 userId: joyboy strategyId: 100001 ruleModel: rule_weight
+24-06-22.06:53:44.211 [main            ] INFO  RuleWeightLogicChain   - 当前用户的积分为0，将采取权重规则：null
+24-06-22.06:53:44.211 [main            ] INFO  RuleWeightLogicChain   - 抽奖责任链-【权重节点】 userId: joyboy strategyId: 100001 ruleModel: rule_weight awardId: 没有参与权重抽奖
+24-06-22.06:53:44.211 [main            ] INFO  BlackListLogicChain    - 抽奖责任链-黑名单开始 userId: joyboy strategyId: 100001 ruleModel: rule_blacklist
+24-06-22.06:53:44.240 [main            ] INFO  BlackListLogicChain    - 抽奖责任链-【黑名单节点】 userId: joyboy strategyId: 100001 ruleModel: rule_blacklist awardId: 没有在黑名单规则中
+24-06-22.06:53:44.291 [main            ] INFO  DefaultLogicChain      - 抽奖责任链-【默认处理节点】 userId: joyboy strategyId: 100001 ruleModel: default awardId: 105
+24-06-22.06:53:44.291 [main            ] INFO  AbstractRaffleStrategy - 抽奖策略计算-责任链：用户ID: joyboy 策略ID: 100001 奖品ID: 105 规则模型: null 处理状态: 【继续处理流程】 结果描述: null
+24-06-22.06:53:44.319 [main            ] INFO  DailyLimitNode         - 【每日限额节点】- 暂未实现，默认通过【CONTINUE】
+24-06-22.06:53:44.319 [main            ] INFO  WinFrequencyNode       - 【中奖频率节点】- 暂未实现，默认通过【CONTINUE】
+24-06-22.06:53:44.319 [main            ] INFO  RuleLockNode           - 【奖品解锁节点】-现阶段未编写具体逻辑，默认通过【Continue】
+24-06-22.06:53:44.319 [main            ] INFO  RuleStockNode          - 【库存扣减节点】- 开始检查库存...
+24-06-22.06:53:44.319 [main            ] INFO  RuleStockNode          - 【库存扣减节点】- 现阶段未编写具体逻辑，默认通过【TERMINATED】，库存不够哦
+24-06-22.06:53:44.319 [main            ] INFO  RuleStockNode          - 【库存扣减节点】- ...库存检查结束
+24-06-22.06:53:44.319 [main            ] INFO  RuleDecisionTreeEngine - 最终决策树节点：rule_stock 处理结果信息: 【终止处理流程】
+24-06-22.06:53:44.319 [main            ] INFO  RuleLuckAwardNode      - 【兜底奖励节点】- 发放兜底奖品，默认终止【TERMINATED】
+24-06-22.06:53:44.319 [main            ] INFO  AbstractRaffleStrategy - 抽奖策略计算-规则树：用户ID: joyboy 策略ID: 100001 奖品ID: 101 规则模型: rule_luck_award 处理状态: 【终止处理流程】 结果描述: null
+24-06-22.06:53:44.319 [main            ] INFO  RaffleStrategyTest     - 第3次测试结果：{"awardId":101}
+24-06-22.06:53:44.345 [main            ] INFO  RuleWeightLogicChain   - 抽奖责任链-权重开始 userId: joyboy strategyId: 100001 ruleModel: rule_weight
+24-06-22.06:53:44.375 [main            ] INFO  RuleWeightLogicChain   - 当前用户的积分为0，将采取权重规则：null
+24-06-22.06:53:44.375 [main            ] INFO  RuleWeightLogicChain   - 抽奖责任链-【权重节点】 userId: joyboy strategyId: 100001 ruleModel: rule_weight awardId: 没有参与权重抽奖
+24-06-22.06:53:44.375 [main            ] INFO  BlackListLogicChain    - 抽奖责任链-黑名单开始 userId: joyboy strategyId: 100001 ruleModel: rule_blacklist
+24-06-22.06:53:44.405 [main            ] INFO  BlackListLogicChain    - 抽奖责任链-【黑名单节点】 userId: joyboy strategyId: 100001 ruleModel: rule_blacklist awardId: 没有在黑名单规则中
+24-06-22.06:53:44.462 [main            ] INFO  DefaultLogicChain      - 抽奖责任链-【默认处理节点】 userId: joyboy strategyId: 100001 ruleModel: default awardId: 102
+24-06-22.06:53:44.463 [main            ] INFO  AbstractRaffleStrategy - 抽奖策略计算-责任链：用户ID: joyboy 策略ID: 100001 奖品ID: 102 规则模型: null 处理状态: 【继续处理流程】 结果描述: null
+24-06-22.06:53:44.491 [main            ] INFO  DailyLimitNode         - 【每日限额节点】- 暂未实现，默认通过【CONTINUE】
+24-06-22.06:53:44.491 [main            ] INFO  WinFrequencyNode       - 【中奖频率节点】- 暂未实现，默认通过【CONTINUE】
+24-06-22.06:53:44.491 [main            ] INFO  RuleLockNode           - 【奖品解锁节点】-现阶段未编写具体逻辑，默认通过【Continue】
+24-06-22.06:53:44.491 [main            ] INFO  RuleStockNode          - 【库存扣减节点】- 开始检查库存...
+24-06-22.06:53:44.491 [main            ] INFO  RuleStockNode          - 【库存扣减节点】- 现阶段未编写具体逻辑，默认通过【TERMINATED】，库存不够哦
+24-06-22.06:53:44.492 [main            ] INFO  RuleStockNode          - 【库存扣减节点】- ...库存检查结束
+24-06-22.06:53:44.492 [main            ] INFO  RuleDecisionTreeEngine - 最终决策树节点：rule_stock 处理结果信息: 【终止处理流程】
+24-06-22.06:53:44.492 [main            ] INFO  RuleLuckAwardNode      - 【兜底奖励节点】- 发放兜底奖品，默认终止【TERMINATED】
+24-06-22.06:53:44.492 [main            ] INFO  AbstractRaffleStrategy - 抽奖策略计算-规则树：用户ID: joyboy 策略ID: 100001 奖品ID: 101 规则模型: rule_luck_award 处理状态: 【终止处理流程】 结果描述: null
+24-06-22.06:53:44.492 [main            ] INFO  RaffleStrategyTest     - 第4次测试结果：{"awardId":101}
+24-06-22.06:53:44.558 [SpringApplicationShutdownHook] INFO  HikariDataSource       - Retail_HikariCP - Shutdown initiated...
+24-06-22.06:53:44.749 [SpringApplicationShutdownHook] INFO  HikariDataSource       - Retail_HikariCP - Shutdown completed.
+24-06-22.07:11:38.684 [main            ] INFO  RaffleStrategyTest     - Starting RaffleStrategyTest using Java 1.8.0_402 on wyh-machine with PID 26708 (started by 98389 in E:\Java_code\MMarket\MMarket-app)
+24-06-22.07:11:38.685 [main            ] INFO  RaffleStrategyTest     - The following 1 profile is active: "dev"
+24-06-22.07:11:39.433 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-06-22.07:11:39.435 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-06-22.07:11:39.465 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 14 ms. Found 0 Redis repository interfaces.
+24-06-22.07:11:41.279 [main            ] INFO  Version                - Redisson 3.23.4
+24-06-22.07:11:42.384 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for 117.72.77.81/117.72.77.81:16379
+24-06-22.07:11:42.629 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 117.72.77.81/117.72.77.81:16379
+24-06-22.07:11:44.447 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-06-22.07:11:44.506 [main            ] INFO  RaffleStrategyTest     - Started RaffleStrategyTest in 6.14 seconds (JVM running for 6.937)
+24-06-22.07:11:45.063 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Starting...
+24-06-22.07:11:45.683 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Start completed.
+24-06-22.07:11:45.916 [main            ] INFO  RaffleStrategyTest     - 策略装配结果：true
+24-06-22.07:11:46.079 [main            ] INFO  RaffleStrategyTest     - 策略装配结果：true
+24-06-22.07:11:46.080 [main            ] INFO  RaffleStrategyTest     - 当前用户幸运值为：40500
+24-06-22.07:11:46.081 [main            ] INFO  RaffleStrategyTest     - 用户已经完成的抽奖次数: 2次
+24-06-22.07:11:46.216 [main            ] INFO  RaffleStrategyTest     - 请求参数：{"strategyId":100003,"userId":"joyboy"}
+24-06-22.07:11:46.308 [main            ] INFO  DefaultLogicChain      - 抽奖责任链-【默认抽奖节点】 规则模型：null 奖品ID：108 执行状态：CONTINUE 结果描述：null
+24-06-22.07:11:46.308 [main            ] INFO  AbstractRaffleStrategy - 抽奖策略计算-责任链：用户ID: joyboy 策略ID: 100003 奖品ID: 108 规则模型: null 处理状态: 【继续处理流程】 结果描述: null
+24-06-22.07:11:46.371 [main            ] INFO  DailyLimitNode         - 【每日限额节点】- 暂未实现，默认通过【CONTINUE】
+24-06-22.07:11:46.371 [main            ] INFO  WinFrequencyNode       - 【中奖频率节点】- 暂未实现，默认通过【CONTINUE】
+24-06-22.07:11:46.371 [main            ] INFO  RuleLockNode           - 【奖品解锁节点】-现阶段未编写具体逻辑，默认通过【Continue】
+24-06-22.07:11:46.371 [main            ] INFO  RuleStockNode          - 【库存扣减节点】- 开始检查库存...
+24-06-22.07:11:46.371 [main            ] INFO  RuleStockNode          - 【库存扣减节点】- 现阶段未编写具体逻辑，默认通过【TERMINATED】，库存不够哦
+24-06-22.07:11:46.371 [main            ] INFO  RuleStockNode          - 【库存扣减节点】- ...库存检查结束
+24-06-22.07:11:46.371 [main            ] INFO  RuleDecisionTreeEngine - 最终决策树节点：rule_stock 处理结果信息: 【终止处理流程】
+24-06-22.07:11:46.371 [main            ] INFO  RuleLuckAwardNode      - 【兜底奖励节点】- 发放兜底奖品，默认终止【TERMINATED】
+24-06-22.07:11:46.371 [main            ] INFO  AbstractRaffleStrategy - 抽奖策略计算-规则树：用户ID: joyboy 策略ID: 100003 奖品ID: 101 规则模型: rule_luck_award 处理状态: 【终止处理流程】 结果描述: null
+24-06-22.07:11:46.376 [main            ] INFO  RaffleStrategyTest     - 第0次测试结果：{"awardId":101}
+24-06-22.07:11:46.463 [main            ] INFO  DefaultLogicChain      - 抽奖责任链-【默认抽奖节点】 规则模型：null 奖品ID：109 执行状态：CONTINUE 结果描述：null
+24-06-22.07:11:46.463 [main            ] INFO  AbstractRaffleStrategy - 抽奖策略计算-责任链：用户ID: joyboy 策略ID: 100003 奖品ID: 109 规则模型: null 处理状态: 【继续处理流程】 结果描述: null
+24-06-22.07:11:46.492 [main            ] INFO  DailyLimitNode         - 【每日限额节点】- 暂未实现，默认通过【CONTINUE】
+24-06-22.07:11:46.492 [main            ] INFO  WinFrequencyNode       - 【中奖频率节点】- 暂未实现，默认通过【CONTINUE】
+24-06-22.07:11:46.492 [main            ] INFO  RuleLockNode           - 【奖品解锁节点】-现阶段未编写具体逻辑，默认通过【Continue】
+24-06-22.07:11:46.492 [main            ] INFO  RuleStockNode          - 【库存扣减节点】- 开始检查库存...
+24-06-22.07:11:46.492 [main            ] INFO  RuleStockNode          - 【库存扣减节点】- 现阶段未编写具体逻辑，默认通过【TERMINATED】，库存不够哦
+24-06-22.07:11:46.492 [main            ] INFO  RuleStockNode          - 【库存扣减节点】- ...库存检查结束
+24-06-22.07:11:46.492 [main            ] INFO  RuleDecisionTreeEngine - 最终决策树节点：rule_stock 处理结果信息: 【终止处理流程】
+24-06-22.07:11:46.492 [main            ] INFO  RuleLuckAwardNode      - 【兜底奖励节点】- 发放兜底奖品，默认终止【TERMINATED】
+24-06-22.07:11:46.492 [main            ] INFO  AbstractRaffleStrategy - 抽奖策略计算-规则树：用户ID: joyboy 策略ID: 100003 奖品ID: 101 规则模型: rule_luck_award 处理状态: 【终止处理流程】 结果描述: null
+24-06-22.07:11:46.493 [main            ] INFO  RaffleStrategyTest     - 第1次测试结果：{"awardId":101}
+24-06-22.07:11:46.579 [main            ] INFO  DefaultLogicChain      - 抽奖责任链-【默认抽奖节点】 规则模型：null 奖品ID：108 执行状态：CONTINUE 结果描述：null
+24-06-22.07:11:46.579 [main            ] INFO  AbstractRaffleStrategy - 抽奖策略计算-责任链：用户ID: joyboy 策略ID: 100003 奖品ID: 108 规则模型: null 处理状态: 【继续处理流程】 结果描述: null
+24-06-22.07:11:46.612 [main            ] INFO  DailyLimitNode         - 【每日限额节点】- 暂未实现，默认通过【CONTINUE】
+24-06-22.07:11:46.612 [main            ] INFO  WinFrequencyNode       - 【中奖频率节点】- 暂未实现，默认通过【CONTINUE】
+24-06-22.07:11:46.612 [main            ] INFO  RuleLockNode           - 【奖品解锁节点】-现阶段未编写具体逻辑，默认通过【Continue】
+24-06-22.07:11:46.612 [main            ] INFO  RuleStockNode          - 【库存扣减节点】- 开始检查库存...
+24-06-22.07:11:46.612 [main            ] INFO  RuleStockNode          - 【库存扣减节点】- 现阶段未编写具体逻辑，默认通过【TERMINATED】，库存不够哦
+24-06-22.07:11:46.612 [main            ] INFO  RuleStockNode          - 【库存扣减节点】- ...库存检查结束
+24-06-22.07:11:46.612 [main            ] INFO  RuleDecisionTreeEngine - 最终决策树节点：rule_stock 处理结果信息: 【终止处理流程】
+24-06-22.07:11:46.612 [main            ] INFO  RuleLuckAwardNode      - 【兜底奖励节点】- 发放兜底奖品，默认终止【TERMINATED】
+24-06-22.07:11:46.612 [main            ] INFO  AbstractRaffleStrategy - 抽奖策略计算-规则树：用户ID: joyboy 策略ID: 100003 奖品ID: 101 规则模型: rule_luck_award 处理状态: 【终止处理流程】 结果描述: null
+24-06-22.07:11:46.615 [main            ] INFO  RaffleStrategyTest     - 第2次测试结果：{"awardId":101}
+24-06-22.07:11:46.708 [main            ] INFO  DefaultLogicChain      - 抽奖责任链-【默认抽奖节点】 规则模型：null 奖品ID：108 执行状态：CONTINUE 结果描述：null
+24-06-22.07:11:46.708 [main            ] INFO  AbstractRaffleStrategy - 抽奖策略计算-责任链：用户ID: joyboy 策略ID: 100003 奖品ID: 108 规则模型: null 处理状态: 【继续处理流程】 结果描述: null
+24-06-22.07:11:46.740 [main            ] INFO  DailyLimitNode         - 【每日限额节点】- 暂未实现，默认通过【CONTINUE】
+24-06-22.07:11:46.740 [main            ] INFO  WinFrequencyNode       - 【中奖频率节点】- 暂未实现，默认通过【CONTINUE】
+24-06-22.07:11:46.741 [main            ] INFO  RuleLockNode           - 【奖品解锁节点】-现阶段未编写具体逻辑，默认通过【Continue】
+24-06-22.07:11:46.741 [main            ] INFO  RuleStockNode          - 【库存扣减节点】- 开始检查库存...
+24-06-22.07:11:46.741 [main            ] INFO  RuleStockNode          - 【库存扣减节点】- 现阶段未编写具体逻辑，默认通过【TERMINATED】，库存不够哦
+24-06-22.07:11:46.741 [main            ] INFO  RuleStockNode          - 【库存扣减节点】- ...库存检查结束
+24-06-22.07:11:46.741 [main            ] INFO  RuleDecisionTreeEngine - 最终决策树节点：rule_stock 处理结果信息: 【终止处理流程】
+24-06-22.07:11:46.741 [main            ] INFO  RuleLuckAwardNode      - 【兜底奖励节点】- 发放兜底奖品，默认终止【TERMINATED】
+24-06-22.07:11:46.741 [main            ] INFO  AbstractRaffleStrategy - 抽奖策略计算-规则树：用户ID: joyboy 策略ID: 100003 奖品ID: 101 规则模型: rule_luck_award 处理状态: 【终止处理流程】 结果描述: null
+24-06-22.07:11:46.741 [main            ] INFO  RaffleStrategyTest     - 第3次测试结果：{"awardId":101}
+24-06-22.07:11:46.826 [main            ] INFO  DefaultLogicChain      - 抽奖责任链-【默认抽奖节点】 规则模型：null 奖品ID：108 执行状态：CONTINUE 结果描述：null
+24-06-22.07:11:46.826 [main            ] INFO  AbstractRaffleStrategy - 抽奖策略计算-责任链：用户ID: joyboy 策略ID: 100003 奖品ID: 108 规则模型: null 处理状态: 【继续处理流程】 结果描述: null
+24-06-22.07:11:46.855 [main            ] INFO  DailyLimitNode         - 【每日限额节点】- 暂未实现，默认通过【CONTINUE】
+24-06-22.07:11:46.855 [main            ] INFO  WinFrequencyNode       - 【中奖频率节点】- 暂未实现，默认通过【CONTINUE】
+24-06-22.07:11:46.855 [main            ] INFO  RuleLockNode           - 【奖品解锁节点】-现阶段未编写具体逻辑，默认通过【Continue】
+24-06-22.07:11:46.855 [main            ] INFO  RuleStockNode          - 【库存扣减节点】- 开始检查库存...
+24-06-22.07:11:46.856 [main            ] INFO  RuleStockNode          - 【库存扣减节点】- 现阶段未编写具体逻辑，默认通过【TERMINATED】，库存不够哦
+24-06-22.07:11:46.856 [main            ] INFO  RuleStockNode          - 【库存扣减节点】- ...库存检查结束
+24-06-22.07:11:46.856 [main            ] INFO  RuleDecisionTreeEngine - 最终决策树节点：rule_stock 处理结果信息: 【终止处理流程】
+24-06-22.07:11:46.856 [main            ] INFO  RuleLuckAwardNode      - 【兜底奖励节点】- 发放兜底奖品，默认终止【TERMINATED】
+24-06-22.07:11:46.856 [main            ] INFO  AbstractRaffleStrategy - 抽奖策略计算-规则树：用户ID: joyboy 策略ID: 100003 奖品ID: 101 规则模型: rule_luck_award 处理状态: 【终止处理流程】 结果描述: null
+24-06-22.07:11:46.856 [main            ] INFO  RaffleStrategyTest     - 第4次测试结果：{"awardId":101}
+24-06-22.07:11:46.917 [SpringApplicationShutdownHook] INFO  HikariDataSource       - Retail_HikariCP - Shutdown initiated...
+24-06-22.07:11:47.147 [SpringApplicationShutdownHook] INFO  HikariDataSource       - Retail_HikariCP - Shutdown completed.
+24-06-22.07:18:37.049 [main            ] INFO  RaffleStrategyTest     - Starting RaffleStrategyTest using Java 1.8.0_402 on wyh-machine with PID 14808 (started by 98389 in E:\Java_code\MMarket\MMarket-app)
+24-06-22.07:18:37.052 [main            ] INFO  RaffleStrategyTest     - The following 1 profile is active: "dev"
+24-06-22.07:18:37.798 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-06-22.07:18:37.801 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-06-22.07:18:37.828 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 15 ms. Found 0 Redis repository interfaces.
+24-06-22.07:18:39.617 [main            ] INFO  Version                - Redisson 3.23.4
+24-06-22.07:18:40.723 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 117.72.77.81/117.72.77.81:16379
+24-06-22.07:18:40.978 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 117.72.77.81/117.72.77.81:16379
+24-06-22.07:18:42.878 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-06-22.07:18:42.942 [main            ] INFO  RaffleStrategyTest     - Started RaffleStrategyTest in 6.219 seconds (JVM running for 6.967)
+24-06-22.07:18:43.513 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Starting...
+24-06-22.07:18:44.160 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Start completed.
+24-06-22.07:18:44.394 [main            ] INFO  RaffleStrategyTest     - 策略装配结果：true
+24-06-22.07:18:44.559 [main            ] INFO  RaffleStrategyTest     - 策略装配结果：true
+24-06-22.07:18:44.560 [main            ] INFO  RaffleStrategyTest     - 当前用户幸运值为：40500
+24-06-22.07:18:44.561 [main            ] INFO  RaffleStrategyTest     - 用户已经完成的抽奖次数: 2次
+24-06-22.07:18:44.700 [main            ] INFO  RaffleStrategyTest     - 请求参数：{"strategyId":100003,"userId":"joyboy"}
+24-06-22.07:18:44.729 [main            ] INFO  DefaultLogicChain      - 用户【joyboy】，参与抽奖活动【100003】，进行【default】
+24-06-22.07:18:44.788 [main            ] INFO  DefaultLogicChain      - 抽奖责任链-【默认抽奖节点】 规则模型：default 奖品ID：108 执行状态：CONTINUE 结果描述：用户参与默认抽奖规则，从默认的奖品规则中抽取奖品
+24-06-22.07:18:44.789 [main            ] INFO  AbstractRaffleStrategy - 抽奖策略计算-责任链：用户ID: joyboy 策略ID: 100003 奖品ID: 108 规则模型: default 处理状态: 【继续处理流程】 结果描述: 用户参与默认抽奖规则，从默认的奖品规则中抽取奖品
+24-06-22.07:18:44.858 [main            ] INFO  DailyLimitNode         - 【每日限额节点】- 暂未实现，默认通过【CONTINUE】
+24-06-22.07:18:44.858 [main            ] INFO  WinFrequencyNode       - 【中奖频率节点】- 暂未实现，默认通过【CONTINUE】
+24-06-22.07:18:44.858 [main            ] INFO  RuleLockNode           - 【奖品解锁节点】-现阶段未编写具体逻辑，默认通过【Continue】
+24-06-22.07:18:44.858 [main            ] INFO  RuleStockNode          - 【库存扣减节点】- 开始检查库存...
+24-06-22.07:18:44.858 [main            ] INFO  RuleStockNode          - 【库存扣减节点】- 现阶段未编写具体逻辑，默认通过【TERMINATED】，库存不够哦
+24-06-22.07:18:44.858 [main            ] INFO  RuleStockNode          - 【库存扣减节点】- ...库存检查结束
+24-06-22.07:18:44.858 [main            ] INFO  RuleDecisionTreeEngine - 最终决策树节点：rule_stock 处理结果信息: 【终止处理流程】
+24-06-22.07:18:44.858 [main            ] INFO  RuleLuckAwardNode      - 【兜底奖励节点】- 发放兜底奖品，默认终止【TERMINATED】
+24-06-22.07:18:44.858 [main            ] INFO  AbstractRaffleStrategy - 抽奖策略计算-规则树：用户ID: joyboy 策略ID: 100003 奖品ID: 101 规则模型: rule_luck_award 处理状态: 【终止处理流程】 结果描述: 用户参与默认抽奖规则，从默认的奖品规则中抽取奖品
+24-06-22.07:18:44.863 [main            ] INFO  RaffleStrategyTest     - 第0次测试结果：{"awardId":101}
+24-06-22.07:18:44.891 [main            ] INFO  DefaultLogicChain      - 用户【joyboy】，参与抽奖活动【100003】，进行【default】
+24-06-22.07:18:44.948 [main            ] INFO  DefaultLogicChain      - 抽奖责任链-【默认抽奖节点】 规则模型：default 奖品ID：108 执行状态：CONTINUE 结果描述：用户参与默认抽奖规则，从默认的奖品规则中抽取奖品
+24-06-22.07:18:44.948 [main            ] INFO  AbstractRaffleStrategy - 抽奖策略计算-责任链：用户ID: joyboy 策略ID: 100003 奖品ID: 108 规则模型: default 处理状态: 【继续处理流程】 结果描述: 用户参与默认抽奖规则，从默认的奖品规则中抽取奖品
+24-06-22.07:18:44.980 [main            ] INFO  DailyLimitNode         - 【每日限额节点】- 暂未实现，默认通过【CONTINUE】
+24-06-22.07:18:44.980 [main            ] INFO  WinFrequencyNode       - 【中奖频率节点】- 暂未实现，默认通过【CONTINUE】
+24-06-22.07:18:44.980 [main            ] INFO  RuleLockNode           - 【奖品解锁节点】-现阶段未编写具体逻辑，默认通过【Continue】
+24-06-22.07:18:44.980 [main            ] INFO  RuleStockNode          - 【库存扣减节点】- 开始检查库存...
+24-06-22.07:18:44.980 [main            ] INFO  RuleStockNode          - 【库存扣减节点】- 现阶段未编写具体逻辑，默认通过【TERMINATED】，库存不够哦
+24-06-22.07:18:44.980 [main            ] INFO  RuleStockNode          - 【库存扣减节点】- ...库存检查结束
+24-06-22.07:18:44.980 [main            ] INFO  RuleDecisionTreeEngine - 最终决策树节点：rule_stock 处理结果信息: 【终止处理流程】
+24-06-22.07:18:44.980 [main            ] INFO  RuleLuckAwardNode      - 【兜底奖励节点】- 发放兜底奖品，默认终止【TERMINATED】
+24-06-22.07:18:44.980 [main            ] INFO  AbstractRaffleStrategy - 抽奖策略计算-规则树：用户ID: joyboy 策略ID: 100003 奖品ID: 101 规则模型: rule_luck_award 处理状态: 【终止处理流程】 结果描述: 用户参与默认抽奖规则，从默认的奖品规则中抽取奖品
+24-06-22.07:18:44.980 [main            ] INFO  RaffleStrategyTest     - 第1次测试结果：{"awardId":101}
+24-06-22.07:18:45.007 [main            ] INFO  DefaultLogicChain      - 用户【joyboy】，参与抽奖活动【100003】，进行【default】
+24-06-22.07:18:45.062 [main            ] INFO  DefaultLogicChain      - 抽奖责任链-【默认抽奖节点】 规则模型：default 奖品ID：109 执行状态：CONTINUE 结果描述：用户参与默认抽奖规则，从默认的奖品规则中抽取奖品
+24-06-22.07:18:45.062 [main            ] INFO  AbstractRaffleStrategy - 抽奖策略计算-责任链：用户ID: joyboy 策略ID: 100003 奖品ID: 109 规则模型: default 处理状态: 【继续处理流程】 结果描述: 用户参与默认抽奖规则，从默认的奖品规则中抽取奖品
+24-06-22.07:18:45.093 [main            ] INFO  DailyLimitNode         - 【每日限额节点】- 暂未实现，默认通过【CONTINUE】
+24-06-22.07:18:45.093 [main            ] INFO  WinFrequencyNode       - 【中奖频率节点】- 暂未实现，默认通过【CONTINUE】
+24-06-22.07:18:45.093 [main            ] INFO  RuleLockNode           - 【奖品解锁节点】-现阶段未编写具体逻辑，默认通过【Continue】
+24-06-22.07:18:45.093 [main            ] INFO  RuleStockNode          - 【库存扣减节点】- 开始检查库存...
+24-06-22.07:18:45.093 [main            ] INFO  RuleStockNode          - 【库存扣减节点】- 现阶段未编写具体逻辑，默认通过【TERMINATED】，库存不够哦
+24-06-22.07:18:45.093 [main            ] INFO  RuleStockNode          - 【库存扣减节点】- ...库存检查结束
+24-06-22.07:18:45.095 [main            ] INFO  RuleDecisionTreeEngine - 最终决策树节点：rule_stock 处理结果信息: 【终止处理流程】
+24-06-22.07:18:45.095 [main            ] INFO  RuleLuckAwardNode      - 【兜底奖励节点】- 发放兜底奖品，默认终止【TERMINATED】
+24-06-22.07:18:45.095 [main            ] INFO  AbstractRaffleStrategy - 抽奖策略计算-规则树：用户ID: joyboy 策略ID: 100003 奖品ID: 101 规则模型: rule_luck_award 处理状态: 【终止处理流程】 结果描述: 用户参与默认抽奖规则，从默认的奖品规则中抽取奖品
+24-06-22.07:18:45.095 [main            ] INFO  RaffleStrategyTest     - 第2次测试结果：{"awardId":101}
+24-06-22.07:18:45.125 [main            ] INFO  DefaultLogicChain      - 用户【joyboy】，参与抽奖活动【100003】，进行【default】
+24-06-22.07:18:45.182 [main            ] INFO  DefaultLogicChain      - 抽奖责任链-【默认抽奖节点】 规则模型：default 奖品ID：109 执行状态：CONTINUE 结果描述：用户参与默认抽奖规则，从默认的奖品规则中抽取奖品
+24-06-22.07:18:45.183 [main            ] INFO  AbstractRaffleStrategy - 抽奖策略计算-责任链：用户ID: joyboy 策略ID: 100003 奖品ID: 109 规则模型: default 处理状态: 【继续处理流程】 结果描述: 用户参与默认抽奖规则，从默认的奖品规则中抽取奖品
+24-06-22.07:18:45.215 [main            ] INFO  DailyLimitNode         - 【每日限额节点】- 暂未实现，默认通过【CONTINUE】
+24-06-22.07:18:45.216 [main            ] INFO  WinFrequencyNode       - 【中奖频率节点】- 暂未实现，默认通过【CONTINUE】
+24-06-22.07:18:45.216 [main            ] INFO  RuleLockNode           - 【奖品解锁节点】-现阶段未编写具体逻辑，默认通过【Continue】
+24-06-22.07:18:45.216 [main            ] INFO  RuleStockNode          - 【库存扣减节点】- 开始检查库存...
+24-06-22.07:18:45.216 [main            ] INFO  RuleStockNode          - 【库存扣减节点】- 现阶段未编写具体逻辑，默认通过【TERMINATED】，库存不够哦
+24-06-22.07:18:45.216 [main            ] INFO  RuleStockNode          - 【库存扣减节点】- ...库存检查结束
+24-06-22.07:18:45.216 [main            ] INFO  RuleDecisionTreeEngine - 最终决策树节点：rule_stock 处理结果信息: 【终止处理流程】
+24-06-22.07:18:45.216 [main            ] INFO  RuleLuckAwardNode      - 【兜底奖励节点】- 发放兜底奖品，默认终止【TERMINATED】
+24-06-22.07:18:45.216 [main            ] INFO  AbstractRaffleStrategy - 抽奖策略计算-规则树：用户ID: joyboy 策略ID: 100003 奖品ID: 101 规则模型: rule_luck_award 处理状态: 【终止处理流程】 结果描述: 用户参与默认抽奖规则，从默认的奖品规则中抽取奖品
+24-06-22.07:18:45.218 [main            ] INFO  RaffleStrategyTest     - 第3次测试结果：{"awardId":101}
+24-06-22.07:18:45.249 [main            ] INFO  DefaultLogicChain      - 用户【joyboy】，参与抽奖活动【100003】，进行【default】
+24-06-22.07:18:45.306 [main            ] INFO  DefaultLogicChain      - 抽奖责任链-【默认抽奖节点】 规则模型：default 奖品ID：108 执行状态：CONTINUE 结果描述：用户参与默认抽奖规则，从默认的奖品规则中抽取奖品
+24-06-22.07:18:45.306 [main            ] INFO  AbstractRaffleStrategy - 抽奖策略计算-责任链：用户ID: joyboy 策略ID: 100003 奖品ID: 108 规则模型: default 处理状态: 【继续处理流程】 结果描述: 用户参与默认抽奖规则，从默认的奖品规则中抽取奖品
+24-06-22.07:18:45.337 [main            ] INFO  DailyLimitNode         - 【每日限额节点】- 暂未实现，默认通过【CONTINUE】
+24-06-22.07:18:45.338 [main            ] INFO  WinFrequencyNode       - 【中奖频率节点】- 暂未实现，默认通过【CONTINUE】
+24-06-22.07:18:45.338 [main            ] INFO  RuleLockNode           - 【奖品解锁节点】-现阶段未编写具体逻辑，默认通过【Continue】
+24-06-22.07:18:45.338 [main            ] INFO  RuleStockNode          - 【库存扣减节点】- 开始检查库存...
+24-06-22.07:18:45.338 [main            ] INFO  RuleStockNode          - 【库存扣减节点】- 现阶段未编写具体逻辑，默认通过【TERMINATED】，库存不够哦
+24-06-22.07:18:45.338 [main            ] INFO  RuleStockNode          - 【库存扣减节点】- ...库存检查结束
+24-06-22.07:18:45.338 [main            ] INFO  RuleDecisionTreeEngine - 最终决策树节点：rule_stock 处理结果信息: 【终止处理流程】
+24-06-22.07:18:45.338 [main            ] INFO  RuleLuckAwardNode      - 【兜底奖励节点】- 发放兜底奖品，默认终止【TERMINATED】
+24-06-22.07:18:45.338 [main            ] INFO  AbstractRaffleStrategy - 抽奖策略计算-规则树：用户ID: joyboy 策略ID: 100003 奖品ID: 101 规则模型: rule_luck_award 处理状态: 【终止处理流程】 结果描述: 用户参与默认抽奖规则，从默认的奖品规则中抽取奖品
+24-06-22.07:18:45.338 [main            ] INFO  RaffleStrategyTest     - 第4次测试结果：{"awardId":101}
+24-06-22.07:18:45.406 [SpringApplicationShutdownHook] INFO  HikariDataSource       - Retail_HikariCP - Shutdown initiated...
+24-06-22.07:18:45.591 [SpringApplicationShutdownHook] INFO  HikariDataSource       - Retail_HikariCP - Shutdown completed.
+24-06-22.11:37:48.746 [main            ] INFO  RaffleStrategyTest     - Starting RaffleStrategyTest using Java 1.8.0_402 on wyh-machine with PID 30592 (started by 98389 in E:\Java_code\MMarket\MMarket-app)
+24-06-22.11:37:48.746 [main            ] INFO  RaffleStrategyTest     - The following 1 profile is active: "dev"
+24-06-22.11:37:49.683 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-06-22.11:37:49.686 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-06-22.11:37:49.725 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 22 ms. Found 0 Redis repository interfaces.
+24-06-22.11:37:51.692 [main            ] INFO  Version                - Redisson 3.23.4
+24-06-22.11:37:52.764 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 117.72.77.81/117.72.77.81:16379
+24-06-22.11:37:53.040 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 117.72.77.81/117.72.77.81:16379
+24-06-22.11:37:54.893 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-06-22.11:37:54.946 [main            ] INFO  RaffleStrategyTest     - Started RaffleStrategyTest in 6.596 seconds (JVM running for 7.465)
+24-06-22.11:37:55.570 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Starting...
+24-06-22.11:37:56.239 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Start completed.
+24-06-22.11:37:56.500 [main            ] INFO  RaffleStrategyTest     - 策略装配结果：true
+24-06-22.11:37:56.697 [main            ] INFO  RaffleStrategyTest     - 策略装配结果：true
+24-06-22.11:37:56.698 [main            ] INFO  RaffleStrategyTest     - 当前用户幸运值为：40500
+24-06-22.11:37:56.769 [main            ] INFO  RuleWeightLogicChain   - 用户【joyboy】，参与抽奖活动【100001】，进行【rule_weight】
+24-06-22.11:37:56.828 [main            ] INFO  RuleWeightLogicChain   - 当前用户的积分为0，将采取权重规则：null
+24-06-22.11:37:56.828 [main            ] INFO  RuleWeightLogicChain   - 抽奖责任链-【权重规则节点】 规则模型：rule_weight 奖品ID：null 执行状态：CONTINUE 结果描述：没有参与权重抽奖
+24-06-22.11:37:56.828 [main            ] INFO  BlackListLogicChain    - 用户【joyboy】，参与抽奖活动【100001】，进行【rule_blacklist】
+24-06-22.11:37:56.862 [main            ] INFO  BlackListLogicChain    - 抽奖责任链-【黑名单节点】 规则模型：rule_blacklist 奖品ID：null 执行状态：CONTINUE 结果描述：用户不在黑名单中
+24-06-22.11:37:56.862 [main            ] INFO  DefaultLogicChain      - 用户【joyboy】，参与抽奖活动【100001】，进行【default】
+24-06-22.11:37:56.928 [main            ] INFO  DefaultLogicChain      - 抽奖责任链-【默认抽奖节点】 规则模型：default 奖品ID：101 执行状态：CONTINUE 结果描述：用户参与默认抽奖规则，从默认的奖品规则中抽取奖品
+24-06-22.11:37:56.928 [main            ] INFO  AbstractRaffleStrategy - 抽奖策略计算-责任链：用户ID: joyboy 策略ID: 100001 奖品ID: 101 规则模型: default 处理状态: 【继续处理流程】 结果描述: 用户参与默认抽奖规则，从默认的奖品规则中抽取奖品
+24-06-22.11:37:56.928 [main            ] INFO  DefaultTreeFactory     - 开始获取策略奖品配置的抽奖规则，策略ID：100001，奖品ID：101
+24-06-22.11:37:57.002 [SpringApplicationShutdownHook] INFO  HikariDataSource       - Retail_HikariCP - Shutdown initiated...
+24-06-22.11:37:57.327 [SpringApplicationShutdownHook] INFO  HikariDataSource       - Retail_HikariCP - Shutdown completed.
+24-06-22.11:43:48.340 [main            ] INFO  RaffleStrategyTest     - Starting RaffleStrategyTest using Java 1.8.0_402 on wyh-machine with PID 31192 (started by 98389 in E:\Java_code\MMarket\MMarket-app)
+24-06-22.11:43:48.341 [main            ] INFO  RaffleStrategyTest     - The following 1 profile is active: "dev"
+24-06-22.11:43:49.243 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-06-22.11:43:49.246 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-06-22.11:43:49.277 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 18 ms. Found 0 Redis repository interfaces.
+24-06-22.11:43:51.137 [main            ] INFO  Version                - Redisson 3.23.4
+24-06-22.11:43:52.204 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 117.72.77.81/117.72.77.81:16379
+24-06-22.11:43:52.472 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 117.72.77.81/117.72.77.81:16379
+24-06-22.11:43:54.298 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-06-22.11:43:54.373 [main            ] INFO  RaffleStrategyTest     - Started RaffleStrategyTest in 6.4 seconds (JVM running for 7.143)
+24-06-22.11:43:54.924 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Starting...
+24-06-22.11:43:55.514 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Start completed.
+24-06-22.11:43:55.768 [main            ] INFO  RaffleStrategyTest     - 策略装配结果：true
+24-06-22.11:43:55.946 [main            ] INFO  RaffleStrategyTest     - 策略装配结果：true
+24-06-22.11:43:55.947 [main            ] INFO  RaffleStrategyTest     - 当前用户幸运值为：40500
+24-06-22.11:43:55.982 [main            ] INFO  RuleWeightLogicChain   - 用户【joyboy】，参与抽奖活动【100001】，进行【rule_weight】
+24-06-22.11:43:56.030 [main            ] INFO  RuleWeightLogicChain   - 当前用户的积分为0，将采取权重规则：null
+24-06-22.11:43:56.031 [main            ] INFO  RuleWeightLogicChain   - 抽奖责任链-【权重规则节点】 规则模型：rule_weight 奖品ID：null 执行状态：CONTINUE 结果描述：没有参与权重抽奖
+24-06-22.11:43:56.032 [main            ] INFO  BlackListLogicChain    - 用户【joyboy】，参与抽奖活动【100001】，进行【rule_blacklist】
+24-06-22.11:43:56.068 [main            ] INFO  BlackListLogicChain    - 抽奖责任链-【黑名单节点】 规则模型：rule_blacklist 奖品ID：null 执行状态：CONTINUE 结果描述：用户不在黑名单中
+24-06-22.11:43:56.070 [main            ] INFO  DefaultLogicChain      - 用户【joyboy】，参与抽奖活动【100001】，进行【default】
+24-06-22.11:43:56.131 [main            ] INFO  DefaultLogicChain      - 抽奖责任链-【默认抽奖节点】 规则模型：default 奖品ID：101 执行状态：CONTINUE 结果描述：用户参与默认抽奖规则，从默认的奖品规则中抽取奖品
+24-06-22.11:43:56.131 [main            ] INFO  AbstractRaffleStrategy - 抽奖策略计算-责任链：用户ID: joyboy 策略ID: 100001 奖品ID: 101 规则模型: default 处理状态: 【继续处理流程】 结果描述: 用户参与默认抽奖规则，从默认的奖品规则中抽取奖品
+24-06-22.11:43:56.131 [main            ] INFO  DefaultTreeFactory     - 开始获取策略奖品配置的抽奖规则，策略ID：100001，奖品ID：101
+24-06-22.11:43:56.202 [SpringApplicationShutdownHook] INFO  HikariDataSource       - Retail_HikariCP - Shutdown initiated...
+24-06-22.11:43:56.303 [SpringApplicationShutdownHook] INFO  HikariDataSource       - Retail_HikariCP - Shutdown completed.
+24-06-22.11:44:32.209 [main            ] INFO  RaffleStrategyTest     - Starting RaffleStrategyTest using Java 1.8.0_402 on wyh-machine with PID 24556 (started by 98389 in E:\Java_code\MMarket\MMarket-app)
+24-06-22.11:44:32.210 [main            ] INFO  RaffleStrategyTest     - The following 1 profile is active: "dev"
+24-06-22.11:44:32.980 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-06-22.11:44:32.982 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-06-22.11:44:33.015 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 14 ms. Found 0 Redis repository interfaces.
+24-06-22.11:44:34.935 [main            ] INFO  Version                - Redisson 3.23.4
+24-06-22.11:44:36.253 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for 117.72.77.81/117.72.77.81:16379
+24-06-22.11:44:36.518 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 117.72.77.81/117.72.77.81:16379
+24-06-22.11:44:38.777 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-06-22.11:44:38.836 [main            ] INFO  RaffleStrategyTest     - Started RaffleStrategyTest in 6.976 seconds (JVM running for 7.696)
+24-06-22.11:44:39.461 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Starting...
+24-06-22.11:44:40.180 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Start completed.
+24-06-22.11:44:40.438 [main            ] INFO  RaffleStrategyTest     - 策略装配结果：true
+24-06-22.11:44:40.624 [main            ] INFO  RaffleStrategyTest     - 策略装配结果：true
+24-06-22.11:44:40.625 [main            ] INFO  RaffleStrategyTest     - 当前用户幸运值为：40500
+24-06-22.11:44:40.670 [main            ] INFO  DefaultLogicChain      - 用户【joyboy】，参与抽奖活动【100003】，进行【default】
+24-06-22.11:44:40.740 [main            ] INFO  DefaultLogicChain      - 抽奖责任链-【默认抽奖节点】 规则模型：default 奖品ID：108 执行状态：CONTINUE 结果描述：用户参与默认抽奖规则，从默认的奖品规则中抽取奖品
+24-06-22.11:44:40.741 [main            ] INFO  AbstractRaffleStrategy - 抽奖策略计算-责任链：用户ID: joyboy 策略ID: 100003 奖品ID: 108 规则模型: default 处理状态: 【继续处理流程】 结果描述: 用户参与默认抽奖规则，从默认的奖品规则中抽取奖品
+24-06-22.11:44:40.741 [main            ] INFO  DefaultTreeFactory     - 开始获取策略奖品配置的抽奖规则，策略ID：100003，奖品ID：108
+24-06-22.11:44:40.827 [SpringApplicationShutdownHook] INFO  HikariDataSource       - Retail_HikariCP - Shutdown initiated...
+24-06-22.11:44:40.927 [SpringApplicationShutdownHook] INFO  HikariDataSource       - Retail_HikariCP - Shutdown completed.
+24-06-22.11:47:34.822 [main            ] INFO  RaffleStrategyTest     - Starting RaffleStrategyTest using Java 1.8.0_402 on wyh-machine with PID 25364 (started by 98389 in E:\Java_code\MMarket\MMarket-app)
+24-06-22.11:47:34.823 [main            ] INFO  RaffleStrategyTest     - The following 1 profile is active: "dev"
+24-06-22.11:47:35.646 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-06-22.11:47:35.650 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-06-22.11:47:35.685 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 21 ms. Found 0 Redis repository interfaces.
+24-06-22.11:47:38.118 [main            ] INFO  Version                - Redisson 3.23.4
+24-06-22.11:47:39.319 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 117.72.77.81/117.72.77.81:16379
+24-06-22.11:47:39.592 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 117.72.77.81/117.72.77.81:16379
+24-06-22.11:47:41.837 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-06-22.11:47:41.906 [main            ] INFO  RaffleStrategyTest     - Started RaffleStrategyTest in 7.474 seconds (JVM running for 8.374)
+24-06-22.11:47:42.459 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Starting...
+24-06-22.11:47:43.039 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Start completed.
+24-06-22.11:47:43.310 [main            ] INFO  RaffleStrategyTest     - 策略装配结果：true
+24-06-22.11:47:43.488 [main            ] INFO  RaffleStrategyTest     - 策略装配结果：true
+24-06-22.11:47:43.488 [main            ] INFO  RaffleStrategyTest     - 当前用户幸运值为：40500
+24-06-22.11:47:43.527 [main            ] INFO  DefaultLogicChain      - 用户【joyboy】，参与抽奖活动【100003】，进行【default】
+24-06-22.11:47:43.590 [main            ] INFO  DefaultLogicChain      - 抽奖责任链-【默认抽奖节点】 规则模型：default 奖品ID：108 执行状态：CONTINUE 结果描述：用户参与默认抽奖规则，从默认的奖品规则中抽取奖品
+24-06-22.11:47:43.590 [main            ] INFO  AbstractRaffleStrategy - 抽奖策略计算-责任链：用户ID: joyboy 策略ID: 100003 奖品ID: 108 规则模型: default 处理状态: 【继续处理流程】 结果描述: 用户参与默认抽奖规则，从默认的奖品规则中抽取奖品
+24-06-22.11:47:43.590 [main            ] INFO  DefaultTreeFactory     - 开始获取策略奖品配置的抽奖规则，策略ID：100003，奖品ID：108
+24-06-22.11:48:05.004 [SpringApplicationShutdownHook] INFO  HikariDataSource       - Retail_HikariCP - Shutdown initiated...
+24-06-22.11:48:05.126 [SpringApplicationShutdownHook] INFO  HikariDataSource       - Retail_HikariCP - Shutdown completed.
+24-06-22.11:49:11.494 [main            ] INFO  RaffleStrategyTest     - Starting RaffleStrategyTest using Java 1.8.0_402 on wyh-machine with PID 30864 (started by 98389 in E:\Java_code\MMarket\MMarket-app)
+24-06-22.11:49:11.495 [main            ] INFO  RaffleStrategyTest     - The following 1 profile is active: "dev"
+24-06-22.11:49:12.448 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-06-22.11:49:12.451 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-06-22.11:49:12.483 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 17 ms. Found 0 Redis repository interfaces.
+24-06-22.11:49:14.408 [main            ] INFO  Version                - Redisson 3.23.4
+24-06-22.11:49:15.513 [redisson-netty-2-6] INFO  MasterPubSubConnectionPool - 1 connections initialized for 117.72.77.81/117.72.77.81:16379
+24-06-22.11:49:15.784 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 117.72.77.81/117.72.77.81:16379
+24-06-22.11:49:17.607 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-06-22.11:49:17.666 [main            ] INFO  RaffleStrategyTest     - Started RaffleStrategyTest in 6.542 seconds (JVM running for 7.394)
+24-06-22.11:49:18.293 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Starting...
+24-06-22.11:49:18.908 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Start completed.
+24-06-22.11:49:19.187 [main            ] INFO  RaffleStrategyTest     - 策略装配结果：true
+24-06-22.11:49:19.363 [main            ] INFO  RaffleStrategyTest     - 策略装配结果：true
+24-06-22.11:49:19.363 [main            ] INFO  RaffleStrategyTest     - 当前用户幸运值为：40500
+24-06-22.11:49:19.402 [main            ] INFO  DefaultLogicChain      - 用户【joyboy】，参与抽奖活动【100003】，进行【default】
+24-06-22.11:49:19.464 [main            ] INFO  DefaultLogicChain      - 抽奖责任链-【默认抽奖节点】 规则模型：default 奖品ID：109 执行状态：CONTINUE 结果描述：用户参与默认抽奖规则，从默认的奖品规则中抽取奖品
+24-06-22.11:49:19.465 [main            ] INFO  AbstractRaffleStrategy - 抽奖策略计算-责任链：用户ID: joyboy 策略ID: 100003 奖品ID: 109 规则模型: default 处理状态: 【继续处理流程】 结果描述: 用户参与默认抽奖规则，从默认的奖品规则中抽取奖品
+24-06-22.11:49:19.465 [main            ] INFO  DefaultTreeFactory     - 开始获取策略奖品配置的抽奖规则，策略ID：100003，奖品ID：109
+24-06-22.11:49:19.659 [main            ] INFO  DefaultTreeFactory     - 当前奖品【109】的规则列表为：{"ruleModels":"rule_lock,rule_luck_award","ruleModelsArray":["rule_lock","rule_luck_award"]}
+24-06-22.11:49:19.659 [main            ] INFO  DefaultTreeFactory     - 开始构建用户属性验证组
+24-06-22.11:49:19.659 [main            ] INFO  DefaultTreeFactory     - 	用户属性验证组添加 DailyLimitNode 节点
+24-06-22.11:49:19.659 [main            ] INFO  DefaultTreeFactory     - 	用户属性验证组添加 WinFrequencyNode 节点
+24-06-22.11:49:19.659 [main            ] INFO  DefaultTreeFactory     - 开始构建奖品属性验证组
+24-06-22.11:49:19.659 [main            ] INFO  DefaultTreeFactory     - 	奖品属性验证组添加 PrizeTypeRestrictionNode 节点
+24-06-22.11:49:19.659 [main            ] INFO  DefaultTreeFactory     - 	奖品属性验证组添加 RuleStockNode 节点
+24-06-22.11:49:19.660 [main            ] INFO  DefaultTreeFactory     - 	奖品属性验证组添加 rule_lock 节点
+24-06-22.11:49:19.660 [main            ] INFO  DefaultTreeFactory     - 	奖品属性验证组添加 rule_luck_award 节点
+24-06-22.11:49:19.660 [main            ] INFO  DefaultTreeFactory     - 开始构建根节点
+24-06-22.11:49:19.660 [main            ] INFO  DefaultTreeFactory     - 	根节点添加->用户属性验证组
+24-06-22.11:49:19.660 [main            ] INFO  DefaultTreeFactory     - 	根节点添加->奖品属性验证组
+24-06-22.11:49:19.660 [main            ] INFO  DefaultTreeFactory     - 构建决策树完成
+24-06-22.11:49:19.660 [main            ] INFO  DailyLimitNode         - 【每日限额节点】- 暂未实现，默认通过【CONTINUE】
+24-06-22.11:49:19.660 [main            ] INFO  WinFrequencyNode       - 【中奖频率节点】- 暂未实现，默认通过【CONTINUE】
+24-06-22.11:49:19.661 [main            ] INFO  PrizeTypeRestrictionNode - 【奖品类型限制节点】-现阶段未编写具体逻辑，默认通过【Continue】
+24-06-22.11:49:19.661 [main            ] INFO  RuleStockNode          - 【库存扣减节点】- 开始检查库存...
+24-06-22.11:49:19.661 [main            ] INFO  RuleStockNode          - 【库存扣减节点】- 现阶段未编写具体逻辑，默认通过【TERMINATED】，库存不够哦
+24-06-22.11:49:19.661 [main            ] INFO  RuleStockNode          - 【库存扣减节点】- ...库存检查结束
+24-06-22.11:49:19.661 [main            ] INFO  RuleDecisionTreeEngine - 最终决策树节点：rule_stock 处理结果信息: 【终止处理流程】
+24-06-22.11:49:19.661 [main            ] INFO  RuleLuckAwardNode      - 【兜底奖励节点】- 发放兜底奖品，默认终止【TERMINATED】
+24-06-22.11:49:19.661 [main            ] INFO  AbstractRaffleStrategy - 抽奖策略计算-规则树：用户ID: joyboy 策略ID: 100003 奖品ID: 101 规则模型: rule_luck_award 处理状态: 【终止处理流程】 结果描述: 用户参与默认抽奖规则，从默认的奖品规则中抽取奖品
+24-06-22.11:49:19.665 [main            ] INFO  RaffleStrategyTest     - 第0次测试结果：{"awardId":101}
+24-06-22.11:49:19.699 [main            ] INFO  DefaultLogicChain      - 用户【joyboy】，参与抽奖活动【100003】，进行【default】
+24-06-22.11:49:19.760 [main            ] INFO  DefaultLogicChain      - 抽奖责任链-【默认抽奖节点】 规则模型：default 奖品ID：108 执行状态：CONTINUE 结果描述：用户参与默认抽奖规则，从默认的奖品规则中抽取奖品
+24-06-22.11:49:19.760 [main            ] INFO  AbstractRaffleStrategy - 抽奖策略计算-责任链：用户ID: joyboy 策略ID: 100003 奖品ID: 108 规则模型: default 处理状态: 【继续处理流程】 结果描述: 用户参与默认抽奖规则，从默认的奖品规则中抽取奖品
+24-06-22.11:49:19.760 [main            ] INFO  DefaultTreeFactory     - 开始获取策略奖品配置的抽奖规则，策略ID：100003，奖品ID：108
+24-06-22.11:49:19.793 [main            ] INFO  DefaultTreeFactory     - 当前奖品【108】的规则列表为：{"ruleModels":"rule_lock,rule_luck_award","ruleModelsArray":["rule_lock","rule_luck_award"]}
+24-06-22.11:49:19.793 [main            ] INFO  DefaultTreeFactory     - 开始构建用户属性验证组
+24-06-22.11:49:19.793 [main            ] INFO  DefaultTreeFactory     - 	用户属性验证组添加 DailyLimitNode 节点
+24-06-22.11:49:19.793 [main            ] INFO  DefaultTreeFactory     - 	用户属性验证组添加 WinFrequencyNode 节点
+24-06-22.11:49:19.793 [main            ] INFO  DefaultTreeFactory     - 开始构建奖品属性验证组
+24-06-22.11:49:19.793 [main            ] INFO  DefaultTreeFactory     - 	奖品属性验证组添加 PrizeTypeRestrictionNode 节点
+24-06-22.11:49:19.793 [main            ] INFO  DefaultTreeFactory     - 	奖品属性验证组添加 RuleStockNode 节点
+24-06-22.11:49:19.793 [main            ] INFO  DefaultTreeFactory     - 	奖品属性验证组添加 rule_lock 节点
+24-06-22.11:49:19.795 [main            ] INFO  DefaultTreeFactory     - 	奖品属性验证组添加 rule_luck_award 节点
+24-06-22.11:49:19.795 [main            ] INFO  DefaultTreeFactory     - 开始构建根节点
+24-06-22.11:49:19.795 [main            ] INFO  DefaultTreeFactory     - 	根节点添加->用户属性验证组
+24-06-22.11:49:19.795 [main            ] INFO  DefaultTreeFactory     - 	根节点添加->奖品属性验证组
+24-06-22.11:49:19.795 [main            ] INFO  DefaultTreeFactory     - 构建决策树完成
+24-06-22.11:49:19.795 [main            ] INFO  DailyLimitNode         - 【每日限额节点】- 暂未实现，默认通过【CONTINUE】
+24-06-22.11:49:19.795 [main            ] INFO  WinFrequencyNode       - 【中奖频率节点】- 暂未实现，默认通过【CONTINUE】
+24-06-22.11:49:19.795 [main            ] INFO  PrizeTypeRestrictionNode - 【奖品类型限制节点】-现阶段未编写具体逻辑，默认通过【Continue】
+24-06-22.11:49:19.795 [main            ] INFO  RuleStockNode          - 【库存扣减节点】- 开始检查库存...
+24-06-22.11:49:19.795 [main            ] INFO  RuleStockNode          - 【库存扣减节点】- 现阶段未编写具体逻辑，默认通过【TERMINATED】，库存不够哦
+24-06-22.11:49:19.795 [main            ] INFO  RuleStockNode          - 【库存扣减节点】- ...库存检查结束
+24-06-22.11:49:19.795 [main            ] INFO  RuleDecisionTreeEngine - 最终决策树节点：rule_stock 处理结果信息: 【终止处理流程】
+24-06-22.11:49:19.795 [main            ] INFO  RuleLuckAwardNode      - 【兜底奖励节点】- 发放兜底奖品，默认终止【TERMINATED】
+24-06-22.11:49:19.795 [main            ] INFO  AbstractRaffleStrategy - 抽奖策略计算-规则树：用户ID: joyboy 策略ID: 100003 奖品ID: 101 规则模型: rule_luck_award 处理状态: 【终止处理流程】 结果描述: 用户参与默认抽奖规则，从默认的奖品规则中抽取奖品
+24-06-22.11:49:19.795 [main            ] INFO  RaffleStrategyTest     - 第1次测试结果：{"awardId":101}
+24-06-22.11:49:19.861 [SpringApplicationShutdownHook] INFO  HikariDataSource       - Retail_HikariCP - Shutdown initiated...
+24-06-22.11:49:19.988 [SpringApplicationShutdownHook] INFO  HikariDataSource       - Retail_HikariCP - Shutdown completed.
+24-06-22.11:59:46.254 [main            ] INFO  RaffleStrategyTest     - Starting RaffleStrategyTest using Java 1.8.0_402 on wyh-machine with PID 26764 (started by 98389 in E:\Java_code\MMarket\MMarket-app)
+24-06-22.11:59:46.255 [main            ] INFO  RaffleStrategyTest     - The following 1 profile is active: "dev"
+24-06-22.11:59:47.102 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-06-22.11:59:47.110 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-06-22.11:59:47.142 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 12 ms. Found 0 Redis repository interfaces.
+24-06-22.11:59:49.274 [main            ] INFO  Version                - Redisson 3.23.4
+24-06-22.11:59:50.353 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 117.72.77.81/117.72.77.81:16379
+24-06-22.11:59:50.626 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 117.72.77.81/117.72.77.81:16379
+24-06-22.11:59:52.672 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-06-22.11:59:52.790 [main            ] INFO  RaffleStrategyTest     - Started RaffleStrategyTest in 6.912 seconds (JVM running for 7.689)
+24-06-22.11:59:53.479 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Starting...
+24-06-22.11:59:54.126 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Start completed.
+24-06-22.11:59:54.380 [main            ] INFO  RaffleStrategyTest     - 策略装配结果：true
+24-06-22.11:59:54.550 [main            ] INFO  RaffleStrategyTest     - 策略装配结果：true
+24-06-22.11:59:54.552 [main            ] INFO  RaffleStrategyTest     - 当前用户幸运值为：40500
+24-06-22.11:59:54.589 [main            ] INFO  RuleWeightLogicChain   - 用户【joyboy】，参与抽奖活动【100001】，进行【rule_weight】
+24-06-22.11:59:54.637 [main            ] INFO  RuleWeightLogicChain   - 当前用户的积分为40500，将采取权重规则：6000:108,109
+24-06-22.11:59:54.699 [main            ] INFO  RuleWeightLogicChain   - 抽奖责任链-【权重规则节点】 规则模型：rule_weight 奖品ID：108 执行状态：TERMINATED 结果描述：参与权重抽奖，直接返回
+24-06-22.11:59:54.699 [main            ] INFO  AbstractRaffleStrategy - 抽奖策略计算-责任链：用户ID: joyboy 策略ID: 100001 奖品ID: 108 规则模型: rule_weight 处理状态: 【终止处理流程】 结果描述: 参与权重抽奖，直接返回
+24-06-22.11:59:54.699 [main            ] INFO  DefaultTreeFactory     - 开始获取策略奖品配置的抽奖规则，策略ID：100001，奖品ID：108
+24-06-22.11:59:54.729 [main            ] INFO  DefaultTreeFactory     - 当前奖品【108】的规则列表为：rule_lock,rule_luck_award
+24-06-22.11:59:54.730 [main            ] INFO  DefaultTreeFactory     - 开始构建决策树>>>>>>>>>>>>>>>>
+24-06-22.11:59:54.730 [main            ] INFO  DefaultTreeFactory     - 开始构建用户属性验证组
+24-06-22.11:59:54.730 [main            ] INFO  DefaultTreeFactory     - 	用户属性验证组添加 DailyLimitNode 节点
+24-06-22.11:59:54.730 [main            ] INFO  DefaultTreeFactory     - 	用户属性验证组添加 WinFrequencyNode 节点
+24-06-22.11:59:54.730 [main            ] INFO  DefaultTreeFactory     - 开始构建奖品属性验证组
+24-06-22.11:59:54.730 [main            ] INFO  DefaultTreeFactory     - 	奖品属性验证组添加 PrizeTypeRestrictionNode 节点
+24-06-22.11:59:54.730 [main            ] INFO  DefaultTreeFactory     - 	奖品属性验证组添加 RuleStockNode 节点
+24-06-22.11:59:54.730 [main            ] INFO  DefaultTreeFactory     - 	奖品属性验证组添加 rule_lock 节点
+24-06-22.11:59:54.730 [main            ] INFO  DefaultTreeFactory     - 	奖品属性验证组添加 rule_luck_award 节点
+24-06-22.11:59:54.730 [main            ] INFO  DefaultTreeFactory     - 开始构建根节点
+24-06-22.11:59:54.730 [main            ] INFO  DefaultTreeFactory     - 	根节点添加->用户属性验证组
+24-06-22.11:59:54.730 [main            ] INFO  DefaultTreeFactory     - 	根节点添加->奖品属性验证组
+24-06-22.11:59:54.730 [main            ] INFO  DefaultTreeFactory     - <<<<<<<<<<<<<<<<<<<<构建决策树完成
+24-06-22.11:59:54.731 [main            ] INFO  RuleDecisionTreeEngine - 最终决策树节点：rule_weight 处理结果信息: 【终止处理流程】
+24-06-22.11:59:54.731 [main            ] INFO  RuleLuckAwardNode      - 【兜底奖励节点】- 发放兜底奖品，默认终止【TERMINATED】
+24-06-22.11:59:54.731 [main            ] INFO  AbstractRaffleStrategy - 抽奖策略计算-规则树：用户ID: joyboy 策略ID: 100001 奖品ID: 101 规则模型: rule_luck_award 处理状态: 【终止处理流程】 结果描述: 参与权重抽奖，直接返回
+24-06-22.11:59:54.889 [main            ] INFO  RaffleStrategyTest     - 请求参数：{"strategyId":100001,"userId":"joyboy"}
+24-06-22.11:59:54.892 [main            ] INFO  RaffleStrategyTest     - 第0次测试结果：{"awardId":101}
+24-06-22.11:59:54.922 [main            ] INFO  RuleWeightLogicChain   - 用户【joyboy】，参与抽奖活动【100001】，进行【rule_weight】
+24-06-22.11:59:54.952 [main            ] INFO  RuleWeightLogicChain   - 当前用户的积分为40500，将采取权重规则：6000:108,109
+24-06-22.11:59:55.014 [main            ] INFO  RuleWeightLogicChain   - 抽奖责任链-【权重规则节点】 规则模型：rule_weight 奖品ID：109 执行状态：TERMINATED 结果描述：参与权重抽奖，直接返回
+24-06-22.11:59:55.014 [main            ] INFO  AbstractRaffleStrategy - 抽奖策略计算-责任链：用户ID: joyboy 策略ID: 100001 奖品ID: 109 规则模型: rule_weight 处理状态: 【终止处理流程】 结果描述: 参与权重抽奖，直接返回
+24-06-22.11:59:55.015 [main            ] INFO  DefaultTreeFactory     - 开始获取策略奖品配置的抽奖规则，策略ID：100001，奖品ID：109
+24-06-22.11:59:55.045 [main            ] INFO  DefaultTreeFactory     - 当前奖品【109】的规则列表为：rule_lock,rule_luck_award
+24-06-22.11:59:55.045 [main            ] INFO  DefaultTreeFactory     - 开始构建决策树>>>>>>>>>>>>>>>>
+24-06-22.11:59:55.045 [main            ] INFO  DefaultTreeFactory     - 开始构建用户属性验证组
+24-06-22.11:59:55.045 [main            ] INFO  DefaultTreeFactory     - 	用户属性验证组添加 DailyLimitNode 节点
+24-06-22.11:59:55.045 [main            ] INFO  DefaultTreeFactory     - 	用户属性验证组添加 WinFrequencyNode 节点
+24-06-22.11:59:55.045 [main            ] INFO  DefaultTreeFactory     - 开始构建奖品属性验证组
+24-06-22.11:59:55.045 [main            ] INFO  DefaultTreeFactory     - 	奖品属性验证组添加 PrizeTypeRestrictionNode 节点
+24-06-22.11:59:55.045 [main            ] INFO  DefaultTreeFactory     - 	奖品属性验证组添加 RuleStockNode 节点
+24-06-22.11:59:55.045 [main            ] INFO  DefaultTreeFactory     - 	奖品属性验证组添加 rule_lock 节点
+24-06-22.11:59:55.045 [main            ] INFO  DefaultTreeFactory     - 	奖品属性验证组添加 rule_luck_award 节点
+24-06-22.11:59:55.046 [main            ] INFO  DefaultTreeFactory     - 开始构建根节点
+24-06-22.11:59:55.046 [main            ] INFO  DefaultTreeFactory     - 	根节点添加->用户属性验证组
+24-06-22.11:59:55.046 [main            ] INFO  DefaultTreeFactory     - 	根节点添加->奖品属性验证组
+24-06-22.11:59:55.046 [main            ] INFO  DefaultTreeFactory     - <<<<<<<<<<<<<<<<<<<<构建决策树完成
+24-06-22.11:59:55.046 [main            ] INFO  RuleDecisionTreeEngine - 最终决策树节点：rule_weight 处理结果信息: 【终止处理流程】
+24-06-22.11:59:55.046 [main            ] INFO  RuleLuckAwardNode      - 【兜底奖励节点】- 发放兜底奖品，默认终止【TERMINATED】
+24-06-22.11:59:55.046 [main            ] INFO  AbstractRaffleStrategy - 抽奖策略计算-规则树：用户ID: joyboy 策略ID: 100001 奖品ID: 101 规则模型: rule_luck_award 处理状态: 【终止处理流程】 结果描述: 参与权重抽奖，直接返回
+24-06-22.11:59:55.046 [main            ] INFO  RaffleStrategyTest     - 请求参数：{"strategyId":100001,"userId":"joyboy"}
+24-06-22.11:59:55.046 [main            ] INFO  RaffleStrategyTest     - 第1次测试结果：{"awardId":101}
+24-06-22.11:59:55.105 [SpringApplicationShutdownHook] INFO  HikariDataSource       - Retail_HikariCP - Shutdown initiated...
+24-06-22.11:59:55.369 [SpringApplicationShutdownHook] INFO  HikariDataSource       - Retail_HikariCP - Shutdown completed.
+24-06-22.12:10:19.290 [main            ] INFO  RaffleStrategyTest     - Starting RaffleStrategyTest using Java 1.8.0_402 on wyh-machine with PID 14172 (started by 98389 in E:\Java_code\MMarket\MMarket-app)
+24-06-22.12:10:19.291 [main            ] INFO  RaffleStrategyTest     - The following 1 profile is active: "dev"
+24-06-22.12:10:20.129 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-06-22.12:10:20.132 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-06-22.12:10:20.165 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 11 ms. Found 0 Redis repository interfaces.
+24-06-22.12:10:22.156 [main            ] INFO  Version                - Redisson 3.23.4
+24-06-22.12:10:23.217 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 117.72.77.81/117.72.77.81:16379
+24-06-22.12:10:23.485 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 117.72.77.81/117.72.77.81:16379
+24-06-22.12:10:25.202 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-06-22.12:10:25.374 [main            ] INFO  RaffleStrategyTest     - Started RaffleStrategyTest in 6.481 seconds (JVM running for 7.489)
+24-06-22.12:10:25.871 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Starting...
+24-06-22.12:10:26.534 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Start completed.
+24-06-22.12:10:26.799 [main            ] INFO  RaffleStrategyTest     - 策略装配结果：true
+24-06-22.12:10:26.976 [main            ] INFO  RaffleStrategyTest     - 策略装配结果：true
+24-06-22.12:10:26.978 [main            ] INFO  RaffleStrategyTest     - 当前用户幸运值为：40500
+24-06-22.12:10:27.022 [main            ] INFO  RuleWeightLogicChain   - 用户【joyboy】，参与抽奖活动【100001】，进行【rule_weight】
+24-06-22.12:10:27.072 [main            ] INFO  RuleWeightLogicChain   - 当前用户的积分为40500，将采取权重规则：6000:108,109
+24-06-22.12:10:27.133 [main            ] INFO  RuleWeightLogicChain   - 抽奖责任链-【权重规则节点】 规则模型：rule_weight 奖品ID：108 执行状态：TERMINATED 结果描述：参与权重抽奖，直接返回
+24-06-22.12:10:27.134 [main            ] INFO  AbstractRaffleStrategy - 抽奖策略计算-责任链：用户ID: joyboy 策略ID: 100001 奖品ID: 108 规则模型: rule_weight 处理状态: 【终止处理流程】 结果描述: 参与权重抽奖，直接返回
+24-06-22.12:10:27.134 [main            ] INFO  AbstractRaffleStrategy - 抽奖策略计算-规则树：用户ID: joyboy 策略ID: 100001 奖品ID: 108 规则模型: rule_weight 处理状态: 【终止处理流程】 结果描述: 参与权重抽奖，直接返回
+24-06-22.12:10:27.292 [main            ] INFO  RaffleStrategyTest     - 请求参数：{"strategyId":100001,"userId":"joyboy"}
+24-06-22.12:10:27.294 [main            ] INFO  RaffleStrategyTest     - 第0次测试结果：{"awardId":108}
+24-06-22.12:10:27.328 [main            ] INFO  RuleWeightLogicChain   - 用户【joyboy】，参与抽奖活动【100001】，进行【rule_weight】
+24-06-22.12:10:27.361 [main            ] INFO  RuleWeightLogicChain   - 当前用户的积分为40500，将采取权重规则：6000:108,109
+24-06-22.12:10:27.427 [main            ] INFO  RuleWeightLogicChain   - 抽奖责任链-【权重规则节点】 规则模型：rule_weight 奖品ID：108 执行状态：TERMINATED 结果描述：参与权重抽奖，直接返回
+24-06-22.12:10:27.427 [main            ] INFO  AbstractRaffleStrategy - 抽奖策略计算-责任链：用户ID: joyboy 策略ID: 100001 奖品ID: 108 规则模型: rule_weight 处理状态: 【终止处理流程】 结果描述: 参与权重抽奖，直接返回
+24-06-22.12:10:27.427 [main            ] INFO  AbstractRaffleStrategy - 抽奖策略计算-规则树：用户ID: joyboy 策略ID: 100001 奖品ID: 108 规则模型: rule_weight 处理状态: 【终止处理流程】 结果描述: 参与权重抽奖，直接返回
+24-06-22.12:10:27.427 [main            ] INFO  RaffleStrategyTest     - 请求参数：{"strategyId":100001,"userId":"joyboy"}
+24-06-22.12:10:27.427 [main            ] INFO  RaffleStrategyTest     - 第1次测试结果：{"awardId":108}
+24-06-22.12:10:27.524 [SpringApplicationShutdownHook] INFO  HikariDataSource       - Retail_HikariCP - Shutdown initiated...
+24-06-22.12:10:27.800 [SpringApplicationShutdownHook] INFO  HikariDataSource       - Retail_HikariCP - Shutdown completed.
+24-06-22.12:12:05.145 [main            ] INFO  RaffleStrategyTest     - Starting RaffleStrategyTest using Java 1.8.0_402 on wyh-machine with PID 24176 (started by 98389 in E:\Java_code\MMarket\MMarket-app)
+24-06-22.12:12:05.146 [main            ] INFO  RaffleStrategyTest     - The following 1 profile is active: "dev"
+24-06-22.12:12:05.914 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-06-22.12:12:05.916 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-06-22.12:12:05.942 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 12 ms. Found 0 Redis repository interfaces.
+24-06-22.12:12:07.748 [main            ] INFO  Version                - Redisson 3.23.4
+24-06-22.12:12:08.833 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 117.72.77.81/117.72.77.81:16379
+24-06-22.12:12:09.086 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 117.72.77.81/117.72.77.81:16379
+24-06-22.12:12:10.812 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-06-22.12:12:10.870 [main            ] INFO  RaffleStrategyTest     - Started RaffleStrategyTest in 6.067 seconds (JVM running for 6.766)
+24-06-22.12:12:11.429 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Starting...
+24-06-22.12:12:12.007 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Start completed.
+24-06-22.12:12:12.254 [main            ] INFO  RaffleStrategyTest     - 策略装配结果：true
+24-06-22.12:12:12.430 [main            ] INFO  RaffleStrategyTest     - 策略装配结果：true
+24-06-22.12:12:12.432 [main            ] INFO  RaffleStrategyTest     - 当前用户幸运值为：40500
+24-06-22.12:12:12.464 [main            ] INFO  RuleWeightLogicChain   - 用户【joyboy】，参与抽奖活动【100001】，进行【rule_weight】
+24-06-22.12:12:12.510 [main            ] INFO  RuleWeightLogicChain   - 当前用户的积分为40500，将采取权重规则：6000:108,109
+24-06-22.12:12:12.573 [main            ] INFO  RuleWeightLogicChain   - 抽奖责任链-【权重规则节点】 规则模型：rule_weight 奖品ID：109 执行状态：TERMINATED 结果描述：参与权重抽奖，直接返回
+24-06-22.12:12:12.573 [main            ] INFO  AbstractRaffleStrategy - 抽奖策略计算-责任链：用户ID: joyboy 策略ID: 100001 奖品ID: 109 规则模型: rule_weight 处理状态: 【终止处理流程】 结果描述: 参与权重抽奖，直接返回
+24-06-22.12:12:12.573 [main            ] INFO  DefaultRaffleStrategy  - 流程状态为TERMINATED，无需进行决策树流程
+24-06-22.12:12:12.573 [main            ] INFO  AbstractRaffleStrategy - 抽奖策略计算-规则树：用户ID: joyboy 策略ID: 100001 奖品ID: 109 规则模型: rule_weight 处理状态: 【终止处理流程】 结果描述: 参与权重抽奖，直接返回
+24-06-22.12:12:12.704 [main            ] INFO  RaffleStrategyTest     - 请求参数：{"strategyId":100001,"userId":"joyboy"}
+24-06-22.12:12:12.706 [main            ] INFO  RaffleStrategyTest     - 第0次测试结果：{"awardId":109}
+24-06-22.12:12:12.739 [main            ] INFO  RuleWeightLogicChain   - 用户【joyboy】，参与抽奖活动【100001】，进行【rule_weight】
+24-06-22.12:12:12.771 [main            ] INFO  RuleWeightLogicChain   - 当前用户的积分为40500，将采取权重规则：6000:108,109
+24-06-22.12:12:12.829 [main            ] INFO  RuleWeightLogicChain   - 抽奖责任链-【权重规则节点】 规则模型：rule_weight 奖品ID：109 执行状态：TERMINATED 结果描述：参与权重抽奖，直接返回
+24-06-22.12:12:12.829 [main            ] INFO  AbstractRaffleStrategy - 抽奖策略计算-责任链：用户ID: joyboy 策略ID: 100001 奖品ID: 109 规则模型: rule_weight 处理状态: 【终止处理流程】 结果描述: 参与权重抽奖，直接返回
+24-06-22.12:12:12.829 [main            ] INFO  DefaultRaffleStrategy  - 流程状态为TERMINATED，无需进行决策树流程
+24-06-22.12:12:12.829 [main            ] INFO  AbstractRaffleStrategy - 抽奖策略计算-规则树：用户ID: joyboy 策略ID: 100001 奖品ID: 109 规则模型: rule_weight 处理状态: 【终止处理流程】 结果描述: 参与权重抽奖，直接返回
+24-06-22.12:12:12.829 [main            ] INFO  RaffleStrategyTest     - 请求参数：{"strategyId":100001,"userId":"joyboy"}
+24-06-22.12:12:12.829 [main            ] INFO  RaffleStrategyTest     - 第1次测试结果：{"awardId":109}
+24-06-22.12:12:12.892 [SpringApplicationShutdownHook] INFO  HikariDataSource       - Retail_HikariCP - Shutdown initiated...
+24-06-22.12:12:13.081 [SpringApplicationShutdownHook] INFO  HikariDataSource       - Retail_HikariCP - Shutdown completed.
+24-06-22.12:13:34.758 [main            ] INFO  RaffleStrategyTest     - Starting RaffleStrategyTest using Java 1.8.0_402 on wyh-machine with PID 32052 (started by 98389 in E:\Java_code\MMarket\MMarket-app)
+24-06-22.12:13:34.758 [main            ] INFO  RaffleStrategyTest     - The following 1 profile is active: "dev"
+24-06-22.12:13:35.478 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-06-22.12:13:35.487 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-06-22.12:13:35.513 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 15 ms. Found 0 Redis repository interfaces.
+24-06-22.12:13:37.300 [main            ] INFO  Version                - Redisson 3.23.4
+24-06-22.12:13:38.300 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 117.72.77.81/117.72.77.81:16379
+24-06-22.12:13:38.563 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 117.72.77.81/117.72.77.81:16379
+24-06-22.12:13:40.306 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-06-22.12:13:40.366 [main            ] INFO  RaffleStrategyTest     - Started RaffleStrategyTest in 5.936 seconds (JVM running for 6.64)
+24-06-22.12:13:40.905 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Starting...
+24-06-22.12:13:41.448 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Start completed.
+24-06-22.12:13:41.691 [main            ] INFO  RaffleStrategyTest     - 策略装配结果：true
+24-06-22.12:13:41.861 [main            ] INFO  RaffleStrategyTest     - 策略装配结果：true
+24-06-22.12:13:41.862 [main            ] INFO  RaffleStrategyTest     - 当前用户幸运值为：4050
+24-06-22.12:13:41.990 [main            ] INFO  RaffleStrategyTest     - 请求参数：{"strategyId":100001,"userId":"joyboy"}
+24-06-22.12:13:42.026 [main            ] INFO  RuleWeightLogicChain   - 用户【joyboy】，参与抽奖活动【100001】，进行【rule_weight】
+24-06-22.12:13:42.091 [main            ] INFO  RuleWeightLogicChain   - 当前用户的积分为4050，将采取权重规则：4000:102,103,104,105
+24-06-22.12:13:42.153 [main            ] INFO  RuleWeightLogicChain   - 抽奖责任链-【权重规则节点】 规则模型：rule_weight 奖品ID：102 执行状态：TERMINATED 结果描述：参与权重抽奖，直接返回
+24-06-22.12:13:42.153 [main            ] INFO  AbstractRaffleStrategy - 抽奖策略计算-责任链：用户ID: joyboy 策略ID: 100001 奖品ID: 102 规则模型: rule_weight 处理状态: 【终止处理流程】 结果描述: 参与权重抽奖，直接返回
+24-06-22.12:13:42.153 [main            ] INFO  DefaultRaffleStrategy  - 流程状态为TERMINATED，无需进行决策树流程
+24-06-22.12:13:42.153 [main            ] INFO  AbstractRaffleStrategy - 抽奖策略计算-规则树：用户ID: joyboy 策略ID: 100001 奖品ID: 102 规则模型: rule_weight 处理状态: 【终止处理流程】 结果描述: 参与权重抽奖，直接返回
+24-06-22.12:13:42.157 [main            ] INFO  RaffleStrategyTest     - 第0次测试结果：{"awardId":102}
+24-06-22.12:13:42.157 [main            ] INFO  RaffleStrategyTest     - 请求参数：{"strategyId":100001,"userId":"joyboy"}
+24-06-22.12:13:42.186 [main            ] INFO  RuleWeightLogicChain   - 用户【joyboy】，参与抽奖活动【100001】，进行【rule_weight】
+24-06-22.12:13:42.212 [main            ] INFO  RuleWeightLogicChain   - 当前用户的积分为4050，将采取权重规则：4000:102,103,104,105
+24-06-22.12:13:42.277 [main            ] INFO  RuleWeightLogicChain   - 抽奖责任链-【权重规则节点】 规则模型：rule_weight 奖品ID：105 执行状态：TERMINATED 结果描述：参与权重抽奖，直接返回
+24-06-22.12:13:42.278 [main            ] INFO  AbstractRaffleStrategy - 抽奖策略计算-责任链：用户ID: joyboy 策略ID: 100001 奖品ID: 105 规则模型: rule_weight 处理状态: 【终止处理流程】 结果描述: 参与权重抽奖，直接返回
+24-06-22.12:13:42.278 [main            ] INFO  DefaultRaffleStrategy  - 流程状态为TERMINATED，无需进行决策树流程
+24-06-22.12:13:42.278 [main            ] INFO  AbstractRaffleStrategy - 抽奖策略计算-规则树：用户ID: joyboy 策略ID: 100001 奖品ID: 105 规则模型: rule_weight 处理状态: 【终止处理流程】 结果描述: 参与权重抽奖，直接返回
+24-06-22.12:13:42.278 [main            ] INFO  RaffleStrategyTest     - 第1次测试结果：{"awardId":105}
+24-06-22.12:13:42.338 [SpringApplicationShutdownHook] INFO  HikariDataSource       - Retail_HikariCP - Shutdown initiated...
+24-06-22.12:13:42.459 [SpringApplicationShutdownHook] INFO  HikariDataSource       - Retail_HikariCP - Shutdown completed.
+24-06-22.12:14:26.634 [main            ] INFO  RaffleStrategyTest     - Starting RaffleStrategyTest using Java 1.8.0_402 on wyh-machine with PID 12784 (started by 98389 in E:\Java_code\MMarket\MMarket-app)
+24-06-22.12:14:26.635 [main            ] INFO  RaffleStrategyTest     - The following 1 profile is active: "dev"
+24-06-22.12:14:27.381 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-06-22.12:14:27.383 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-06-22.12:14:27.411 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 11 ms. Found 0 Redis repository interfaces.
+24-06-22.12:14:29.217 [main            ] INFO  Version                - Redisson 3.23.4
+24-06-22.12:14:30.280 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 117.72.77.81/117.72.77.81:16379
+24-06-22.12:14:30.561 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 117.72.77.81/117.72.77.81:16379
+24-06-22.12:14:32.302 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-06-22.12:14:32.409 [main            ] INFO  RaffleStrategyTest     - Started RaffleStrategyTest in 6.113 seconds (JVM running for 6.811)
+24-06-22.12:14:32.976 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Starting...
+24-06-22.12:14:33.531 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Start completed.
+24-06-22.12:14:33.789 [main            ] INFO  RaffleStrategyTest     - 策略装配结果：true
+24-06-22.12:14:33.964 [main            ] INFO  RaffleStrategyTest     - 策略装配结果：true
+24-06-22.12:14:33.965 [main            ] INFO  RaffleStrategyTest     - 当前用户幸运值为：4050
+24-06-22.12:14:34.003 [main            ] INFO  RuleWeightLogicChain   - 用户【user003】，参与抽奖活动【100001】，进行【rule_weight】
+24-06-22.12:14:34.056 [main            ] INFO  RuleWeightLogicChain   - 当前用户的积分为4050，将采取权重规则：4000:102,103,104,105
+24-06-22.12:14:34.121 [main            ] INFO  RuleWeightLogicChain   - 抽奖责任链-【权重规则节点】 规则模型：rule_weight 奖品ID：105 执行状态：TERMINATED 结果描述：参与权重抽奖，直接返回
+24-06-22.12:14:34.122 [main            ] INFO  AbstractRaffleStrategy - 抽奖策略计算-责任链：用户ID: user003 策略ID: 100001 奖品ID: 105 规则模型: rule_weight 处理状态: 【终止处理流程】 结果描述: 参与权重抽奖，直接返回
+24-06-22.12:14:34.122 [main            ] INFO  DefaultRaffleStrategy  - 流程状态为TERMINATED，无需进行决策树流程
+24-06-22.12:14:34.122 [main            ] INFO  AbstractRaffleStrategy - 抽奖策略计算-规则树：用户ID: user003 策略ID: 100001 奖品ID: 105 规则模型: rule_weight 处理状态: 【终止处理流程】 结果描述: 参与权重抽奖，直接返回
+24-06-22.12:14:34.250 [main            ] INFO  RaffleStrategyTest     - 请求参数：{"strategyId":100001,"userId":"user003"}
+24-06-22.12:14:34.255 [main            ] INFO  RaffleStrategyTest     - 测试结果：{"awardId":105}
+24-06-22.12:14:34.315 [SpringApplicationShutdownHook] INFO  HikariDataSource       - Retail_HikariCP - Shutdown initiated...
+24-06-22.12:14:34.540 [SpringApplicationShutdownHook] INFO  HikariDataSource       - Retail_HikariCP - Shutdown completed.
+24-06-22.12:18:37.310 [main            ] INFO  RaffleStrategyTest     - Starting RaffleStrategyTest using Java 1.8.0_402 on wyh-machine with PID 22056 (started by 98389 in E:\Java_code\MMarket\MMarket-app)
+24-06-22.12:18:37.311 [main            ] INFO  RaffleStrategyTest     - The following 1 profile is active: "dev"
+24-06-22.12:18:38.037 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-06-22.12:18:38.046 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-06-22.12:18:38.075 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 17 ms. Found 0 Redis repository interfaces.
+24-06-22.12:18:39.965 [main            ] INFO  Version                - Redisson 3.23.4
+24-06-22.12:18:41.039 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 117.72.77.81/117.72.77.81:16379
+24-06-22.12:18:41.309 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 117.72.77.81/117.72.77.81:16379
+24-06-22.12:18:43.086 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-06-22.12:18:43.170 [main            ] INFO  RaffleStrategyTest     - Started RaffleStrategyTest in 6.188 seconds (JVM running for 6.887)
+24-06-22.12:18:43.615 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Starting...
+24-06-22.12:18:44.272 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Start completed.
+24-06-22.12:18:44.806 [main            ] INFO  RaffleStrategyTest     - 策略装配结果：true
+24-06-22.12:18:45.117 [main            ] INFO  RaffleStrategyTest     - 策略装配结果：true
+24-06-22.12:18:45.119 [main            ] INFO  RaffleStrategyTest     - 当前用户幸运值为：4050
+24-06-22.12:18:45.160 [main            ] INFO  BlackListLogicChain    - 用户【user003】，参与抽奖活动【100001】，进行【rule_blacklist】
+24-06-22.12:18:45.214 [main            ] INFO  BlackListLogicChain    - 抽奖责任链-【黑名单节点】 规则模型：rule_blacklist 奖品ID：100 执行状态：TERMINATED 结果描述：用户在黑名单中
+24-06-22.12:18:45.214 [main            ] INFO  AbstractRaffleStrategy - 抽奖策略计算-责任链：用户ID: user003 策略ID: 100001 奖品ID: 100 规则模型: rule_blacklist 处理状态: 【终止处理流程】 结果描述: 用户在黑名单中
+24-06-22.12:18:45.214 [main            ] INFO  DefaultRaffleStrategy  - 流程状态为TERMINATED，无需进行决策树流程
+24-06-22.12:18:45.214 [main            ] INFO  AbstractRaffleStrategy - 抽奖策略计算-规则树：用户ID: user003 策略ID: 100001 奖品ID: 100 规则模型: rule_blacklist 处理状态: 【终止处理流程】 结果描述: 用户在黑名单中
+24-06-22.12:18:45.379 [main            ] INFO  RaffleStrategyTest     - 请求参数：{"strategyId":100001,"userId":"user003"}
+24-06-22.12:18:45.382 [main            ] INFO  RaffleStrategyTest     - 测试结果：{"awardId":100}
+24-06-22.12:18:45.446 [SpringApplicationShutdownHook] INFO  HikariDataSource       - Retail_HikariCP - Shutdown initiated...
+24-06-22.12:18:45.602 [SpringApplicationShutdownHook] INFO  HikariDataSource       - Retail_HikariCP - Shutdown completed.
+24-06-22.12:25:46.724 [main            ] INFO  RaffleStrategyTest     - Starting RaffleStrategyTest using Java 1.8.0_402 on wyh-machine with PID 28888 (started by 98389 in E:\Java_code\MMarket\MMarket-app)
+24-06-22.12:25:46.725 [main            ] INFO  RaffleStrategyTest     - The following 1 profile is active: "dev"
+24-06-22.12:25:47.452 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-06-22.12:25:47.455 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-06-22.12:25:47.483 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 17 ms. Found 0 Redis repository interfaces.
+24-06-22.12:25:49.176 [main            ] INFO  Version                - Redisson 3.23.4
+24-06-22.12:25:50.209 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 117.72.77.81/117.72.77.81:16379
+24-06-22.12:25:50.485 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 117.72.77.81/117.72.77.81:16379
+24-06-22.12:25:52.211 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-06-22.12:25:52.262 [main            ] INFO  RaffleStrategyTest     - Started RaffleStrategyTest in 5.865 seconds (JVM running for 6.565)
+24-06-22.12:25:52.812 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Starting...
+24-06-22.12:25:53.420 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Start completed.
+24-06-22.12:25:53.677 [main            ] INFO  RaffleStrategyTest     - 策略装配结果：true
+24-06-22.12:25:53.858 [main            ] INFO  RaffleStrategyTest     - 策略装配结果：true
+24-06-22.12:25:53.859 [main            ] INFO  RaffleStrategyTest     - 当前用户幸运值为：4050
+24-06-22.12:25:53.894 [main            ] INFO  DefaultChainFactory    - 策略ID：100001 的规则模型为：[rule_blacklist, rule_weight]
+24-06-22.12:25:53.894 [main            ] INFO  DefaultChainFactory    - 开始为策略ID：100001 构建责任链>>>>>>>>>>>>>>>>>>>>
+24-06-22.12:25:53.894 [main            ] INFO  DefaultChainFactory    - 按照配置顺序装填用户配置的责任链
+24-06-22.12:25:53.894 [main            ] INFO  DefaultChainFactory    - 	初始化责任链节点：rule_blacklist
+24-06-22.12:25:53.894 [main            ] INFO  DefaultChainFactory    - 添加责任链节点：rule_weight
+24-06-22.12:25:53.894 [main            ] INFO  DefaultChainFactory    - 	添加默认责任链节点
+24-06-22.12:25:53.894 [main            ] INFO  DefaultChainFactory    - >>>>>>>>>>>>>>>>>>>>责任链构建完成
+24-06-22.12:25:53.894 [main            ] INFO  BlackListLogicChain    - 用户【user003】，参与抽奖活动【100001】，进行【rule_blacklist】
+24-06-22.12:25:53.949 [main            ] INFO  BlackListLogicChain    - 抽奖责任链-【黑名单节点】 规则模型：rule_blacklist 奖品ID：100 执行状态：TERMINATED 结果描述：用户在黑名单中
+24-06-22.12:25:53.949 [main            ] INFO  AbstractRaffleStrategy - 抽奖策略计算-责任链：用户ID: user003 策略ID: 100001 奖品ID: 100 规则模型: rule_blacklist 处理状态: 【终止处理流程】 结果描述: 用户在黑名单中
+24-06-22.12:25:53.949 [main            ] INFO  DefaultRaffleStrategy  - 流程状态为TERMINATED，无需进行决策树流程
+24-06-22.12:25:53.949 [main            ] INFO  AbstractRaffleStrategy - 抽奖策略计算-规则树：用户ID: user003 策略ID: 100001 奖品ID: 100 规则模型: rule_blacklist 处理状态: 【终止处理流程】 结果描述: 用户在黑名单中
+24-06-22.12:25:54.079 [main            ] INFO  RaffleStrategyTest     - 请求参数：{"strategyId":100001,"userId":"user003"}
+24-06-22.12:25:54.081 [main            ] INFO  RaffleStrategyTest     - 测试结果：{"awardId":100}
+24-06-22.12:25:54.143 [SpringApplicationShutdownHook] INFO  HikariDataSource       - Retail_HikariCP - Shutdown initiated...
+24-06-22.12:25:54.428 [SpringApplicationShutdownHook] INFO  HikariDataSource       - Retail_HikariCP - Shutdown completed.
+24-06-22.12:26:39.770 [main            ] INFO  RaffleStrategyTest     - Starting RaffleStrategyTest using Java 1.8.0_402 on wyh-machine with PID 27300 (started by 98389 in E:\Java_code\MMarket\MMarket-app)
+24-06-22.12:26:39.771 [main            ] INFO  RaffleStrategyTest     - The following 1 profile is active: "dev"
+24-06-22.12:26:40.507 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-06-22.12:26:40.514 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-06-22.12:26:40.536 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 11 ms. Found 0 Redis repository interfaces.
+24-06-22.12:26:42.270 [main            ] INFO  Version                - Redisson 3.23.4
+24-06-22.12:26:43.294 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for 117.72.77.81/117.72.77.81:16379
+24-06-22.12:26:43.553 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 117.72.77.81/117.72.77.81:16379
+24-06-22.12:26:45.565 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-06-22.12:26:45.629 [main            ] INFO  RaffleStrategyTest     - Started RaffleStrategyTest in 6.168 seconds (JVM running for 6.869)
+24-06-22.12:26:46.203 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Starting...
+24-06-22.12:26:46.790 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Start completed.
+24-06-22.12:26:47.048 [main            ] INFO  RaffleStrategyTest     - 策略装配结果：true
+24-06-22.12:26:47.206 [main            ] INFO  RaffleStrategyTest     - 策略装配结果：true
+24-06-22.12:26:47.207 [main            ] INFO  RaffleStrategyTest     - 当前用户幸运值为：4050
+24-06-22.12:26:47.243 [main            ] INFO  DefaultChainFactory    - 策略ID：100001 的规则模型为：[rule_blacklist, rule_weight]
+24-06-22.12:26:47.243 [main            ] INFO  DefaultChainFactory    - >>>>>>>>>>>>>>>>>>>>开始为策略ID：100001 构建责任链
+24-06-22.12:26:47.243 [main            ] INFO  DefaultChainFactory    - 按照配置顺序装填用户配置的责任链
+24-06-22.12:26:47.243 [main            ] INFO  DefaultChainFactory    - 	初始化责任链节点：rule_blacklist
+24-06-22.12:26:47.243 [main            ] INFO  DefaultChainFactory    - 添加责任链节点：rule_weight
+24-06-22.12:26:47.243 [main            ] INFO  DefaultChainFactory    - 	添加默认责任链节点
+24-06-22.12:26:47.243 [main            ] INFO  DefaultChainFactory    - <<<<<<<<<<<<<<<<<<<<责任链构建完成
+24-06-22.12:26:47.243 [main            ] INFO  BlackListLogicChain    - 用户【user003】，参与抽奖活动【100001】，进行【rule_blacklist】
+24-06-22.12:26:47.296 [main            ] INFO  BlackListLogicChain    - 抽奖责任链-【黑名单节点】 规则模型：rule_blacklist 奖品ID：100 执行状态：TERMINATED 结果描述：用户在黑名单中
+24-06-22.12:26:47.296 [main            ] INFO  AbstractRaffleStrategy - 抽奖策略计算-责任链：用户ID: user003 策略ID: 100001 奖品ID: 100 规则模型: rule_blacklist 处理状态: 【终止处理流程】 结果描述: 用户在黑名单中
+24-06-22.12:26:47.296 [main            ] INFO  DefaultRaffleStrategy  - 流程状态为TERMINATED，无需进行决策树流程
+24-06-22.12:26:47.296 [main            ] INFO  AbstractRaffleStrategy - 抽奖策略计算-规则树：用户ID: user003 策略ID: 100001 奖品ID: 100 规则模型: rule_blacklist 处理状态: 【终止处理流程】 结果描述: 用户在黑名单中
+24-06-22.12:26:47.431 [main            ] INFO  RaffleStrategyTest     - 请求参数：{"strategyId":100001,"userId":"user003"}
+24-06-22.12:26:47.434 [main            ] INFO  RaffleStrategyTest     - 测试结果：{"awardId":100}
+24-06-22.12:26:47.498 [SpringApplicationShutdownHook] INFO  HikariDataSource       - Retail_HikariCP - Shutdown initiated...
+24-06-22.12:26:47.820 [SpringApplicationShutdownHook] INFO  HikariDataSource       - Retail_HikariCP - Shutdown completed.
+24-06-22.12:29:22.862 [main            ] INFO  RaffleStrategyTest     - Starting RaffleStrategyTest using Java 1.8.0_402 on wyh-machine with PID 2968 (started by 98389 in E:\Java_code\MMarket\MMarket-app)
+24-06-22.12:29:22.863 [main            ] INFO  RaffleStrategyTest     - The following 1 profile is active: "dev"
+24-06-22.12:29:23.600 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-06-22.12:29:23.614 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-06-22.12:29:23.635 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 10 ms. Found 0 Redis repository interfaces.
+24-06-22.12:29:25.503 [main            ] INFO  Version                - Redisson 3.23.4
+24-06-22.12:29:26.678 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 117.72.77.81/117.72.77.81:16379
+24-06-22.12:29:26.956 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 117.72.77.81/117.72.77.81:16379
+24-06-22.12:29:28.783 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-06-22.12:29:28.840 [main            ] INFO  RaffleStrategyTest     - Started RaffleStrategyTest in 6.336 seconds (JVM running for 7.056)
+24-06-22.12:29:29.398 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Starting...
+24-06-22.12:29:29.980 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Start completed.
+24-06-22.12:29:30.233 [main            ] INFO  RaffleStrategyTest     - 策略装配结果：true
+24-06-22.12:29:30.442 [main            ] INFO  RaffleStrategyTest     - 策略装配结果：true
+24-06-22.12:29:30.443 [main            ] INFO  RaffleStrategyTest     - 当前用户幸运值为：4050
+24-06-22.12:29:30.444 [main            ] INFO  RaffleStrategyTest     - 用户已经完成的抽奖次数: 2次
+24-06-22.12:29:30.572 [main            ] INFO  RaffleStrategyTest     - 请求参数：{"strategyId":100003,"userId":"joyboy"}
+24-06-22.12:29:30.608 [main            ] INFO  DefaultChainFactory    - 策略ID：100003 的规则模型为：null
+24-06-22.12:29:30.608 [main            ] INFO  DefaultChainFactory    - >>>>>>>>>>>>>>>>>>>>开始为策略ID：100003 构建责任链
+24-06-22.12:29:30.608 [main            ] INFO  DefaultChainFactory    - 	未配置策略规则，返回默认责任链
+24-06-22.12:29:30.608 [main            ] INFO  DefaultLogicChain      - 用户【joyboy】，参与抽奖活动【100003】，进行【default】
+24-06-22.12:29:30.670 [main            ] INFO  DefaultLogicChain      - 抽奖责任链-【默认抽奖节点】 规则模型：default 奖品ID：108 执行状态：CONTINUE 结果描述：用户参与默认抽奖规则，从默认的奖品规则中抽取奖品
+24-06-22.12:29:30.670 [main            ] INFO  AbstractRaffleStrategy - 抽奖策略计算-责任链：用户ID: joyboy 策略ID: 100003 奖品ID: 108 规则模型: default 处理状态: 【继续处理流程】 结果描述: 用户参与默认抽奖规则，从默认的奖品规则中抽取奖品
+24-06-22.12:29:30.670 [main            ] INFO  DefaultTreeFactory     - 开始获取策略奖品配置的抽奖规则，策略ID：100003，奖品ID：108
+24-06-22.12:29:30.740 [main            ] INFO  DefaultTreeFactory     - 当前奖品【108】的规则列表为：rule_lock,rule_luck_award
+24-06-22.12:29:30.740 [main            ] INFO  DefaultTreeFactory     - 开始构建决策树>>>>>>>>>>>>>>>>
+24-06-22.12:29:30.740 [main            ] INFO  DefaultTreeFactory     - 开始构建用户属性验证组
+24-06-22.12:29:30.740 [main            ] INFO  DefaultTreeFactory     - 	用户属性验证组添加 DailyLimitNode 节点
+24-06-22.12:29:30.740 [main            ] INFO  DefaultTreeFactory     - 	用户属性验证组添加 WinFrequencyNode 节点
+24-06-22.12:29:30.740 [main            ] INFO  DefaultTreeFactory     - 开始构建奖品属性验证组
+24-06-22.12:29:30.740 [main            ] INFO  DefaultTreeFactory     - 	奖品属性验证组添加 PrizeTypeRestrictionNode 节点
+24-06-22.12:29:30.741 [main            ] INFO  DefaultTreeFactory     - 	奖品属性验证组添加 RuleStockNode 节点
+24-06-22.12:29:30.741 [main            ] INFO  DefaultTreeFactory     - 	奖品属性验证组添加 rule_lock 节点
+24-06-22.12:29:30.741 [main            ] INFO  DefaultTreeFactory     - 	奖品属性验证组添加 rule_luck_award 节点
+24-06-22.12:29:30.741 [main            ] INFO  DefaultTreeFactory     - 开始构建根节点
+24-06-22.12:29:30.741 [main            ] INFO  DefaultTreeFactory     - 	根节点添加->用户属性验证组
+24-06-22.12:29:30.741 [main            ] INFO  DefaultTreeFactory     - 	根节点添加->奖品属性验证组
+24-06-22.12:29:30.741 [main            ] INFO  DefaultTreeFactory     - <<<<<<<<<<<<<<<<<<<<构建决策树完成
+24-06-22.12:29:30.741 [main            ] INFO  DailyLimitNode         - 【每日限额节点】- 暂未实现，默认通过【CONTINUE】
+24-06-22.12:29:30.742 [main            ] INFO  WinFrequencyNode       - 【中奖频率节点】- 暂未实现，默认通过【CONTINUE】
+24-06-22.12:29:30.742 [main            ] INFO  PrizeTypeRestrictionNode - 【奖品类型限制节点】-现阶段未编写具体逻辑，默认通过【Continue】
+24-06-22.12:29:30.742 [main            ] INFO  RuleStockNode          - 【库存扣减节点】- 开始检查库存...
+24-06-22.12:29:30.742 [main            ] INFO  RuleStockNode          - 【库存扣减节点】- 现阶段未编写具体逻辑，默认通过【TERMINATED】，库存不够哦
+24-06-22.12:29:30.742 [main            ] INFO  RuleStockNode          - 【库存扣减节点】- ...库存检查结束
+24-06-22.12:29:30.742 [main            ] INFO  RuleDecisionTreeEngine - 最终决策树节点：rule_stock 处理结果信息: 【终止处理流程】
+24-06-22.12:29:30.742 [main            ] INFO  AbstractRaffleStrategy - 抽奖策略计算-规则树：用户ID: joyboy 策略ID: 100003 奖品ID: 108 规则模型: rule_stock 处理状态: 【终止处理流程】 结果描述: 用户参与默认抽奖规则，从默认的奖品规则中抽取奖品
+24-06-22.12:29:30.748 [main            ] INFO  RaffleStrategyTest     - 第0次测试结果：{"awardId":108}
+24-06-22.12:29:30.783 [main            ] INFO  DefaultChainFactory    - 策略ID：100003 的规则模型为：null
+24-06-22.12:29:30.783 [main            ] INFO  DefaultChainFactory    - >>>>>>>>>>>>>>>>>>>>开始为策略ID：100003 构建责任链
+24-06-22.12:29:30.783 [main            ] INFO  DefaultChainFactory    - 	未配置策略规则，返回默认责任链
+24-06-22.12:29:30.783 [main            ] INFO  DefaultLogicChain      - 用户【joyboy】，参与抽奖活动【100003】，进行【default】
+24-06-22.12:29:30.852 [main            ] INFO  DefaultLogicChain      - 抽奖责任链-【默认抽奖节点】 规则模型：default 奖品ID：108 执行状态：CONTINUE 结果描述：用户参与默认抽奖规则，从默认的奖品规则中抽取奖品
+24-06-22.12:29:30.852 [main            ] INFO  AbstractRaffleStrategy - 抽奖策略计算-责任链：用户ID: joyboy 策略ID: 100003 奖品ID: 108 规则模型: default 处理状态: 【继续处理流程】 结果描述: 用户参与默认抽奖规则，从默认的奖品规则中抽取奖品
+24-06-22.12:29:30.852 [main            ] INFO  DefaultTreeFactory     - 开始获取策略奖品配置的抽奖规则，策略ID：100003，奖品ID：108
+24-06-22.12:29:30.889 [main            ] INFO  DefaultTreeFactory     - 当前奖品【108】的规则列表为：rule_lock,rule_luck_award
+24-06-22.12:29:30.890 [main            ] INFO  DefaultTreeFactory     - 开始构建决策树>>>>>>>>>>>>>>>>
+24-06-22.12:29:30.890 [main            ] INFO  DefaultTreeFactory     - 开始构建用户属性验证组
+24-06-22.12:29:30.890 [main            ] INFO  DefaultTreeFactory     - 	用户属性验证组添加 DailyLimitNode 节点
+24-06-22.12:29:30.890 [main            ] INFO  DefaultTreeFactory     - 	用户属性验证组添加 WinFrequencyNode 节点
+24-06-22.12:29:30.890 [main            ] INFO  DefaultTreeFactory     - 开始构建奖品属性验证组
+24-06-22.12:29:30.890 [main            ] INFO  DefaultTreeFactory     - 	奖品属性验证组添加 PrizeTypeRestrictionNode 节点
+24-06-22.12:29:30.890 [main            ] INFO  DefaultTreeFactory     - 	奖品属性验证组添加 RuleStockNode 节点
+24-06-22.12:29:30.890 [main            ] INFO  DefaultTreeFactory     - 	奖品属性验证组添加 rule_lock 节点
+24-06-22.12:29:30.890 [main            ] INFO  DefaultTreeFactory     - 	奖品属性验证组添加 rule_luck_award 节点
+24-06-22.12:29:30.891 [main            ] INFO  DefaultTreeFactory     - 开始构建根节点
+24-06-22.12:29:30.891 [main            ] INFO  DefaultTreeFactory     - 	根节点添加->用户属性验证组
+24-06-22.12:29:30.891 [main            ] INFO  DefaultTreeFactory     - 	根节点添加->奖品属性验证组
+24-06-22.12:29:30.891 [main            ] INFO  DefaultTreeFactory     - <<<<<<<<<<<<<<<<<<<<构建决策树完成
+24-06-22.12:29:30.891 [main            ] INFO  DailyLimitNode         - 【每日限额节点】- 暂未实现，默认通过【CONTINUE】
+24-06-22.12:29:30.891 [main            ] INFO  WinFrequencyNode       - 【中奖频率节点】- 暂未实现，默认通过【CONTINUE】
+24-06-22.12:29:30.891 [main            ] INFO  PrizeTypeRestrictionNode - 【奖品类型限制节点】-现阶段未编写具体逻辑，默认通过【Continue】
+24-06-22.12:29:30.891 [main            ] INFO  RuleStockNode          - 【库存扣减节点】- 开始检查库存...
+24-06-22.12:29:30.891 [main            ] INFO  RuleStockNode          - 【库存扣减节点】- 现阶段未编写具体逻辑，默认通过【TERMINATED】，库存不够哦
+24-06-22.12:29:30.891 [main            ] INFO  RuleStockNode          - 【库存扣减节点】- ...库存检查结束
+24-06-22.12:29:30.891 [main            ] INFO  RuleDecisionTreeEngine - 最终决策树节点：rule_stock 处理结果信息: 【终止处理流程】
+24-06-22.12:29:30.891 [main            ] INFO  AbstractRaffleStrategy - 抽奖策略计算-规则树：用户ID: joyboy 策略ID: 100003 奖品ID: 108 规则模型: rule_stock 处理状态: 【终止处理流程】 结果描述: 用户参与默认抽奖规则，从默认的奖品规则中抽取奖品
+24-06-22.12:29:30.891 [main            ] INFO  RaffleStrategyTest     - 第1次测试结果：{"awardId":108}
+24-06-22.12:29:30.923 [main            ] INFO  DefaultChainFactory    - 策略ID：100003 的规则模型为：null
+24-06-22.12:29:30.923 [main            ] INFO  DefaultChainFactory    - >>>>>>>>>>>>>>>>>>>>开始为策略ID：100003 构建责任链
+24-06-22.12:29:30.923 [main            ] INFO  DefaultChainFactory    - 	未配置策略规则，返回默认责任链
+24-06-22.12:29:30.923 [main            ] INFO  DefaultLogicChain      - 用户【joyboy】，参与抽奖活动【100003】，进行【default】
+24-06-22.12:29:30.985 [main            ] INFO  DefaultLogicChain      - 抽奖责任链-【默认抽奖节点】 规则模型：default 奖品ID：108 执行状态：CONTINUE 结果描述：用户参与默认抽奖规则，从默认的奖品规则中抽取奖品
+24-06-22.12:29:30.985 [main            ] INFO  AbstractRaffleStrategy - 抽奖策略计算-责任链：用户ID: joyboy 策略ID: 100003 奖品ID: 108 规则模型: default 处理状态: 【继续处理流程】 结果描述: 用户参与默认抽奖规则，从默认的奖品规则中抽取奖品
+24-06-22.12:29:30.985 [main            ] INFO  DefaultTreeFactory     - 开始获取策略奖品配置的抽奖规则，策略ID：100003，奖品ID：108
+24-06-22.12:29:31.017 [main            ] INFO  DefaultTreeFactory     - 当前奖品【108】的规则列表为：rule_lock,rule_luck_award
+24-06-22.12:29:31.017 [main            ] INFO  DefaultTreeFactory     - 开始构建决策树>>>>>>>>>>>>>>>>
+24-06-22.12:29:31.017 [main            ] INFO  DefaultTreeFactory     - 开始构建用户属性验证组
+24-06-22.12:29:31.017 [main            ] INFO  DefaultTreeFactory     - 	用户属性验证组添加 DailyLimitNode 节点
+24-06-22.12:29:31.017 [main            ] INFO  DefaultTreeFactory     - 	用户属性验证组添加 WinFrequencyNode 节点
+24-06-22.12:29:31.017 [main            ] INFO  DefaultTreeFactory     - 开始构建奖品属性验证组
+24-06-22.12:29:31.017 [main            ] INFO  DefaultTreeFactory     - 	奖品属性验证组添加 PrizeTypeRestrictionNode 节点
+24-06-22.12:29:31.017 [main            ] INFO  DefaultTreeFactory     - 	奖品属性验证组添加 RuleStockNode 节点
+24-06-22.12:29:31.017 [main            ] INFO  DefaultTreeFactory     - 	奖品属性验证组添加 rule_lock 节点
+24-06-22.12:29:31.017 [main            ] INFO  DefaultTreeFactory     - 	奖品属性验证组添加 rule_luck_award 节点
+24-06-22.12:29:31.017 [main            ] INFO  DefaultTreeFactory     - 开始构建根节点
+24-06-22.12:29:31.017 [main            ] INFO  DefaultTreeFactory     - 	根节点添加->用户属性验证组
+24-06-22.12:29:31.017 [main            ] INFO  DefaultTreeFactory     - 	根节点添加->奖品属性验证组
+24-06-22.12:29:31.017 [main            ] INFO  DefaultTreeFactory     - <<<<<<<<<<<<<<<<<<<<构建决策树完成
+24-06-22.12:29:31.017 [main            ] INFO  DailyLimitNode         - 【每日限额节点】- 暂未实现，默认通过【CONTINUE】
+24-06-22.12:29:31.017 [main            ] INFO  WinFrequencyNode       - 【中奖频率节点】- 暂未实现，默认通过【CONTINUE】
+24-06-22.12:29:31.017 [main            ] INFO  PrizeTypeRestrictionNode - 【奖品类型限制节点】-现阶段未编写具体逻辑，默认通过【Continue】
+24-06-22.12:29:31.017 [main            ] INFO  RuleStockNode          - 【库存扣减节点】- 开始检查库存...
+24-06-22.12:29:31.017 [main            ] INFO  RuleStockNode          - 【库存扣减节点】- 现阶段未编写具体逻辑，默认通过【TERMINATED】，库存不够哦
+24-06-22.12:29:31.017 [main            ] INFO  RuleStockNode          - 【库存扣减节点】- ...库存检查结束
+24-06-22.12:29:31.017 [main            ] INFO  RuleDecisionTreeEngine - 最终决策树节点：rule_stock 处理结果信息: 【终止处理流程】
+24-06-22.12:29:31.017 [main            ] INFO  AbstractRaffleStrategy - 抽奖策略计算-规则树：用户ID: joyboy 策略ID: 100003 奖品ID: 108 规则模型: rule_stock 处理状态: 【终止处理流程】 结果描述: 用户参与默认抽奖规则，从默认的奖品规则中抽取奖品
+24-06-22.12:29:31.017 [main            ] INFO  RaffleStrategyTest     - 第2次测试结果：{"awardId":108}
+24-06-22.12:29:31.054 [main            ] INFO  DefaultChainFactory    - 策略ID：100003 的规则模型为：null
+24-06-22.12:29:31.054 [main            ] INFO  DefaultChainFactory    - >>>>>>>>>>>>>>>>>>>>开始为策略ID：100003 构建责任链
+24-06-22.12:29:31.054 [main            ] INFO  DefaultChainFactory    - 	未配置策略规则，返回默认责任链
+24-06-22.12:29:31.054 [main            ] INFO  DefaultLogicChain      - 用户【joyboy】，参与抽奖活动【100003】，进行【default】
+24-06-22.12:29:31.120 [main            ] INFO  DefaultLogicChain      - 抽奖责任链-【默认抽奖节点】 规则模型：default 奖品ID：109 执行状态：CONTINUE 结果描述：用户参与默认抽奖规则，从默认的奖品规则中抽取奖品
+24-06-22.12:29:31.121 [main            ] INFO  AbstractRaffleStrategy - 抽奖策略计算-责任链：用户ID: joyboy 策略ID: 100003 奖品ID: 109 规则模型: default 处理状态: 【继续处理流程】 结果描述: 用户参与默认抽奖规则，从默认的奖品规则中抽取奖品
+24-06-22.12:29:31.121 [main            ] INFO  DefaultTreeFactory     - 开始获取策略奖品配置的抽奖规则，策略ID：100003，奖品ID：109
+24-06-22.12:29:31.155 [main            ] INFO  DefaultTreeFactory     - 当前奖品【109】的规则列表为：rule_lock,rule_luck_award
+24-06-22.12:29:31.155 [main            ] INFO  DefaultTreeFactory     - 开始构建决策树>>>>>>>>>>>>>>>>
+24-06-22.12:29:31.155 [main            ] INFO  DefaultTreeFactory     - 开始构建用户属性验证组
+24-06-22.12:29:31.155 [main            ] INFO  DefaultTreeFactory     - 	用户属性验证组添加 DailyLimitNode 节点
+24-06-22.12:29:31.155 [main            ] INFO  DefaultTreeFactory     - 	用户属性验证组添加 WinFrequencyNode 节点
+24-06-22.12:29:31.155 [main            ] INFO  DefaultTreeFactory     - 开始构建奖品属性验证组
+24-06-22.12:29:31.155 [main            ] INFO  DefaultTreeFactory     - 	奖品属性验证组添加 PrizeTypeRestrictionNode 节点
+24-06-22.12:29:31.155 [main            ] INFO  DefaultTreeFactory     - 	奖品属性验证组添加 RuleStockNode 节点
+24-06-22.12:29:31.155 [main            ] INFO  DefaultTreeFactory     - 	奖品属性验证组添加 rule_lock 节点
+24-06-22.12:29:31.155 [main            ] INFO  DefaultTreeFactory     - 	奖品属性验证组添加 rule_luck_award 节点
+24-06-22.12:29:31.155 [main            ] INFO  DefaultTreeFactory     - 开始构建根节点
+24-06-22.12:29:31.155 [main            ] INFO  DefaultTreeFactory     - 	根节点添加->用户属性验证组
+24-06-22.12:29:31.155 [main            ] INFO  DefaultTreeFactory     - 	根节点添加->奖品属性验证组
+24-06-22.12:29:31.155 [main            ] INFO  DefaultTreeFactory     - <<<<<<<<<<<<<<<<<<<<构建决策树完成
+24-06-22.12:29:31.155 [main            ] INFO  DailyLimitNode         - 【每日限额节点】- 暂未实现，默认通过【CONTINUE】
+24-06-22.12:29:31.155 [main            ] INFO  WinFrequencyNode       - 【中奖频率节点】- 暂未实现，默认通过【CONTINUE】
+24-06-22.12:29:31.155 [main            ] INFO  PrizeTypeRestrictionNode - 【奖品类型限制节点】-现阶段未编写具体逻辑，默认通过【Continue】
+24-06-22.12:29:31.155 [main            ] INFO  RuleStockNode          - 【库存扣减节点】- 开始检查库存...
+24-06-22.12:29:31.155 [main            ] INFO  RuleStockNode          - 【库存扣减节点】- 现阶段未编写具体逻辑，默认通过【TERMINATED】，库存不够哦
+24-06-22.12:29:31.155 [main            ] INFO  RuleStockNode          - 【库存扣减节点】- ...库存检查结束
+24-06-22.12:29:31.155 [main            ] INFO  RuleDecisionTreeEngine - 最终决策树节点：rule_stock 处理结果信息: 【终止处理流程】
+24-06-22.12:29:31.155 [main            ] INFO  AbstractRaffleStrategy - 抽奖策略计算-规则树：用户ID: joyboy 策略ID: 100003 奖品ID: 109 规则模型: rule_stock 处理状态: 【终止处理流程】 结果描述: 用户参与默认抽奖规则，从默认的奖品规则中抽取奖品
+24-06-22.12:29:31.155 [main            ] INFO  RaffleStrategyTest     - 第3次测试结果：{"awardId":109}
+24-06-22.12:29:31.185 [main            ] INFO  DefaultChainFactory    - 策略ID：100003 的规则模型为：null
+24-06-22.12:29:31.187 [main            ] INFO  DefaultChainFactory    - >>>>>>>>>>>>>>>>>>>>开始为策略ID：100003 构建责任链
+24-06-22.12:29:31.187 [main            ] INFO  DefaultChainFactory    - 	未配置策略规则，返回默认责任链
+24-06-22.12:29:31.187 [main            ] INFO  DefaultLogicChain      - 用户【joyboy】，参与抽奖活动【100003】，进行【default】
+24-06-22.12:29:31.251 [main            ] INFO  DefaultLogicChain      - 抽奖责任链-【默认抽奖节点】 规则模型：default 奖品ID：108 执行状态：CONTINUE 结果描述：用户参与默认抽奖规则，从默认的奖品规则中抽取奖品
+24-06-22.12:29:31.251 [main            ] INFO  AbstractRaffleStrategy - 抽奖策略计算-责任链：用户ID: joyboy 策略ID: 100003 奖品ID: 108 规则模型: default 处理状态: 【继续处理流程】 结果描述: 用户参与默认抽奖规则，从默认的奖品规则中抽取奖品
+24-06-22.12:29:31.251 [main            ] INFO  DefaultTreeFactory     - 开始获取策略奖品配置的抽奖规则，策略ID：100003，奖品ID：108
+24-06-22.12:29:31.284 [main            ] INFO  DefaultTreeFactory     - 当前奖品【108】的规则列表为：rule_lock,rule_luck_award
+24-06-22.12:29:31.285 [main            ] INFO  DefaultTreeFactory     - 开始构建决策树>>>>>>>>>>>>>>>>
+24-06-22.12:29:31.285 [main            ] INFO  DefaultTreeFactory     - 开始构建用户属性验证组
+24-06-22.12:29:31.285 [main            ] INFO  DefaultTreeFactory     - 	用户属性验证组添加 DailyLimitNode 节点
+24-06-22.12:29:31.285 [main            ] INFO  DefaultTreeFactory     - 	用户属性验证组添加 WinFrequencyNode 节点
+24-06-22.12:29:31.285 [main            ] INFO  DefaultTreeFactory     - 开始构建奖品属性验证组
+24-06-22.12:29:31.285 [main            ] INFO  DefaultTreeFactory     - 	奖品属性验证组添加 PrizeTypeRestrictionNode 节点
+24-06-22.12:29:31.285 [main            ] INFO  DefaultTreeFactory     - 	奖品属性验证组添加 RuleStockNode 节点
+24-06-22.12:29:31.285 [main            ] INFO  DefaultTreeFactory     - 	奖品属性验证组添加 rule_lock 节点
+24-06-22.12:29:31.285 [main            ] INFO  DefaultTreeFactory     - 	奖品属性验证组添加 rule_luck_award 节点
+24-06-22.12:29:31.285 [main            ] INFO  DefaultTreeFactory     - 开始构建根节点
+24-06-22.12:29:31.285 [main            ] INFO  DefaultTreeFactory     - 	根节点添加->用户属性验证组
+24-06-22.12:29:31.285 [main            ] INFO  DefaultTreeFactory     - 	根节点添加->奖品属性验证组
+24-06-22.12:29:31.285 [main            ] INFO  DefaultTreeFactory     - <<<<<<<<<<<<<<<<<<<<构建决策树完成
+24-06-22.12:29:31.285 [main            ] INFO  DailyLimitNode         - 【每日限额节点】- 暂未实现，默认通过【CONTINUE】
+24-06-22.12:29:31.285 [main            ] INFO  WinFrequencyNode       - 【中奖频率节点】- 暂未实现，默认通过【CONTINUE】
+24-06-22.12:29:31.285 [main            ] INFO  PrizeTypeRestrictionNode - 【奖品类型限制节点】-现阶段未编写具体逻辑，默认通过【Continue】
+24-06-22.12:29:31.285 [main            ] INFO  RuleStockNode          - 【库存扣减节点】- 开始检查库存...
+24-06-22.12:29:31.285 [main            ] INFO  RuleStockNode          - 【库存扣减节点】- 现阶段未编写具体逻辑，默认通过【TERMINATED】，库存不够哦
+24-06-22.12:29:31.285 [main            ] INFO  RuleStockNode          - 【库存扣减节点】- ...库存检查结束
+24-06-22.12:29:31.285 [main            ] INFO  RuleDecisionTreeEngine - 最终决策树节点：rule_stock 处理结果信息: 【终止处理流程】
+24-06-22.12:29:31.285 [main            ] INFO  AbstractRaffleStrategy - 抽奖策略计算-规则树：用户ID: joyboy 策略ID: 100003 奖品ID: 108 规则模型: rule_stock 处理状态: 【终止处理流程】 结果描述: 用户参与默认抽奖规则，从默认的奖品规则中抽取奖品
+24-06-22.12:29:31.285 [main            ] INFO  RaffleStrategyTest     - 第4次测试结果：{"awardId":108}
+24-06-22.12:29:31.353 [SpringApplicationShutdownHook] INFO  HikariDataSource       - Retail_HikariCP - Shutdown initiated...
+24-06-22.12:29:31.626 [SpringApplicationShutdownHook] INFO  HikariDataSource       - Retail_HikariCP - Shutdown completed.
+24-06-22.12:30:02.536 [main            ] INFO  RaffleStrategyTest     - Starting RaffleStrategyTest using Java 1.8.0_402 on wyh-machine with PID 26512 (started by 98389 in E:\Java_code\MMarket\MMarket-app)
+24-06-22.12:30:02.537 [main            ] INFO  RaffleStrategyTest     - The following 1 profile is active: "dev"
+24-06-22.12:30:03.247 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-06-22.12:30:03.250 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-06-22.12:30:03.276 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 11 ms. Found 0 Redis repository interfaces.
+24-06-22.12:30:04.976 [main            ] INFO  Version                - Redisson 3.23.4
+24-06-22.12:30:06.004 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 117.72.77.81/117.72.77.81:16379
+24-06-22.12:30:06.274 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 117.72.77.81/117.72.77.81:16379
+24-06-22.12:30:08.156 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-06-22.12:30:08.227 [main            ] INFO  RaffleStrategyTest     - Started RaffleStrategyTest in 6.046 seconds (JVM running for 6.762)
+24-06-22.12:30:08.913 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Starting...
+24-06-22.12:30:09.569 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Start completed.
+24-06-22.12:30:09.843 [main            ] INFO  RaffleStrategyTest     - 策略装配结果：true
+24-06-22.12:30:10.016 [main            ] INFO  RaffleStrategyTest     - 策略装配结果：true
+24-06-22.12:30:10.017 [main            ] INFO  RaffleStrategyTest     - 当前用户幸运值为：4050
+24-06-22.12:30:10.154 [main            ] INFO  RaffleStrategyTest     - 请求参数：{"strategyId":100001,"userId":"user003"}
+24-06-22.12:30:10.189 [main            ] INFO  DefaultChainFactory    - 策略ID：100001 的规则模型为：[rule_blacklist, rule_weight]
+24-06-22.12:30:10.189 [main            ] INFO  DefaultChainFactory    - >>>>>>>>>>>>>>>>>>>>开始为策略ID：100001 构建责任链
+24-06-22.12:30:10.189 [main            ] INFO  DefaultChainFactory    - 按照配置顺序装填用户配置的责任链
+24-06-22.12:30:10.189 [main            ] INFO  DefaultChainFactory    - 	初始化责任链节点：rule_blacklist
+24-06-22.12:30:10.189 [main            ] INFO  DefaultChainFactory    - 添加责任链节点：rule_weight
+24-06-22.12:30:10.189 [main            ] INFO  DefaultChainFactory    - 	添加默认责任链节点：default
+24-06-22.12:30:10.190 [main            ] INFO  DefaultChainFactory    - <<<<<<<<<<<<<<<<<<<<责任链构建完成
+24-06-22.12:30:10.190 [main            ] INFO  BlackListLogicChain    - 用户【user003】，参与抽奖活动【100001】，进行【rule_blacklist】
+24-06-22.12:30:10.274 [main            ] INFO  BlackListLogicChain    - 抽奖责任链-【黑名单节点】 规则模型：rule_blacklist 奖品ID：100 执行状态：TERMINATED 结果描述：用户在黑名单中
+24-06-22.12:30:10.274 [main            ] INFO  AbstractRaffleStrategy - 抽奖策略计算-责任链：用户ID: user003 策略ID: 100001 奖品ID: 100 规则模型: rule_blacklist 处理状态: 【终止处理流程】 结果描述: 用户在黑名单中
+24-06-22.12:30:10.274 [main            ] INFO  DefaultRaffleStrategy  - 流程状态为TERMINATED，无需进行决策树流程
+24-06-22.12:30:10.274 [main            ] INFO  AbstractRaffleStrategy - 抽奖策略计算-规则树：用户ID: user003 策略ID: 100001 奖品ID: 100 规则模型: rule_blacklist 处理状态: 【终止处理流程】 结果描述: 用户在黑名单中
+24-06-22.12:30:10.279 [main            ] INFO  RaffleStrategyTest     - 测试结果：{"awardId":100}
+24-06-22.12:30:10.349 [SpringApplicationShutdownHook] INFO  HikariDataSource       - Retail_HikariCP - Shutdown initiated...
+24-06-22.12:30:10.580 [SpringApplicationShutdownHook] INFO  HikariDataSource       - Retail_HikariCP - Shutdown completed.
+24-06-22.12:35:06.869 [main            ] INFO  RaffleStrategyTest     - Starting RaffleStrategyTest using Java 1.8.0_402 on wyh-machine with PID 22080 (started by 98389 in E:\Java_code\MMarket\MMarket-app)
+24-06-22.12:35:06.870 [main            ] INFO  RaffleStrategyTest     - The following 1 profile is active: "dev"
+24-06-22.12:35:07.600 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-06-22.12:35:07.603 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-06-22.12:35:07.636 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 14 ms. Found 0 Redis repository interfaces.
+24-06-22.12:35:09.461 [main            ] INFO  Version                - Redisson 3.23.4
+24-06-22.12:35:10.580 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for 117.72.77.81/117.72.77.81:16379
+24-06-22.12:35:10.854 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 117.72.77.81/117.72.77.81:16379
+24-06-22.12:35:12.553 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-06-22.12:35:12.614 [main            ] INFO  RaffleStrategyTest     - Started RaffleStrategyTest in 6.091 seconds (JVM running for 6.79)
+24-06-22.12:35:13.206 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Starting...
+24-06-22.12:35:13.822 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Start completed.
+24-06-22.12:35:14.152 [main            ] INFO  RaffleStrategyTest     - 策略装配结果：true
+24-06-22.12:35:14.351 [main            ] INFO  RaffleStrategyTest     - 策略装配结果：true
+24-06-22.12:35:14.352 [main            ] INFO  RaffleStrategyTest     - 当前用户幸运值为：4050
+24-06-22.12:35:14.353 [main            ] INFO  RaffleStrategyTest     - 用户已经完成的抽奖次数: 2次
+24-06-22.12:35:14.478 [main            ] INFO  RaffleStrategyTest     - 请求参数：{"strategyId":100003,"userId":"joyboy"}
+24-06-22.12:35:14.511 [main            ] INFO  DefaultChainFactory    - 策略ID：100003 的规则模型为：null
+24-06-22.12:35:14.512 [main            ] INFO  DefaultChainFactory    - >>>>>>>>>>>>>>>>>>>>开始为策略ID：100003 构建责任链
+24-06-22.12:35:14.512 [main            ] INFO  DefaultChainFactory    - 	未配置策略规则，返回默认责任链
+24-06-22.12:35:14.512 [main            ] INFO  DefaultLogicChain      - 用户【joyboy】，参与抽奖活动【100003】，进行【default】
+24-06-22.12:35:14.575 [main            ] INFO  DefaultLogicChain      - 抽奖责任链-【默认抽奖节点】 规则模型：default 奖品ID：108 执行状态：CONTINUE 结果描述：用户参与默认抽奖规则，从默认的奖品规则中抽取奖品
+24-06-22.12:35:14.576 [main            ] INFO  AbstractRaffleStrategy - 抽奖策略计算-责任链：用户ID: joyboy 策略ID: 100003 奖品ID: 108 规则模型: default 处理状态: 【继续处理流程】 结果描述: 用户参与默认抽奖规则，从默认的奖品规则中抽取奖品
+24-06-22.12:35:14.576 [main            ] INFO  DefaultTreeFactory     - 开始获取策略奖品配置的抽奖规则，策略ID：100003，奖品ID：108
+24-06-22.12:35:14.645 [main            ] INFO  DefaultTreeFactory     - 当前奖品【108】的规则列表为：rule_lock,rule_luck_award
+24-06-22.12:35:14.645 [main            ] INFO  DefaultTreeFactory     - 开始构建决策树>>>>>>>>>>>>>>>>
+24-06-22.12:35:14.645 [main            ] INFO  DefaultTreeFactory     - 开始构建用户属性验证组
+24-06-22.12:35:14.646 [main            ] INFO  DefaultTreeFactory     - 	用户属性验证组添加 DailyLimitNode 节点
+24-06-22.12:35:14.646 [main            ] INFO  DefaultTreeFactory     - 	用户属性验证组添加 WinFrequencyNode 节点
+24-06-22.12:35:14.646 [main            ] INFO  DefaultTreeFactory     - 开始构建奖品属性验证组
+24-06-22.12:35:14.646 [main            ] INFO  DefaultTreeFactory     - 	奖品属性验证组添加 PrizeTypeRestrictionNode 节点
+24-06-22.12:35:14.646 [main            ] INFO  DefaultTreeFactory     - 	奖品属性验证组添加 RuleStockNode 节点
+24-06-22.12:35:14.646 [main            ] INFO  DefaultTreeFactory     - 	奖品属性验证组添加 rule_lock 节点
+24-06-22.12:35:14.646 [main            ] INFO  DefaultTreeFactory     - 	奖品属性验证组添加 rule_luck_award 节点
+24-06-22.12:35:14.646 [main            ] INFO  DefaultTreeFactory     - 开始构建根节点
+24-06-22.12:35:14.646 [main            ] INFO  DefaultTreeFactory     - 	根节点添加->用户属性验证组
+24-06-22.12:35:14.646 [main            ] INFO  DefaultTreeFactory     - 	根节点添加->奖品属性验证组
+24-06-22.12:35:14.646 [main            ] INFO  DefaultTreeFactory     - <<<<<<<<<<<<<<<<<<<<构建决策树完成
+24-06-22.12:35:14.646 [main            ] INFO  DailyLimitNode         - 【每日限额节点】- 暂未实现，默认通过【CONTINUE】
+24-06-22.12:35:14.646 [main            ] INFO  WinFrequencyNode       - 【中奖频率节点】- 暂未实现，默认通过【CONTINUE】
+24-06-22.12:35:14.647 [main            ] INFO  PrizeTypeRestrictionNode - 【奖品类型限制节点】-现阶段未编写具体逻辑，默认通过【Continue】
+24-06-22.12:35:14.647 [main            ] INFO  RuleStockNode          - 【库存扣减节点】- 开始检查库存...
+24-06-22.12:35:14.647 [main            ] INFO  RuleStockNode          - 【库存扣减节点】- 现阶段未编写具体逻辑，默认通过【TERMINATED】，库存不够哦
+24-06-22.12:35:14.647 [main            ] INFO  RuleStockNode          - 【库存扣减节点】- ...库存检查结束
+24-06-22.12:35:14.647 [main            ] INFO  RuleDecisionTreeEngine - 最终决策树节点：rule_stock 处理结果信息: 【终止处理流程】
+24-06-22.12:35:14.647 [main            ] INFO  AbstractRaffleStrategy - 抽奖策略计算-规则树：用户ID: joyboy 策略ID: 100003 奖品ID: 108 规则模型: rule_stock 处理状态: 【终止处理流程】 结果描述: 用户参与默认抽奖规则，从默认的奖品规则中抽取奖品
+24-06-22.12:35:14.650 [main            ] INFO  RaffleStrategyTest     - 第0次测试结果：{"awardId":108}
+24-06-22.12:35:14.650 [main            ] INFO  RaffleStrategyTest     - 请求参数：{"strategyId":100003,"userId":"joyboy"}
+24-06-22.12:35:14.682 [main            ] INFO  DefaultChainFactory    - 策略ID：100003 的规则模型为：null
+24-06-22.12:35:14.683 [main            ] INFO  DefaultChainFactory    - >>>>>>>>>>>>>>>>>>>>开始为策略ID：100003 构建责任链
+24-06-22.12:35:14.683 [main            ] INFO  DefaultChainFactory    - 	未配置策略规则，返回默认责任链
+24-06-22.12:35:14.683 [main            ] INFO  DefaultLogicChain      - 用户【joyboy】，参与抽奖活动【100003】，进行【default】
+24-06-22.12:35:14.753 [main            ] INFO  DefaultLogicChain      - 抽奖责任链-【默认抽奖节点】 规则模型：default 奖品ID：109 执行状态：CONTINUE 结果描述：用户参与默认抽奖规则，从默认的奖品规则中抽取奖品
+24-06-22.12:35:14.753 [main            ] INFO  AbstractRaffleStrategy - 抽奖策略计算-责任链：用户ID: joyboy 策略ID: 100003 奖品ID: 109 规则模型: default 处理状态: 【继续处理流程】 结果描述: 用户参与默认抽奖规则，从默认的奖品规则中抽取奖品
+24-06-22.12:35:14.753 [main            ] INFO  DefaultTreeFactory     - 开始获取策略奖品配置的抽奖规则，策略ID：100003，奖品ID：109
+24-06-22.12:35:14.790 [main            ] INFO  DefaultTreeFactory     - 当前奖品【109】的规则列表为：rule_lock,rule_luck_award
+24-06-22.12:35:14.791 [main            ] INFO  DefaultTreeFactory     - 开始构建决策树>>>>>>>>>>>>>>>>
+24-06-22.12:35:14.791 [main            ] INFO  DefaultTreeFactory     - 开始构建用户属性验证组
+24-06-22.12:35:14.791 [main            ] INFO  DefaultTreeFactory     - 	用户属性验证组添加 DailyLimitNode 节点
+24-06-22.12:35:14.791 [main            ] INFO  DefaultTreeFactory     - 	用户属性验证组添加 WinFrequencyNode 节点
+24-06-22.12:35:14.791 [main            ] INFO  DefaultTreeFactory     - 开始构建奖品属性验证组
+24-06-22.12:35:14.791 [main            ] INFO  DefaultTreeFactory     - 	奖品属性验证组添加 PrizeTypeRestrictionNode 节点
+24-06-22.12:35:14.791 [main            ] INFO  DefaultTreeFactory     - 	奖品属性验证组添加 RuleStockNode 节点
+24-06-22.12:35:14.791 [main            ] INFO  DefaultTreeFactory     - 	奖品属性验证组添加 rule_lock 节点
+24-06-22.12:35:14.791 [main            ] INFO  DefaultTreeFactory     - 	奖品属性验证组添加 rule_luck_award 节点
+24-06-22.12:35:14.791 [main            ] INFO  DefaultTreeFactory     - 开始构建根节点
+24-06-22.12:35:14.791 [main            ] INFO  DefaultTreeFactory     - 	根节点添加->用户属性验证组
+24-06-22.12:35:14.791 [main            ] INFO  DefaultTreeFactory     - 	根节点添加->奖品属性验证组
+24-06-22.12:35:14.791 [main            ] INFO  DefaultTreeFactory     - <<<<<<<<<<<<<<<<<<<<构建决策树完成
+24-06-22.12:35:14.791 [main            ] INFO  DailyLimitNode         - 【每日限额节点】- 暂未实现，默认通过【CONTINUE】
+24-06-22.12:35:14.791 [main            ] INFO  WinFrequencyNode       - 【中奖频率节点】- 暂未实现，默认通过【CONTINUE】
+24-06-22.12:35:14.791 [main            ] INFO  PrizeTypeRestrictionNode - 【奖品类型限制节点】-现阶段未编写具体逻辑，默认通过【Continue】
+24-06-22.12:35:14.791 [main            ] INFO  RuleStockNode          - 【库存扣减节点】- 开始检查库存...
+24-06-22.12:35:14.791 [main            ] INFO  RuleStockNode          - 【库存扣减节点】- 现阶段未编写具体逻辑，默认通过【TERMINATED】，库存不够哦
+24-06-22.12:35:14.791 [main            ] INFO  RuleStockNode          - 【库存扣减节点】- ...库存检查结束
+24-06-22.12:35:14.791 [main            ] INFO  RuleDecisionTreeEngine - 最终决策树节点：rule_stock 处理结果信息: 【终止处理流程】
+24-06-22.12:35:14.791 [main            ] INFO  AbstractRaffleStrategy - 抽奖策略计算-规则树：用户ID: joyboy 策略ID: 100003 奖品ID: 109 规则模型: rule_stock 处理状态: 【终止处理流程】 结果描述: 用户参与默认抽奖规则，从默认的奖品规则中抽取奖品
+24-06-22.12:35:14.791 [main            ] INFO  RaffleStrategyTest     - 第1次测试结果：{"awardId":109}
+24-06-22.12:35:14.858 [SpringApplicationShutdownHook] INFO  HikariDataSource       - Retail_HikariCP - Shutdown initiated...
+24-06-22.12:35:15.191 [SpringApplicationShutdownHook] INFO  HikariDataSource       - Retail_HikariCP - Shutdown completed.
+24-06-22.12:39:04.661 [main            ] INFO  RaffleStrategyTest     - Starting RaffleStrategyTest using Java 1.8.0_402 on wyh-machine with PID 13200 (started by 98389 in E:\Java_code\MMarket\MMarket-app)
+24-06-22.12:39:04.662 [main            ] INFO  RaffleStrategyTest     - The following 1 profile is active: "dev"
+24-06-22.12:39:05.402 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-06-22.12:39:05.408 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-06-22.12:39:05.444 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 16 ms. Found 0 Redis repository interfaces.
+24-06-22.12:39:07.124 [main            ] INFO  Version                - Redisson 3.23.4
+24-06-22.12:39:08.317 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 117.72.77.81/117.72.77.81:16379
+24-06-22.12:39:08.574 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 117.72.77.81/117.72.77.81:16379
+24-06-22.12:39:10.389 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-06-22.12:39:10.471 [main            ] INFO  RaffleStrategyTest     - Started RaffleStrategyTest in 6.121 seconds (JVM running for 6.828)
+24-06-22.12:39:10.997 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Starting...
+24-06-22.12:39:11.623 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Start completed.
+24-06-22.12:39:11.874 [main            ] INFO  RaffleStrategyTest     - 策略装配结果：true
+24-06-22.12:39:12.061 [main            ] INFO  RaffleStrategyTest     - 策略装配结果：true
+24-06-22.12:39:12.062 [main            ] INFO  RaffleStrategyTest     - 当前用户幸运值为：4050
+24-06-22.12:39:12.063 [main            ] INFO  RaffleStrategyTest     - 用户已经完成的抽奖次数: 2次
+24-06-22.12:39:12.194 [main            ] INFO  RaffleStrategyTest     - 请求参数：{"strategyId":100003,"userId":"joyboy"}
+24-06-22.12:39:12.228 [main            ] INFO  DefaultChainFactory    - 策略ID：100003 的规则模型为：null
+24-06-22.12:39:12.228 [main            ] INFO  DefaultChainFactory    - >>>>>>>>>>>>>>>>>>>>开始为策略ID：100003 构建责任链
+24-06-22.12:39:12.228 [main            ] INFO  DefaultChainFactory    - 	未配置策略规则，返回默认责任链
+24-06-22.12:39:12.229 [main            ] INFO  DefaultLogicChain      - 用户【joyboy】，参与抽奖活动【100003】，进行【default】
+24-06-22.12:39:12.290 [main            ] INFO  DefaultLogicChain      - 抽奖责任链-【默认抽奖节点】 规则模型：default 奖品ID：109 执行状态：CONTINUE 结果描述：用户参与默认抽奖规则，从默认的奖品规则中抽取奖品
+24-06-22.12:39:12.290 [main            ] INFO  AbstractRaffleStrategy - 抽奖策略计算-责任链：用户ID: joyboy 策略ID: 100003 奖品ID: 109 规则模型: default 处理状态: 【继续处理流程】 结果描述: 用户参与默认抽奖规则，从默认的奖品规则中抽取奖品
+24-06-22.12:39:12.290 [main            ] INFO  DefaultTreeFactory     - 开始获取策略奖品配置的抽奖规则，策略ID：100003，奖品ID：109
+24-06-22.12:39:12.358 [main            ] INFO  DefaultTreeFactory     - 当前奖品【109】的规则列表为：rule_lock,rule_luck_award
+24-06-22.12:39:12.358 [main            ] INFO  DefaultTreeFactory     - 开始构建决策树>>>>>>>>>>>>>>>>
+24-06-22.12:39:12.358 [main            ] INFO  DefaultTreeFactory     - 开始构建用户属性验证组
+24-06-22.12:39:12.359 [main            ] INFO  DefaultTreeFactory     - 	用户属性验证组添加 DailyLimitNode 节点
+24-06-22.12:39:12.359 [main            ] INFO  DefaultTreeFactory     - 	用户属性验证组添加 WinFrequencyNode 节点
+24-06-22.12:39:12.359 [main            ] INFO  DefaultTreeFactory     - 开始构建奖品属性验证组
+24-06-22.12:39:12.359 [main            ] INFO  DefaultTreeFactory     - 	奖品属性验证组添加 PrizeTypeRestrictionNode 节点
+24-06-22.12:39:12.359 [main            ] INFO  DefaultTreeFactory     - 	奖品属性验证组添加 RuleStockNode 节点
+24-06-22.12:39:12.359 [main            ] INFO  DefaultTreeFactory     - 	奖品属性验证组添加 rule_lock 节点
+24-06-22.12:39:12.359 [main            ] INFO  DefaultTreeFactory     - 	奖品属性验证组添加 rule_luck_award 节点
+24-06-22.12:39:12.359 [main            ] INFO  DefaultTreeFactory     - 开始构建根节点
+24-06-22.12:39:12.359 [main            ] INFO  DefaultTreeFactory     - 	根节点添加->用户属性验证组
+24-06-22.12:39:12.359 [main            ] INFO  DefaultTreeFactory     - 	根节点添加->奖品属性验证组
+24-06-22.12:39:12.359 [main            ] INFO  DefaultTreeFactory     - <<<<<<<<<<<<<<<<<<<<构建决策树完成
+24-06-22.12:39:12.359 [main            ] INFO  DailyLimitNode         - 【每日限额节点】- 暂未实现，默认通过【CONTINUE】
+24-06-22.12:39:12.359 [main            ] INFO  WinFrequencyNode       - 【中奖频率节点】- 暂未实现，默认通过【CONTINUE】
+24-06-22.12:39:12.359 [main            ] INFO  PrizeTypeRestrictionNode - 【奖品类型限制节点】-现阶段未编写具体逻辑，默认通过【Continue】
+24-06-22.12:39:12.359 [main            ] INFO  RuleStockNode          - 【库存扣减节点】- 开始检查库存...
+24-06-22.12:39:12.359 [main            ] INFO  RuleStockNode          - 【库存扣减节点】- 现阶段未编写具体逻辑，默认通过【TERMINATED】，库存不够哦
+24-06-22.12:39:12.359 [main            ] INFO  RuleStockNode          - 【库存扣减节点】- ...库存检查结束
+24-06-22.12:39:12.359 [main            ] INFO  RuleDecisionTreeEngine - 最终决策树节点：rule_stock 处理结果信息: 【终止处理流程】
+24-06-22.12:39:12.359 [main            ] INFO  RuleLuckAwardNode      - 【兜底奖励节点】- 发放兜底奖品，默认终止【TERMINATED】
+24-06-22.12:39:12.359 [main            ] INFO  AbstractRaffleStrategy - 抽奖策略计算-规则树：用户ID: joyboy 策略ID: 100003 奖品ID: 101 规则模型: rule_luck_award 处理状态: 【终止处理流程】 结果描述: 用户参与默认抽奖规则，从默认的奖品规则中抽取奖品
+24-06-22.12:39:12.362 [main            ] INFO  RaffleStrategyTest     - 第0次测试结果：{"awardId":101}
+24-06-22.12:39:12.363 [main            ] INFO  RaffleStrategyTest     - 请求参数：{"strategyId":100003,"userId":"joyboy"}
+24-06-22.12:39:12.392 [main            ] INFO  DefaultChainFactory    - 策略ID：100003 的规则模型为：null
+24-06-22.12:39:12.393 [main            ] INFO  DefaultChainFactory    - >>>>>>>>>>>>>>>>>>>>开始为策略ID：100003 构建责任链
+24-06-22.12:39:12.393 [main            ] INFO  DefaultChainFactory    - 	未配置策略规则，返回默认责任链
+24-06-22.12:39:12.393 [main            ] INFO  DefaultLogicChain      - 用户【joyboy】，参与抽奖活动【100003】，进行【default】
+24-06-22.12:39:12.459 [main            ] INFO  DefaultLogicChain      - 抽奖责任链-【默认抽奖节点】 规则模型：default 奖品ID：109 执行状态：CONTINUE 结果描述：用户参与默认抽奖规则，从默认的奖品规则中抽取奖品
+24-06-22.12:39:12.459 [main            ] INFO  AbstractRaffleStrategy - 抽奖策略计算-责任链：用户ID: joyboy 策略ID: 100003 奖品ID: 109 规则模型: default 处理状态: 【继续处理流程】 结果描述: 用户参与默认抽奖规则，从默认的奖品规则中抽取奖品
+24-06-22.12:39:12.461 [main            ] INFO  DefaultTreeFactory     - 开始获取策略奖品配置的抽奖规则，策略ID：100003，奖品ID：109
+24-06-22.12:39:12.494 [main            ] INFO  DefaultTreeFactory     - 当前奖品【109】的规则列表为：rule_lock,rule_luck_award
+24-06-22.12:39:12.494 [main            ] INFO  DefaultTreeFactory     - 开始构建决策树>>>>>>>>>>>>>>>>
+24-06-22.12:39:12.494 [main            ] INFO  DefaultTreeFactory     - 开始构建用户属性验证组
+24-06-22.12:39:12.494 [main            ] INFO  DefaultTreeFactory     - 	用户属性验证组添加 DailyLimitNode 节点
+24-06-22.12:39:12.494 [main            ] INFO  DefaultTreeFactory     - 	用户属性验证组添加 WinFrequencyNode 节点
+24-06-22.12:39:12.494 [main            ] INFO  DefaultTreeFactory     - 开始构建奖品属性验证组
+24-06-22.12:39:12.494 [main            ] INFO  DefaultTreeFactory     - 	奖品属性验证组添加 PrizeTypeRestrictionNode 节点
+24-06-22.12:39:12.494 [main            ] INFO  DefaultTreeFactory     - 	奖品属性验证组添加 RuleStockNode 节点
+24-06-22.12:39:12.495 [main            ] INFO  DefaultTreeFactory     - 	奖品属性验证组添加 rule_lock 节点
+24-06-22.12:39:12.495 [main            ] INFO  DefaultTreeFactory     - 	奖品属性验证组添加 rule_luck_award 节点
+24-06-22.12:39:12.495 [main            ] INFO  DefaultTreeFactory     - 开始构建根节点
+24-06-22.12:39:12.495 [main            ] INFO  DefaultTreeFactory     - 	根节点添加->用户属性验证组
+24-06-22.12:39:12.495 [main            ] INFO  DefaultTreeFactory     - 	根节点添加->奖品属性验证组
+24-06-22.12:39:12.495 [main            ] INFO  DefaultTreeFactory     - <<<<<<<<<<<<<<<<<<<<构建决策树完成
+24-06-22.12:39:12.495 [main            ] INFO  DailyLimitNode         - 【每日限额节点】- 暂未实现，默认通过【CONTINUE】
+24-06-22.12:39:12.495 [main            ] INFO  WinFrequencyNode       - 【中奖频率节点】- 暂未实现，默认通过【CONTINUE】
+24-06-22.12:39:12.495 [main            ] INFO  PrizeTypeRestrictionNode - 【奖品类型限制节点】-现阶段未编写具体逻辑，默认通过【Continue】
+24-06-22.12:39:12.495 [main            ] INFO  RuleStockNode          - 【库存扣减节点】- 开始检查库存...
+24-06-22.12:39:12.495 [main            ] INFO  RuleStockNode          - 【库存扣减节点】- 现阶段未编写具体逻辑，默认通过【TERMINATED】，库存不够哦
+24-06-22.12:39:12.495 [main            ] INFO  RuleStockNode          - 【库存扣减节点】- ...库存检查结束
+24-06-22.12:39:12.495 [main            ] INFO  RuleDecisionTreeEngine - 最终决策树节点：rule_stock 处理结果信息: 【终止处理流程】
+24-06-22.12:39:12.495 [main            ] INFO  RuleLuckAwardNode      - 【兜底奖励节点】- 发放兜底奖品，默认终止【TERMINATED】
+24-06-22.12:39:12.495 [main            ] INFO  AbstractRaffleStrategy - 抽奖策略计算-规则树：用户ID: joyboy 策略ID: 100003 奖品ID: 101 规则模型: rule_luck_award 处理状态: 【终止处理流程】 结果描述: 用户参与默认抽奖规则，从默认的奖品规则中抽取奖品
+24-06-22.12:39:12.495 [main            ] INFO  RaffleStrategyTest     - 第1次测试结果：{"awardId":101}
+24-06-22.12:39:12.561 [SpringApplicationShutdownHook] INFO  HikariDataSource       - Retail_HikariCP - Shutdown initiated...
+24-06-22.12:39:12.688 [SpringApplicationShutdownHook] INFO  HikariDataSource       - Retail_HikariCP - Shutdown completed.
+24-06-22.12:53:58.421 [main            ] INFO  RaffleStrategyTest     - Starting RaffleStrategyTest using Java 1.8.0_402 on wyh-machine with PID 26704 (started by 98389 in E:\Java_code\MMarket\MMarket-app)
+24-06-22.12:53:58.422 [main            ] INFO  RaffleStrategyTest     - The following 1 profile is active: "dev"
+24-06-22.12:53:59.264 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-06-22.12:53:59.268 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-06-22.12:53:59.296 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 13 ms. Found 0 Redis repository interfaces.
+24-06-22.12:54:01.206 [main            ] INFO  Version                - Redisson 3.23.4
+24-06-22.12:54:02.381 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for 117.72.77.81/117.72.77.81:16379
+24-06-22.12:54:02.652 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 117.72.77.81/117.72.77.81:16379
+24-06-22.12:54:04.445 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-06-22.12:54:04.508 [main            ] INFO  RaffleStrategyTest     - Started RaffleStrategyTest in 6.445 seconds (JVM running for 7.309)
+24-06-22.12:54:05.158 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Starting...
+24-06-22.12:54:05.784 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Start completed.
+24-06-22.12:54:06.047 [main            ] INFO  RaffleStrategyTest     - 策略装配结果：true
+24-06-22.12:54:06.224 [main            ] INFO  RaffleStrategyTest     - 策略装配结果：true
+24-06-22.12:54:06.226 [main            ] INFO  RaffleStrategyTest     - 当前用户幸运值为：4050
+24-06-22.12:54:06.227 [main            ] INFO  RaffleStrategyTest     - 用户已经完成的抽奖次数: 2次
+24-06-22.12:54:06.389 [main            ] INFO  RaffleStrategyTest     - 请求参数：{"strategyId":100003,"userId":"joyboy"}
+24-06-22.12:54:06.422 [main            ] INFO  DefaultChainFactory    - 策略ID：100003 的规则模型为：null
+24-06-22.12:54:06.422 [main            ] INFO  DefaultChainFactory    - >>>>>>>>>>>>>>>>>>>>开始为策略ID：100003 构建责任链
+24-06-22.12:54:06.422 [main            ] INFO  DefaultChainFactory    - 	未配置策略规则，返回默认责任链
+24-06-22.12:54:06.422 [main            ] INFO  DefaultLogicChain      - 用户【joyboy】，参与抽奖活动【100003】，进行【default】
+24-06-22.12:54:06.483 [main            ] INFO  DefaultLogicChain      - 抽奖责任链-【默认抽奖节点】 规则模型：default 奖品ID：109 执行状态：CONTINUE 结果描述：用户参与默认抽奖规则，从默认的奖品规则中抽取奖品
+24-06-22.12:54:06.483 [main            ] INFO  AbstractRaffleStrategy - 抽奖策略计算-责任链：用户ID: joyboy 策略ID: 100003 奖品ID: 109 规则模型: default 处理状态: 【继续处理流程】 结果描述: 用户参与默认抽奖规则，从默认的奖品规则中抽取奖品
+24-06-22.12:54:06.483 [main            ] INFO  DefaultTreeFactory     - 开始获取策略奖品配置的抽奖规则，策略ID：100003，奖品ID：109
+24-06-22.12:54:06.548 [main            ] INFO  DefaultTreeFactory     - 当前奖品【109】的规则列表为：rule_lock,rule_luck_award
+24-06-22.12:54:06.548 [main            ] INFO  DefaultTreeFactory     - 开始构建决策树>>>>>>>>>>>>>>>>
+24-06-22.12:54:06.548 [main            ] INFO  DefaultTreeFactory     - 开始构建用户属性验证组
+24-06-22.12:54:06.549 [main            ] INFO  DefaultTreeFactory     - 	用户属性验证组添加 DailyLimitNode 节点
+24-06-22.12:54:06.549 [main            ] INFO  DefaultTreeFactory     - 	用户属性验证组添加 WinFrequencyNode 节点
+24-06-22.12:54:06.549 [main            ] INFO  DefaultTreeFactory     - 开始构建奖品属性验证组
+24-06-22.12:54:06.549 [main            ] INFO  DefaultTreeFactory     - 	奖品属性验证组添加 PrizeTypeRestrictionNode 节点
+24-06-22.12:54:06.549 [main            ] INFO  DefaultTreeFactory     - 	奖品属性验证组添加 RuleStockNode 节点
+24-06-22.12:54:06.549 [main            ] INFO  DefaultTreeFactory     - 	奖品属性验证组添加 rule_lock 节点
+24-06-22.12:54:06.549 [main            ] INFO  DefaultTreeFactory     - 	奖品属性验证组添加 rule_luck_award 节点
+24-06-22.12:54:06.549 [main            ] INFO  DefaultTreeFactory     - 开始构建根节点
+24-06-22.12:54:06.549 [main            ] INFO  DefaultTreeFactory     - 	根节点添加->用户属性验证组
+24-06-22.12:54:06.549 [main            ] INFO  DefaultTreeFactory     - 	根节点添加->奖品属性验证组
+24-06-22.12:54:06.549 [main            ] INFO  DefaultTreeFactory     - <<<<<<<<<<<<<<<<<<<<构建决策树完成
+24-06-22.12:54:06.549 [main            ] INFO  DailyLimitNode         - 抽奖决策树-【每日限额节点】 规则模型：rule_daily_limit 奖品ID：109 执行状态：CONTINUE 结果描述：暂未实现，默认通过【CONTINUE】
+24-06-22.12:54:06.550 [main            ] INFO  WinFrequencyNode       - 抽奖决策树-【中奖频率节点】 规则模型：rule_win_frequency 奖品ID：109 执行状态：CONTINUE 结果描述：暂未实现，默认通过【CONTINUE】
+24-06-22.12:54:06.550 [main            ] INFO  PrizeTypeRestrictionNode - 抽奖决策树-【奖品类型限制节点】 规则模型：prize_type_restriction 奖品ID：109 执行状态：CONTINUE 结果描述：暂未实现，现阶段未编写具体逻辑，默认通过【Continue】
+24-06-22.12:54:06.550 [main            ] INFO  RuleStockNode          - 【库存扣减节点】- 现阶段未编写具体逻辑，默认通过【TERMINATED】，库存不够哦
+24-06-22.12:54:06.550 [main            ] INFO  RuleStockNode          - 抽奖决策树-【库存扣减节点】 规则模型：rule_stock 奖品ID：109 执行状态：TERMINATED 结果描述：奖品库存数量不够
+24-06-22.12:54:06.550 [main            ] INFO  RuleDecisionTreeEngine - 最终决策树节点：rule_stock 处理结果信息: 【终止处理流程】
+24-06-22.12:54:06.550 [main            ] INFO  RuleLuckAwardNode      - 抽奖决策树-【兜底奖励节点】 规则模型：rule_luck_award 奖品ID：101 执行状态：TERMINATED 结果描述：发放兜底奖品，默认终止【TERMINATED】
+24-06-22.12:54:06.550 [main            ] INFO  AbstractRaffleStrategy - 抽奖策略计算-规则树：用户ID: joyboy 策略ID: 100003 奖品ID: 101 规则模型: rule_luck_award 处理状态: 【终止处理流程】 结果描述: 发放兜底奖品，默认终止【TERMINATED】
+24-06-22.12:54:06.553 [main            ] INFO  RaffleStrategyTest     - 第0次测试结果：{"awardId":101}
+24-06-22.12:54:06.553 [main            ] INFO  RaffleStrategyTest     - 请求参数：{"strategyId":100003,"userId":"joyboy"}
+24-06-22.12:54:06.598 [main            ] INFO  DefaultChainFactory    - 策略ID：100003 的规则模型为：null
+24-06-22.12:54:06.598 [main            ] INFO  DefaultChainFactory    - >>>>>>>>>>>>>>>>>>>>开始为策略ID：100003 构建责任链
+24-06-22.12:54:06.598 [main            ] INFO  DefaultChainFactory    - 	未配置策略规则，返回默认责任链
+24-06-22.12:54:06.598 [main            ] INFO  DefaultLogicChain      - 用户【joyboy】，参与抽奖活动【100003】，进行【default】
+24-06-22.12:54:06.667 [main            ] INFO  DefaultLogicChain      - 抽奖责任链-【默认抽奖节点】 规则模型：default 奖品ID：108 执行状态：CONTINUE 结果描述：用户参与默认抽奖规则，从默认的奖品规则中抽取奖品
+24-06-22.12:54:06.667 [main            ] INFO  AbstractRaffleStrategy - 抽奖策略计算-责任链：用户ID: joyboy 策略ID: 100003 奖品ID: 108 规则模型: default 处理状态: 【继续处理流程】 结果描述: 用户参与默认抽奖规则，从默认的奖品规则中抽取奖品
+24-06-22.12:54:06.667 [main            ] INFO  DefaultTreeFactory     - 开始获取策略奖品配置的抽奖规则，策略ID：100003，奖品ID：108
+24-06-22.12:54:06.700 [main            ] INFO  DefaultTreeFactory     - 当前奖品【108】的规则列表为：rule_lock,rule_luck_award
+24-06-22.12:54:06.701 [main            ] INFO  DefaultTreeFactory     - 开始构建决策树>>>>>>>>>>>>>>>>
+24-06-22.12:54:06.701 [main            ] INFO  DefaultTreeFactory     - 开始构建用户属性验证组
+24-06-22.12:54:06.701 [main            ] INFO  DefaultTreeFactory     - 	用户属性验证组添加 DailyLimitNode 节点
+24-06-22.12:54:06.701 [main            ] INFO  DefaultTreeFactory     - 	用户属性验证组添加 WinFrequencyNode 节点
+24-06-22.12:54:06.701 [main            ] INFO  DefaultTreeFactory     - 开始构建奖品属性验证组
+24-06-22.12:54:06.701 [main            ] INFO  DefaultTreeFactory     - 	奖品属性验证组添加 PrizeTypeRestrictionNode 节点
+24-06-22.12:54:06.701 [main            ] INFO  DefaultTreeFactory     - 	奖品属性验证组添加 RuleStockNode 节点
+24-06-22.12:54:06.701 [main            ] INFO  DefaultTreeFactory     - 	奖品属性验证组添加 rule_lock 节点
+24-06-22.12:54:06.701 [main            ] INFO  DefaultTreeFactory     - 	奖品属性验证组添加 rule_luck_award 节点
+24-06-22.12:54:06.701 [main            ] INFO  DefaultTreeFactory     - 开始构建根节点
+24-06-22.12:54:06.701 [main            ] INFO  DefaultTreeFactory     - 	根节点添加->用户属性验证组
+24-06-22.12:54:06.701 [main            ] INFO  DefaultTreeFactory     - 	根节点添加->奖品属性验证组
+24-06-22.12:54:06.701 [main            ] INFO  DefaultTreeFactory     - <<<<<<<<<<<<<<<<<<<<构建决策树完成
+24-06-22.12:54:06.701 [main            ] INFO  DailyLimitNode         - 抽奖决策树-【每日限额节点】 规则模型：rule_daily_limit 奖品ID：108 执行状态：CONTINUE 结果描述：暂未实现，默认通过【CONTINUE】
+24-06-22.12:54:06.701 [main            ] INFO  WinFrequencyNode       - 抽奖决策树-【中奖频率节点】 规则模型：rule_win_frequency 奖品ID：108 执行状态：CONTINUE 结果描述：暂未实现，默认通过【CONTINUE】
+24-06-22.12:54:06.701 [main            ] INFO  PrizeTypeRestrictionNode - 抽奖决策树-【奖品类型限制节点】 规则模型：prize_type_restriction 奖品ID：108 执行状态：CONTINUE 结果描述：暂未实现，现阶段未编写具体逻辑，默认通过【Continue】
+24-06-22.12:54:06.701 [main            ] INFO  RuleStockNode          - 【库存扣减节点】- 现阶段未编写具体逻辑，默认通过【TERMINATED】，库存不够哦
+24-06-22.12:54:06.702 [main            ] INFO  RuleStockNode          - 抽奖决策树-【库存扣减节点】 规则模型：rule_stock 奖品ID：108 执行状态：TERMINATED 结果描述：奖品库存数量不够
+24-06-22.12:54:06.702 [main            ] INFO  RuleDecisionTreeEngine - 最终决策树节点：rule_stock 处理结果信息: 【终止处理流程】
+24-06-22.12:54:06.702 [main            ] INFO  RuleLuckAwardNode      - 抽奖决策树-【兜底奖励节点】 规则模型：rule_luck_award 奖品ID：101 执行状态：TERMINATED 结果描述：发放兜底奖品，默认终止【TERMINATED】
+24-06-22.12:54:06.702 [main            ] INFO  AbstractRaffleStrategy - 抽奖策略计算-规则树：用户ID: joyboy 策略ID: 100003 奖品ID: 101 规则模型: rule_luck_award 处理状态: 【终止处理流程】 结果描述: 发放兜底奖品，默认终止【TERMINATED】
+24-06-22.12:54:06.702 [main            ] INFO  RaffleStrategyTest     - 第1次测试结果：{"awardId":101}
+24-06-22.12:54:06.767 [SpringApplicationShutdownHook] INFO  HikariDataSource       - Retail_HikariCP - Shutdown initiated...
+24-06-22.12:54:06.899 [SpringApplicationShutdownHook] INFO  HikariDataSource       - Retail_HikariCP - Shutdown completed.

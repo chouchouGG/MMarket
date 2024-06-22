@@ -21,14 +21,17 @@ public class RuleStockNode implements ILogicTreeNode {
             return;
         }
 
-        log.info("【库存扣减节点】- 开始检查库存...");
 
         log.info("【库存扣减节点】- 现阶段未编写具体逻辑，默认通过【TERMINATED】，库存不够哦");
 
         context.setRuleModel(Constants.RuleModel.RULE_STOCK);
         context.setStatus(ProcessingContext.ProcessStatus.TERMINATED);
+        context.setResultDesc("奖品库存数量不够");
+        context.setNeedsFallbackAward(true);
 
-        log.info("【库存扣减节点】- ...库存检查结束");
+        log.info("抽奖决策树-【库存扣减节点】 规则模型：{} 奖品ID：{} 执行状态：{} 结果描述：{}",
+                context.getRuleModel(), context.getAwardId(), context.getStatus(), context.getResultDesc());
+
         return;
     }
 }

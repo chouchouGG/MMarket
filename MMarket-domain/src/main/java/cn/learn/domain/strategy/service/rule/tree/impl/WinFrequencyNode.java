@@ -25,7 +25,10 @@ public class WinFrequencyNode implements ILogicTreeNode {
 
         // fixme: 用户中奖频率验证逻辑，暂未实现
         context.setStatus(ProcessingContext.ProcessStatus.CONTINUE);
-        log.info("【中奖频率节点】- 暂未实现，默认通过【CONTINUE】");
+        context.setRuleModel(RULE_WIN_FREQUENCY);
+        context.setResultDesc("暂未实现，默认通过【CONTINUE】");
+        log.info("抽奖决策树-【中奖频率节点】 规则模型：{} 奖品ID：{} 执行状态：{} 结果描述：{}",
+                context.getRuleModel(), context.getAwardId(), context.getStatus(), context.getResultDesc());
         return;
     }
 

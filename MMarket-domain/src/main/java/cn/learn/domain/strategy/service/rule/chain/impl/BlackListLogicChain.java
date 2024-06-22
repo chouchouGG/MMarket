@@ -9,6 +9,8 @@ import org.springframework.stereotype.Component;
 
 import javax.annotation.Resource;
 
+import static cn.learn.types.common.Constants.RuleModel.RULE_BLACKLIST;
+
 /**
  * @program: MMarket
  * @description: 黑名单责任链节点
@@ -16,20 +18,19 @@ import javax.annotation.Resource;
  * @create: 2024-06-16 09:04
  **/
 @Slf4j
-@Component(value = Constants.RuleModel.RULE_BLACKLIST)
+@Component(value = RULE_BLACKLIST)
 public class BlackListLogicChain extends AbstractLogicChain {
 
     @Resource
     IStrategyRepository repository;
 
     @Override
-    public ProcessingContext handle(ProcessingContext context) {
+    public void handle(ProcessingContext context) {
         Long strategyId = context.getStrategyId();
         String userId = context.getUserId();
         String ruleModelName = getRuleModelName();
 
-        log.info("抽奖责任链-黑名单开始 userId: {} strategyId: {} ruleModel: {}",
-                userId, strategyId, ruleModelName);
+        log.info("用户【{}】，参与抽奖活动【{}】，进行【{}】", userId, strategyId, ruleModelName);
 
         // 查询规则值配置，（黑名单规则无需奖品ID）
         String ruleValue = repository.queryStrategyRuleValue(strategyId,null, ruleModelName);
@@ -40,17 +41,21 @@ public class BlackListLogicChain extends AbstractLogicChain {
         String[] userBlackIds = splitRuleValue[1].split(Constants.SPLIT);
         for (String id : userBlackIds) {
             if (userId.equals(id)) {
-                context.setStatus(ProcessingContext.ProcessStatus.TERMINATED);
                 context.setAwardId(awardId);
-                log.info("抽奖责任链-【黑名单节点】 userId: {} strategyId: {} ruleModel: {} awardId: {}",
-                        userId, strategyId, ruleModelName, awardId);
-                return context;
+                context.setStatus(ProcessingContext.ProcessStatus.TERMINATED);
+                context.setRuleModel(RULE_BLACKLIST);
+                context.setResultDesc("用户在黑名单中");
+                log.info("抽奖责任链-【黑名单节点】 规则模型：{} 奖品ID：{} 执行状态：{} 结果描述：{}",
+                        context.getRuleModel(), context.getAwardId(), context.getStatus(), context.getResultDesc());
+                return;
             }
         }
 
         context.setStatus(ProcessingContext.ProcessStatus.CONTINUE);
-        log.info("抽奖责任链-【黑名单节点】 userId: {} strategyId: {} ruleModel: {} awardId: {}",
-                userId, strategyId, ruleModelName, "没有在黑名单规则中");
-        return context;
+        context.setRuleModel(RULE_BLACKLIST);
+        context.setResultDesc("用户不在黑名单中");
+        log.info("抽奖责任链-【黑名单节点】 规则模型：{} 奖品ID：{} 执行状态：{} 结果描述：{}",
+                context.getRuleModel(), context.getAwardId(), context.getStatus(), context.getResultDesc());
+        return;
     }
 }

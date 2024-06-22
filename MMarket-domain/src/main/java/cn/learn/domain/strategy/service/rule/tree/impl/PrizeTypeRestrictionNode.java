@@ -21,9 +21,12 @@ public class PrizeTypeRestrictionNode implements ILogicTreeNode {
         if (context.getStatus() == ProcessingContext.ProcessStatus.TERMINATED) {
             return;
         }
-        log.info("【奖品类型限制节点】-现阶段未编写具体逻辑，默认通过【Continue】");
         context.setStatus(ProcessingContext.ProcessStatus.CONTINUE);
         context.setRuleModel(PRIZE_TYPE_RESTRICTION);
+        context.setResultDesc("暂未实现，现阶段未编写具体逻辑，默认通过【Continue】");
+
+        log.info("抽奖决策树-【奖品类型限制节点】 规则模型：{} 奖品ID：{} 执行状态：{} 结果描述：{}",
+                context.getRuleModel(), context.getAwardId(), context.getStatus(), context.getResultDesc());
         return;
     }
 }

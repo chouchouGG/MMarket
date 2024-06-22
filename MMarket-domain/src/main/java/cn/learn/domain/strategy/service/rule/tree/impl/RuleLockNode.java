@@ -9,7 +9,7 @@ import static cn.learn.types.common.Constants.RuleModel.RULE_LOCK;
 
 /**
  * @program: MMarket
- * @description: 次数锁节点
+ * @description: 奖品解锁节点
  * @author: chouchouGG
  * @create: 2024-06-20 17:23
  **/
@@ -22,9 +22,12 @@ public class RuleLockNode implements ILogicTreeNode {
         if (context.getStatus() == ProcessingContext.ProcessStatus.TERMINATED) {
             return;
         }
-        log.info("【奖品解锁节点】-现阶段未编写具体逻辑，默认通过【Continue】");
         context.setStatus(ProcessingContext.ProcessStatus.CONTINUE);
         context.setRuleModel(RULE_LOCK);
+        context.setResultDesc("奖品解锁条件达成，通过解锁节点 - 现阶段未编写具体逻辑，默认通过【Continue】");
+
+        log.info("抽奖决策树-【奖品解锁节点】 规则模型：{} 奖品ID：{} 执行状态：{} 结果描述：{}",
+                context.getRuleModel(), context.getAwardId(), context.getStatus(), context.getResultDesc());
         return;
     }
 
