@@ -8,9 +8,9 @@ import java.time.Duration;
 
 /**
  * @author chouchouGG
- * 实现 Redis 客户端服务操作的 API
- *
  * @author Fuzhengwei bugstack.cn @xfg
+ * @description 对 Redisson 客户端api的封装
+ * note：需要分析该类的实现
  */
 @Service("redissonService")
 public class RedissonService implements IRedisService {
@@ -166,5 +166,14 @@ public class RedissonService implements IRedisService {
         return redissonClient.getMap(key);
     }
 
+    @Override
+    public void setAtomicLong(String key, long value) {
+        redissonClient.getAtomicLong(key).set(value);
+    }
+
+    @Override
+    public Boolean setNx(String key) {
+        return redissonClient.getBucket(key).trySet("lock");
+    }
 
 }

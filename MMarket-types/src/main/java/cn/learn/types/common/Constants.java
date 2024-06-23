@@ -16,6 +16,39 @@ public class Constants {
         public static final String STRATEGY_RATE_TABLE_KEY = "big_market_strategy_rate_table_key_";
         // 奖品映射范围前缀
         public static final String STRATEGY_RATE_RANGE_KEY = "big_market_strategy_rate_range_key_";
+        // 奖品库存数量前缀
+        public static final String STRATEGY_AWARD_COUNT_KEY = "strategy_award_count_key";
+        // 奖品库存消耗的队列key
+        public static final String STRATEGY_AWARD_COUNT_QUEUE_KEY = "strategy_award_count_queue_key";
+
+
+        /**
+         * 生成奖品库存数量缓存的key
+         * @param strategyId 策略id
+         * @param awardId 奖品id
+         * @return
+         */
+        public static String acquireStrategyAwardCountKey(Long strategyId, Integer awardId) {
+            return Constants.RedisKey.STRATEGY_AWARD_COUNT_KEY + "_" + strategyId + "_" + awardId;
+        }
+
+
+        /**
+         * 生成库存锁的key。
+         * 通过加锁机制，确保在后续恢复库存或手动处理等情况下，不会出现超卖的情况。
+         *
+         * @param cacheKey 缓存键，用于标识库存的唯一标识符。
+         * @param surplus  减少后的库存值。
+         * @return 生成的库存锁key。
+         */
+        public static String generateStockLockKey(String cacheKey, long surplus) {
+            return cacheKey + "_" + surplus;
+        }
+
+
+        public static String acquireStrategyAwardCountQueuekey() {
+            return STRATEGY_AWARD_COUNT_QUEUE_KEY;
+        }
 
     }
 
@@ -25,13 +58,13 @@ public class Constants {
         public static final String RULE_RANDOM = "rule_random";
         // 解锁规则
         public static final String RULE_LOCK = "rule_lock";
-        // 幸运值规则
+        // 兜底奖品规则
         public static final String RULE_LUCK_AWARD = "rule_luck_award";
         // 权重规则
         public static final String RULE_WEIGHT = "rule_weight";
         // 黑名单规则
         public static final String RULE_BLACKLIST = "rule_blacklist";
-        // 默认的兜底规则
+        // 默认抽奖规则
         public static final String DEFAULT = "default";
         // 库存规则
         public static final String RULE_STOCK = "rule_stock";

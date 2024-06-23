@@ -238,4 +238,15 @@ public interface IRedisService {
      *
      */
     <K, V> RMap<K, V> getMap(String key);
+
+
+    /**
+     * 设置值
+     *
+     * @param key   key 键
+     * @param value 值
+     */
+    void setAtomicLong(String key, long value);
+
+    Boolean setNx(String key);
 }

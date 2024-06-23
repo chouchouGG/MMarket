@@ -4,6 +4,7 @@ import cn.learn.domain.strategy.model.entity.StrategyAwardEntity;
 import cn.learn.domain.strategy.model.entity.StrategyEntity;
 import cn.learn.domain.strategy.model.entity.StrategyRuleEntity;
 import cn.learn.domain.strategy.model.vo.StrategyAwardRuleModelVO;
+import cn.learn.domain.strategy.model.vo.StrategyAwardStockKeyVO;
 import cn.learn.domain.strategy.respository.IStrategyRepository;
 import cn.learn.infrastructure.persistent.dao.IStrategyAwardDao;
 import cn.learn.infrastructure.persistent.dao.IStrategyDao;
@@ -13,12 +14,17 @@ import cn.learn.infrastructure.persistent.po.StrategyPO;
 import cn.learn.infrastructure.persistent.po.StrategyRulePO;
 import cn.learn.infrastructure.persistent.redis.IRedisService;
 import cn.learn.types.common.Constants;
+import lombok.extern.slf4j.Slf4j;
+import org.redisson.api.RBlockingQueue;
+import org.redisson.api.RDelayedQueue;
 import org.springframework.stereotype.Repository;
 
 import javax.annotation.Resource;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.TimeUnit;
+
 
 /**
  * @program: MMarket
@@ -38,7 +44,7 @@ import java.util.Map;
  *  是由 Spring 管理的 Spring Bean。如果类没有被 Spring 管理，Spring 就无法自动注入其依赖项。
  */
 
-//@Repository
+@Slf4j
 @Repository
 public class StrategyRepository implements IStrategyRepository {
 
@@ -184,6 +190,66 @@ public class StrategyRepository implements IStrategyRepository {
         String ruleModels = strategyAwardDao.queryStrategyAwardRuleModelVO(strategyAwardPO);
         return StrategyAwardRuleModelVO.builder().ruleModels(ruleModels).build();
     }
+
+    @Override
+    public void cacheStrategyAwardCount(String cacheKey, Integer awardCount) {
+        if (redisService.isExists(cacheKey)) {
+            return;
+        }
+        redisService.setAtomicLong(cacheKey, awardCount);
+    }
+
+    @Override
+    public Boolean subtractionAwardStock(String cacheKey) {
+        // 返回的 surplus 为扣减之后的值
+        long surplus = redisService.decr(cacheKey);
+        if (surplus < 0) {
+            // 库存小于0，恢复为0个
+            redisService.setValue(cacheKey, 0);
+            return false;
+        }
+        // 1. 按照cacheKey decr 后的值，如 99、98、97 和 key 组成为库存锁的key进行使用。
+        // 2. 加锁为了兜底，如果后续有恢复库存，手动处理等，也不会超卖。因为所有的可用库存key，都被加锁了。
+        String lockKey = Constants.RedisKey.generateStockLockKey(cacheKey, surplus);
+        Boolean lock = redisService.setNx(lockKey);
+        if (!lock) {
+            log.info("策略奖品库存加锁失败 {}", lockKey);
+        }
+        return lock;
+    }
+
+    // note：【生产者】将任务放到阻塞队列中
+    @Override
+    public void awardStockConsumeSendQueue(StrategyAwardStockKeyVO strategyAwardStockKeyVO) {
+        // 获取策略奖品库存任务队列的键
+        String cacheQueueKey = Constants.RedisKey.acquireStrategyAwardCountQueuekey();
+        // 获取 Redis 阻塞队列
+        RBlockingQueue<StrategyAwardStockKeyVO> blockingQueue = redisService.getBlockingQueue(cacheQueueKey);
+        // 获取 Redis 延迟队列，目的是降低库存信息更新到数据库的速度，减少连接的占用
+        RDelayedQueue<StrategyAwardStockKeyVO> delayedQueue = redisService.getDelayedQueue(blockingQueue);
+        // offer 方法：将一个元素添加到队列中，元素将在指定的延迟时间后才会真正可用。
+        // 将奖品库存消费信息添加到延迟队列中，在延迟时间 3 秒后才会在队列中可用。
+        delayedQueue.offer(strategyAwardStockKeyVO, 3, TimeUnit.SECONDS);
+    }
+
+    // note：【消费者】从阻塞队列中取出任务
+    @Override
+    public StrategyAwardStockKeyVO takeQueueValue() {
+        // 获取策略奖品库存任务队列的键
+        String cacheQueueKey = Constants.RedisKey.acquireStrategyAwardCountQueuekey();
+        RBlockingQueue<StrategyAwardStockKeyVO> destinationQueue = redisService.getBlockingQueue(cacheQueueKey);
+        return destinationQueue.poll();
+    }
+
+    @Override
+    public void updateStrategyAwardStock(Long strategyId, Integer awardId) {
+        StrategyAwardPO strategyAward = new StrategyAwardPO();
+        strategyAward.setStrategyId(strategyId);
+        strategyAward.setAwardId(awardId);
+        strategyAwardDao.updateStrategyAwardStock(strategyAward);
+    }
+
+
 }
 
 

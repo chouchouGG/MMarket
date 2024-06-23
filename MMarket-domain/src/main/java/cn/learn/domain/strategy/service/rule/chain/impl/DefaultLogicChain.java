@@ -9,6 +9,9 @@ import org.springframework.stereotype.Component;
 
 import javax.annotation.Resource;
 
+import static cn.learn.domain.strategy.model.entity.ProcessingContext.ProcessStatus.CONTINUE;
+import static cn.learn.types.common.Constants.RuleModel.DEFAULT;
+
 /**
  * @program: MMarket
  * @description: 默认规则的责任链节点（兜底规则）
@@ -16,7 +19,7 @@ import javax.annotation.Resource;
  * @create: 2024-06-16 09:40
  **/
 @Slf4j
-@Component(value = Constants.RuleModel.DEFAULT)
+@Component(value = DEFAULT)
 public class DefaultLogicChain extends AbstractLogicChain {
 
     @Resource
@@ -33,7 +36,7 @@ public class DefaultLogicChain extends AbstractLogicChain {
         // 默认抽奖方式
         Integer awardId = strategyDispatch.getRandomAwardId(strategyId);
         context.setAwardId(awardId);
-        context.setStatus(ProcessingContext.ProcessStatus.CONTINUE);
+        context.setStatus(CONTINUE);
         context.setRuleModel(ruleModelName);
         context.setResultDesc("用户参与默认抽奖规则，从默认的奖品规则中抽取奖品");
         log.info("抽奖责任链-【默认抽奖节点】 规则模型：{} 奖品ID：{} 执行状态：{} 结果描述：{}",

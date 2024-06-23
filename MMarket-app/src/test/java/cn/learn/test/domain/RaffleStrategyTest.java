@@ -5,6 +5,7 @@ import cn.learn.domain.strategy.model.entity.RaffleFactorEntity;
 import cn.learn.domain.strategy.service.IRaffleStrategy;
 import cn.learn.domain.strategy.service.armory.StrategyArmoryDispatch;
 import cn.learn.domain.strategy.service.rule.chain.impl.RuleWeightLogicChain;
+import cn.learn.domain.strategy.service.rule.tree.impl.RuleLockNode;
 import com.alibaba.fastjson.JSON;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Before;
@@ -16,6 +17,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.util.ReflectionTestUtils;
 
 import javax.annotation.Resource;
+import java.util.concurrent.TimeUnit;
 
 /**
  * @author Fuzhengwei bugstack.cn @小傅哥
@@ -31,34 +33,45 @@ public class RaffleStrategyTest {
     StrategyArmoryDispatch strategyArmory;
 
     @Resource
-    private IRaffleStrategy raffleStrategy;
+    IRaffleStrategy raffleStrategy;
 
     @Resource
     RuleWeightLogicChain ruleWeightLogicChain;
 
+    @Resource
+    RuleLockNode ruleLockNode;
 
-    /* fixme: 使用责任链重构后会出现报错，所以先注释起来 */
+
     @Before
     public void setUp() {
         log.info("策略装配结果：{}", strategyArmory.assembleLotteryStrategy(100001L));
         log.info("策略装配结果：{}", strategyArmory.assembleLotteryStrategy(100003L));
-
-        long lucky_value = 4050L;
+        // fixme：mock测试
+        // 1. 设置用户累计积分
+        long lucky_value = 100L;
         ReflectionTestUtils.setField(ruleWeightLogicChain, "userScore", lucky_value);
         log.info("当前用户幸运值为：{}", lucky_value);
+        // 2. 设置用户抽奖次数
+        long raffleCount = 1L;
+        ReflectionTestUtils.setField(ruleLockNode, "userRaffleCount", raffleCount);
+        log.info("当前用户次数为：{}", raffleCount);
     }
 
     @Test
-    public void test_performRaffle() {
+    public void test_performRaffle() throws InterruptedException {
         RaffleFactorEntity raffleFactorEntity = RaffleFactorEntity.builder()
                 .userId("joyboy")
                 .strategyId(100001L).build();
-        // 连续抽奖 
-        for (int i = 0; i < 2; i++) {
+        // 连续抽奖
+        for (int i = 0; i < 1; i++) {
             log.info("请求参数：{}", JSON.toJSONString(raffleFactorEntity));
             RaffleAwardEntity raffleAwardEntity = raffleStrategy.performRaffle(raffleFactorEntity);
             log.info("第{}次测试结果：{}", i, JSON.toJSONString(raffleAwardEntity));
         }
+
+        // note: 每次记得重新加载reids的缓存
+        // 让当前线程等待10秒，等待异步的数据库更新完成
+        TimeUnit.SECONDS.sleep(10);
     }
 
     @Test
@@ -72,21 +85,5 @@ public class RaffleStrategyTest {
         log.info("测试结果：{}", JSON.toJSONString(raffleAwardEntity));
     }
 
-    @Test
-    public void test_raffle_center_rule_lock() {
-        // mock测试，设置用户的抽奖次数
-        long numberOfRaffle = 2L;
-        log.info("用户已经完成的抽奖次数: {}次", numberOfRaffle);
-
-        RaffleFactorEntity raffleFactorEntity = RaffleFactorEntity.builder()
-                .userId("joyboy")
-                .strategyId(100003L).build();
-        // 连续抽奖
-        for (int i = 0; i < 2; i++) {
-             log.info("请求参数：{}", JSON.toJSONString(raffleFactorEntity));
-            RaffleAwardEntity raffleAwardEntity = raffleStrategy.performRaffle(raffleFactorEntity);
-            log.info("第{}次测试结果：{}", i, JSON.toJSONString(raffleAwardEntity));
-        }
-    }
 
 }

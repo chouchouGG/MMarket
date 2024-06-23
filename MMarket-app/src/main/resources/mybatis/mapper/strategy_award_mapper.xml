@@ -19,12 +19,16 @@
         <result property="updateTime" column="update_time"/>
     </resultMap>
 
+    <update id="updateStrategyAwardStock" parameterType="cn.learn.infrastructure.persistent.po.StrategyAwardPO">
+        update strategy_award
+        set award_count_surplus = award_count_surplus - 1
+        where strategy_id = #{strategyId} and award_id = #{awardId} and award_count_surplus > 0
+    </update>
     <select id="queryStrategyAwardList" resultMap="dataMap">
         select *
         from strategy_award
         limit 5
     </select>
-
     <select id="queryStrategyAwardListByStrategyId" parameterType="java.lang.Long" resultMap="dataMap">
         select strategy_id, award_id, award_count, award_count_surplus, award_rate
         from strategy_award

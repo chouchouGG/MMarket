@@ -2,6 +2,7 @@ package cn.learn.domain.strategy.service.raffle;
 
 import cn.learn.domain.strategy.model.entity.ProcessingContext;
 import cn.learn.domain.strategy.model.vo.StrategyAwardRuleModelVO;
+import cn.learn.domain.strategy.model.vo.StrategyAwardStockKeyVO;
 import cn.learn.domain.strategy.respository.IStrategyRepository;
 import cn.learn.domain.strategy.service.AbstractRaffleStrategy;
 import cn.learn.domain.strategy.service.armory.IStrategyDispatch;
@@ -11,6 +12,8 @@ import cn.learn.domain.strategy.service.rule.tree.engine.IDecisionTreeEngine;
 import cn.learn.domain.strategy.service.rule.tree.factory.DefaultTreeFactory;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
+
+import javax.annotation.Resource;
 
 /**
  * @program: MMarket
@@ -22,6 +25,8 @@ import org.springframework.stereotype.Service;
 @Service
 public class DefaultRaffleStrategy extends AbstractRaffleStrategy {
 
+    @Resource
+    private IStrategyRepository repository;
 
     public DefaultRaffleStrategy(DefaultChainFactory defaultChainFactory, DefaultTreeFactory defaultTreeFactory) {
         super(defaultChainFactory, defaultTreeFactory);
@@ -52,4 +57,13 @@ public class DefaultRaffleStrategy extends AbstractRaffleStrategy {
         treeEngine.process(context);
     }
 
+    @Override
+    public StrategyAwardStockKeyVO takeQueueValue() {
+        return repository.takeQueueValue();
+    }
+
+    @Override
+    public void updateStrategyAwardStock(Long strategyId, Integer awardId) {
+        repository.updateStrategyAwardStock(strategyId, awardId);
+    }
 }

@@ -3,8 +3,6 @@ package cn.learn.domain.strategy.service;
 import cn.learn.domain.strategy.model.entity.ProcessingContext;
 import cn.learn.domain.strategy.model.entity.RaffleAwardEntity;
 import cn.learn.domain.strategy.model.entity.RaffleFactorEntity;
-import cn.learn.domain.strategy.respository.IStrategyRepository;
-import cn.learn.domain.strategy.service.armory.IStrategyDispatch;
 import cn.learn.domain.strategy.service.rule.chain.factory.DefaultChainFactory;
 import cn.learn.domain.strategy.service.rule.tree.factory.DefaultTreeFactory;
 import cn.learn.types.enums.ResponseCode;
@@ -21,7 +19,7 @@ import org.springframework.beans.factory.annotation.Autowired;
  * @create: 2024-06-13 14:37
  **/
 @Slf4j
-public abstract class AbstractRaffleStrategy implements IRaffleStrategy {
+public abstract class AbstractRaffleStrategy implements IRaffleStrategy, IRaffleStock {
 
     // 抽奖的责任链工厂 -> 从抽奖的规则中，解耦出前置规则为责任链处理
     protected final DefaultChainFactory defaultChainFactory;

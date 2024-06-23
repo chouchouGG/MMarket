@@ -17,16 +17,19 @@ public class ProcessingContext {
     private final String userId;
     private final Long strategyId;
 
+    // 奖品ID
+    private Integer awardId;
+
+    private String awardRuleValue;
+
     // note: @Builder.Default 使用构建器 builder 生成对象时，用于如果没有显式设置该字段的值，则使用默认值。避免构建器忽略预设的默认值。
-    @Builder.Default
-    private Integer awardId = null;
     @Builder.Default
     private ProcessStatus status = ProcessStatus.CONTINUE;
 
     // 记录处理流程终止时的规则模型
     private String ruleModel;
 
-    // 结果描述，用于提供反馈
+    // 处理流程的结果描述，用于提供反馈
     // note：当 awardId 为 null 时，该字段有效
     private String resultDesc;
 

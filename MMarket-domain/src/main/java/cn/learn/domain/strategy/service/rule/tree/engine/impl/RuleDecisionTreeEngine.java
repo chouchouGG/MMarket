@@ -1,13 +1,10 @@
 package cn.learn.domain.strategy.service.rule.tree.engine.impl;
 
 import cn.learn.domain.strategy.model.entity.ProcessingContext;
-import cn.learn.domain.strategy.service.rule.tree.ILogicTreeNode;
 import cn.learn.domain.strategy.service.rule.tree.engine.IDecisionTreeEngine;
 import cn.learn.domain.strategy.service.rule.tree.factory.DefaultTreeFactory;
 import cn.learn.domain.strategy.service.rule.tree.impl.CompositeNode;
 import lombok.extern.slf4j.Slf4j;
-
-import static cn.learn.types.common.Constants.RuleModel.RULE_LUCK_AWARD;
 
 /**
  * @program: MMarket
@@ -26,17 +23,14 @@ public class RuleDecisionTreeEngine implements IDecisionTreeEngine {
      */
     private final CompositeNode rootNode;
 
-    private final DefaultTreeFactory defaultTreeFactory;
-
 
     /**
      * 构造函数，初始化决策树引擎。
      *
      * @param rootNode 决策树的根节点
      */
-    public RuleDecisionTreeEngine(CompositeNode rootNode, DefaultTreeFactory defaultTreeFactory) {
+    public RuleDecisionTreeEngine(CompositeNode rootNode) {
         this.rootNode = rootNode;
-        this.defaultTreeFactory = defaultTreeFactory;
     }
 
 
@@ -49,22 +43,9 @@ public class RuleDecisionTreeEngine implements IDecisionTreeEngine {
      */
     @Override
     public void process(ProcessingContext context) {
-
-        // 从根节点开始执行
+        // 从根节点开始执行决策树逻辑
         rootNode.execute(context);
-
-        log.info("最终决策树节点：{} 处理结果信息: {}",
-                context.getRuleModel(),
-                context.getStatus().getInfo());
-
-        // note：当前的设计是，只要context的流程处理状态为【终止】，一律走兜底策略的逻辑
-        if (context.isNeedsFallbackAward()) {
-            ILogicTreeNode luckAwardNode = defaultTreeFactory.getSpecificTreeNode(RULE_LUCK_AWARD);
-            luckAwardNode.execute(context);
-        }
-
-        return;
-
+        log.info("最终决策树节点：{} 处理结果信息: {}", context.getRuleModel(), context.getStatus().getInfo());
     }
 
 }

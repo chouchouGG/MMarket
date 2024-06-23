@@ -100,18 +100,27 @@ public class StrategyArmoryDispatch implements IStrategyArmory, IStrategyDispatc
      */
     @Override
     public boolean assembleLotteryStrategy(Long strategyId) {
-        // 获取当前策略对应的所有奖品列表
+        // 1. 获取当前策略对应的所有奖品列表
         List<StrategyAwardEntity> strategyAwardEntities = strategyRepository.queryStrategyAwardList(strategyId);
-        // 1. 装配默认的奖品列表
+
+        // 2 缓存奖品库存【用于decr扣减库存使用】
+        for (StrategyAwardEntity entity : strategyAwardEntities) {
+            cacheStrategyAwardCount(strategyId, entity.getAwardId(), entity.getAwardCount());
+        }
+
+
+
+
+
+        // 3. 装配抽奖列表
+        // 3.1. 装配默认的奖品列表
         assembleLotteryStrategy(String.valueOf(strategyId), strategyAwardEntities);
 
-        // 2. 装配幸运值抽奖表
-        // 获取策略实体
+        // 3.2. 装配幸运值抽奖表
         StrategyEntity strategyEntity = strategyRepository.queryStrategyEntityByStrategyId(strategyId);
-        // 判断当前策略是否设置了权重规则
+        // 判断当前策略是否设置了权重规则，若没有设置权重规则，则直接返回，无需装配【幸运值抽奖表】（权重抽奖表）
         boolean isSetRuleWeight = strategyEntity.getRuleWeight();
         if (!isSetRuleWeight) {
-            // 当前策略没有设置权重规则，则直接返回，无需装配【幸运值抽奖表】（权重抽奖表）
             return true;
         }
         // 获取幸运值规则的配置
@@ -121,10 +130,7 @@ public class StrategyArmoryDispatch implements IStrategyArmory, IStrategyDispatc
             throw new AppException(ResponseCode.STRATEGY_RULE_WEIGHT_IS_NULL.getCode(),
                     ResponseCode.STRATEGY_RULE_WEIGHT_IS_NULL.getInfo());
         }
-//        获取幸运值
-//        数据案例；4000:102,103,104,105
-//                5000:102,103,104,105,106,107
-//                6000:102,103,104,105,106,107,108,109
+
         Map<String, List<Integer>> ruleWeightValueMap = strategyRuleEntity.getRuleWeightItem();
         Set<String> keys = ruleWeightValueMap.keySet();
         for (String key : keys) {
@@ -137,8 +143,10 @@ public class StrategyArmoryDispatch implements IStrategyArmory, IStrategyDispatc
             // 装配【幸运值抽奖表】🎯
             assembleLotteryStrategy(assembleKey, strategyAwardEntitiesClone);
         }
+
         return true;
     }
+
 
     /**
      * 组装抽奖策略
@@ -229,6 +237,24 @@ public class StrategyArmoryDispatch implements IStrategyArmory, IStrategyDispatc
         int random = new SecureRandom().nextInt(size);
         /* fixme: 如果【奖品映射表】（策略奖品查找表）已经被 redis 淘汰出内存，那么如下结果可能返回 null */
         return strategyRepository.getStrategyAwardAssemble(key, random);
+    }
+
+    /**
+     * 缓存奖品库存到Redis
+     *
+     * @param strategyId 策略ID
+     * @param awardId    奖品ID
+     * @param awardCount 奖品库存
+     */
+    private void cacheStrategyAwardCount(Long strategyId, Integer awardId, Integer awardCount) {
+        String cacheKey = Constants.RedisKey.acquireStrategyAwardCountKey(strategyId, awardId);
+        strategyRepository.cacheStrategyAwardCount(cacheKey, awardCount);
+    }
+
+    @Override
+    public Boolean subtractionAwardStock(Long strategyId, Integer awardId) {
+        String cacheKey = Constants.RedisKey.acquireStrategyAwardCountKey(strategyId, awardId);
+        return strategyRepository.subtractionAwardStock(cacheKey);
     }
 
     /**
