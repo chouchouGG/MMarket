@@ -54,7 +54,7 @@ public class RaffleStrategyTest {
         // 2. 设置用户抽奖次数
         long raffleCount = 1L;
         ReflectionTestUtils.setField(ruleLockNode, "userRaffleCount", raffleCount);
-        log.info("当前用户次数为：{}", raffleCount);
+        log.info("当前用户抽奖次数为：{}", raffleCount);
     }
 
     @Test

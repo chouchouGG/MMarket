@@ -987,3 +987,318 @@ org.springframework.beans.factory.BeanCreationNotAllowedException: Error creatin
 24-06-23.12:07:35.038 [scheduling-1    ] INFO  UpdateAwardStockJob    - 【定时任务】 - 更新奖品消耗库存 strategyId:100001 awardId:102
 24-06-23.12:07:38.291 [SpringApplicationShutdownHook] INFO  HikariDataSource       - Retail_HikariCP - Shutdown initiated...
 24-06-23.12:07:38.718 [SpringApplicationShutdownHook] INFO  HikariDataSource       - Retail_HikariCP - Shutdown completed.
+24-06-23.13:30:01.981 [main            ] INFO  RaffleStrategyTest     - Starting RaffleStrategyTest using Java 1.8.0_402 on wyh-machine with PID 22968 (started by 98389 in E:\Java_code\MMarket\MMarket-app)
+24-06-23.13:30:01.983 [main            ] INFO  RaffleStrategyTest     - The following 1 profile is active: "dev"
+24-06-23.13:30:03.300 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-06-23.13:30:03.308 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-06-23.13:30:03.362 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 27 ms. Found 0 Redis repository interfaces.
+24-06-23.13:30:07.067 [main            ] INFO  Version                - Redisson 3.23.4
+24-06-23.13:30:08.764 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 117.72.77.81/117.72.77.81:16379
+24-06-23.13:30:09.007 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 117.72.77.81/117.72.77.81:16379
+24-06-23.13:30:12.709 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-06-23.13:30:12.825 [main            ] INFO  RaffleStrategyTest     - Started RaffleStrategyTest in 11.5 seconds (JVM running for 13.362)
+24-06-23.13:30:13.674 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Starting...
+24-06-23.13:30:14.759 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Start completed.
+24-06-23.13:30:15.000 [scheduling-1    ] INFO  UpdateAwardStockJob    - 【定时任务】 - 开始更新奖品消耗库存
+24-06-23.13:30:15.109 [scheduling-1    ] INFO  UpdateAwardStockJob    - 【定时任务】 - 队列为空，无需更新库存
+24-06-23.13:30:16.080 [main            ] INFO  RaffleStrategyTest     - 策略装配结果：true
+24-06-23.13:30:16.535 [main            ] INFO  RaffleStrategyTest     - 策略装配结果：true
+24-06-23.13:30:16.536 [main            ] INFO  RaffleStrategyTest     - 当前用户幸运值为：100
+24-06-23.13:30:16.536 [main            ] INFO  RaffleStrategyTest     - 当前用户次数为：1
+24-06-23.13:30:16.718 [main            ] INFO  RaffleStrategyTest     - 请求参数：{"strategyId":100001,"userId":"joyboy"}
+24-06-23.13:30:16.758 [main            ] INFO  DefaultChainFactory    - 策略ID：100001 的规则模型为：[rule_blacklist, rule_weight]
+24-06-23.13:30:16.758 [main            ] INFO  DefaultChainFactory    - >>>>>>>>>>>>>>>>>>>>开始为策略ID：100001 构建责任链
+24-06-23.13:30:16.758 [main            ] INFO  DefaultChainFactory    - 按照配置顺序装填用户配置的责任链
+24-06-23.13:30:16.758 [main            ] INFO  DefaultChainFactory    - 	初始化责任链节点：rule_blacklist
+24-06-23.13:30:16.758 [main            ] INFO  DefaultChainFactory    - 添加责任链节点：rule_weight
+24-06-23.13:30:16.759 [main            ] INFO  DefaultChainFactory    - 	添加默认责任链节点：default
+24-06-23.13:30:16.759 [main            ] INFO  DefaultChainFactory    - <<<<<<<<<<<<<<<<<<<<责任链构建完成
+24-06-23.13:30:16.759 [main            ] INFO  BlackListLogicChain    - 用户【joyboy】，参与抽奖活动【100001】，进行【rule_blacklist】
+24-06-23.13:30:16.808 [main            ] INFO  BlackListLogicChain    - 抽奖责任链-【黑名单节点】 规则模型：rule_blacklist 奖品ID：null 执行状态：CONTINUE 结果描述：用户不在黑名单中
+24-06-23.13:30:16.808 [main            ] INFO  RuleWeightLogicChain   - 用户【joyboy】，参与抽奖活动【100001】，进行【rule_weight】
+24-06-23.13:30:16.841 [main            ] INFO  RuleWeightLogicChain   - 当前用户的积分为100，将采取权重规则：null
+24-06-23.13:30:16.841 [main            ] INFO  RuleWeightLogicChain   - 抽奖责任链-【权重规则节点】 规则模型：rule_weight 奖品ID：null 执行状态：CONTINUE 结果描述：没有参与权重抽奖
+24-06-23.13:30:16.841 [main            ] INFO  DefaultLogicChain      - 用户【joyboy】，参与抽奖活动【100001】，进行【default】
+24-06-23.13:30:16.897 [main            ] INFO  DefaultLogicChain      - 抽奖责任链-【默认抽奖节点】 规则模型：default 奖品ID：101 执行状态：CONTINUE 结果描述：用户参与默认抽奖规则，从默认的奖品规则中抽取奖品
+24-06-23.13:30:16.897 [main            ] INFO  AbstractRaffleStrategy - 抽奖策略计算-责任链：用户ID: joyboy 策略ID: 100001 奖品ID: 101 规则模型: default 处理状态: 【继续处理流程】 结果描述: 用户参与默认抽奖规则，从默认的奖品规则中抽取奖品
+24-06-23.13:30:16.897 [main            ] INFO  DefaultTreeFactory     - 开始获取策略奖品配置的抽奖规则，策略ID：100001，奖品ID：101
+24-06-23.13:30:16.930 [main            ] INFO  DefaultTreeFactory     - 当前奖品【101】的规则列表为：rule_luck_award
+24-06-23.13:30:16.930 [main            ] INFO  DefaultTreeFactory     - 开始构建决策树>>>>>>>>>>>>>>>>
+24-06-23.13:30:16.930 [main            ] INFO  DefaultTreeFactory     - 开始构建用户属性验证组
+24-06-23.13:30:16.930 [main            ] INFO  DefaultTreeFactory     - 	用户属性验证组添加 DailyLimitNode 节点
+24-06-23.13:30:16.930 [main            ] INFO  DefaultTreeFactory     - 	用户属性验证组添加 WinFrequencyNode 节点
+24-06-23.13:30:16.930 [main            ] INFO  DefaultTreeFactory     - 开始构建奖品属性验证组
+24-06-23.13:30:16.930 [main            ] INFO  DefaultTreeFactory     - 	奖品属性验证组添加 PrizeTypeRestrictionNode 节点
+24-06-23.13:30:16.930 [main            ] INFO  DefaultTreeFactory     - 	奖品属性验证组添加 RuleStockNode 节点
+24-06-23.13:30:16.930 [main            ] INFO  DefaultTreeFactory     - 	奖品属性验证组添加 rule_luck_award 节点
+24-06-23.13:30:16.930 [main            ] INFO  DefaultTreeFactory     - 开始构建根节点
+24-06-23.13:30:16.930 [main            ] INFO  DefaultTreeFactory     - 	根节点添加->用户属性验证组
+24-06-23.13:30:16.932 [main            ] INFO  DefaultTreeFactory     - 	根节点添加->奖品属性验证组
+24-06-23.13:30:16.932 [main            ] INFO  DefaultTreeFactory     - <<<<<<<<<<<<<<<<<<<<构建决策树完成
+24-06-23.13:30:16.932 [main            ] INFO  DailyLimitNode         - 抽奖决策树-【每日限额节点】 规则模型：rule_daily_limit 奖品ID：101 执行状态：CONTINUE 结果描述：暂未实现，默认通过【CONTINUE】
+24-06-23.13:30:16.932 [main            ] INFO  WinFrequencyNode       - 抽奖决策树-【中奖频率节点】 规则模型：rule_win_frequency 奖品ID：101 执行状态：CONTINUE 结果描述：暂未实现，默认通过【CONTINUE】
+24-06-23.13:30:16.932 [main            ] INFO  PrizeTypeRestrictionNode - 抽奖决策树-【奖品类型限制节点】 规则模型：prize_type_restriction 奖品ID：101 执行状态：CONTINUE 结果描述：暂未实现，现阶段未编写具体逻辑，默认通过【Continue】
+24-06-23.13:30:17.062 [main            ] INFO  RuleStockNode          - 抽奖决策树-【库存扣减节点】 规则模型：rule_stock 奖品ID：101 执行状态：CONTINUE 结果描述：奖品库存数量足够，库存扣减成功
+24-06-23.13:30:17.062 [main            ] INFO  RuleLuckAwardNode      - 不需要走兜底处理
+24-06-23.13:30:17.062 [main            ] INFO  RuleDecisionTreeEngine - 最终决策树节点：rule_stock 处理结果信息: 【继续处理流程】
+24-06-23.13:30:17.062 [main            ] INFO  AbstractRaffleStrategy - 抽奖策略计算-规则树：用户ID: joyboy 策略ID: 100001 奖品ID: 101 规则模型: rule_stock 处理状态: 【继续处理流程】 结果描述: 奖品库存数量足够，库存扣减成功
+24-06-23.13:30:17.067 [main            ] INFO  RaffleStrategyTest     - 第0次测试结果：{"awardId":101}
+24-06-23.13:30:20.011 [scheduling-1    ] INFO  UpdateAwardStockJob    - 【定时任务】 - 开始更新奖品消耗库存
+24-06-23.13:30:20.038 [scheduling-1    ] INFO  UpdateAwardStockJob    - 【定时任务】 - 队列为空，无需更新库存
+24-06-23.13:30:25.003 [scheduling-1    ] INFO  UpdateAwardStockJob    - 【定时任务】 - 开始更新奖品消耗库存
+24-06-23.13:30:25.035 [scheduling-1    ] INFO  UpdateAwardStockJob    - 【定时任务】 - 更新奖品消耗库存，strategyId: 100001 awardId: 101
+24-06-23.13:30:25.138 [scheduling-1    ] INFO  UpdateAwardStockJob    - 【定时任务】 - 完成奖品消耗库存更新，strategyId: 100001 awardId: 101
+24-06-23.13:30:27.134 [SpringApplicationShutdownHook] INFO  HikariDataSource       - Retail_HikariCP - Shutdown initiated...
+24-06-23.13:30:27.567 [SpringApplicationShutdownHook] INFO  HikariDataSource       - Retail_HikariCP - Shutdown completed.
+24-06-23.13:33:07.094 [main            ] INFO  RaffleStrategyTest     - Starting RaffleStrategyTest using Java 1.8.0_402 on wyh-machine with PID 8036 (started by 98389 in E:\Java_code\MMarket\MMarket-app)
+24-06-23.13:33:07.095 [main            ] INFO  RaffleStrategyTest     - The following 1 profile is active: "dev"
+24-06-23.13:33:08.646 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-06-23.13:33:08.651 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-06-23.13:33:08.699 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 24 ms. Found 0 Redis repository interfaces.
+24-06-23.13:33:11.994 [main            ] INFO  Version                - Redisson 3.23.4
+24-06-23.13:33:13.426 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for 117.72.77.81/117.72.77.81:16379
+24-06-23.13:33:13.701 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 117.72.77.81/117.72.77.81:16379
+24-06-23.13:33:16.868 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-06-23.13:33:16.977 [main            ] INFO  RaffleStrategyTest     - Started RaffleStrategyTest in 10.551 seconds (JVM running for 11.772)
+24-06-23.13:33:18.553 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Starting...
+24-06-23.13:33:19.261 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Start completed.
+24-06-23.13:33:19.519 [main            ] INFO  RaffleStrategyTest     - 策略装配结果：true
+24-06-23.13:33:19.767 [main            ] INFO  RaffleStrategyTest     - 策略装配结果：true
+24-06-23.13:33:19.769 [main            ] INFO  RaffleStrategyTest     - 当前用户幸运值为：100
+24-06-23.13:33:19.769 [main            ] INFO  RaffleStrategyTest     - 当前用户次数为：1
+24-06-23.13:33:19.955 [main            ] INFO  RaffleStrategyTest     - 请求参数：{"strategyId":100001,"userId":"joyboy"}
+24-06-23.13:33:19.989 [main            ] INFO  DefaultChainFactory    - 策略ID：100001 的规则模型为：[rule_blacklist, rule_weight]
+24-06-23.13:33:19.990 [main            ] INFO  DefaultChainFactory    - >>>>>>>>>>>>>>>>>>>>开始为策略ID：100001 构建责任链
+24-06-23.13:33:19.990 [main            ] INFO  DefaultChainFactory    - 按照配置顺序装填用户配置的责任链
+24-06-23.13:33:19.990 [main            ] INFO  DefaultChainFactory    - 	初始化责任链节点：rule_blacklist
+24-06-23.13:33:19.990 [main            ] INFO  DefaultChainFactory    - 添加责任链节点：rule_weight
+24-06-23.13:33:19.990 [main            ] INFO  DefaultChainFactory    - 	添加默认责任链节点：default
+24-06-23.13:33:19.990 [main            ] INFO  DefaultChainFactory    - <<<<<<<<<<<<<<<<<<<<责任链构建完成
+24-06-23.13:33:19.990 [main            ] INFO  BlackListLogicChain    - 用户【joyboy】，参与抽奖活动【100001】，进行【rule_blacklist】
+24-06-23.13:33:20.005 [scheduling-1    ] INFO  UpdateAwardStockJob    - 【定时任务】 - 开始更新奖品消耗库存
+24-06-23.13:33:20.041 [scheduling-1    ] INFO  UpdateAwardStockJob    - 【定时任务】 - 队列为空，无需更新库存
+24-06-23.13:33:20.062 [main            ] INFO  BlackListLogicChain    - 抽奖责任链-【黑名单节点】 规则模型：rule_blacklist 奖品ID：null 执行状态：CONTINUE 结果描述：用户不在黑名单中
+24-06-23.13:33:20.062 [main            ] INFO  RuleWeightLogicChain   - 用户【joyboy】，参与抽奖活动【100001】，进行【rule_weight】
+24-06-23.13:33:20.091 [main            ] INFO  RuleWeightLogicChain   - 当前用户的积分为100，将采取权重规则：null
+24-06-23.13:33:20.091 [main            ] INFO  RuleWeightLogicChain   - 抽奖责任链-【权重规则节点】 规则模型：rule_weight 奖品ID：null 执行状态：CONTINUE 结果描述：没有参与权重抽奖
+24-06-23.13:33:20.091 [main            ] INFO  DefaultLogicChain      - 用户【joyboy】，参与抽奖活动【100001】，进行【default】
+24-06-23.13:33:20.149 [main            ] INFO  DefaultLogicChain      - 抽奖责任链-【默认抽奖节点】 规则模型：default 奖品ID：107 执行状态：CONTINUE 结果描述：用户参与默认抽奖规则，从默认的奖品规则中抽取奖品
+24-06-23.13:33:20.150 [main            ] INFO  AbstractRaffleStrategy - 抽奖策略计算-责任链：用户ID: joyboy 策略ID: 100001 奖品ID: 107 规则模型: default 处理状态: 【继续处理流程】 结果描述: 用户参与默认抽奖规则，从默认的奖品规则中抽取奖品
+24-06-23.13:33:20.151 [main            ] INFO  DefaultTreeFactory     - 开始获取策略奖品配置的抽奖规则，策略ID：100001，奖品ID：107
+24-06-23.13:33:20.178 [main            ] INFO  DefaultTreeFactory     - 当前奖品【107】的规则列表为：rule_lock,rule_luck_award
+24-06-23.13:33:20.178 [main            ] INFO  DefaultTreeFactory     - 开始构建决策树>>>>>>>>>>>>>>>>
+24-06-23.13:33:20.178 [main            ] INFO  DefaultTreeFactory     - 开始构建用户属性验证组
+24-06-23.13:33:20.179 [main            ] INFO  DefaultTreeFactory     - 	用户属性验证组添加 DailyLimitNode 节点
+24-06-23.13:33:20.179 [main            ] INFO  DefaultTreeFactory     - 	用户属性验证组添加 WinFrequencyNode 节点
+24-06-23.13:33:20.179 [main            ] INFO  DefaultTreeFactory     - 开始构建奖品属性验证组
+24-06-23.13:33:20.179 [main            ] INFO  DefaultTreeFactory     - 	奖品属性验证组添加 PrizeTypeRestrictionNode 节点
+24-06-23.13:33:20.179 [main            ] INFO  DefaultTreeFactory     - 	奖品属性验证组添加 RuleStockNode 节点
+24-06-23.13:33:20.179 [main            ] INFO  DefaultTreeFactory     - 	奖品属性验证组添加 rule_lock 节点
+24-06-23.13:33:20.179 [main            ] INFO  DefaultTreeFactory     - 	奖品属性验证组添加 rule_luck_award 节点
+24-06-23.13:33:20.179 [main            ] INFO  DefaultTreeFactory     - 开始构建根节点
+24-06-23.13:33:20.179 [main            ] INFO  DefaultTreeFactory     - 	根节点添加->用户属性验证组
+24-06-23.13:33:20.179 [main            ] INFO  DefaultTreeFactory     - 	根节点添加->奖品属性验证组
+24-06-23.13:33:20.179 [main            ] INFO  DefaultTreeFactory     - <<<<<<<<<<<<<<<<<<<<构建决策树完成
+24-06-23.13:33:20.182 [main            ] INFO  DailyLimitNode         - 抽奖决策树-【每日限额节点】 规则模型：rule_daily_limit 奖品ID：107 执行状态：CONTINUE 结果描述：暂未实现，默认通过【CONTINUE】
+24-06-23.13:33:20.183 [main            ] INFO  WinFrequencyNode       - 抽奖决策树-【中奖频率节点】 规则模型：rule_win_frequency 奖品ID：107 执行状态：CONTINUE 结果描述：暂未实现，默认通过【CONTINUE】
+24-06-23.13:33:20.183 [main            ] INFO  PrizeTypeRestrictionNode - 抽奖决策树-【奖品类型限制节点】 规则模型：prize_type_restriction 奖品ID：107 执行状态：CONTINUE 结果描述：暂未实现，现阶段未编写具体逻辑，默认通过【Continue】
+24-06-23.13:33:20.326 [main            ] INFO  RuleStockNode          - 抽奖决策树-【库存扣减节点】 规则模型：rule_stock 奖品ID：107 执行状态：CONTINUE 结果描述：奖品库存数量足够，库存扣减成功
+24-06-23.13:33:20.430 [SpringApplicationShutdownHook] INFO  HikariDataSource       - Retail_HikariCP - Shutdown initiated...
+24-06-23.13:33:20.578 [SpringApplicationShutdownHook] INFO  HikariDataSource       - Retail_HikariCP - Shutdown completed.
+24-06-23.13:37:39.077 [main            ] INFO  RaffleStrategyTest     - Starting RaffleStrategyTest using Java 1.8.0_402 on wyh-machine with PID 776 (started by 98389 in E:\Java_code\MMarket\MMarket-app)
+24-06-23.13:37:39.078 [main            ] INFO  RaffleStrategyTest     - The following 1 profile is active: "dev"
+24-06-23.13:37:40.245 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-06-23.13:37:40.251 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-06-23.13:37:40.295 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 25 ms. Found 0 Redis repository interfaces.
+24-06-23.13:37:42.899 [main            ] INFO  Version                - Redisson 3.23.4
+24-06-23.13:37:44.456 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for 117.72.77.81/117.72.77.81:16379
+24-06-23.13:37:44.744 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 117.72.77.81/117.72.77.81:16379
+24-06-23.13:37:48.352 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-06-23.13:37:48.449 [main            ] INFO  RaffleStrategyTest     - Started RaffleStrategyTest in 9.896 seconds (JVM running for 11.062)
+24-06-23.13:37:50.006 [scheduling-1    ] INFO  UpdateAwardStockJob    - 【定时任务】 - 开始更新奖品消耗库存
+24-06-23.13:37:50.040 [scheduling-1    ] INFO  UpdateAwardStockJob    - 【定时任务】 - 队列为空，无需更新库存
+24-06-23.13:37:50.098 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Starting...
+24-06-23.13:37:50.849 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Start completed.
+24-06-23.13:37:51.101 [main            ] INFO  RaffleStrategyTest     - 策略装配结果：true
+24-06-23.13:37:51.392 [main            ] INFO  RaffleStrategyTest     - 策略装配结果：true
+24-06-23.13:37:51.394 [main            ] INFO  RaffleStrategyTest     - 当前用户幸运值为：100
+24-06-23.13:37:51.394 [main            ] INFO  RaffleStrategyTest     - 当前用户抽奖次数为：1
+24-06-23.13:37:51.533 [main            ] INFO  RaffleStrategyTest     - 请求参数：{"strategyId":100001,"userId":"joyboy"}
+24-06-23.13:37:51.566 [main            ] INFO  DefaultChainFactory    - 策略ID：100001 的规则模型为：[rule_blacklist, rule_weight]
+24-06-23.13:37:51.566 [main            ] INFO  DefaultChainFactory    - >>>>>>>>>>>>>>>>>>>>开始为策略ID：100001 构建责任链
+24-06-23.13:37:51.566 [main            ] INFO  DefaultChainFactory    - 按照配置顺序装填用户配置的责任链
+24-06-23.13:37:51.566 [main            ] INFO  DefaultChainFactory    - 	初始化责任链节点：rule_blacklist
+24-06-23.13:37:51.566 [main            ] INFO  DefaultChainFactory    - 添加责任链节点：rule_weight
+24-06-23.13:37:51.566 [main            ] INFO  DefaultChainFactory    - 	添加默认责任链节点：default
+24-06-23.13:37:51.566 [main            ] INFO  DefaultChainFactory    - <<<<<<<<<<<<<<<<<<<<责任链构建完成
+24-06-23.13:37:51.566 [main            ] INFO  BlackListLogicChain    - 用户【joyboy】，参与抽奖活动【100001】，进行【rule_blacklist】
+24-06-23.13:37:51.645 [main            ] INFO  BlackListLogicChain    - 抽奖责任链-【黑名单节点】 规则模型：rule_blacklist 奖品ID：null 执行状态：CONTINUE 结果描述：用户不在黑名单中
+24-06-23.13:37:51.645 [main            ] INFO  RuleWeightLogicChain   - 用户【joyboy】，参与抽奖活动【100001】，进行【rule_weight】
+24-06-23.13:37:51.677 [main            ] INFO  RuleWeightLogicChain   - 当前用户的积分为100，将采取权重规则：null
+24-06-23.13:37:51.677 [main            ] INFO  RuleWeightLogicChain   - 抽奖责任链-【权重规则节点】 规则模型：rule_weight 奖品ID：null 执行状态：CONTINUE 结果描述：没有参与权重抽奖
+24-06-23.13:37:51.677 [main            ] INFO  DefaultLogicChain      - 用户【joyboy】，参与抽奖活动【100001】，进行【default】
+24-06-23.13:37:51.730 [main            ] INFO  DefaultLogicChain      - 抽奖责任链-【默认抽奖节点】 规则模型：default 奖品ID：103 执行状态：CONTINUE 结果描述：用户参与默认抽奖规则，从默认的奖品规则中抽取奖品
+24-06-23.13:37:51.730 [main            ] INFO  AbstractRaffleStrategy - 抽奖策略计算-责任链：用户ID: joyboy 策略ID: 100001 奖品ID: 103 规则模型: default 处理状态: 【继续处理流程】 结果描述: 用户参与默认抽奖规则，从默认的奖品规则中抽取奖品
+24-06-23.13:37:51.730 [main            ] INFO  DefaultTreeFactory     - 开始获取策略奖品配置的抽奖规则，策略ID：100001，奖品ID：103
+24-06-23.13:37:51.764 [main            ] INFO  DefaultTreeFactory     - 当前奖品【103】的规则列表为：rule_luck_award
+24-06-23.13:37:51.764 [main            ] INFO  DefaultTreeFactory     - 开始构建决策树>>>>>>>>>>>>>>>>
+24-06-23.13:37:51.764 [main            ] INFO  DefaultTreeFactory     - 开始构建用户属性验证组
+24-06-23.13:37:51.765 [main            ] INFO  DefaultTreeFactory     - 	用户属性验证组添加 DailyLimitNode 节点
+24-06-23.13:37:51.765 [main            ] INFO  DefaultTreeFactory     - 	用户属性验证组添加 WinFrequencyNode 节点
+24-06-23.13:37:51.765 [main            ] INFO  DefaultTreeFactory     - 开始构建奖品属性验证组
+24-06-23.13:37:51.765 [main            ] INFO  DefaultTreeFactory     - 	奖品属性验证组添加 PrizeTypeRestrictionNode 节点
+24-06-23.13:37:51.765 [main            ] INFO  DefaultTreeFactory     - 	奖品属性验证组添加 RuleStockNode 节点
+24-06-23.13:37:51.765 [main            ] INFO  DefaultTreeFactory     - 	奖品属性验证组添加 rule_luck_award 节点
+24-06-23.13:37:51.765 [main            ] INFO  DefaultTreeFactory     - 开始构建根节点
+24-06-23.13:37:51.765 [main            ] INFO  DefaultTreeFactory     - 	根节点添加->用户属性验证组
+24-06-23.13:37:51.765 [main            ] INFO  DefaultTreeFactory     - 	根节点添加->奖品属性验证组
+24-06-23.13:37:51.765 [main            ] INFO  DefaultTreeFactory     - <<<<<<<<<<<<<<<<<<<<构建决策树完成
+24-06-23.13:37:51.766 [main            ] INFO  DailyLimitNode         - 抽奖决策树-【每日限额节点】 规则模型：rule_daily_limit 奖品ID：103 执行状态：CONTINUE 结果描述：暂未实现，默认通过【CONTINUE】
+24-06-23.13:37:51.766 [main            ] INFO  WinFrequencyNode       - 抽奖决策树-【中奖频率节点】 规则模型：rule_win_frequency 奖品ID：103 执行状态：CONTINUE 结果描述：暂未实现，默认通过【CONTINUE】
+24-06-23.13:37:51.766 [main            ] INFO  PrizeTypeRestrictionNode - 抽奖决策树-【奖品类型限制节点】 规则模型：prize_type_restriction 奖品ID：103 执行状态：CONTINUE 结果描述：暂未实现，现阶段未编写具体逻辑，默认通过【Continue】
+24-06-23.13:37:51.900 [main            ] INFO  RuleStockNode          - 抽奖决策树-【库存扣减节点】 规则模型：rule_stock 奖品ID：103 执行状态：CONTINUE 结果描述：奖品库存数量足够，库存扣减成功
+24-06-23.13:37:51.902 [main            ] INFO  RuleLuckAwardNode      - 不需要走兜底处理
+24-06-23.13:37:51.902 [main            ] INFO  RuleDecisionTreeEngine - 最终决策树节点：rule_stock 处理结果信息: 【继续处理流程】
+24-06-23.13:37:51.902 [main            ] INFO  AbstractRaffleStrategy - 抽奖策略计算-规则树：用户ID: joyboy 策略ID: 100001 奖品ID: 103 规则模型: rule_stock 处理状态: 【继续处理流程】 结果描述: 奖品库存数量足够，库存扣减成功
+24-06-23.13:37:51.906 [main            ] INFO  RaffleStrategyTest     - 第0次测试结果：{"awardId":103}
+24-06-23.13:37:55.007 [scheduling-1    ] INFO  UpdateAwardStockJob    - 【定时任务】 - 开始更新奖品消耗库存
+24-06-23.13:37:55.036 [scheduling-1    ] INFO  UpdateAwardStockJob    - 【定时任务】 - 更新奖品消耗库存，strategyId: 100001 awardId: 107
+24-06-23.13:37:55.139 [scheduling-1    ] INFO  UpdateAwardStockJob    - 【定时任务】 - 完成奖品消耗库存更新，strategyId: 100001 awardId: 107
+24-06-23.13:38:00.007 [scheduling-1    ] INFO  UpdateAwardStockJob    - 【定时任务】 - 开始更新奖品消耗库存
+24-06-23.13:38:00.040 [scheduling-1    ] INFO  UpdateAwardStockJob    - 【定时任务】 - 更新奖品消耗库存，strategyId: 100001 awardId: 103
+24-06-23.13:38:00.172 [scheduling-1    ] INFO  UpdateAwardStockJob    - 【定时任务】 - 完成奖品消耗库存更新，strategyId: 100001 awardId: 103
+24-06-23.13:38:01.997 [SpringApplicationShutdownHook] INFO  HikariDataSource       - Retail_HikariCP - Shutdown initiated...
+24-06-23.13:38:02.444 [SpringApplicationShutdownHook] INFO  HikariDataSource       - Retail_HikariCP - Shutdown completed.
+24-06-23.13:42:59.623 [main            ] INFO  RaffleStrategyTest     - Starting RaffleStrategyTest using Java 1.8.0_402 on wyh-machine with PID 24828 (started by 98389 in E:\Java_code\MMarket\MMarket-app)
+24-06-23.13:42:59.625 [main            ] INFO  RaffleStrategyTest     - The following 1 profile is active: "dev"
+24-06-23.13:43:00.840 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-06-23.13:43:00.844 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-06-23.13:43:00.892 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 25 ms. Found 0 Redis repository interfaces.
+24-06-23.13:43:03.799 [main            ] INFO  Version                - Redisson 3.23.4
+24-06-23.13:43:05.472 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 117.72.77.81/117.72.77.81:16379
+24-06-23.13:43:05.718 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 117.72.77.81/117.72.77.81:16379
+24-06-23.13:43:08.871 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-06-23.13:43:08.975 [main            ] INFO  RaffleStrategyTest     - Started RaffleStrategyTest in 9.934 seconds (JVM running for 11.375)
+24-06-23.13:43:10.023 [scheduling-1    ] INFO  UpdateAwardStockJob    - 【定时任务】 - 开始更新奖品消耗库存
+24-06-23.13:43:10.111 [scheduling-1    ] INFO  UpdateAwardStockJob    - 【定时任务】 - 队列为空，无需更新库存
+24-06-23.13:43:10.807 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Starting...
+24-06-23.13:43:11.585 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Start completed.
+24-06-23.13:43:11.863 [main            ] INFO  RaffleStrategyTest     - 策略装配结果：true
+24-06-23.13:43:12.115 [main            ] INFO  RaffleStrategyTest     - 策略装配结果：true
+24-06-23.13:43:12.117 [main            ] INFO  RaffleStrategyTest     - 当前用户幸运值为：100
+24-06-23.13:43:12.117 [main            ] INFO  RaffleStrategyTest     - 当前用户抽奖次数为：1
+24-06-23.13:43:12.283 [main            ] INFO  RaffleStrategyTest     - 请求参数：{"strategyId":100001,"userId":"joyboy"}
+24-06-23.13:43:12.322 [main            ] INFO  DefaultChainFactory    - 策略ID：100001 的规则模型为：[rule_blacklist, rule_weight]
+24-06-23.13:43:12.322 [main            ] INFO  DefaultChainFactory    - >>>>>>>>>>>>>>>>>>>>开始为策略ID：100001 构建责任链
+24-06-23.13:43:12.322 [main            ] INFO  DefaultChainFactory    - 按照配置顺序装填用户配置的责任链
+24-06-23.13:43:12.322 [main            ] INFO  DefaultChainFactory    - 	初始化责任链节点：rule_blacklist
+24-06-23.13:43:12.322 [main            ] INFO  DefaultChainFactory    - 添加责任链节点：rule_weight
+24-06-23.13:43:12.322 [main            ] INFO  DefaultChainFactory    - 	添加默认责任链节点：default
+24-06-23.13:43:12.322 [main            ] INFO  DefaultChainFactory    - <<<<<<<<<<<<<<<<<<<<责任链构建完成
+24-06-23.13:43:12.323 [main            ] INFO  BlackListLogicChain    - 用户【joyboy】，参与抽奖活动【100001】，进行【rule_blacklist】
+24-06-23.13:43:12.413 [main            ] INFO  BlackListLogicChain    - 抽奖责任链-【黑名单节点】 规则模型：rule_blacklist 奖品ID：null 执行状态：CONTINUE 结果描述：用户不在黑名单中
+24-06-23.13:43:12.413 [main            ] INFO  RuleWeightLogicChain   - 用户【joyboy】，参与抽奖活动【100001】，进行【rule_weight】
+24-06-23.13:43:12.463 [main            ] INFO  RuleWeightLogicChain   - 当前用户的积分为100，将采取权重规则：null
+24-06-23.13:43:12.463 [main            ] INFO  RuleWeightLogicChain   - 抽奖责任链-【权重规则节点】 规则模型：rule_weight 奖品ID：null 执行状态：CONTINUE 结果描述：没有参与权重抽奖
+24-06-23.13:43:12.463 [main            ] INFO  DefaultLogicChain      - 用户【joyboy】，参与抽奖活动【100001】，进行【default】
+24-06-23.13:43:12.517 [main            ] INFO  DefaultLogicChain      - 抽奖责任链-【默认抽奖节点】 规则模型：default 奖品ID：106 执行状态：CONTINUE 结果描述：用户参与默认抽奖规则，从默认的奖品规则中抽取奖品
+24-06-23.13:43:12.517 [main            ] INFO  AbstractRaffleStrategy - 抽奖策略计算-责任链：用户ID: joyboy 策略ID: 100001 奖品ID: 106 规则模型: default 处理状态: 【继续处理流程】 结果描述: 用户参与默认抽奖规则，从默认的奖品规则中抽取奖品
+24-06-23.13:43:12.517 [main            ] INFO  DefaultTreeFactory     - 开始获取策略奖品配置的抽奖规则，策略ID：100001，奖品ID：106
+24-06-23.13:43:12.555 [main            ] INFO  DefaultTreeFactory     - 当前奖品【106】的规则列表为：rule_luck_award
+24-06-23.13:43:12.555 [main            ] INFO  DefaultTreeFactory     - 开始构建决策树>>>>>>>>>>>>>>>>
+24-06-23.13:43:12.555 [main            ] INFO  DefaultTreeFactory     - 开始构建用户属性验证组
+24-06-23.13:43:12.557 [main            ] INFO  DefaultTreeFactory     - 	用户属性验证组添加 DailyLimitNode 节点
+24-06-23.13:43:12.557 [main            ] INFO  DefaultTreeFactory     - 	用户属性验证组添加 WinFrequencyNode 节点
+24-06-23.13:43:12.557 [main            ] INFO  DefaultTreeFactory     - 开始构建奖品属性验证组
+24-06-23.13:43:12.557 [main            ] INFO  DefaultTreeFactory     - 	奖品属性验证组添加 PrizeTypeRestrictionNode 节点
+24-06-23.13:43:12.557 [main            ] INFO  DefaultTreeFactory     - 	奖品属性验证组添加 RuleStockNode 节点
+24-06-23.13:43:12.557 [main            ] INFO  DefaultTreeFactory     - 	奖品属性验证组添加 rule_luck_award 节点
+24-06-23.13:43:12.557 [main            ] INFO  DefaultTreeFactory     - 开始构建根节点
+24-06-23.13:43:12.557 [main            ] INFO  DefaultTreeFactory     - 	根节点添加->用户属性验证组
+24-06-23.13:43:12.557 [main            ] INFO  DefaultTreeFactory     - 	根节点添加->奖品属性验证组
+24-06-23.13:43:12.557 [main            ] INFO  DefaultTreeFactory     - <<<<<<<<<<<<<<<<<<<<构建决策树完成
+24-06-23.13:43:12.558 [main            ] INFO  DailyLimitNode         - 用户【joyboy】，参与抽奖活动【100001】，进行【rule_daily_limit】
+24-06-23.13:43:12.559 [main            ] INFO  DailyLimitNode         - 抽奖决策树-【每日限额节点】 规则模型：rule_daily_limit 奖品ID：106 执行状态：CONTINUE 结果描述：暂未实现，默认通过【CONTINUE】
+24-06-23.13:43:12.559 [main            ] INFO  WinFrequencyNode       - 用户【joyboy】，参与抽奖活动【100001】，进行【rule_win_frequency】
+24-06-23.13:43:12.559 [main            ] INFO  WinFrequencyNode       - 抽奖决策树-【中奖频率节点】 规则模型：rule_win_frequency 奖品ID：106 执行状态：CONTINUE 结果描述：暂未实现，默认通过【CONTINUE】
+24-06-23.13:43:12.561 [main            ] INFO  PrizeTypeRestrictionNode - 用户【joyboy】，参与抽奖活动【100001】，进行【prize_type_restriction】
+24-06-23.13:43:12.561 [main            ] INFO  PrizeTypeRestrictionNode - 抽奖决策树-【奖品类型限制节点】 规则模型：prize_type_restriction 奖品ID：106 执行状态：CONTINUE 结果描述：暂未实现，现阶段未编写具体逻辑，默认通过【Continue】
+24-06-23.13:43:12.695 [main            ] INFO  RuleStockNode          - 抽奖决策树-【库存扣减节点】 规则模型：rule_stock 奖品ID：106 执行状态：CONTINUE 结果描述：奖品库存数量足够，库存扣减成功
+24-06-23.13:43:12.695 [main            ] INFO  RuleLuckAwardNode      - 不需要走兜底处理
+24-06-23.13:43:12.695 [main            ] INFO  RuleDecisionTreeEngine - 最终决策树节点：rule_stock 处理结果信息: 【继续处理流程】
+24-06-23.13:43:12.695 [main            ] INFO  AbstractRaffleStrategy - 抽奖策略计算-规则树：用户ID: joyboy 策略ID: 100001 奖品ID: 106 规则模型: rule_stock 处理状态: 【继续处理流程】 结果描述: 奖品库存数量足够，库存扣减成功
+24-06-23.13:43:12.704 [main            ] INFO  RaffleStrategyTest     - 第0次测试结果：{"awardId":106}
+24-06-23.13:43:15.008 [scheduling-1    ] INFO  UpdateAwardStockJob    - 【定时任务】 - 开始更新奖品消耗库存
+24-06-23.13:43:15.038 [scheduling-1    ] INFO  UpdateAwardStockJob    - 【定时任务】 - 队列为空，无需更新库存
+24-06-23.13:43:20.007 [scheduling-1    ] INFO  UpdateAwardStockJob    - 【定时任务】 - 开始更新奖品消耗库存
+24-06-23.13:43:20.033 [scheduling-1    ] INFO  UpdateAwardStockJob    - 【定时任务】 - 更新奖品消耗库存，strategyId: 100001 awardId: 106
+24-06-23.13:43:20.137 [scheduling-1    ] INFO  UpdateAwardStockJob    - 【定时任务】 - 完成奖品消耗库存更新，strategyId: 100001 awardId: 106
+24-06-23.13:43:22.786 [SpringApplicationShutdownHook] INFO  HikariDataSource       - Retail_HikariCP - Shutdown initiated...
+24-06-23.13:43:23.206 [SpringApplicationShutdownHook] INFO  HikariDataSource       - Retail_HikariCP - Shutdown completed.
+24-06-23.13:48:31.640 [main            ] INFO  RaffleStrategyTest     - Starting RaffleStrategyTest using Java 1.8.0_402 on wyh-machine with PID 24552 (started by 98389 in E:\Java_code\MMarket\MMarket-app)
+24-06-23.13:48:31.643 [main            ] INFO  RaffleStrategyTest     - The following 1 profile is active: "dev"
+24-06-23.13:48:33.069 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-06-23.13:48:33.078 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-06-23.13:48:33.127 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 26 ms. Found 0 Redis repository interfaces.
+24-06-23.13:48:36.193 [main            ] INFO  Version                - Redisson 3.23.4
+24-06-23.13:48:37.668 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 117.72.77.81/117.72.77.81:16379
+24-06-23.13:48:37.983 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 117.72.77.81/117.72.77.81:16379
+24-06-23.13:48:41.263 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-06-23.13:48:41.411 [main            ] INFO  RaffleStrategyTest     - Started RaffleStrategyTest in 10.543 seconds (JVM running for 12.198)
+24-06-23.13:48:43.349 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Starting...
+24-06-23.13:48:44.099 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Start completed.
+24-06-23.13:48:44.362 [main            ] INFO  RaffleStrategyTest     - 策略装配结果：true
+24-06-23.13:48:44.604 [main            ] INFO  RaffleStrategyTest     - 策略装配结果：true
+24-06-23.13:48:44.605 [main            ] INFO  RaffleStrategyTest     - 当前用户幸运值为：100
+24-06-23.13:48:44.605 [main            ] INFO  RaffleStrategyTest     - 当前用户抽奖次数为：1
+24-06-23.13:48:44.808 [main            ] INFO  RaffleStrategyTest     - 请求参数：{"strategyId":100001,"userId":"joyboy"}
+24-06-23.13:48:44.837 [main            ] INFO  DefaultChainFactory    - 策略ID：100001 的规则模型为：[rule_blacklist, rule_weight]
+24-06-23.13:48:44.837 [main            ] INFO  DefaultChainFactory    - >>>>>>>>>>>>>>>>>>>>开始为策略ID：100001 构建责任链
+24-06-23.13:48:44.837 [main            ] INFO  DefaultChainFactory    - 按照配置顺序装填用户配置的责任链
+24-06-23.13:48:44.837 [main            ] INFO  DefaultChainFactory    - 	初始化责任链节点：rule_blacklist
+24-06-23.13:48:44.837 [main            ] INFO  DefaultChainFactory    - 添加责任链节点：rule_weight
+24-06-23.13:48:44.838 [main            ] INFO  DefaultChainFactory    - 	添加默认责任链节点：default
+24-06-23.13:48:44.838 [main            ] INFO  DefaultChainFactory    - <<<<<<<<<<<<<<<<<<<<责任链构建完成
+24-06-23.13:48:44.838 [main            ] INFO  BlackListLogicChain    - 用户【joyboy】，参与抽奖活动【100001】，进行【rule_blacklist】
+24-06-23.13:48:44.931 [main            ] INFO  BlackListLogicChain    - 抽奖责任链-【黑名单节点】 规则模型：rule_blacklist 奖品ID：null 执行状态：CONTINUE 结果描述：用户不在黑名单中
+24-06-23.13:48:44.932 [main            ] INFO  RuleWeightLogicChain   - 用户【joyboy】，参与抽奖活动【100001】，进行【rule_weight】
+24-06-23.13:48:44.968 [main            ] INFO  RuleWeightLogicChain   - 当前用户的积分为100，将采取权重规则：null
+24-06-23.13:48:44.969 [main            ] INFO  RuleWeightLogicChain   - 抽奖责任链-【权重规则节点】 规则模型：rule_weight 奖品ID：null 执行状态：CONTINUE 结果描述：没有参与权重抽奖
+24-06-23.13:48:44.969 [main            ] INFO  DefaultLogicChain      - 用户【joyboy】，参与抽奖活动【100001】，进行【default】
+24-06-23.13:48:45.008 [scheduling-1    ] INFO  UpdateAwardStockJob    - 【定时任务】 - 开始更新奖品消耗库存
+24-06-23.13:48:45.031 [main            ] INFO  DefaultLogicChain      - 抽奖责任链-【默认抽奖节点】 规则模型：default 奖品ID：105 执行状态：CONTINUE 结果描述：用户参与默认抽奖规则，从默认的奖品规则中抽取奖品
+24-06-23.13:48:45.032 [main            ] INFO  AbstractRaffleStrategy - 抽奖策略计算-责任链：用户ID: joyboy 策略ID: 100001 奖品ID: 105 规则模型: default 处理状态: 【继续处理流程】 结果描述: 用户参与默认抽奖规则，从默认的奖品规则中抽取奖品
+24-06-23.13:48:45.032 [main            ] INFO  DefaultTreeFactory     - 开始获取策略奖品配置的抽奖规则，策略ID：100001，奖品ID：105
+24-06-23.13:48:45.035 [scheduling-1    ] INFO  UpdateAwardStockJob    - 【定时任务】 - 队列为空，无需更新库存
+24-06-23.13:48:45.067 [main            ] INFO  DefaultTreeFactory     - 当前奖品【105】的规则列表为：rule_luck_award
+24-06-23.13:48:45.067 [main            ] INFO  DefaultTreeFactory     - 开始构建决策树>>>>>>>>>>>>>>>>
+24-06-23.13:48:45.067 [main            ] INFO  DefaultTreeFactory     - 开始构建用户属性验证组
+24-06-23.13:48:45.067 [main            ] INFO  DefaultTreeFactory     - 	用户属性验证组添加 DailyLimitNode 节点
+24-06-23.13:48:45.067 [main            ] INFO  DefaultTreeFactory     - 	用户属性验证组添加 WinFrequencyNode 节点
+24-06-23.13:48:45.067 [main            ] INFO  DefaultTreeFactory     - 开始构建奖品属性验证组
+24-06-23.13:48:45.067 [main            ] INFO  DefaultTreeFactory     - 	奖品属性验证组添加 PrizeTypeRestrictionNode 节点
+24-06-23.13:48:45.067 [main            ] INFO  DefaultTreeFactory     - 	奖品属性验证组添加 RuleStockNode 节点
+24-06-23.13:48:45.067 [main            ] INFO  DefaultTreeFactory     - 	奖品属性验证组添加 rule_luck_award 节点
+24-06-23.13:48:45.067 [main            ] INFO  DefaultTreeFactory     - 开始构建根节点
+24-06-23.13:48:45.067 [main            ] INFO  DefaultTreeFactory     - 	根节点添加->用户属性验证组
+24-06-23.13:48:45.068 [main            ] INFO  DefaultTreeFactory     - 	根节点添加->奖品属性验证组
+24-06-23.13:48:45.068 [main            ] INFO  DefaultTreeFactory     - <<<<<<<<<<<<<<<<<<<<构建决策树完成
+24-06-23.13:48:45.068 [main            ] INFO  DailyLimitNode         - 用户【joyboy】，参与抽奖活动【100001】，进行【rule_daily_limit】
+24-06-23.13:48:45.068 [main            ] INFO  DailyLimitNode         - 抽奖决策树-【每日限额节点】 规则模型：rule_daily_limit 奖品ID：105 执行状态：CONTINUE 结果描述：暂未实现，默认通过【CONTINUE】
+24-06-23.13:48:45.068 [main            ] INFO  WinFrequencyNode       - 用户【joyboy】，参与抽奖活动【100001】，进行【rule_win_frequency】
+24-06-23.13:48:45.068 [main            ] INFO  WinFrequencyNode       - 抽奖决策树-【中奖频率节点】 规则模型：rule_win_frequency 奖品ID：105 执行状态：CONTINUE 结果描述：暂未实现，默认通过【CONTINUE】
+24-06-23.13:48:45.068 [main            ] INFO  PrizeTypeRestrictionNode - 用户【joyboy】，参与抽奖活动【100001】，进行【prize_type_restriction】
+24-06-23.13:48:45.070 [main            ] INFO  PrizeTypeRestrictionNode - 抽奖决策树-【奖品类型限制节点】 规则模型：prize_type_restriction 奖品ID：105 执行状态：CONTINUE 结果描述：暂未实现，现阶段未编写具体逻辑，默认通过【Continue】
+24-06-23.13:48:45.071 [main            ] INFO  RuleStockNode          - 用户【joyboy】，参与抽奖活动【100001】，进行【rule_stock】
+24-06-23.13:48:45.207 [main            ] INFO  RuleStockNode          - 抽奖决策树-【库存扣减节点】 规则模型：rule_stock 奖品ID：105 执行状态：CONTINUE 结果描述：奖品库存数量足够，库存扣减成功
+24-06-23.13:48:45.207 [main            ] INFO  RuleLuckAwardNode      - 不需要走兜底处理
+24-06-23.13:48:45.207 [main            ] INFO  RuleDecisionTreeEngine - 最终决策树节点：rule_stock 处理结果信息: 【继续处理流程】
+24-06-23.13:48:45.207 [main            ] INFO  AbstractRaffleStrategy - 抽奖策略计算-规则树：用户ID: joyboy 策略ID: 100001 奖品ID: 105 规则模型: rule_stock 处理状态: 【继续处理流程】 结果描述: 奖品库存数量足够，库存扣减成功
+24-06-23.13:48:45.211 [main            ] INFO  RaffleStrategyTest     - 第0次测试结果：{"awardId":105}
+24-06-23.13:48:50.014 [scheduling-1    ] INFO  UpdateAwardStockJob    - 【定时任务】 - 开始更新奖品消耗库存
+24-06-23.13:48:50.045 [scheduling-1    ] INFO  UpdateAwardStockJob    - 【定时任务】 - 更新奖品消耗库存，strategyId: 100001 awardId: 105
+24-06-23.13:48:50.166 [scheduling-1    ] INFO  UpdateAwardStockJob    - 【定时任务】 - 完成奖品消耗库存更新，strategyId: 100001 awardId: 105
+24-06-23.13:48:55.002 [scheduling-1    ] INFO  UpdateAwardStockJob    - 【定时任务】 - 开始更新奖品消耗库存
+24-06-23.13:48:55.028 [scheduling-1    ] INFO  UpdateAwardStockJob    - 【定时任务】 - 队列为空，无需更新库存
+24-06-23.13:48:55.286 [SpringApplicationShutdownHook] INFO  HikariDataSource       - Retail_HikariCP - Shutdown initiated...
+24-06-23.13:48:55.710 [SpringApplicationShutdownHook] INFO  HikariDataSource       - Retail_HikariCP - Shutdown completed.

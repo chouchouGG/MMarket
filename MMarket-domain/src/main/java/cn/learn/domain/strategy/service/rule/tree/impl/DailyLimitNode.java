@@ -21,6 +21,9 @@ public class DailyLimitNode implements ILogicTreeNode {
         if (context.getStatus() == ProcessingContext.ProcessStatus.TERMINATED) {
             return;
         }
+        log.info("用户【{}】，参与抽奖活动【{}】，进行【{}】", context.getUserId(), context.getStrategyId(), RULE_DAILY_LIMIT);
+
+
         // fixme: 用户中奖频率验证逻辑，暂未实现
         context.setStatus(ProcessingContext.ProcessStatus.CONTINUE);
         context.setRuleModel(RULE_DAILY_LIMIT);

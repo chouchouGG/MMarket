@@ -78,16 +78,17 @@ public interface IStrategyRepository {
 
 
     /**
-     * 减少奖品库存。
+     * 根据策略ID和奖品ID，扣减奖品缓存库存
      * <p>
      * 按照缓存键减去库存，并返回是否成功。如果库存不足，则返回 false。
      * 加锁机制确保在并发情况下不会出现超卖问题。
      * </p>
      *
-     * @param cacheKey 缓存键，用于标识库存的唯一标识符。
+     * @param strategyId 策略ID
+     * @param awardId    奖品ID
      * @return 返回 true 表示库存减少成功，返回 false 表示库存不足，减少失败。
      */
-    Boolean subtractionAwardStock(String cacheKey);
+    Boolean subtractionAwardStock(Long strategyId, Integer awardId);
 
 
     /**

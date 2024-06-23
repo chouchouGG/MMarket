@@ -10,6 +10,7 @@ import org.springframework.stereotype.Component;
 import javax.annotation.Resource;
 
 import static cn.learn.domain.strategy.model.entity.ProcessingContext.ProcessStatus.TERMINATED;
+import static cn.learn.types.common.Constants.RuleModel.RULE_LOCK;
 import static cn.learn.types.common.Constants.RuleModel.RULE_LUCK_AWARD;
 
 /**
@@ -31,6 +32,8 @@ public class RuleLuckAwardNode implements ILogicTreeNode {
             log.info("不需要走兜底处理");
             return;
         }
+        log.info("用户【{}】，参与抽奖活动【{}】，进行【{}】", context.getUserId(), context.getStrategyId(), RULE_LUCK_AWARD);
+
 
         String ruleValue = strategyRepository.queryStrategyRuleValue(context.getStrategyId(), context.getAwardId(), RULE_LUCK_AWARD);
         String[] split = ruleValue.split(Constants.COLON);

@@ -200,7 +200,10 @@ public class StrategyRepository implements IStrategyRepository {
     }
 
     @Override
-    public Boolean subtractionAwardStock(String cacheKey) {
+    public Boolean subtractionAwardStock(Long strategyId, Integer awardId) {
+        // 获取库存缓存key
+        String cacheKey = Constants.RedisKey.acquireStrategyAwardCountKey(strategyId, awardId);
+
         // 返回的 surplus 为扣减之后的值
         long surplus = redisService.decr(cacheKey);
         if (surplus < 0) {

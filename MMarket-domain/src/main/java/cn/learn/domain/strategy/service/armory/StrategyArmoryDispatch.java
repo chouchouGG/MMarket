@@ -108,10 +108,6 @@ public class StrategyArmoryDispatch implements IStrategyArmory, IStrategyDispatc
             cacheStrategyAwardCount(strategyId, entity.getAwardId(), entity.getAwardCount());
         }
 
-
-
-
-
         // 3. 装配抽奖列表
         // 3.1. 装配默认的奖品列表
         assembleLotteryStrategy(String.valueOf(strategyId), strategyAwardEntities);
@@ -249,12 +245,6 @@ public class StrategyArmoryDispatch implements IStrategyArmory, IStrategyDispatc
     private void cacheStrategyAwardCount(Long strategyId, Integer awardId, Integer awardCount) {
         String cacheKey = Constants.RedisKey.acquireStrategyAwardCountKey(strategyId, awardId);
         strategyRepository.cacheStrategyAwardCount(cacheKey, awardCount);
-    }
-
-    @Override
-    public Boolean subtractionAwardStock(Long strategyId, Integer awardId) {
-        String cacheKey = Constants.RedisKey.acquireStrategyAwardCountKey(strategyId, awardId);
-        return strategyRepository.subtractionAwardStock(cacheKey);
     }
 
     /**

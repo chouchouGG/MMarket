@@ -6,6 +6,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 
 import static cn.learn.types.common.Constants.RuleModel.PRIZE_TYPE_RESTRICTION;
+import static cn.learn.types.common.Constants.RuleModel.RULE_DAILY_LIMIT;
 
 /**
  * @program: MMarket
@@ -21,6 +22,9 @@ public class PrizeTypeRestrictionNode implements ILogicTreeNode {
         if (context.getStatus() == ProcessingContext.ProcessStatus.TERMINATED) {
             return;
         }
+        log.info("用户【{}】，参与抽奖活动【{}】，进行【{}】", context.getUserId(), context.getStrategyId(), PRIZE_TYPE_RESTRICTION);
+
+
         context.setStatus(ProcessingContext.ProcessStatus.CONTINUE);
         context.setRuleModel(PRIZE_TYPE_RESTRICTION);
         context.setResultDesc("暂未实现，现阶段未编写具体逻辑，默认通过【Continue】");

@@ -33,10 +33,12 @@ public class RuleLockNode implements ILogicTreeNode {
         if (context.getStatus() == ProcessingContext.ProcessStatus.TERMINATED) {
             return;
         }
+        log.info("用户【{}】，参与抽奖活动【{}】，进行【{}】", context.getUserId(), context.getStrategyId(), RULE_LOCK);
+
 
         // 1. 获取数据库中配置的解锁次数
         // fixme：通过将奖品的解锁次数缓存到reids中，可以减少查表的次数，修改queryStrategyRuleValue方法，添加走缓存的逻辑
-        String ruleValue = strategyRepository.queryStrategyRuleValue(context.getStrategyId(), context.getAwardId(), context.getRuleModel());
+        String ruleValue = strategyRepository.queryStrategyRuleValue(context.getStrategyId(), context.getAwardId(), RULE_LOCK);
         long unlockThreshold = 0L;
         try {
             unlockThreshold = Long.parseLong(ruleValue);
