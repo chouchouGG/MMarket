@@ -201,19 +201,20 @@ public class StrategyRepository implements IStrategyRepository {
 
     @Override
     public Boolean subtractionAwardStock(Long strategyId, Integer awardId) {
-        // 获取库存缓存key
+        // 使用策略ID和奖品ID生成唯一的库存缓存Key
         String cacheKey = Constants.RedisKey.acquireStrategyAwardCountKey(strategyId, awardId);
 
-        // 返回的 surplus 为扣减之后的值
+        // 使用Redis的 decr 方法对库存进行扣减，返回扣减后的库存值。
         long surplus = redisService.decr(cacheKey);
+
+        // 如果扣减后的库存值小于0，说明库存不足，则重新将库存值恢复为0，并返回 false 表示扣减失败
         if (surplus < 0) {
-            // 库存小于0，恢复为0个
             redisService.setValue(cacheKey, 0);
             return false;
         }
-        // 1. 按照cacheKey decr 后的值，如 99、98、97 和 key 组成为库存锁的key进行使用。
-        // 2. 加锁为了兜底，如果后续有恢复库存，手动处理等，也不会超卖。因为所有的可用库存key，都被加锁了。
+        // 使用 cacheKey 和当前库存值生成一个唯一的锁Key
         String lockKey = Constants.RedisKey.generateStockLockKey(cacheKey, surplus);
+        // 通过每次扣减后都有一个唯一的锁Key实现防止超卖
         Boolean lock = redisService.setNx(lockKey);
         if (!lock) {
             log.info("策略奖品库存加锁失败 {}", lockKey);
@@ -240,7 +241,9 @@ public class StrategyRepository implements IStrategyRepository {
     public StrategyAwardStockKeyVO takeQueueValue() {
         // 获取策略奖品库存任务队列的键
         String cacheQueueKey = Constants.RedisKey.acquireStrategyAwardCountQueuekey();
+        // 获取 Redis 阻塞队列
         RBlockingQueue<StrategyAwardStockKeyVO> destinationQueue = redisService.getBlockingQueue(cacheQueueKey);
+        // 从队列中取出元素，阻塞队列的 poll 方法会立即返回任务，如果队列为空则返回 null
         return destinationQueue.poll();
     }
 

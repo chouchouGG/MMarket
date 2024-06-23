@@ -29,7 +29,7 @@ public class UpdateAwardStockJob {
     public void exec() {
         log.info("【定时任务】 - 开始更新奖品消耗库存");
 
-        // 1. 获取延迟任务队列中的奖品消耗库存键值对象
+        // 1. 获取延迟阻塞任务队列中的【奖品消耗库存对象】strategyAwardStockKeyVO
         StrategyAwardStockKeyVO strategyAwardStockKeyVO = raffleStock.takeQueueValue();
         if (strategyAwardStockKeyVO == null) {
             log.info("【定时任务】 - 队列为空，无需更新库存");

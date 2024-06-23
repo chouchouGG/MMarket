@@ -11,7 +11,6 @@ import javax.annotation.Resource;
 
 import static cn.learn.domain.strategy.model.entity.ProcessingContext.ProcessStatus.CONTINUE;
 import static cn.learn.domain.strategy.model.entity.ProcessingContext.ProcessStatus.TERMINATED;
-import static cn.learn.types.common.Constants.RuleModel.RULE_LUCK_AWARD;
 import static cn.learn.types.common.Constants.RuleModel.RULE_STOCK;
 
 /**
@@ -24,7 +23,8 @@ import static cn.learn.types.common.Constants.RuleModel.RULE_STOCK;
 @Component(value = RULE_STOCK)
 public class RuleStockNode implements ILogicTreeNode {
 
-    // fixme：当前通过 redis 的缓存操作，来实现发送异步的队列消息用于更新数据库中库存信息避免每次抽奖都访问数据库导致连接被过多占用，后期考虑加入MQ
+    // fixme：当前通过 redis 的缓存操作，来实现发送异步的队列消息用于更新数据库中库存信息
+    //  避免每次抽奖都访问数据库导致连接被过多占用，后期考虑加入MQ
     @Resource
     private IStrategyRepository repository;
 
@@ -36,7 +36,7 @@ public class RuleStockNode implements ILogicTreeNode {
         log.info("用户【{}】，参与抽奖活动【{}】，进行【{}】", context.getUserId(), context.getStrategyId(), RULE_STOCK);
 
 
-        // note: 奖品库存扣减是重点内容，需要深入理解整个流程
+        // note: 奖品库存扣减是重点内容，需要【深入理解】
         // 1. 扣减Reids中库存
         Boolean isSuccessful = repository.subtractionAwardStock(context.getStrategyId(), context.getAwardId());
 
@@ -61,10 +61,12 @@ public class RuleStockNode implements ILogicTreeNode {
     }
 
     private void delayStockUpdate(Long strategyId, Integer awardId) {
-        // 构建
+        // 构建策略奖品库存键值对象
         StrategyAwardStockKeyVO strategyAwardStockKeyVO = StrategyAwardStockKeyVO.builder()
                 .strategyId(strategyId)
                 .awardId(awardId).build();
+
+        // 将库存更新操作发送到延迟队列
         repository.awardStockConsumeSendQueue(strategyAwardStockKeyVO);
     }
 
