@@ -17,19 +17,19 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class RaffleAwardEntity {
 
-    // 策略ID
-    private Long strategyId;
-
     // 抽奖奖品ID - 内部流转使用
     private Integer awardId;
 
-    // 奖品对接标识 - 每一个都是一个对应的发奖策略
-    private String awardKey;
-
     // 奖品配置信息
-    private String awardConfig;
+    private String awardRuleValue;
 
-    // 奖品内容描述
-    private String awardDesc;
+    // 规则模型
+    private String ruleModel;
+
+    // 处理流程的结果描述，用于提供反馈
+    private String resultDesc;
+
+    // 排序
+    private Integer sort;
 
 }

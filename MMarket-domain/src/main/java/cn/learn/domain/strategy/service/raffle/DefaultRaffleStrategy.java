@@ -1,11 +1,12 @@
 package cn.learn.domain.strategy.service.raffle;
 
 import cn.learn.domain.strategy.model.entity.ProcessingContext;
-import cn.learn.domain.strategy.model.vo.StrategyAwardRuleModelVO;
+import cn.learn.domain.strategy.model.entity.StrategyAwardEntity;
 import cn.learn.domain.strategy.model.vo.StrategyAwardStockKeyVO;
 import cn.learn.domain.strategy.respository.IStrategyRepository;
 import cn.learn.domain.strategy.service.AbstractRaffleStrategy;
-import cn.learn.domain.strategy.service.armory.IStrategyDispatch;
+import cn.learn.domain.strategy.service.IRaffleAward;
+import cn.learn.domain.strategy.service.IRaffleStock;
 import cn.learn.domain.strategy.service.rule.chain.factory.DefaultChainFactory;
 import cn.learn.domain.strategy.service.rule.chain.logicChain.ILogicChain;
 import cn.learn.domain.strategy.service.rule.tree.engine.IDecisionTreeEngine;
@@ -13,7 +14,7 @@ import cn.learn.domain.strategy.service.rule.tree.factory.DefaultTreeFactory;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
-import javax.annotation.Resource;
+import java.util.List;
 
 /**
  * @program: MMarket
@@ -23,14 +24,12 @@ import javax.annotation.Resource;
  **/
 @Slf4j
 @Service
-public class DefaultRaffleStrategy extends AbstractRaffleStrategy {
+public class DefaultRaffleStrategy extends AbstractRaffleStrategy implements IRaffleStock, IRaffleAward {
 
-    @Resource
-    private IStrategyRepository repository;
-
-    public DefaultRaffleStrategy(DefaultChainFactory defaultChainFactory, DefaultTreeFactory defaultTreeFactory) {
-        super(defaultChainFactory, defaultTreeFactory);
+    public DefaultRaffleStrategy(DefaultChainFactory defaultChainFactory, DefaultTreeFactory defaultTreeFactory, IStrategyRepository repository) {
+        super(defaultChainFactory, defaultTreeFactory, repository);
     }
+
 
     @Override
     public void raffleLogicChain(ProcessingContext context) {
@@ -65,5 +64,10 @@ public class DefaultRaffleStrategy extends AbstractRaffleStrategy {
     @Override
     public void updateStrategyAwardStock(Long strategyId, Integer awardId) {
         repository.updateStrategyAwardStock(strategyId, awardId);
+    }
+
+    @Override
+    public List<StrategyAwardEntity> queryRaffleStrategyAwardList(Long strategyId) {
+        return repository.queryStrategyAwardList(strategyId);
     }
 }

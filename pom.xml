@@ -13,6 +13,7 @@
         <module>MMarket-trigger</module>
         <module>MMarket-infrastructure</module>
         <module>MMarket-types</module>
+        <module>MMarket-api</module>
     </modules>
 
     <repositories>
@@ -140,6 +141,11 @@
             <dependency>
                 <groupId>cn.learn</groupId>
                 <artifactId>MMarket-trigger</artifactId>
+                <version>1.0-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>cn.learn</groupId>
+                <artifactId>MMarket-api</artifactId>
                 <version>1.0-SNAPSHOT</version>
             </dependency>
         </dependencies>

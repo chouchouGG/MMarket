@@ -2,8 +2,7 @@ package cn.learn.infrastructure.persistent.dao;
 
 import cn.learn.infrastructure.persistent.po.StrategyAwardPO;
 import org.apache.ibatis.annotations.Mapper;
-import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Repository;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -23,4 +22,6 @@ public interface IStrategyAwardDao {
     String queryStrategyAwardRuleModelVO(StrategyAwardPO strategyAward);
 
     void updateStrategyAwardStock(StrategyAwardPO strategyAward);
+
+    StrategyAwardPO queryStrategyAwardPO(@Param("strategyId") Long strategyId, @Param("awardId") Integer awardId);
 }

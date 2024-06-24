@@ -36,6 +36,10 @@
             <groupId>cn.learn</groupId>
             <artifactId>MMarket-domain</artifactId>
         </dependency>
+        <dependency>
+            <groupId>cn.learn</groupId>
+            <artifactId>MMarket-api</artifactId>
+        </dependency>
     </dependencies>
 
     <build>

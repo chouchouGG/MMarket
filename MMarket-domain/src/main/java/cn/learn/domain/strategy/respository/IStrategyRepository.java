@@ -23,9 +23,13 @@ public interface IStrategyRepository {
     List<StrategyAwardEntity> queryStrategyAwardList(Long strategyId);
 
     /**
-     * 缓存【抽奖表】、【映射范围】
+     * 该方法将【抽奖策略的随机数范围】和【抽奖表】缓存到 Redis 中，用于后续抽奖操作。
+     *
+     * @param assembleKey                       缓存键，用于标识当前策略
+     * @param size                      当前策略的随机数范围值，如 10000
+     * @param shuffleStrategyAwardSearchRateTable 抽奖表
      */
-    void storeStrategyAwardSearchRateTable(String key, Integer size, Map<Integer, Integer> shuffleStrategyAwardSearchRateTable);
+    void storeStrategyAwardSearchRateTable(String assembleKey, Integer size, Map<Integer, Integer> shuffleStrategyAwardSearchRateTable);
 
     /**
      * 获取映射范围
@@ -35,7 +39,7 @@ public interface IStrategyRepository {
     /**
      * 获取映射范围
      */
-    int getRateRange(String key);
+    int getRateRange(String assembleKey);
 
     /**
      * 根据【抽奖策略】和【随机值】获取对应的奖品id
@@ -111,4 +115,16 @@ public interface IStrategyRepository {
      * @param awardId 奖品ID
      */
     void updateStrategyAwardStock(Long strategyId, Integer awardId);
+
+    /**
+     * 查询策略奖品实体。
+     * <p>
+     * 根据策略ID和奖品ID查询对应的策略奖品实体信息。
+     * </p>
+     *
+     * @param strategyId 策略ID，用于标识具体的抽奖策略。
+     * @param awardId    奖品ID，用于标识具体的奖品。
+     * @return 返回对应的策略奖品实体 {@code StrategyAwardEntity}。
+     */
+    StrategyAwardEntity queryStrategyAwardEntity(Long strategyId, Integer awardId);
 }

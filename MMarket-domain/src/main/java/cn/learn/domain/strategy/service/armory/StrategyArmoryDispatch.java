@@ -12,7 +12,6 @@ import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 import java.math.BigDecimal;
-import java.math.RoundingMode;
 import java.security.SecureRandom;
 import java.util.*;
 
@@ -243,7 +242,7 @@ public class StrategyArmoryDispatch implements IStrategyArmory, IStrategyDispatc
      * @param awardCount 奖品库存
      */
     private void cacheStrategyAwardCount(Long strategyId, Integer awardId, Integer awardCount) {
-        String cacheKey = Constants.RedisKey.acquireStrategyAwardCountKey(strategyId, awardId);
+        String cacheKey = Constants.RedisKey.acquireKey_strategyAwardCount(strategyId, awardId);
         strategyRepository.cacheStrategyAwardCount(cacheKey, awardCount);
     }
 

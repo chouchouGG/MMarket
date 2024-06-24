@@ -8,44 +8,84 @@ public class Constants {
 
     public static class RedisKey {
 
-        // 策略前缀
+        // 策略
         public static final String STRATEGY_KEY = "big_market_strategy_key_";
-        // 策略奖品前缀
+        // 策略奖品
         public static final String STRATEGY_AWARD_KEY = "big_market_strategy_award_key_";
-        // 策略比值前缀
+        // 策略奖品列表
+        public static final String STRATEGY_AWARD_LIST_KEY = "big_market_strategy_award_list_key_";
+        // 策略抽奖表
         public static final String STRATEGY_RATE_TABLE_KEY = "big_market_strategy_rate_table_key_";
-        // 奖品映射范围前缀
+        // 奖品映射范围
         public static final String STRATEGY_RATE_RANGE_KEY = "big_market_strategy_rate_range_key_";
-        // 奖品库存数量前缀
-        public static final String STRATEGY_AWARD_COUNT_KEY = "strategy_award_count_key";
+        // 奖品库存数量
+        public static final String STRATEGY_AWARD_COUNT_KEY = "strategy_award_count_key_";
         // 奖品库存消耗的队列key
         public static final String STRATEGY_AWARD_COUNT_QUEUE_KEY = "strategy_award_count_queue_key";
 
 
         /**
-         * 生成奖品库存数量缓存的key
-         * @param strategyId 策略id
-         * @param awardId 奖品id
-         * @return
+         * 获取策略奖品概率表的缓存键。
+         *
+         * @param assembleKey 组装的键，用于标识具体的策略奖品概率表。
+         * @return 返回策略奖品概率表的缓存键。
          */
-        public static String acquireStrategyAwardCountKey(Long strategyId, Integer awardId) {
-            return Constants.RedisKey.STRATEGY_AWARD_COUNT_KEY + "_" + strategyId + "_" + awardId;
+        public static String acquireKey_strategyRateTable(String assembleKey) {
+            return Constants.RedisKey.STRATEGY_RATE_TABLE_KEY + assembleKey;
+        }
+
+        /**
+         * 获取策略奖品概率范围的缓存键。
+         *
+         * @param assembleKey 组装的键，用于标识具体的策略奖品概率范围。
+         * @return 返回策略奖品概率范围的缓存键。
+         */
+        public static String acquireKey_strategyRateRange(String assembleKey) {
+            return STRATEGY_RATE_RANGE_KEY + assembleKey;
+        }
+
+        /**
+         * 获取策略奖品实体的缓存键。
+         *
+         * @param strategyId 策略ID，用于标识具体的抽奖策略。
+         * @param awardId    奖品ID，用于标识具体的奖品。
+         * @return 返回策略奖品实体的缓存键。
+         */
+        public static String acquireKey_strategyAwardEntity(Long strategyId, Integer awardId) {
+            return STRATEGY_AWARD_KEY + strategyId + "_" + awardId;
+        }
+
+        /**
+         * 获取策略奖品列表的缓存键。
+         *
+         * @param strategyId 策略ID，用于标识具体的抽奖策略。
+         * @return 返回策略奖品列表的缓存键。
+         */
+        public static String acquireKey_strategyAwardList(Long strategyId) {
+            return STRATEGY_AWARD_LIST_KEY + strategyId;
+        }
+
+        // 获取奖品库存数量缓存的key
+        public static String acquireKey_strategyAwardCount(Long strategyId, Integer awardId) {
+            return STRATEGY_AWARD_COUNT_KEY + strategyId + "_" + awardId;
         }
 
 
         /**
-         * 生成库存锁的key。
-         * 通过加锁机制，确保在后续恢复库存或手动处理等情况下，不会出现超卖的情况。
+         * 获取库存锁的key。
+         * 通过加锁机制，确保在后续手动处理补加库存情况下，不会出现超卖的情况。
          *
          * @param cacheKey 缓存键，用于标识库存的唯一标识符。
          * @param surplus  减少后的库存值。
          * @return 生成的库存锁key。
          */
-        public static String generateStockLockKey(String cacheKey, long surplus) {
+        public static String acquireKey_stockLock(String cacheKey, long surplus) {
             return cacheKey + "_" + surplus;
         }
 
-
+        /**
+         * @return 返回策略奖品库存计数队列的缓存键 {@code STRATEGY_AWARD_COUNT_QUEUE_KEY}。
+         */
         public static String acquireStrategyAwardCountQueuekey() {
             return STRATEGY_AWARD_COUNT_QUEUE_KEY;
         }
