@@ -1,5 +1,5 @@
 spring:
   config:
-    name: MMarket-app
+    name: MMarket-app  # spring.config.name：设置应用程序的名称。
   profiles:
-    active: dev
+    active: dev  # 设置了当前活动的配置文件为 dev 环境。

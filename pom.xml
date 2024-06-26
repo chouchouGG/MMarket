@@ -60,6 +60,7 @@
         <version>2.7.12</version>
     </parent>
 
+    <!-- <dependencyManagement>用于集中管理依赖版本 -->
     <dependencyManagement>
         <dependencies>
             <dependency>
@@ -121,6 +122,21 @@
                 <artifactId>redisson-spring-boot-starter</artifactId>
                 <version>3.23.4</version>
             </dependency>
+            <!--note：分库分表路由组件，可以学习该路由组件的源码-->
+            <!-- https://mvnrepository.com/artifact/cn.bugstack.middleware/db-router-spring-boot-starter -->
+            <dependency>
+                <groupId>cn.bugstack.middleware</groupId>
+                <artifactId>db-router-spring-boot-starter</artifactId>
+                <version>1.0.2</version>
+            </dependency>
+            <!-- Easy Random用于在Java应用程序中生成随机测试数据 -->
+            <dependency>
+                <groupId>org.jeasy</groupId>
+                <artifactId>easy-random-core</artifactId>
+                <version>4.3.0</version>
+            </dependency>
+
+
 
             <!-- 工程模块 -->
             <dependency>
