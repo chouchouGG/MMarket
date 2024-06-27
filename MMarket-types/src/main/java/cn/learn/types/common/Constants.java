@@ -8,6 +8,9 @@ public class Constants {
 
     public static class RedisKey {
 
+        /**
+         * 抽奖策略相关的key
+         */
         // 策略
         public static final String STRATEGY_KEY = "big_market_strategy_key_";
         // 策略奖品
@@ -22,6 +25,17 @@ public class Constants {
         public static final String STRATEGY_AWARD_COUNT_KEY = "strategy_award_count_key_";
         // 奖品库存消耗的队列key
         public static final String STRATEGY_AWARD_COUNT_QUEUE_KEY = "strategy_award_count_queue_key";
+
+
+        /**
+         * 抽奖活动相关的key
+         */
+        public static String ACTIVITY_KEY = "big_market_activity_key_";
+        public static String ACTIVITY_SKU_KEY = "big_market_activity_sku_key_";
+        public static String ACTIVITY_COUNT_KEY = "big_market_activity_count_key_";
+
+
+
 
 
         /**
@@ -73,7 +87,7 @@ public class Constants {
 
         /**
          * 获取库存锁的key。
-         * 通过加锁机制，确保在后续手动处理补加库存情况下，不会出现超卖的情况。
+         * 通过加锁机制，确保在后续手动处理，如补加库存情况下，不会出现超卖的情况。
          *
          * @param cacheKey 缓存键，用于标识库存的唯一标识符。
          * @param surplus  减少后的库存值。
@@ -90,6 +104,13 @@ public class Constants {
             return STRATEGY_AWARD_COUNT_QUEUE_KEY;
         }
 
+        public static String acquireKey_activity(Long activityId) {
+            return ACTIVITY_KEY + activityId.toString();
+        }
+
+        public static String acquireKey_activityCount(Long activityCountId) {
+            return ACTIVITY_COUNT_KEY + activityCountId;
+        }
     }
 
     public static class RuleModel {

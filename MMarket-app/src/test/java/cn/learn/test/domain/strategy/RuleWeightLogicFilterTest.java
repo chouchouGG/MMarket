@@ -1,4 +1,4 @@
-package cn.learn.test.domain;
+package cn.learn.test.domain.strategy;
 
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;

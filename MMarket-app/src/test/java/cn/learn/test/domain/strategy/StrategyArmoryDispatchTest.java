@@ -1,4 +1,4 @@
-package cn.learn.test.domain;
+package cn.learn.test.domain.strategy;
 
 import cn.learn.domain.strategy.service.armory.IStrategyArmory;
 import cn.learn.domain.strategy.service.armory.IStrategyDispatch;
