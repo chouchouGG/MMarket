@@ -8,6 +8,7 @@ import org.apache.ibatis.annotations.Mapper;
 import java.util.List;
 
 /**
+ * @author 98389
  * @description 【数据访问层】抽奖活动订单表
  */
 @Mapper

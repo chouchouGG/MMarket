@@ -1,5 +1,6 @@
 package cn.learn.domain.activity.repository;
 
+import cn.learn.domain.activity.model.aggregate.CreateOrderAggregate;
 import cn.learn.domain.activity.model.entity.ActivityCountEntity;
 import cn.learn.domain.activity.model.entity.ActivityEntity;
 import cn.learn.domain.activity.model.entity.ActivitySkuEntity;
@@ -35,4 +36,10 @@ public interface IActivityRepository {
      */
     ActivityCountEntity queryRaffleActivityCountByActivityCountId(Long activityCountId);
 
+    /**
+     * 保存订单信息
+     *
+     * @param createOrderAggregate 订单聚合对象，包含订单相关的所有信息
+     */
+    void doSaveOrder(CreateOrderAggregate createOrderAggregate);
 }
