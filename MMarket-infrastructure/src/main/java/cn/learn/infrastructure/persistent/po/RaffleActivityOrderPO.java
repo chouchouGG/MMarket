@@ -19,9 +19,9 @@ public class RaffleActivityOrderPO {
     private Long strategyId;        // 抽奖策略ID
     private String orderId;         // 订单ID
     private Date orderTime;         // 下单时间
-    private Integer totalCount;     // 总次数
-    private Integer dayCount;       // 日次数
-    private Integer monthCount;     // 月次数
+    private Integer totalCount;     // 总次数 note：本质是 totalCountAdded，因为是从抽奖活动次数表里查出来的
+    private Integer dayCount;       // 日次数 note：本质是 dayCountAdded，因为是从抽奖活动次数表里查出来的
+    private Integer monthCount;     // 月次数 note：本质是 monthCountAdded，因为是从抽奖活动次数表里查出来的
     private String state;           // 订单状态（complete）
     private String outBusinessNo;   // fixme: 已经有了order_id且是唯一索引为什么还需要out_business_no？
     private Date createTime;        // 创建时间
