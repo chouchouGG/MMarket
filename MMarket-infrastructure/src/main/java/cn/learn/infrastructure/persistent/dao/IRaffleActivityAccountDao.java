@@ -11,5 +11,10 @@ import org.apache.ibatis.annotations.Mapper;
 public interface IRaffleActivityAccountDao {
     void insert(RaffleActivityAccountPO raffleActivityAccount);
 
+    /**
+     * 更新操作是将增量直接添加
+     * @param raffleActivityAccount
+     * @return
+     */
     int updateAccountQuota(RaffleActivityAccountPO raffleActivityAccount);
 }

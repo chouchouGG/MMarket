@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+ <trees>
+     <tree path="/MMarket-domain/src/main/java/cn/learn/domain/activity/repository" title="仓储接口"/>
+     <tree path="/MMarket-domain/src/main/java/cn/learn/domain/activity/service/RaffleActivitySupport.java"
+           title="功能性的基础查询"/>
+     <tree path="/MMarket-domain/src/main/java/cn/learn/domain/activity/service/AbstractRaffleActivity.java"
+           title="定义抽奖活动流程（模板方法模式）" extension="" presentableText="" tooltipTitle="" icon="" textColor=""
+           backgroundColor=""/>
+     <tree path="/MMarket-domain/src/main/java/cn/learn/domain/activity/service/chain" title="抽奖活动责任链模块"/>
+     <tree path="/MMarket-domain/src/main/java/cn/learn/domain/activity/service/chain/ICheckChain.java"
+           title="责任链节点处理"/>
+     <tree path="/MMarket-domain/src/main/java/cn/learn/domain/activity/service/chain/ICheckChainArmory.java"
+           title="责任链节点装配"/>
+     <tree path="/MMarket-domain/src/main/java/cn/learn/domain/activity/service/chain/factory/DefaultActivityChainFactory.java"
+           title="责任链工厂用于自动化构建责任链"/>
+    <tree path="/MMarket-domain/src/main/java/cn/learn/domain/activity/service/chain/impl" title="责任链节点实现"/>
+    <tree path="/MMarket-domain/src/main/java/cn/learn/domain/activity/service/armory" title="活动装配相关"/>
+    <tree path="/MMarket-domain/src/main/java/cn/learn/domain/activity/model/valobj/ActivityStateVO.java"
+          title="活动状态"/>
+    <tree path="/MMarket-infrastructure/src/main/java/cn/learn/infrastructure/event" title="工具包，发送RabbitMQ消息"
+          extension="" presentableText="" tooltipTitle="" icon="" textColor="" backgroundColor=""/>
+    <tree path="/MMarket-trigger/src/main/java/cn/learn/trigger/job/UpdateActivitySkuStockJob.java"
+          title="趋势更新库存的定时任务"/>
+</trees>

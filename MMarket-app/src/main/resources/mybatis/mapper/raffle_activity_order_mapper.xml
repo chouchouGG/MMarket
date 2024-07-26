@@ -4,7 +4,7 @@
 
     <resultMap id="dataMap" type="cn.learn.infrastructure.persistent.po.RaffleActivityOrderPO">
         <id column="id" property="id"/>
-        <result column="sku" property="sku"/>
+        <result column="sku" property="sku"/>  <!--sku-->
         <result column="user_id" property="userId"/>
         <result column="activity_id" property="activityId"/>
         <result column="activity_name" property="activityName"/>
@@ -15,7 +15,7 @@
         <result column="day_count" property="dayCount"/>
         <result column="month_count" property="monthCount"/>
         <result column="state" property="state"/>
-        <result column="out_business_no" property="outBusinessNo"/>
+        <result column="out_business_no" property="outBusinessNo"/> <!--外部传入的业务id-->
         <result column="create_time" property="createTime"/>
         <result column="update_time" property="updateTime"/>
     </resultMap>

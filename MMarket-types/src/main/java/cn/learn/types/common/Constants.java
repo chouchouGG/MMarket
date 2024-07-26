@@ -26,6 +26,9 @@ public class Constants {
         // 奖品库存消耗的队列key
         public static final String STRATEGY_AWARD_COUNT_QUEUE_KEY = "strategy_award_count_queue_key";
 
+        public static final String ACTIVITY_SKU_COUNT_QUEUE_KEY = "activity_sku_count_queue_key";
+
+        public static final String ACTIVITY_SKU_STOCK_COUNT_KEY = "activity_sku_stock_count_surplus_key_";
 
         /**
          * 抽奖活动相关的key
@@ -35,7 +38,12 @@ public class Constants {
         public static String ACTIVITY_COUNT_KEY = "big_market_activity_count_key_";
 
 
-
+        /**
+         * @return "big_market_activity_sku_key_" + sku
+         */
+        public static String acquireKey_activitySku(Long sku) {
+            return Constants.RedisKey.ACTIVITY_SKU_KEY + sku;
+        }
 
 
         /**
@@ -104,12 +112,32 @@ public class Constants {
             return STRATEGY_AWARD_COUNT_QUEUE_KEY;
         }
 
+        /**
+         * @return "big_market_activity_key_" + <code>activityId</code>
+         */
         public static String acquireKey_activity(Long activityId) {
             return ACTIVITY_KEY + activityId.toString();
         }
 
+        /**
+         * @return  "big_market_activity_count_key_" + activityCountId
+         */
         public static String acquireKey_activityCount(Long activityCountId) {
             return ACTIVITY_COUNT_KEY + activityCountId;
+        }
+
+        /**
+         * @return "activity_sku_stock_count_key_" + sku
+         */
+        public static String acquireKey_skuStockCount(Long sku) {
+            return ACTIVITY_SKU_STOCK_COUNT_KEY + sku;
+        }
+
+        /**
+         * @return "activity_sku_count_queue_key"
+         */
+        public static String acquireKey_skuCountQueue() {
+            return ACTIVITY_SKU_COUNT_QUEUE_KEY;
         }
     }
 

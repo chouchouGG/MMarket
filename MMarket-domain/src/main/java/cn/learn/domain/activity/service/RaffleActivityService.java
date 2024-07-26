@@ -2,6 +2,7 @@ package cn.learn.domain.activity.service;
 
 import cn.learn.domain.activity.model.aggregate.CreateOrderAggregate;
 import cn.learn.domain.activity.model.entity.*;
+import cn.learn.domain.activity.model.valobj.ActivitySkuStockKeyVO;
 import cn.learn.domain.activity.model.valobj.OrderStateVO;
 import cn.learn.domain.activity.repository.IActivityRepository;
 import cn.learn.domain.activity.service.chain.factory.DefaultActivityChainFactory;
@@ -17,29 +18,30 @@ import java.util.Date;
  * @create 2024-03-16 08:41
  */
 @Service
-public class RaffleActivityService extends AbstractRaffleActivity {
+public class RaffleActivityService extends AbstractRaffleActivity implements ISkuStock {
 
     public RaffleActivityService(IActivityRepository activityRepository, DefaultActivityChainFactory defaultActivityChainFactory) {
         super(activityRepository, defaultActivityChainFactory);
     }
 
     @Override
-    protected CreateOrderAggregate buildOrderAggregate(SkuRechargeEntity skuRechargeEntity, ActivitySkuEntity activitySkuEntity, ActivityEntity activityEntity, ActivityCountEntity activityCountEntity) {
+    protected CreateOrderAggregate buildOrderAggregate(SkuRechargeEntity skuRechargeEntity, ActivitySkuEntity activitySkuEntity,
+                                                       ActivityEntity activityEntity, ActivityCountEntity activityCountEntity) {
         // 创建活动订单实体对象
         ActivityOrderEntity activityOrderEntity = ActivityOrderEntity.builder()
                 .userId(skuRechargeEntity.getUserId())                  // （1）设置用户ID
-                .sku(skuRechargeEntity.getSku())                        // （2）设置商品SKU
+                .sku(activitySkuEntity.getSku())                        // （2）设置商品SKU
                 .activityId(activityEntity.getActivityId())             // （3）设置活动ID
                 .activityName(activityEntity.getActivityName())         // （4）设置活动名称
                 .strategyId(activityEntity.getStrategyId())             // （5）设置抽奖策略ID
                 // fixme: 公司里一般会有专门的【雪花算法】UUID服务，我们这里直接生成个12位就可以了。
-                .orderId(RandomStringUtils.randomNumeric(12))     // （6）生成12位的订单ID
+                .orderId(RandomStringUtils.randomNumeric(12))     // （6）生成12位的订单ID fixme：用于内部标识？
                 .orderTime(new Date())                                  // （7）设置下单时间为当前时间
                 .totalCount(activityCountEntity.getTotalCount())        // （8）设置总次数
                 .dayCount(activityCountEntity.getDayCount())            // （9）设置日次数
                 .monthCount(activityCountEntity.getMonthCount())        // （10）设置月次数
                 .state(OrderStateVO.completed)                          // （11）设置订单状态为已完成
-                .outBusinessNo(skuRechargeEntity.getOutBusinessNo())    // （12）设置外部业务唯一标识
+                .outBusinessNo(skuRechargeEntity.getOutBusinessNo())    // （12）设置外部业务唯一标识 fixme: 由外部生成？
                 .build();
 
 
@@ -55,5 +57,25 @@ public class RaffleActivityService extends AbstractRaffleActivity {
     @Override
     protected void doSaveOrder(CreateOrderAggregate createOrderAggregate) {
         activityRepository.doSaveOrder(createOrderAggregate);
+    }
+
+    @Override
+    public ActivitySkuStockKeyVO takeQueueValue() {
+        return activityRepository.takeQueueValue();
+    }
+
+    @Override
+    public void clearQueueValue() {
+        activityRepository.clearQueueValue();
+    }
+
+    @Override
+    public void updateActivitySkuStock(Long sku) {
+        activityRepository.updateActivitySkuStock(sku);
+    }
+
+    @Override
+    public void clearActivitySkuStock(Long sku) {
+        activityRepository.clearActivitySkuStock(sku);
     }
 }

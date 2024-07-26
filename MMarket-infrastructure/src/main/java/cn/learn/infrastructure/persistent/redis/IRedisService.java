@@ -2,6 +2,8 @@ package cn.learn.infrastructure.persistent.redis;
 
 import org.redisson.api.*;
 
+import java.util.concurrent.TimeUnit;
+
 /**
  * @author chouchouGG
  * NOTE: 项目代码依赖抽象接口，而不是直接使用 redissonClient，可以在后续需要时更换 redis客户端为其他第三方库
@@ -62,6 +64,13 @@ public interface IRedisService {
      * @return 队列
      */
     <T> RDelayedQueue<T> getDelayedQueue(RBlockingQueue<T> rBlockingQueue);
+
+    /**
+     * 获取值
+     *
+     * @param key key 键
+     */
+    Long getAtomicLong(String key);
 
     /**
      * 自增 Key 的值；1、2、3、4
@@ -249,4 +258,6 @@ public interface IRedisService {
     void setAtomicLong(String key, long value);
 
     Boolean setNx(String key);
+
+    Boolean setNx(String key, long expired, TimeUnit timeUnit);
 }

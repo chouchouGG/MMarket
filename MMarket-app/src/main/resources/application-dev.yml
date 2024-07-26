@@ -19,13 +19,13 @@ app:
 spring:
   rabbitmq:
     addresses: 117.72.77.81
-    port: 15672
+    port: 5672
     username: admin
     password: admin
     listener:
       simple:
         prefetch: 1 # 每次投递n个消息，消费完在投递n个
-    topic:
+    topic: # topic 是程序中自己使用的，Spring不使用
       activity_sku_stock_zero: activity_sku_stock_zero
 
 # 线程池配置

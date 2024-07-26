@@ -27,6 +27,10 @@ public class RaffleActivitySupport {
         return activityRepository.queryRaffleActivitySku(sku);
     }
 
+    Integer querySkuStockCountSurplus(Long sku) {
+        return activityRepository.querySkuStockCountSurplus(sku);
+    }
+
     public ActivityEntity queryRaffleActivityByActivityId(Long activityId) {
         return activityRepository.queryRaffleActivityByActivityId(activityId);
     }

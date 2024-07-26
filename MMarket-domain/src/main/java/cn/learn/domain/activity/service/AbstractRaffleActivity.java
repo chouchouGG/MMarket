@@ -25,42 +25,49 @@ public abstract class AbstractRaffleActivity extends RaffleActivitySupport imple
         super(activityRepository, defaultActivityChainFactory);
     }
 
+    /**
+     * 标准流程的具体实现
+     * @param skuRechargeEntity 活动商品充值实体对象
+     * @return
+     */
     @Override
     public String createSkuRechargeOrder(SkuRechargeEntity skuRechargeEntity) {
         // 1. 参数校验
-        String userId = skuRechargeEntity.getUserId();
-        Long sku = skuRechargeEntity.getSku();
-        String outBusinessNo = skuRechargeEntity.getOutBusinessNo();
-        if (null == sku || StringUtils.isBlank(userId) || StringUtils.isBlank(outBusinessNo)) {
-            throw new AppException(ResponseCode.ILLEGAL_PARAMETER.getCode(), ResponseCode.ILLEGAL_PARAMETER.getInfo());
-        }
+        paramCheck(skuRechargeEntity);
 
-        // 2. 查询基础信息（通过RaffleActivitySupport类中方法获取）
-        // 2.1 查询sku信息
-        ActivitySkuEntity activitySkuEntity = queryActivitySku(sku);
-        // 2.2 查询活动信息
-        ActivityEntity activityEntity = queryRaffleActivityByActivityId(activitySkuEntity.getActivityId());
-        // 2.3 查询次数信息（用户在活动上可参与的次数）
-        ActivityCountEntity activityCountEntity = queryRaffleActivityCountByActivityCountId(activitySkuEntity.getActivityCountId());
+        // 2. 查询基础信息（通过继承的 RaffleActivitySupport 类中方法获取）
+        // note：对于这种和具体业务无关，与功能有关的方法，可以增加一个 Support 类将功能性的方法封装起来
+        ActivitySkuEntity activitySku = super.queryActivitySku(skuRechargeEntity.getSku()); // 其中的剩余库存是从缓存中获取的
+        activitySku.setStockCountSurplus(super.querySkuStockCountSurplus(skuRechargeEntity.getSku())); // 更新当前的剩余的sku缓存，而不是装配时的sku缓存
+        ActivityEntity activity = super.queryRaffleActivityByActivityId(activitySku.getActivityId());
+        ActivityCountEntity activityCount = super.queryRaffleActivityCountByActivityCountId(activitySku.getActivityCountId());
 
-        // 3. 活动动作规则校验 todo 后续处理规则过滤流程，暂时也不处理责任链结果
-        ICheckChain actionChain = defaultActivityChainFactory.openActionChain();
-        boolean success = actionChain.handle(activitySkuEntity, activityEntity, activityCountEntity);
+        // 3. 责任链处理（活动校验、sku库存扣减）「过滤失败则直接抛异常」
+        defaultActivityChainFactory.openActionChain().handle(activitySku, activity, activityCount);
 
         // 4. 构建订单聚合对象
-        CreateOrderAggregate createOrderAggregate = buildOrderAggregate(skuRechargeEntity, activitySkuEntity, activityEntity, activityCountEntity);
+        CreateOrderAggregate createOrderAggregate = buildOrderAggregate(skuRechargeEntity, activitySku, activity, activityCount);
 
-        // 5. 保存订单
+        // 5. 两步操作，一个事务下完成（1.保存订单，2.更新账户）
         doSaveOrder(createOrderAggregate);
 
-        // 6. 返回单号
+        // 6. 返回订单号
         return createOrderAggregate.getActivityOrderEntity().getOrderId();
     }
 
+    private void paramCheck(SkuRechargeEntity skuRechargeEntity) {
+        // 参数校验：取出商品充值实体 skuRechargeEntity 中的三个属性，进行非空检查
+        String userId = skuRechargeEntity.getUserId();
+        Long sku = skuRechargeEntity.getSku();
+        String outBusinessNo = skuRechargeEntity.getOutBusinessNo();
 
-    protected abstract CreateOrderAggregate buildOrderAggregate(SkuRechargeEntity skuRechargeEntity, ActivitySkuEntity activitySkuEntity, ActivityEntity activityEntity, ActivityCountEntity activityCountEntity);
+        if (null == sku || StringUtils.isBlank(userId) || StringUtils.isBlank(outBusinessNo)) {
+            throw new AppException(ResponseCode.ILLEGAL_PARAMETER.getCode(), ResponseCode.ILLEGAL_PARAMETER.getInfo());
+        }
+    }
+
+    protected abstract CreateOrderAggregate buildOrderAggregate(SkuRechargeEntity skuRechargeEntity, ActivitySkuEntity activitySku, ActivityEntity activity, ActivityCountEntity activityCount);
 
     protected abstract void doSaveOrder(CreateOrderAggregate createOrderAggregate);
-
 
 }

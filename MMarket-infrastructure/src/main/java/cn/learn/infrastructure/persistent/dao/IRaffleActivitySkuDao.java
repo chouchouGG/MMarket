@@ -13,4 +13,12 @@ public interface IRaffleActivitySkuDao {
 
     RaffleActivitySkuPO queryActivitySku(Long sku);
 
+    /**
+     * 更新操作，每次自减1
+     * @param sku
+     */
+    void updateActivitySkuStock(Long sku);
+
+    void clearActivitySkuStock(Long sku);
+
 }

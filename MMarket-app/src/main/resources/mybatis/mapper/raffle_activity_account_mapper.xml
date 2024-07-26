@@ -22,6 +22,7 @@
         values (#{userId}, #{activityId}, #{totalCount}, #{totalCountSurplus}, #{dayCount},
                 #{dayCountSurplus}, #{monthCount}, #{monthCountSurplus}, now(), now())
     </insert>
+
     <update id="updateAccountQuota" parameterType="cn.learn.infrastructure.persistent.po.RaffleActivityAccountPO">
         update raffle_activity_account
         set

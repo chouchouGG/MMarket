@@ -23,17 +23,15 @@ public class DefaultActivityChainFactory {
      * 3. 活动下单动作的责任链是固定的，所以直接在构造函数中组装即可。
      */
     public DefaultActivityChainFactory(Map<String, ICheckChain> actionChainGroup) {
-        // 活动基本信息责任链节点
-        actionChain = actionChainGroup.get(ActionModel.activity_base_action.getCode());
-        // 添加sku库存责任链节点
-        actionChain.setNext(actionChainGroup.get(ActionModel.activity_sku_stock_action.getCode()));
+        // 【构建头节点】：活动基本信息责任链节点
+        actionChain = actionChainGroup.get(ActionModel.activity_base_action.code);
+        // 【添加下一个节点】：sku库存责任链节点
+        actionChain.setNext(actionChainGroup.get(ActionModel.activity_sku_stock_action.code));
     }
 
     public ICheckChain openActionChain() {
         return this.actionChain;
     }
-
-
 
 
     @Getter

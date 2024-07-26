@@ -5,6 +5,7 @@ import lombok.Data;
 import java.util.Date;
 
 /**
+ * @author 98389
  * @description 抽奖活动账户表 持久化对象
  */
 @Data
