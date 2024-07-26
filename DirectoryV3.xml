@@ -4,8 +4,7 @@
      <tree path="/MMarket-domain/src/main/java/cn/learn/domain/activity/service/RaffleActivitySupport.java"
            title="功能性的基础查询"/>
      <tree path="/MMarket-domain/src/main/java/cn/learn/domain/activity/service/AbstractRaffleActivity.java"
-           title="定义抽奖活动流程（模板方法模式）" extension="" presentableText="" tooltipTitle="" icon="" textColor=""
-           backgroundColor=""/>
+           title="定义抽奖活动流程（模板方法模式）"/>
      <tree path="/MMarket-domain/src/main/java/cn/learn/domain/activity/service/chain" title="抽奖活动责任链模块"/>
      <tree path="/MMarket-domain/src/main/java/cn/learn/domain/activity/service/chain/ICheckChain.java"
            title="责任链节点处理"/>
@@ -17,8 +16,27 @@
     <tree path="/MMarket-domain/src/main/java/cn/learn/domain/activity/service/armory" title="活动装配相关"/>
     <tree path="/MMarket-domain/src/main/java/cn/learn/domain/activity/model/valobj/ActivityStateVO.java"
           title="活动状态"/>
-    <tree path="/MMarket-infrastructure/src/main/java/cn/learn/infrastructure/event" title="工具包，发送RabbitMQ消息"
-          extension="" presentableText="" tooltipTitle="" icon="" textColor="" backgroundColor=""/>
+    <tree path="/MMarket-infrastructure/src/main/java/cn/learn/infrastructure/event" title="工具包，发送RabbitMQ消息"/>
     <tree path="/MMarket-trigger/src/main/java/cn/learn/trigger/job/UpdateActivitySkuStockJob.java"
           title="趋势更新库存的定时任务"/>
+    <tree path="/MMarket-infrastructure/src/main/java/cn/learn/infrastructure/persistent/po/RaffleActivityOrderPO.java"
+          title="充值订单表"/>
+    <tree path="/MMarket-infrastructure/src/main/java/cn/learn/infrastructure/persistent/po/RaffleActivityPO.java"
+          title="活动表"/>
+    <tree path="/MMarket-infrastructure/src/main/java/cn/learn/infrastructure/persistent/po/RaffleActivitySkuPO.java"
+          title="sku表"/>
+    <tree path="/MMarket-infrastructure/src/main/java/cn/learn/infrastructure/persistent/po/RaffleActivityCountPO.java"
+          title="次数表"/>
+    <tree path="/MMarket-infrastructure/src/main/java/cn/learn/infrastructure/persistent/po/RaffleActivityAccountPO.java"
+          title="用户账户表"/>
+    <tree path="/MMarket-infrastructure/src/main/java/cn/learn/infrastructure/persistent/po/RaffleActivityAccountDayPO.java"
+          title="账户日次数表"/>
+    <tree path="/MMarket-infrastructure/src/main/java/cn/learn/infrastructure/persistent/po/RaffleActivityAccountMonthPO.java"
+          title="账户月次数表"/>
+    <tree path="/MMarket-infrastructure/src/main/java/cn/learn/infrastructure/persistent/po/TaskPO.java"
+          title="任务表，发送MQ"/>
+    <tree path="/MMarket-infrastructure/src/main/java/cn/learn/infrastructure/persistent/po/UserAwardRecordPO.java"
+          title="用户中奖记录表"/>
+    <tree path="/MMarket-infrastructure/src/main/java/cn/learn/infrastructure/persistent/po/UserRaffleOrderPO.java"
+          title="用户抽奖订单表"/>
 </trees>
