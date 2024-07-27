@@ -15,7 +15,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class CreateOrderAggregate {
+public class CreateQuotaOrderAggregate {
 
     /**
      * 活动订单实体

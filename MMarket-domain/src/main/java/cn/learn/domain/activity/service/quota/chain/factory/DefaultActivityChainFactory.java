@@ -1,6 +1,6 @@
-package cn.learn.domain.activity.service.chain.factory;
+package cn.learn.domain.activity.service.quota.chain.factory;
 
-import cn.learn.domain.activity.service.chain.ICheckChain;
+import cn.learn.domain.activity.service.quota.chain.ICheckChain;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import org.springframework.stereotype.Service;

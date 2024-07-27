@@ -1,102 +1,532 @@
-24-07-26.13:28:33.012 [main            ] WARN  RaffleOrderTest        - 活动库存不足
-24-07-26.13:28:33.139 [main            ] WARN  RaffleOrderTest        - 活动库存不足
-24-07-26.13:28:33.271 [main            ] WARN  RaffleOrderTest        - 活动库存不足
-24-07-26.13:28:33.410 [main            ] WARN  RaffleOrderTest        - 活动库存不足
-24-07-26.13:28:33.547 [main            ] WARN  RaffleOrderTest        - 活动库存不足
-24-07-26.13:28:33.684 [main            ] WARN  RaffleOrderTest        - 活动库存不足
-24-07-26.13:28:33.822 [main            ] WARN  RaffleOrderTest        - 活动库存不足
-24-07-26.13:28:33.953 [main            ] WARN  RaffleOrderTest        - 活动库存不足
-24-07-26.13:28:34.090 [main            ] WARN  RaffleOrderTest        - 活动库存不足
-24-07-26.13:28:34.233 [main            ] WARN  RaffleOrderTest        - 活动库存不足
-24-07-26.13:28:34.364 [main            ] WARN  RaffleOrderTest        - 活动库存不足
-24-07-26.13:28:34.492 [main            ] WARN  RaffleOrderTest        - 活动库存不足
-24-07-26.13:28:34.618 [main            ] WARN  RaffleOrderTest        - 活动库存不足
-24-07-26.13:28:34.760 [main            ] WARN  RaffleOrderTest        - 活动库存不足
-24-07-26.13:28:34.893 [main            ] WARN  RaffleOrderTest        - 活动库存不足
-24-07-26.13:28:35.033 [main            ] WARN  RaffleOrderTest        - 活动库存不足
-24-07-26.13:28:35.160 [main            ] WARN  RaffleOrderTest        - 活动库存不足
-24-07-26.13:28:35.295 [main            ] WARN  RaffleOrderTest        - 活动库存不足
-24-07-26.13:28:35.436 [main            ] WARN  RaffleOrderTest        - 活动库存不足
-24-07-26.13:28:35.564 [main            ] WARN  RaffleOrderTest        - 活动库存不足
-24-07-26.13:32:50.801 [main            ] WARN  RaffleOrderTest        - ERR_BIZ_005 - 活动库存不足
-24-07-26.13:32:50.924 [main            ] WARN  RaffleOrderTest        - ERR_BIZ_005 - 活动库存不足
-24-07-26.13:32:51.047 [main            ] WARN  RaffleOrderTest        - ERR_BIZ_005 - 活动库存不足
-24-07-26.13:32:51.172 [main            ] WARN  RaffleOrderTest        - ERR_BIZ_005 - 活动库存不足
-24-07-26.13:32:51.291 [main            ] WARN  RaffleOrderTest        - ERR_BIZ_005 - 活动库存不足
-24-07-26.13:32:51.410 [main            ] WARN  RaffleOrderTest        - ERR_BIZ_005 - 活动库存不足
-24-07-26.13:32:51.529 [main            ] WARN  RaffleOrderTest        - ERR_BIZ_005 - 活动库存不足
-24-07-26.13:32:51.651 [main            ] WARN  RaffleOrderTest        - ERR_BIZ_005 - 活动库存不足
-24-07-26.13:32:51.764 [main            ] WARN  RaffleOrderTest        - ERR_BIZ_005 - 活动库存不足
-24-07-26.13:32:51.891 [main            ] WARN  RaffleOrderTest        - ERR_BIZ_005 - 活动库存不足
-24-07-26.13:32:52.018 [main            ] WARN  RaffleOrderTest        - ERR_BIZ_005 - 活动库存不足
-24-07-26.13:32:52.142 [main            ] WARN  RaffleOrderTest        - ERR_BIZ_005 - 活动库存不足
-24-07-26.13:32:52.264 [main            ] WARN  RaffleOrderTest        - ERR_BIZ_005 - 活动库存不足
-24-07-26.13:32:52.385 [main            ] WARN  RaffleOrderTest        - ERR_BIZ_005 - 活动库存不足
-24-07-26.13:32:52.505 [main            ] WARN  RaffleOrderTest        - ERR_BIZ_005 - 活动库存不足
-24-07-26.13:32:52.624 [main            ] WARN  RaffleOrderTest        - ERR_BIZ_005 - 活动库存不足
-24-07-26.13:32:52.750 [main            ] WARN  RaffleOrderTest        - ERR_BIZ_005 - 活动库存不足
-24-07-26.13:32:52.901 [main            ] WARN  RaffleOrderTest        - ERR_BIZ_005 - 活动库存不足
-24-07-26.13:32:53.036 [main            ] WARN  RaffleOrderTest        - ERR_BIZ_005 - 活动库存不足
-24-07-26.13:32:53.166 [main            ] WARN  RaffleOrderTest        - ERR_BIZ_005 - 活动库存不足
-24-07-26.14:16:19.123 [main            ] WARN  RaffleOrderTest        - ERR_BIZ_005 - 活动库存不足，请检查数据库配置
-24-07-26.14:16:19.253 [main            ] WARN  RaffleOrderTest        - ERR_BIZ_005 - 活动库存不足，请检查数据库配置
-24-07-26.14:16:19.391 [main            ] WARN  RaffleOrderTest        - ERR_BIZ_005 - 活动库存不足，请检查数据库配置
-24-07-26.14:16:19.517 [main            ] WARN  RaffleOrderTest        - ERR_BIZ_005 - 活动库存不足，请检查数据库配置
-24-07-26.14:16:19.651 [main            ] WARN  RaffleOrderTest        - ERR_BIZ_005 - 活动库存不足，请检查数据库配置
-24-07-26.14:16:19.775 [main            ] WARN  RaffleOrderTest        - ERR_BIZ_005 - 活动库存不足，请检查数据库配置
-24-07-26.14:16:19.904 [main            ] WARN  RaffleOrderTest        - ERR_BIZ_005 - 活动库存不足，请检查数据库配置
-24-07-26.14:16:20.034 [main            ] WARN  RaffleOrderTest        - ERR_BIZ_005 - 活动库存不足，请检查数据库配置
-24-07-26.14:16:20.162 [main            ] WARN  RaffleOrderTest        - ERR_BIZ_005 - 活动库存不足，请检查数据库配置
-24-07-26.14:16:20.280 [main            ] WARN  RaffleOrderTest        - ERR_BIZ_005 - 活动库存不足，请检查数据库配置
-24-07-26.14:16:20.406 [main            ] WARN  RaffleOrderTest        - ERR_BIZ_005 - 活动库存不足，请检查数据库配置
-24-07-26.14:16:20.567 [main            ] WARN  RaffleOrderTest        - ERR_BIZ_005 - 活动库存不足，请检查数据库配置
-24-07-26.14:16:20.685 [main            ] WARN  RaffleOrderTest        - ERR_BIZ_005 - 活动库存不足，请检查数据库配置
-24-07-26.14:16:20.836 [main            ] WARN  RaffleOrderTest        - ERR_BIZ_005 - 活动库存不足，请检查数据库配置
-24-07-26.14:16:20.971 [main            ] WARN  RaffleOrderTest        - ERR_BIZ_005 - 活动库存不足，请检查数据库配置
-24-07-26.14:16:21.108 [main            ] WARN  RaffleOrderTest        - ERR_BIZ_005 - 活动库存不足，请检查数据库配置
-24-07-26.14:16:21.229 [main            ] WARN  RaffleOrderTest        - ERR_BIZ_005 - 活动库存不足，请检查数据库配置
-24-07-26.14:16:21.359 [main            ] WARN  RaffleOrderTest        - ERR_BIZ_005 - 活动库存不足，请检查数据库配置
-24-07-26.14:16:21.482 [main            ] WARN  RaffleOrderTest        - ERR_BIZ_005 - 活动库存不足，请检查数据库配置
-24-07-26.14:16:21.597 [main            ] WARN  RaffleOrderTest        - ERR_BIZ_005 - 活动库存不足，请检查数据库配置
-24-07-26.14:21:58.927 [main            ] WARN  RaffleOrderTest        - ERR_BIZ_005 - 活动库存不足，请检查数据库配置
-24-07-26.14:21:59.046 [main            ] WARN  RaffleOrderTest        - ERR_BIZ_005 - 活动库存不足，请检查数据库配置
-24-07-26.14:21:59.174 [main            ] WARN  RaffleOrderTest        - ERR_BIZ_005 - 活动库存不足，请检查数据库配置
-24-07-26.14:21:59.291 [main            ] WARN  RaffleOrderTest        - ERR_BIZ_005 - 活动库存不足，请检查数据库配置
-24-07-26.14:21:59.412 [main            ] WARN  RaffleOrderTest        - ERR_BIZ_005 - 活动库存不足，请检查数据库配置
-24-07-26.14:21:59.537 [main            ] WARN  RaffleOrderTest        - ERR_BIZ_005 - 活动库存不足，请检查数据库配置
-24-07-26.14:21:59.660 [main            ] WARN  RaffleOrderTest        - ERR_BIZ_005 - 活动库存不足，请检查数据库配置
-24-07-26.14:44:17.933 [main            ] WARN  RaffleOrderTest        - ERR_BIZ_005 - 活动库存不足，请检查数据库配置
-24-07-26.14:44:18.056 [main            ] WARN  RaffleOrderTest        - ERR_BIZ_005 - 活动库存不足，请检查数据库配置
-24-07-26.14:44:18.174 [main            ] WARN  RaffleOrderTest        - ERR_BIZ_005 - 活动库存不足，请检查数据库配置
-24-07-26.14:44:18.302 [main            ] WARN  RaffleOrderTest        - ERR_BIZ_005 - 活动库存不足，请检查数据库配置
-24-07-26.14:44:18.435 [main            ] WARN  RaffleOrderTest        - ERR_BIZ_005 - 活动库存不足，请检查数据库配置
-24-07-26.14:44:18.570 [main            ] WARN  RaffleOrderTest        - ERR_BIZ_005 - 活动库存不足，请检查数据库配置
-24-07-26.14:44:18.691 [main            ] WARN  RaffleOrderTest        - ERR_BIZ_005 - 活动库存不足，请检查数据库配置
-24-07-26.14:44:18.814 [main            ] WARN  RaffleOrderTest        - ERR_BIZ_005 - 活动库存不足，请检查数据库配置
-24-07-26.14:44:18.936 [main            ] WARN  RaffleOrderTest        - ERR_BIZ_005 - 活动库存不足，请检查数据库配置
-24-07-26.14:44:19.056 [main            ] WARN  RaffleOrderTest        - ERR_BIZ_005 - 活动库存不足，请检查数据库配置
-24-07-26.14:44:19.186 [main            ] WARN  RaffleOrderTest        - ERR_BIZ_005 - 活动库存不足，请检查数据库配置
-24-07-26.14:44:19.320 [main            ] WARN  RaffleOrderTest        - ERR_BIZ_005 - 活动库存不足，请检查数据库配置
-24-07-26.14:44:19.456 [main            ] WARN  RaffleOrderTest        - ERR_BIZ_005 - 活动库存不足，请检查数据库配置
-24-07-26.14:44:19.577 [main            ] WARN  RaffleOrderTest        - ERR_BIZ_005 - 活动库存不足，请检查数据库配置
-24-07-26.14:44:19.696 [main            ] WARN  RaffleOrderTest        - ERR_BIZ_005 - 活动库存不足，请检查数据库配置
-24-07-26.14:44:19.812 [main            ] WARN  RaffleOrderTest        - ERR_BIZ_005 - 活动库存不足，请检查数据库配置
-24-07-26.14:44:19.941 [main            ] WARN  RaffleOrderTest        - ERR_BIZ_005 - 活动库存不足，请检查数据库配置
-24-07-26.14:44:20.062 [main            ] WARN  RaffleOrderTest        - ERR_BIZ_005 - 活动库存不足，请检查数据库配置
-24-07-26.14:44:20.183 [main            ] WARN  RaffleOrderTest        - ERR_BIZ_005 - 活动库存不足，请检查数据库配置
-24-07-26.14:44:20.302 [main            ] WARN  RaffleOrderTest        - ERR_BIZ_005 - 活动库存不足，请检查数据库配置
-24-07-26.14:45:10.803 [main            ] WARN  RaffleOrderTest        - ERR_BIZ_005 - 活动库存不足，请检查数据库配置
-24-07-26.14:45:10.922 [main            ] WARN  RaffleOrderTest        - ERR_BIZ_005 - 活动库存不足，请检查数据库配置
-24-07-26.14:45:11.038 [main            ] WARN  RaffleOrderTest        - ERR_BIZ_005 - 活动库存不足，请检查数据库配置
-24-07-26.14:45:11.164 [main            ] WARN  RaffleOrderTest        - ERR_BIZ_005 - 活动库存不足，请检查数据库配置
-24-07-26.14:45:11.284 [main            ] WARN  RaffleOrderTest        - ERR_BIZ_005 - 活动库存不足，请检查数据库配置
-24-07-26.14:45:11.407 [main            ] WARN  RaffleOrderTest        - ERR_BIZ_005 - 活动库存不足，请检查数据库配置
-24-07-26.14:45:11.520 [main            ] WARN  RaffleOrderTest        - ERR_BIZ_005 - 活动库存不足，请检查数据库配置
-24-07-26.14:45:11.636 [main            ] WARN  RaffleOrderTest        - ERR_BIZ_005 - 活动库存不足，请检查数据库配置
-24-07-26.14:45:11.760 [main            ] WARN  RaffleOrderTest        - ERR_BIZ_005 - 活动库存不足，请检查数据库配置
-24-07-26.14:45:11.887 [main            ] WARN  RaffleOrderTest        - ERR_BIZ_005 - 活动库存不足，请检查数据库配置
-24-07-26.14:45:12.005 [main            ] WARN  RaffleOrderTest        - ERR_BIZ_005 - 活动库存不足，请检查数据库配置
-24-07-26.14:45:12.123 [main            ] WARN  RaffleOrderTest        - ERR_BIZ_005 - 活动库存不足，请检查数据库配置
-24-07-26.14:45:12.242 [main            ] WARN  RaffleOrderTest        - ERR_BIZ_005 - 活动库存不足，请检查数据库配置
-24-07-26.14:45:12.370 [main            ] WARN  RaffleOrderTest        - ERR_BIZ_005 - 活动库存不足，请检查数据库配置
-24-07-26.14:45:12.490 [main            ] WARN  RaffleOrderTest        - ERR_BIZ_005 - 活动库存不足，请检查数据库配置
+24-07-27.11:50:31.569 [main            ] WARN  GenericWebApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'updateActivitySkuStockJob': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'raffleActivityAccountQuotaService' defined in file [E:\Java_code\MMarket\MMarket-domain\target\classes\cn\learn\domain\activity\service\quota\RaffleActivityAccountQuotaService.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'activityRepository': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'cn.learn.infrastructure.persistent.dao.IRaffleActivityAccountMonthDao' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@javax.annotation.Resource(shareable=true, lookup=, name=, description=, authenticationType=CONTAINER, type=class java.lang.Object, mappedName=)}
+24-07-27.11:50:31.750 [main            ] ERROR LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in cn.learn.domain.activity.service.quota.RaffleActivityAccountQuotaService required a bean of type 'cn.learn.infrastructure.persistent.dao.IRaffleActivityAccountMonthDao' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'cn.learn.infrastructure.persistent.dao.IRaffleActivityAccountMonthDao' in your configuration.
+
+24-07-27.11:50:31.755 [main            ] ERROR TestContextManager     - Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@f79e] to prepare test instance [cn.learn.test.domain.activity.RaffleActivityPartakeServiceTest@3db1ce78]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:98)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:124)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:248)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:232)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:55)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'updateActivitySkuStockJob': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'raffleActivityAccountQuotaService' defined in file [E:\Java_code\MMarket\MMarket-domain\target\classes\cn\learn\domain\activity\service\quota\RaffleActivityAccountQuotaService.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'activityRepository': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'cn.learn.infrastructure.persistent.dao.IRaffleActivityAccountMonthDao' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@javax.annotation.Resource(shareable=true, lookup=, name=, description=, authenticationType=CONTAINER, type=class java.lang.Object, mappedName=)}
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:332)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:920)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:136)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:141)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:90)
+	... 27 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'raffleActivityAccountQuotaService' defined in file [E:\Java_code\MMarket\MMarket-domain\target\classes\cn\learn\domain\activity\service\quota\RaffleActivityAccountQuotaService.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'activityRepository': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'cn.learn.infrastructure.persistent.dao.IRaffleActivityAccountMonthDao' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@javax.annotation.Resource(shareable=true, lookup=, name=, description=, authenticationType=CONTAINER, type=class java.lang.Object, mappedName=)}
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:229)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1372)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1222)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:544)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:520)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:673)
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:228)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:329)
+	... 43 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'activityRepository': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'cn.learn.infrastructure.persistent.dao.IRaffleActivityAccountMonthDao' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@javax.annotation.Resource(shareable=true, lookup=, name=, description=, authenticationType=CONTAINER, type=class java.lang.Object, mappedName=)}
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:332)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 61 common frames omitted
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'cn.learn.infrastructure.persistent.dao.IRaffleActivityAccountMonthDao' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@javax.annotation.Resource(shareable=true, lookup=, name=, description=, authenticationType=CONTAINER, type=class java.lang.Object, mappedName=)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:1801)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1357)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:544)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:520)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:673)
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:228)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:329)
+	... 73 common frames omitted
+24-07-27.11:52:37.913 [main            ] WARN  GenericWebApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'updateActivitySkuStockJob': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'raffleActivityAccountQuotaService' defined in file [E:\Java_code\MMarket\MMarket-domain\target\classes\cn\learn\domain\activity\service\quota\RaffleActivityAccountQuotaService.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'activityRepository': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'cn.learn.infrastructure.persistent.dao.IUserRaffleOrderDao' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@javax.annotation.Resource(shareable=true, lookup=, name=, description=, authenticationType=CONTAINER, type=class java.lang.Object, mappedName=)}
+24-07-27.11:52:38.070 [main            ] ERROR LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in cn.learn.domain.activity.service.quota.RaffleActivityAccountQuotaService required a bean of type 'cn.learn.infrastructure.persistent.dao.IUserRaffleOrderDao' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'cn.learn.infrastructure.persistent.dao.IUserRaffleOrderDao' in your configuration.
+
+24-07-27.11:52:38.074 [main            ] ERROR TestContextManager     - Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@f79e] to prepare test instance [cn.learn.test.domain.activity.RaffleActivityPartakeServiceTest@6aad919c]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:98)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:124)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:248)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:232)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:55)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'updateActivitySkuStockJob': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'raffleActivityAccountQuotaService' defined in file [E:\Java_code\MMarket\MMarket-domain\target\classes\cn\learn\domain\activity\service\quota\RaffleActivityAccountQuotaService.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'activityRepository': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'cn.learn.infrastructure.persistent.dao.IUserRaffleOrderDao' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@javax.annotation.Resource(shareable=true, lookup=, name=, description=, authenticationType=CONTAINER, type=class java.lang.Object, mappedName=)}
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:332)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:920)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:136)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:141)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:90)
+	... 27 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'raffleActivityAccountQuotaService' defined in file [E:\Java_code\MMarket\MMarket-domain\target\classes\cn\learn\domain\activity\service\quota\RaffleActivityAccountQuotaService.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'activityRepository': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'cn.learn.infrastructure.persistent.dao.IUserRaffleOrderDao' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@javax.annotation.Resource(shareable=true, lookup=, name=, description=, authenticationType=CONTAINER, type=class java.lang.Object, mappedName=)}
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:229)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1372)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1222)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:544)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:520)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:673)
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:228)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:329)
+	... 43 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'activityRepository': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'cn.learn.infrastructure.persistent.dao.IUserRaffleOrderDao' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@javax.annotation.Resource(shareable=true, lookup=, name=, description=, authenticationType=CONTAINER, type=class java.lang.Object, mappedName=)}
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:332)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 61 common frames omitted
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'cn.learn.infrastructure.persistent.dao.IUserRaffleOrderDao' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@javax.annotation.Resource(shareable=true, lookup=, name=, description=, authenticationType=CONTAINER, type=class java.lang.Object, mappedName=)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:1801)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1357)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:544)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:520)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:673)
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:228)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:329)
+	... 73 common frames omitted
+24-07-27.16:08:12.379 [redisson-timer-4-1] ERROR PingConnectionHandler  - Unable to send PING command over channel: [id: 0x01320360, L:/192.168.2.12:52388 - R:117.72.77.81/117.72.77.81:16379]
+org.redisson.client.RedisTimeoutException: Command execution timeout for command: (PING), params: [], Redis client: [addr=redis://117.72.77.81:16379]
+	at org.redisson.client.RedisConnection.lambda$async$0(RedisConnection.java:256)
+	at io.netty.util.HashedWheelTimer$HashedWheelTimeout.run(HashedWheelTimer.java:715)
+	at io.netty.util.concurrent.ImmediateExecutor.execute(ImmediateExecutor.java:34)
+	at io.netty.util.HashedWheelTimer$HashedWheelTimeout.expire(HashedWheelTimer.java:703)
+	at io.netty.util.HashedWheelTimer$HashedWheelBucket.expireTimeouts(HashedWheelTimer.java:790)
+	at io.netty.util.HashedWheelTimer$Worker.run(HashedWheelTimer.java:503)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:750)
+24-07-27.16:08:13.429 [scheduling-1    ] ERROR UpdateAwardStockJob    - 【定时任务-1】，更新奖品消耗库存失败
+org.springframework.beans.factory.BeanCreationNotAllowedException: Error creating bean with name 'redissonConnectionFactory': Singleton bean creation not allowed while singletons of this factory are in destruction (Do not request a bean from a BeanFactory in a destroy method implementation!)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:220)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory$1.orderedStream(DefaultListableBeanFactory.java:481)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.detectPersistenceExceptionTranslators(PersistenceExceptionTranslationInterceptor.java:167)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:149)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)
+	at cn.learn.infrastructure.persistent.repository.StrategyRepository$$EnhancerBySpringCGLIB$$1740d9b.takeQueueValue(<generated>)
+	at cn.learn.domain.strategy.service.raffle.DefaultRaffleStrategy.takeQueueValue(DefaultRaffleStrategy.java:61)
+	at cn.learn.trigger.job.UpdateAwardStockJob.exec(UpdateAwardStockJob.java:32)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:95)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+24-07-27.16:24:31.751 [Retail_HikariCP housekeeper] WARN  HikariPool             - Retail_HikariCP - Thread starvation or clock leap detected (housekeeper delta=13m5s250ms47µs200ns).
+24-07-27.16:24:33.183 [AMQP Connection 117.72.77.81:5672] WARN  ForgivingExceptionHandler - An unexpected connection driver error occurred (Exception message: Connection reset)
+24-07-27.16:29:30.015 [Retail_HikariCP housekeeper] WARN  HikariPool             - Retail_HikariCP - Thread starvation or clock leap detected (housekeeper delta=3m58s678ms32µs400ns).
+24-07-27.16:29:30.019 [Retail_HikariCP housekeeper] WARN  HikariPool             - Retail_HikariCP - Thread starvation or clock leap detected (housekeeper delta=3m35s916ms959µs300ns).
+24-07-27.16:30:11.370 [AMQP Connection 117.72.77.81:5672] WARN  ForgivingExceptionHandler - An unexpected connection driver error occurred (Exception message: Connection reset)
+24-07-27.16:31:29.516 [redisson-timer-4-1] ERROR PingConnectionHandler  - Unable to send PING command over channel: [id: 0x71072811, L:/192.168.2.12:53906 - R:117.72.77.81/117.72.77.81:16379]
+org.redisson.client.RedisTimeoutException: Command execution timeout for command: (PING), params: [], Redis client: [addr=redis://117.72.77.81:16379]
+	at org.redisson.client.RedisConnection.lambda$async$0(RedisConnection.java:256)
+	at io.netty.util.HashedWheelTimer$HashedWheelTimeout.run(HashedWheelTimer.java:715)
+	at io.netty.util.concurrent.ImmediateExecutor.execute(ImmediateExecutor.java:34)
+	at io.netty.util.HashedWheelTimer$HashedWheelTimeout.expire(HashedWheelTimer.java:703)
+	at io.netty.util.HashedWheelTimer$HashedWheelBucket.expireTimeouts(HashedWheelTimer.java:790)
+	at io.netty.util.HashedWheelTimer$Worker.run(HashedWheelTimer.java:503)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:750)
+24-07-27.16:31:29.519 [redisson-timer-4-1] ERROR PingConnectionHandler  - Unable to send PING command over channel: [id: 0x0a3eb924, L:/192.168.2.12:53908 - R:117.72.77.81/117.72.77.81:16379]
+org.redisson.client.RedisTimeoutException: Command execution timeout for command: (PING), params: [], Redis client: [addr=redis://117.72.77.81:16379]
+	at org.redisson.client.RedisConnection.lambda$async$0(RedisConnection.java:256)
+	at io.netty.util.HashedWheelTimer$HashedWheelTimeout.run(HashedWheelTimer.java:715)
+	at io.netty.util.concurrent.ImmediateExecutor.execute(ImmediateExecutor.java:34)
+	at io.netty.util.HashedWheelTimer$HashedWheelTimeout.expire(HashedWheelTimer.java:703)
+	at io.netty.util.HashedWheelTimer$HashedWheelBucket.expireTimeouts(HashedWheelTimer.java:790)
+	at io.netty.util.HashedWheelTimer$Worker.run(HashedWheelTimer.java:503)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:750)
+24-07-27.16:31:29.520 [redisson-timer-4-1] ERROR PingConnectionHandler  - Unable to send PING command over channel: [id: 0xf8e218cf, L:/192.168.2.12:53909 - R:117.72.77.81/117.72.77.81:16379]
+org.redisson.client.RedisTimeoutException: Command execution timeout for command: (PING), params: [], Redis client: [addr=redis://117.72.77.81:16379]
+	at org.redisson.client.RedisConnection.lambda$async$0(RedisConnection.java:256)
+	at io.netty.util.HashedWheelTimer$HashedWheelTimeout.run(HashedWheelTimer.java:715)
+	at io.netty.util.concurrent.ImmediateExecutor.execute(ImmediateExecutor.java:34)
+	at io.netty.util.HashedWheelTimer$HashedWheelTimeout.expire(HashedWheelTimer.java:703)
+	at io.netty.util.HashedWheelTimer$HashedWheelBucket.expireTimeouts(HashedWheelTimer.java:790)
+	at io.netty.util.HashedWheelTimer$Worker.run(HashedWheelTimer.java:503)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:750)
+24-07-27.16:32:11.223 [AMQP Connection 117.72.77.81:5672] WARN  ForgivingExceptionHandler - An unexpected connection driver error occurred (Exception message: Connection reset)
+24-07-27.16:32:20.882 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] ERROR SimpleMessageListenerContainer - Failed to check/redeclare auto-delete queue(s).
+org.springframework.amqp.AmqpTimeoutException: java.util.concurrent.TimeoutException
+	at org.springframework.amqp.rabbit.support.RabbitExceptionTranslator.convertRabbitAccessException(RabbitExceptionTranslator.java:73)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:603)
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.createConnection(CachingConnectionFactory.java:725)
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.createBareChannel(CachingConnectionFactory.java:676)
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.getCachedChannelProxy(CachingConnectionFactory.java:650)
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.getChannel(CachingConnectionFactory.java:540)
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.access$1600(CachingConnectionFactory.java:100)
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory$ChannelCachingConnectionProxy.createChannel(CachingConnectionFactory.java:1418)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.doExecute(RabbitTemplate.java:2216)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:2183)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:2163)
+	at org.springframework.amqp.rabbit.core.RabbitAdmin.getQueueInfo(RabbitAdmin.java:463)
+	at org.springframework.amqp.rabbit.core.RabbitAdmin.getQueueProperties(RabbitAdmin.java:447)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.attemptDeclarations(AbstractMessageListenerContainer.java:1942)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.redeclareElementsIfNecessary(AbstractMessageListenerContainer.java:1915)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.initialize(SimpleMessageListenerContainer.java:1384)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.run(SimpleMessageListenerContainer.java:1230)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: java.util.concurrent.TimeoutException: null
+	at com.rabbitmq.utility.BlockingCell.get(BlockingCell.java:77)
+	at com.rabbitmq.utility.BlockingCell.uninterruptibleGet(BlockingCell.java:120)
+	at com.rabbitmq.utility.BlockingValueOrException.uninterruptibleGetValue(BlockingValueOrException.java:36)
+	at com.rabbitmq.client.impl.AMQChannel$BlockingRpcContinuation.getReply(AMQChannel.java:502)
+	at com.rabbitmq.client.impl.AMQChannel.privateRpc(AMQChannel.java:330)
+	at com.rabbitmq.client.impl.AMQChannel.rpc(AMQChannel.java:275)
+	at com.rabbitmq.client.impl.AMQConnection.start(AMQConnection.java:373)
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1225)
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1173)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connectAddresses(AbstractConnectionFactory.java:641)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connect(AbstractConnectionFactory.java:616)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:566)
+	... 16 common frames omitted
+24-07-27.16:32:38.329 [redisson-timer-4-1] ERROR PingConnectionHandler  - Unable to send PING command over channel: [id: 0xfb959878, L:/192.168.2.12:53904 - R:117.72.77.81/117.72.77.81:16379]
+org.redisson.client.RedisTimeoutException: Command execution timeout for command: (PING), params: [], Redis client: [addr=redis://117.72.77.81:16379]
+	at org.redisson.client.RedisConnection.lambda$async$0(RedisConnection.java:256)
+	at io.netty.util.HashedWheelTimer$HashedWheelTimeout.run(HashedWheelTimer.java:715)
+	at io.netty.util.concurrent.ImmediateExecutor.execute(ImmediateExecutor.java:34)
+	at io.netty.util.HashedWheelTimer$HashedWheelTimeout.expire(HashedWheelTimer.java:703)
+	at io.netty.util.HashedWheelTimer$HashedWheelBucket.expireTimeouts(HashedWheelTimer.java:790)
+	at io.netty.util.HashedWheelTimer$Worker.run(HashedWheelTimer.java:503)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:750)
+24-07-27.16:32:50.725 [scheduling-1    ] ERROR UpdateAwardStockJob    - 【定时任务-1】，更新奖品消耗库存失败
+org.springframework.data.redis.RedisConnectionFailureException: Unable to write command into connection! Increase nettyThreads setting. Node source: NodeSource [slot=0, addr=null, redisClient=null, redirect=null, entry=null], connection: RedisConnection@1541618235 [redisClient=[addr=redis://117.72.77.81:16379], channel=[id: 0xfb959878, L:/192.168.2.12:53904 ! R:117.72.77.81/117.72.77.81:16379], currentCommand=null, usage=1], command: (LPOP), params: [strategy_award_count_queue_key] after 3 retry attempts; nested exception is org.redisson.client.WriteRedisConnectionException: Unable to write command into connection! Increase nettyThreads setting. Node source: NodeSource [slot=0, addr=null, redisClient=null, redirect=null, entry=null], connection: RedisConnection@1541618235 [redisClient=[addr=redis://117.72.77.81:16379], channel=[id: 0xfb959878, L:/192.168.2.12:53904 ! R:117.72.77.81/117.72.77.81:16379], currentCommand=null, usage=1], command: (LPOP), params: [strategy_award_count_queue_key] after 3 retry attempts
+	at org.redisson.spring.data.connection.RedissonExceptionConverter.convert(RedissonExceptionConverter.java:40)
+	at org.redisson.spring.data.connection.RedissonExceptionConverter.convert(RedissonExceptionConverter.java:35)
+	at org.springframework.data.redis.PassThroughExceptionTranslationStrategy.translate(PassThroughExceptionTranslationStrategy.java:44)
+	at org.redisson.spring.data.connection.RedissonConnectionFactory.translateExceptionIfPossible(RedissonConnectionFactory.java:91)
+	at org.springframework.dao.support.ChainedPersistenceExceptionTranslator.translateExceptionIfPossible(ChainedPersistenceExceptionTranslator.java:61)
+	at org.springframework.dao.support.DataAccessUtils.translateIfNecessary(DataAccessUtils.java:242)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:152)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)
+	at cn.learn.infrastructure.persistent.repository.StrategyRepository$$EnhancerBySpringCGLIB$$1740d9b.takeQueueValue(<generated>)
+	at cn.learn.domain.strategy.service.raffle.DefaultRaffleStrategy.takeQueueValue(DefaultRaffleStrategy.java:61)
+	at cn.learn.trigger.job.UpdateAwardStockJob.exec(UpdateAwardStockJob.java:32)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:95)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: org.redisson.client.WriteRedisConnectionException: Unable to write command into connection! Increase nettyThreads setting. Node source: NodeSource [slot=0, addr=null, redisClient=null, redirect=null, entry=null], connection: RedisConnection@1541618235 [redisClient=[addr=redis://117.72.77.81:16379], channel=[id: 0xfb959878, L:/192.168.2.12:53904 ! R:117.72.77.81/117.72.77.81:16379], currentCommand=null, usage=1], command: (LPOP), params: [strategy_award_count_queue_key] after 3 retry attempts
+	at org.redisson.command.RedisExecutor.checkWriteFuture(RedisExecutor.java:345)
+	at org.redisson.command.RedisExecutor.lambda$execute$3(RedisExecutor.java:188)
+	at io.netty.util.concurrent.DefaultPromise.notifyListener0(DefaultPromise.java:590)
+	at io.netty.util.concurrent.DefaultPromise.notifyListenersNow(DefaultPromise.java:557)
+	at io.netty.util.concurrent.DefaultPromise.notifyListeners(DefaultPromise.java:492)
+	at io.netty.util.concurrent.DefaultPromise.setValue0(DefaultPromise.java:636)
+	at io.netty.util.concurrent.DefaultPromise.setFailure0(DefaultPromise.java:629)
+	at io.netty.util.concurrent.DefaultPromise.tryFailure(DefaultPromise.java:118)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.safeSetFailure(AbstractChannel.java:999)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(AbstractChannel.java:860)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.write(DefaultChannelPipeline.java:1367)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeWrite0(AbstractChannelHandlerContext.java:877)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeWriteAndFlush(AbstractChannelHandlerContext.java:940)
+	at io.netty.channel.AbstractChannelHandlerContext$WriteTask.run(AbstractChannelHandlerContext.java:1247)
+	at io.netty.util.concurrent.AbstractEventExecutor.runTask(AbstractEventExecutor.java:174)
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:167)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:470)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:569)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	... 1 common frames omitted
+Caused by: io.netty.channel.StacklessClosedChannelException: null
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(Object, ChannelPromise)(Unknown Source)
+24-07-27.16:37:50.742 [Retail_HikariCP housekeeper] WARN  HikariPool             - Retail_HikariCP - Thread starvation or clock leap detected (housekeeper delta=4m45s183ms794µs).
+24-07-27.16:37:50.743 [Retail_HikariCP housekeeper] WARN  HikariPool             - Retail_HikariCP - Thread starvation or clock leap detected (housekeeper delta=4m45s182ms840µs300ns).
+24-07-27.16:37:50.744 [redisson-timer-4-1] ERROR PingConnectionHandler  - Unable to send PING command over channel: [id: 0x89d6c220, L:/192.168.2.12:53905 - R:117.72.77.81/117.72.77.81:16379]
+org.redisson.client.RedisTimeoutException: Command execution timeout for command: (PING), params: [], Redis client: [addr=redis://117.72.77.81:16379]
+	at org.redisson.client.RedisConnection.lambda$async$0(RedisConnection.java:256)
+	at io.netty.util.HashedWheelTimer$HashedWheelTimeout.run(HashedWheelTimer.java:715)
+	at io.netty.util.concurrent.ImmediateExecutor.execute(ImmediateExecutor.java:34)
+	at io.netty.util.HashedWheelTimer$HashedWheelTimeout.expire(HashedWheelTimer.java:703)
+	at io.netty.util.HashedWheelTimer$HashedWheelBucket.expireTimeouts(HashedWheelTimer.java:790)
+	at io.netty.util.HashedWheelTimer$Worker.run(HashedWheelTimer.java:503)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:750)
+24-07-27.16:38:00.757 [main            ] WARN  PoolBase               - Retail_HikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@56e78538 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+24-07-27.16:39:20.201 [Retail_HikariCP housekeeper] WARN  HikariPool             - Retail_HikariCP - Thread starvation or clock leap detected (housekeeper delta=57s265ms804µs300ns).
+24-07-27.16:39:20.201 [Retail_HikariCP housekeeper] WARN  HikariPool             - Retail_HikariCP - Thread starvation or clock leap detected (housekeeper delta=57s266ms710µs101ns).
+24-07-27.16:40:12.848 [Retail_HikariCP housekeeper] WARN  HikariPool             - Retail_HikariCP - Thread starvation or clock leap detected (housekeeper delta=52s646ms828µs).
+24-07-27.16:40:12.848 [Retail_HikariCP housekeeper] WARN  HikariPool             - Retail_HikariCP - Thread starvation or clock leap detected (housekeeper delta=52s646ms391µs700ns).
+24-07-27.16:40:20.989 [redisson-timer-4-1] ERROR PingConnectionHandler  - Unable to send PING command over channel: [id: 0x58dfcca0, L:/192.168.2.12:54342 - R:117.72.77.81/117.72.77.81:16379]
+org.redisson.client.RedisTimeoutException: Command execution timeout for command: (PING), params: [], Redis client: [addr=redis://117.72.77.81:16379]
+	at org.redisson.client.RedisConnection.lambda$async$0(RedisConnection.java:256)
+	at io.netty.util.HashedWheelTimer$HashedWheelTimeout.run(HashedWheelTimer.java:715)
+	at io.netty.util.concurrent.ImmediateExecutor.execute(ImmediateExecutor.java:34)
+	at io.netty.util.HashedWheelTimer$HashedWheelTimeout.expire(HashedWheelTimer.java:703)
+	at io.netty.util.HashedWheelTimer$HashedWheelBucket.expireTimeouts(HashedWheelTimer.java:790)
+	at io.netty.util.HashedWheelTimer$Worker.run(HashedWheelTimer.java:503)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:750)
+24-07-27.16:40:25.274 [redisson-timer-4-1] ERROR PingConnectionHandler  - Unable to send PING command over channel: [id: 0xace28279, L:/192.168.2.12:54612 - R:117.72.77.81/117.72.77.81:16379]
+org.redisson.client.RedisTimeoutException: Command execution timeout for command: (PING), params: [], Redis client: [addr=redis://117.72.77.81:16379]
+	at org.redisson.client.RedisConnection.lambda$async$0(RedisConnection.java:256)
+	at io.netty.util.HashedWheelTimer$HashedWheelTimeout.run(HashedWheelTimer.java:715)
+	at io.netty.util.concurrent.ImmediateExecutor.execute(ImmediateExecutor.java:34)
+	at io.netty.util.HashedWheelTimer$HashedWheelTimeout.expire(HashedWheelTimer.java:703)
+	at io.netty.util.HashedWheelTimer$HashedWheelBucket.expireTimeouts(HashedWheelTimer.java:790)
+	at io.netty.util.HashedWheelTimer$Worker.run(HashedWheelTimer.java:503)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:750)
+24-07-27.16:40:31.813 [redisson-timer-4-1] ERROR PingConnectionHandler  - Unable to send PING command over channel: [id: 0xde11b81c, L:/192.168.2.12:54616 - R:117.72.77.81/117.72.77.81:16379]
+org.redisson.client.RedisTimeoutException: Command execution timeout for command: (PING), params: [], Redis client: [addr=redis://117.72.77.81:16379]
+	at org.redisson.client.RedisConnection.lambda$async$0(RedisConnection.java:256)
+	at io.netty.util.HashedWheelTimer$HashedWheelTimeout.run(HashedWheelTimer.java:715)
+	at io.netty.util.concurrent.ImmediateExecutor.execute(ImmediateExecutor.java:34)
+	at io.netty.util.HashedWheelTimer$HashedWheelTimeout.expire(HashedWheelTimer.java:703)
+	at io.netty.util.HashedWheelTimer$HashedWheelBucket.expireTimeouts(HashedWheelTimer.java:790)
+	at io.netty.util.HashedWheelTimer$Worker.run(HashedWheelTimer.java:503)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:750)
+24-07-27.16:40:58.586 [scheduling-1    ] ERROR UpdateActivitySkuStockJob - 【定时任务-2】，更新活动sku库存失败
+org.springframework.dao.QueryTimeoutException: Redis server response timeout (3000 ms) occured after 0 retry attempts, is non-idempotent command: true Check connection with Redis node: 117.72.77.81/117.72.77.81:16379 for TCP packet drops or bandwidth limits.  Try to increase nettyThreads and/or timeout settings. Command: (LPOP), params: [activity_sku_count_queue_key], channel: [id: 0x30110fe3, L:/192.168.2.12:54813 - R:117.72.77.81/117.72.77.81:16379]; nested exception is org.redisson.client.RedisResponseTimeoutException: Redis server response timeout (3000 ms) occured after 0 retry attempts, is non-idempotent command: true Check connection with Redis node: 117.72.77.81/117.72.77.81:16379 for TCP packet drops or bandwidth limits.  Try to increase nettyThreads and/or timeout settings. Command: (LPOP), params: [activity_sku_count_queue_key], channel: [id: 0x30110fe3, L:/192.168.2.12:54813 - R:117.72.77.81/117.72.77.81:16379]
+	at org.redisson.spring.data.connection.RedissonExceptionConverter.convert(RedissonExceptionConverter.java:48)
+	at org.redisson.spring.data.connection.RedissonExceptionConverter.convert(RedissonExceptionConverter.java:35)
+	at org.springframework.data.redis.PassThroughExceptionTranslationStrategy.translate(PassThroughExceptionTranslationStrategy.java:44)
+	at org.redisson.spring.data.connection.RedissonConnectionFactory.translateExceptionIfPossible(RedissonConnectionFactory.java:91)
+	at org.springframework.dao.support.ChainedPersistenceExceptionTranslator.translateExceptionIfPossible(ChainedPersistenceExceptionTranslator.java:61)
+	at org.springframework.dao.support.DataAccessUtils.translateIfNecessary(DataAccessUtils.java:242)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:152)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)
+	at cn.learn.infrastructure.persistent.repository.ActivityRepository$$EnhancerBySpringCGLIB$$167044ef.takeQueueValue(<generated>)
+	at cn.learn.domain.activity.service.quota.RaffleActivityAccountQuotaService.takeQueueValue(RaffleActivityAccountQuotaService.java:64)
+	at cn.learn.trigger.job.UpdateActivitySkuStockJob.exec(UpdateActivitySkuStockJob.java:27)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:95)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: org.redisson.client.RedisResponseTimeoutException: Redis server response timeout (3000 ms) occured after 0 retry attempts, is non-idempotent command: true Check connection with Redis node: 117.72.77.81/117.72.77.81:16379 for TCP packet drops or bandwidth limits.  Try to increase nettyThreads and/or timeout settings. Command: (LPOP), params: [activity_sku_count_queue_key], channel: [id: 0x30110fe3, L:/192.168.2.12:54813 - R:117.72.77.81/117.72.77.81:16379]
+	at org.redisson.command.RedisExecutor.lambda$scheduleResponseTimeout$9(RedisExecutor.java:407)
+	at io.netty.util.HashedWheelTimer$HashedWheelTimeout.run(HashedWheelTimer.java:715)
+	at io.netty.util.concurrent.ImmediateExecutor.execute(ImmediateExecutor.java:34)
+	at io.netty.util.HashedWheelTimer$HashedWheelTimeout.expire(HashedWheelTimer.java:703)
+	at io.netty.util.HashedWheelTimer$HashedWheelBucket.expireTimeouts(HashedWheelTimer.java:790)
+	at io.netty.util.HashedWheelTimer$Worker.run(HashedWheelTimer.java:503)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	... 1 common frames omitted
+24-07-27.17:35:55.192 [Retail_HikariCP housekeeper] WARN  HikariPool             - Retail_HikariCP - Thread starvation or clock leap detected (housekeeper delta=55m10s236ms109µs).
+24-07-27.17:35:56.194 [AMQP Connection 117.72.77.81:5672] WARN  ForgivingExceptionHandler - An unexpected connection driver error occurred (Exception message: Connection reset)
+24-07-27.17:35:56.195 [Retail_HikariCP housekeeper] WARN  HikariPool             - Retail_HikariCP - Thread starvation or clock leap detected (housekeeper delta=55m11s239ms528µs900ns).
+24-07-27.17:47:22.579 [Retail_HikariCP housekeeper] WARN  HikariPool             - Retail_HikariCP - Thread starvation or clock leap detected (housekeeper delta=11m26s383ms497µs400ns).
+24-07-27.17:47:22.581 [AMQP Connection 117.72.77.81:5672] WARN  ForgivingExceptionHandler - An unexpected connection driver error occurred (Exception message: Connection reset)
+24-07-27.17:47:22.581 [Retail_HikariCP housekeeper] WARN  HikariPool             - Retail_HikariCP - Thread starvation or clock leap detected (housekeeper delta=11m27s385ms212µs799ns).
+24-07-27.17:47:22.616 [scheduling-1    ] ERROR UpdateAwardStockJob    - 【定时任务-1】，更新奖品消耗库存失败
+org.springframework.dao.InvalidDataAccessApiUsageException: java.lang.InterruptedException; nested exception is org.redisson.client.RedisException: java.lang.InterruptedException
+	at org.redisson.spring.data.connection.RedissonExceptionConverter.convert(RedissonExceptionConverter.java:52)
+	at org.redisson.spring.data.connection.RedissonExceptionConverter.convert(RedissonExceptionConverter.java:35)
+	at org.springframework.data.redis.PassThroughExceptionTranslationStrategy.translate(PassThroughExceptionTranslationStrategy.java:44)
+	at org.redisson.spring.data.connection.RedissonConnectionFactory.translateExceptionIfPossible(RedissonConnectionFactory.java:91)
+	at org.springframework.dao.support.ChainedPersistenceExceptionTranslator.translateExceptionIfPossible(ChainedPersistenceExceptionTranslator.java:61)
+	at org.springframework.dao.support.DataAccessUtils.translateIfNecessary(DataAccessUtils.java:242)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:152)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)
+	at cn.learn.infrastructure.persistent.repository.StrategyRepository$$EnhancerBySpringCGLIB$$1740d9b.takeQueueValue(<generated>)
+	at cn.learn.domain.strategy.service.raffle.DefaultRaffleStrategy.takeQueueValue(DefaultRaffleStrategy.java:61)
+	at cn.learn.trigger.job.UpdateAwardStockJob.exec(UpdateAwardStockJob.java:32)
+	at sun.reflect.GeneratedMethodAccessor11.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:95)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: org.redisson.client.RedisException: java.lang.InterruptedException
+	at org.redisson.command.CommandAsyncService.get(CommandAsyncService.java:114)
+	at org.redisson.RedissonObject.get(RedissonObject.java:90)
+	at org.redisson.RedissonQueue.poll(RedissonQueue.java:105)
+	at cn.learn.infrastructure.persistent.repository.StrategyRepository.takeQueueValue(StrategyRepository.java:249)
+	at cn.learn.infrastructure.persistent.repository.StrategyRepository$$FastClassBySpringCGLIB$$97989348.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:793)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137)
+	... 19 common frames omitted
+Caused by: java.lang.InterruptedException: null
+	at java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:347)
+	at java.util.concurrent.CompletableFuture.get(CompletableFuture.java:1908)
+	at org.redisson.command.CommandAsyncService.get(CommandAsyncService.java:110)
+	... 28 common frames omitted

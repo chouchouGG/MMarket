@@ -1,11 +1,11 @@
-package cn.learn.domain.activity.service.chain.impl;
+package cn.learn.domain.activity.service.quota.chain.impl;
 
 
 import cn.learn.domain.activity.model.entity.ActivityCountEntity;
 import cn.learn.domain.activity.model.entity.ActivityEntity;
 import cn.learn.domain.activity.model.entity.ActivitySkuEntity;
 import cn.learn.domain.activity.model.valobj.ActivityStateVO;
-import cn.learn.domain.activity.service.chain.AbstractCheckChain;
+import cn.learn.domain.activity.service.quota.chain.AbstractCheckChain;
 import cn.learn.types.enums.ResponseCode;
 import cn.learn.types.exception.AppException;
 import lombok.extern.slf4j.Slf4j;

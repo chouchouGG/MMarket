@@ -25,6 +25,11 @@ public enum ResponseCode {
     ACTIVITY_DATE_ERROR("ERR_BIZ_004", "非活动日期范围"),
     ACTIVITY_SKU_STOCK_ERROR("ERR_BIZ_005", "活动库存不足，请检查数据库配置"),
 
+    ACCOUNT_QUOTA_ERROR("ERR_BIZ_006","账户总额度不足"),
+    ACCOUNT_MONTH_QUOTA_ERROR("ERR_BIZ_007","账户月额度不足"),
+    ACCOUNT_DAY_QUOTA_ERROR("ERR_BIZ_008","账户日额度不足"),
+
+
 
     // fixme：这里的状态定义的是异常错误码，是开始没有理解 ResponseCode 类是描述http响应状态的类
     //  后续需要将下面这两个异常描述拆分出去

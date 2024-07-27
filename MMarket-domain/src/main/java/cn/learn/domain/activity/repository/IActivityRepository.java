@@ -1,9 +1,8 @@
 package cn.learn.domain.activity.repository;
 
-import cn.learn.domain.activity.model.aggregate.CreateOrderAggregate;
-import cn.learn.domain.activity.model.entity.ActivityCountEntity;
-import cn.learn.domain.activity.model.entity.ActivityEntity;
-import cn.learn.domain.activity.model.entity.ActivitySkuEntity;
+import cn.learn.domain.activity.model.aggregate.CreatePartakeOrderAggregate;
+import cn.learn.domain.activity.model.aggregate.CreateQuotaOrderAggregate;
+import cn.learn.domain.activity.model.entity.*;
 import cn.learn.domain.activity.model.valobj.ActivitySkuStockKeyVO;
 
 import java.util.Date;
@@ -48,7 +47,7 @@ public interface IActivityRepository {
      *
      * @param createOrderAggregate 订单聚合对象，包含订单相关的所有信息
      */
-    void doSaveOrder(CreateOrderAggregate createOrderAggregate);
+    void doSaveOrder(CreateQuotaOrderAggregate createOrderAggregate);
 
 
 
@@ -108,4 +107,14 @@ public interface IActivityRepository {
      * @param sku 活动商品的 SKU。
      */
     void clearActivitySkuStock(Long sku);
+
+    void saveCreatePartakeOrderAggregate(CreatePartakeOrderAggregate createPartakeOrderAggregate);
+
+    ActivityAccountEntity queryActivityAccount(String userId, Long activityId);
+
+    ActivityAccountMonthEntity queryActivityAccountMonth(String userId, Long activityId, String month);
+
+    ActivityAccountDayEntity queryActivityAccountDay(String userId, Long activityId, String day);
+
+    UserRaffleOrderEntity queryNoUsedRaffleOrder(PartakeRaffleActivityEntity partakeRaffleActivityEntity);
 }

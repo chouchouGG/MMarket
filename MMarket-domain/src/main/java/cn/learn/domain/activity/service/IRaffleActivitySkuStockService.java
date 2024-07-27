@@ -7,7 +7,7 @@ import cn.learn.domain.activity.model.valobj.ActivitySkuStockKeyVO;
  * @author chouchouGG
  * @description sku 库存处理接口
  */
-public interface ISkuStock {
+public interface IRaffleActivitySkuStockService {
     /*
       note：
        （1）获取和更新库存消耗队列（进行趋势更新）：

@@ -1,4 +1,4 @@
-package cn.learn.domain.activity.service.chain;
+package cn.learn.domain.activity.service.quota.chain;
 
 import cn.learn.domain.activity.model.entity.ActivityCountEntity;
 import cn.learn.domain.activity.model.entity.ActivityEntity;

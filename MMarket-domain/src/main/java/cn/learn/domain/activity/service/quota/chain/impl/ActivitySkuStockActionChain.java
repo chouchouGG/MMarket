@@ -1,4 +1,4 @@
-package cn.learn.domain.activity.service.chain.impl;
+package cn.learn.domain.activity.service.quota.chain.impl;
 
 
 import cn.learn.domain.activity.model.entity.ActivityCountEntity;
@@ -7,7 +7,7 @@ import cn.learn.domain.activity.model.entity.ActivitySkuEntity;
 import cn.learn.domain.activity.model.valobj.ActivitySkuStockKeyVO;
 import cn.learn.domain.activity.repository.IActivityRepository;
 import cn.learn.domain.activity.service.armory.IActivityDispatch;
-import cn.learn.domain.activity.service.chain.AbstractCheckChain;
+import cn.learn.domain.activity.service.quota.chain.AbstractCheckChain;
 import cn.learn.types.enums.ResponseCode;
 import cn.learn.types.exception.AppException;
 import lombok.extern.slf4j.Slf4j;

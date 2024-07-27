@@ -1,8 +1,4 @@
-package cn.learn.domain.activity.service.chain;
-
-import cn.learn.domain.strategy.service.rule.chain.logicChain.ILogicChain;
-
-import java.util.Set;
+package cn.learn.domain.activity.service.quota.chain;
 
 /**
  * @program: MMarket

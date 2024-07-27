@@ -1,4 +1,4 @@
-package cn.learn.domain.activity.service.chain;
+package cn.learn.domain.activity.service.quota.chain;
 
 /**
  * @author Fuzhengwei bugstack.cn @小傅哥

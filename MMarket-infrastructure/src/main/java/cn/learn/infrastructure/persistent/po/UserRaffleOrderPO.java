@@ -1,15 +1,25 @@
 package cn.learn.infrastructure.persistent.po;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.Date;
 
 /**
- * @author Fuzhengwei bugstack.cn @小傅哥
- * @description 用户抽奖订单表
- * @create 2024-04-03 15:30
+ * <h1>用户抽奖订单表</h1>
+ * <h2>表结构介绍：
+ *  <ul>（user_id, activity_id）即（用户ID, 活动ID）设置了普通索引</ul>
+ *  <ul>（order_id）即（订单ID）设置了唯一索引</ul>
+ *  <ul>订单状态包括三种；create-创建、used-已使用、cancel-已作废	</ul>
+ * </h2>
+ *
  */
 @Data
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
 public class UserRaffleOrderPO {
 
     private String id;

@@ -1,6 +1,6 @@
 package cn.learn.trigger.listener;
 
-import cn.learn.domain.activity.service.ISkuStock;
+import cn.learn.domain.activity.service.IRaffleActivitySkuStockService;
 import cn.learn.types.event.BaseEvent;
 import com.alibaba.fastjson.TypeReference;
 import com.alibaba.fastjson2.JSON;
@@ -25,7 +25,7 @@ public class ActivitySkuStockZeroCustomer {
     private String topic;
 
     @Resource
-    private ISkuStock skuStock;
+    private IRaffleActivitySkuStockService skuStock;
 
     // note: 需要学习 RabbitMQ 的使用
     @RabbitListener(queuesToDeclare = @Queue(value = "activity_sku_stock_zero"))

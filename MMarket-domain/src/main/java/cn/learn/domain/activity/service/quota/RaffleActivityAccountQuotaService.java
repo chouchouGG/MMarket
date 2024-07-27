@@ -1,13 +1,13 @@
-package cn.learn.domain.activity.service;
+package cn.learn.domain.activity.service.quota;
 
-import cn.learn.domain.activity.model.aggregate.CreateOrderAggregate;
+import cn.learn.domain.activity.model.aggregate.CreateQuotaOrderAggregate;
 import cn.learn.domain.activity.model.entity.*;
 import cn.learn.domain.activity.model.valobj.ActivitySkuStockKeyVO;
 import cn.learn.domain.activity.model.valobj.OrderStateVO;
 import cn.learn.domain.activity.repository.IActivityRepository;
-import cn.learn.domain.activity.service.chain.factory.DefaultActivityChainFactory;
+import cn.learn.domain.activity.service.IRaffleActivitySkuStockService;
+import cn.learn.domain.activity.service.quota.chain.factory.DefaultActivityChainFactory;
 import org.apache.commons.lang3.RandomStringUtils;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Date;
@@ -18,15 +18,15 @@ import java.util.Date;
  * @create 2024-03-16 08:41
  */
 @Service
-public class RaffleActivityService extends AbstractRaffleActivity implements ISkuStock {
+public class RaffleActivityAccountQuotaService extends AbstractRaffleActivityAccountQuota implements IRaffleActivitySkuStockService {
 
-    public RaffleActivityService(IActivityRepository activityRepository, DefaultActivityChainFactory defaultActivityChainFactory) {
+    public RaffleActivityAccountQuotaService(IActivityRepository activityRepository, DefaultActivityChainFactory defaultActivityChainFactory) {
         super(activityRepository, defaultActivityChainFactory);
     }
 
     @Override
-    protected CreateOrderAggregate buildOrderAggregate(SkuRechargeEntity skuRechargeEntity, ActivitySkuEntity activitySkuEntity,
-                                                       ActivityEntity activityEntity, ActivityCountEntity activityCountEntity) {
+    protected CreateQuotaOrderAggregate buildOrderAggregate(SkuRechargeEntity skuRechargeEntity, ActivitySkuEntity activitySkuEntity,
+                                                            ActivityEntity activityEntity, ActivityCountEntity activityCountEntity) {
         // 创建活动订单实体对象
         ActivityOrderEntity activityOrderEntity = ActivityOrderEntity.builder()
                 .userId(skuRechargeEntity.getUserId())                  // （1）设置用户ID
@@ -46,7 +46,7 @@ public class RaffleActivityService extends AbstractRaffleActivity implements ISk
 
 
         // 构建聚合对象
-        return CreateOrderAggregate.builder()
+        return CreateQuotaOrderAggregate.builder()
                 .totalCount(activityCountEntity.getTotalCount())    // （8）设置总次数
                 .dayCount(activityCountEntity.getDayCount())        // （9）设置日次数
                 .monthCount(activityCountEntity.getMonthCount())    // （10）设置月次数
@@ -55,7 +55,7 @@ public class RaffleActivityService extends AbstractRaffleActivity implements ISk
     }
 
     @Override
-    protected void doSaveOrder(CreateOrderAggregate createOrderAggregate) {
+    protected void doSaveOrder(CreateQuotaOrderAggregate createOrderAggregate) {
         activityRepository.doSaveOrder(createOrderAggregate);
     }
 
