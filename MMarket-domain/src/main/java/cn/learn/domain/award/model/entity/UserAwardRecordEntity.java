@@ -1,5 +1,6 @@
-package cn.learn.infrastructure.persistent.po;
+package cn.learn.domain.award.model.entity;
 
+import cn.learn.domain.award.model.valobj.AwardStateVO;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -7,17 +8,12 @@ import lombok.NoArgsConstructor;
 
 import java.util.Date;
 
-/**
- * 用户中奖记录表
- */
 @Data
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class UserAwardRecordPO {
+public class UserAwardRecordEntity {
 
-    /** 自增ID */
-    private String id;
     /** 用户ID */
     private String userId;
     /** 活动ID */
@@ -33,10 +29,6 @@ public class UserAwardRecordPO {
     /** 中奖时间 */
     private Date awardTime;
     /** 奖品状态；create-创建、completed-发奖完成 */
-    private String awardState;
-    /** 创建时间 */
-    private Date createTime;
-    /** 更新时间 */
-    private Date updateTime;
+    private AwardStateVO awardState;
 
 }

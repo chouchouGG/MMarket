@@ -26,7 +26,7 @@ public class UpdateActivitySkuStockJob {
             // 1. 获取延迟阻塞队列中的库存对象
             ActivitySkuStockKeyVO activitySkuStockKeyVO = skuStock.takeQueueValue();
             if (null == activitySkuStockKeyVO) {
-                log.info("【定时任务-2】 - sku库存队列为空，无需更新库存");
+//                log.info("【定时任务-2】 - sku库存队列为空，无需更新库存");
                 return;
             }
             // 2. 更新数据库中的库存信息

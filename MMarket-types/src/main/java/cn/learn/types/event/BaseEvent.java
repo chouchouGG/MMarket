@@ -8,30 +8,37 @@ import lombok.NoArgsConstructor;
 import java.util.Date;
 
 /**
- * @author Fuzhengwei bugstack.cn @小傅哥
- * @description 基础事件
- * @create 2024-03-30 12:42
+ * <h2>{@link BaseEvent} 提供了一种模板方法模式。它定义了
+ * ‘构建事件消息标准格式的方法’ {@link BaseEvent#buildEventMessage(Object)} 和
+ * ‘获取事件主题的方法’ {@link BaseEvent#topic()}。</h2>
  */
 @Data
 public abstract class BaseEvent<T> {
 
     /**
-     * 构建事件消息的方法，需要子类实现。
+     * <h1>构建事件消息的方法</h1>
      *
-     * @param data 事件数据
-     * @return 构建的事件消息
+     * @param data 事件消息
+     * @return 标准格式的事件消息对象
      */
     public abstract EventMessage<T> buildEventMessage(T data);
 
+
     /**
-     * 获取事件主题的方法，需要子类实现。
+     * <h1>获取事件主题的方法</h1>
      *
      * @return 事件主题
      */
     public abstract String topic();
 
 
-    // note: EventMessage 类表示事件消息，定义了标准的消息格式（包含 id、timestamp 和 data 三个字段）
+    /**
+     * <h2>note: {@link cn.learn.types.event.BaseEvent.EventMessage} 类用于表示事件消息的标准格式，
+     *  定义了标准的消息格式
+     *  （包含 {@link cn.learn.types.event.BaseEvent.EventMessage#id}、
+     *  {@link cn.learn.types.event.BaseEvent.EventMessage#timestamp} 和
+     *  {@link cn.learn.types.event.BaseEvent.EventMessage#data} 三个字段）</h2>
+     */
     @Data
     @Builder
     @AllArgsConstructor

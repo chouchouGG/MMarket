@@ -13,9 +13,8 @@ import org.springframework.stereotype.Component;
 import javax.annotation.Resource;
 
 /**
- * @author chouchouGG
- * @description Customer 用于监听 RabbitMQ 队列消息的组件。当活动 SKU 库存耗尽时，该类会接收到相应的消息并进行处理。
- * @create 2024-03-30 12:31
+ *  <p>监听 RabbitMQ 队列消息的处理器。当活动 SKU 库存耗尽时，该类会接收到相应的消息并进行处理。</p>
+ *  <h2>此MQ消息用于抽奖系统内部使用，用于在库存为0时立即更新，终止趋势更新的流程。</h2>
  */
 @Slf4j
 @Component

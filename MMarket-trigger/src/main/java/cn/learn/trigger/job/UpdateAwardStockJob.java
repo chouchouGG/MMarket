@@ -31,7 +31,7 @@ public class UpdateAwardStockJob {
             // 1. 获取延迟阻塞任务队列中的【奖品消耗库存对象】strategyAwardStockKeyVO
             StrategyAwardStockKeyVO strategyAwardStockKeyVO = raffleStock.takeQueueValue();
             if (strategyAwardStockKeyVO == null) {
-                log.info("【定时任务-1】 - 奖品库存队列为空，无需更新库存");
+//                log.info("【定时任务-1】 - 奖品库存队列为空，无需更新库存");
                 return;
             }
             log.info("【定时任务-1】 - 正在更新奖品消耗库存，strategyId: {} awardId: {}", strategyAwardStockKeyVO.getStrategyId(), strategyAwardStockKeyVO.getAwardId());

@@ -13,7 +13,8 @@
      <tree path="/MMarket-domain/src/main/java/cn/learn/domain/activity/service/chain/factory/DefaultActivityChainFactory.java"
            title="责任链工厂用于自动化构建责任链"/>
     <tree path="/MMarket-domain/src/main/java/cn/learn/domain/activity/service/chain/impl" title="责任链节点实现"/>
-    <tree path="/MMarket-domain/src/main/java/cn/learn/domain/activity/service/armory" title="活动装配相关"/>
+    <tree path="/MMarket-domain/src/main/java/cn/learn/domain/activity/service/armory" title="装配" extension=""
+          presentableText="" tooltipTitle="" icon="" textColor="" backgroundColor=""/>
     <tree path="/MMarket-domain/src/main/java/cn/learn/domain/activity/model/valobj/ActivityStateVO.java"
           title="活动状态"/>
     <tree path="/MMarket-infrastructure/src/main/java/cn/learn/infrastructure/event" title="工具包，发送RabbitMQ消息"/>
@@ -39,10 +40,16 @@
           title="用户中奖记录表"/>
     <tree path="/MMarket-infrastructure/src/main/java/cn/learn/infrastructure/persistent/po/UserRaffleOrderPO.java"
           title="用户抽奖订单表"/>
-    <tree path="/MMarket-domain/src/main/java/cn/learn/domain/activity/service/partake" title="用户领取活动的相关处理"/>
+    <tree path="/MMarket-domain/src/main/java/cn/learn/domain/activity/service/partake" title="用户参与活动"
+          extension="" presentableText="" tooltipTitle="" icon="" textColor="" backgroundColor=""/>
     <tree path="/MMarket-domain/src/main/java/cn/learn/domain/activity/model/entity/PartakeRaffleActivityEntity.java"
           title="用户参与抽奖的实体对象"/>
     <tree path="/MMarket-domain/src/main/java/cn/learn/domain/activity/model/entity" title="影响数据库的一般定义实体"/>
     <tree path="/MMarket-domain/src/main/java/cn/learn/domain/activity/model/aggregate"
           title="保证事务的一般定义聚合对象"/>
+    <tree path="/MMarket-domain/src/main/java/cn/learn/domain/activity/service/quota" title="活动额度"/>
+    <tree path="/MMarket-trigger/src/main/java/cn/learn/trigger/listener/SendAwardCustomer.java"
+          title="模拟客户端接受发奖的处理"/>
+    <tree path="/MMarket-trigger/src/main/java/cn/learn/trigger/listener/ActivitySkuStockZeroCustomer.java"
+          title="抽奖系统内部使用"/>
 </trees>
