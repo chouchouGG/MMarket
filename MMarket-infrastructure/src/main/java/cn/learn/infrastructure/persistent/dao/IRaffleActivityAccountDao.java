@@ -41,4 +41,9 @@ public interface IRaffleActivityAccountDao {
 
     @DBRouter // 分库分表路由
     RaffleActivityAccountPO queryActivityAccount(RaffleActivityAccountPO param);
+
+    int updateActivityAccountMonthSubtractionQuota(RaffleActivityAccountPO raffleActivityAccount);
+
+    int updateActivityAccountDaySubtractionQuota(RaffleActivityAccountPO raffleActivityAccount);
+
 }

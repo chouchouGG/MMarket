@@ -41,15 +41,12 @@ public interface IActivityRepository {
     ActivityCountEntity queryRaffleActivityCountByActivityCountId(Long activityCountId);
 
 
-
     /**
      * 保存订单信息
      *
      * @param createOrderAggregate 订单聚合对象，包含订单相关的所有信息
      */
     void doSaveOrder(CreateQuotaOrderAggregate createOrderAggregate);
-
-
 
 
 
@@ -70,7 +67,6 @@ public interface IActivityRepository {
      * @return 如果库存扣减成功返回 true，否则返回 false。
      */
     boolean subtractionActivitySkuStock(Long sku, String cacheKey, Date endDateTime);
-
 
 
 
@@ -108,6 +104,9 @@ public interface IActivityRepository {
      */
     void clearActivitySkuStock(Long sku);
 
+    /**
+     * <h1>note:活动订单的核心逻辑</h1>
+     */
     void saveCreatePartakeOrderAggregate(CreatePartakeOrderAggregate createPartakeOrderAggregate);
 
     ActivityAccountEntity queryActivityAccount(String userId, Long activityId);
