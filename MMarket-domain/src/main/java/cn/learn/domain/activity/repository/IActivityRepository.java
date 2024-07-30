@@ -6,6 +6,7 @@ import cn.learn.domain.activity.model.entity.*;
 import cn.learn.domain.activity.model.valobj.ActivitySkuStockKeyVO;
 
 import java.util.Date;
+import java.util.List;
 
 /**
  * @author chouchouGG
@@ -52,11 +53,8 @@ public interface IActivityRepository {
 
     /**
      * 缓存活动 SKU 的库存数量。
-     *
-     * @param cacheKey 用于缓存的键，通常包括 SKU 信息和其他标识符。
-     * @param stockCount 要缓存的库存数量，表示总库存或剩余库存。
      */
-    void cacheActivitySkuStockCount(String cacheKey, Integer stockCount);
+    void cacheActivitySkuStockCount(Long sku, Integer stockCount);
 
     /**
      * 扣减活动 SKU 的库存数量。
@@ -116,4 +114,6 @@ public interface IActivityRepository {
     ActivityAccountDayEntity queryActivityAccountDay(String userId, Long activityId, String day);
 
     UserRaffleOrderEntity queryNoUsedRaffleOrder(PartakeRaffleActivityEntity partakeRaffleActivityEntity);
+
+    List<ActivitySkuEntity> queryActivitySkuListByActivityId(Long activityId);
 }

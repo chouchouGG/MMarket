@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 import java.util.Date;
+import java.util.List;
 
 /**
  * @author Fuzhengwei bugstack.cn @小傅哥
@@ -27,8 +28,8 @@ public class ActivityArmory implements IActivityArmory, IActivityDispatch {
         // 预热活动sku库存
         ActivitySkuEntity activitySkuEntity = activityRepository.queryRaffleActivitySku(sku);
 
-        // note：这里缓存的是总库存，缓存剩余库存也是可以的
-        cacheActivitySkuStockCount(sku, activitySkuEntity.getStockCountSurplus());
+        // note：这里缓存的是剩余库存，缓存总库存也是可以的
+        activityRepository.cacheActivitySkuStockCount(sku, activitySkuEntity.getStockCountSurplus());
 
         // 预热活动【查询并预热到缓存】
         activityRepository.queryRaffleActivityByActivityId(activitySkuEntity.getActivityId());
@@ -39,11 +40,21 @@ public class ActivityArmory implements IActivityArmory, IActivityDispatch {
         return true;
     }
 
-    /**
-     * 缓存库存
-     */
-    private void cacheActivitySkuStockCount(Long sku, Integer stockCountSurplus) {
-        activityRepository.cacheActivitySkuStockCount(Constants.RedisKey.acquireKey_skuStockCount(sku), stockCountSurplus);
+    @Override
+    public boolean assembleActivitySkuByActivityId(Long activityId) {
+        // SKU和活动ID之间为一对多：一个SKU确定一个活动ID和次数ID，一个活动ID有可能对应多个SKU
+        // note：（2024年7月29日-暂时理解）结果是查询出来的sku实体的列表中，活动ID都相同，次数ID不同，对应于不同的触发行为
+        List<ActivitySkuEntity> activitySkuEntities = activityRepository.queryActivitySkuListByActivityId(activityId);
+        // 循环处理所有的SKU
+        for (ActivitySkuEntity activitySkuEntity : activitySkuEntities) {
+            // 缓存SKU的库存剩余（note：sku库存是交给运维进行营销成本控制的）
+            activityRepository.cacheActivitySkuStockCount(activitySkuEntity.getSku(), activitySkuEntity.getStockCountSurplus());
+            // 预热活动次数【查询时预热到缓存】
+            activityRepository.queryRaffleActivityCountByActivityCountId(activitySkuEntity.getActivityCountId());
+        }
+        // 预热活动【查询时预热到缓存】
+        activityRepository.queryRaffleActivityByActivityId(activityId);
+        return true;
     }
 
     /**

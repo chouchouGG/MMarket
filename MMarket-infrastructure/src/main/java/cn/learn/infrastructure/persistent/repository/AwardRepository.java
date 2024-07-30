@@ -8,8 +8,10 @@ import cn.learn.domain.award.repository.IAwardRepository;
 import cn.learn.infrastructure.event.EventPublisher;
 import cn.learn.infrastructure.persistent.dao.ITaskDao;
 import cn.learn.infrastructure.persistent.dao.IUserAwardRecordDao;
+import cn.learn.infrastructure.persistent.dao.IUserRaffleOrderDao;
 import cn.learn.infrastructure.persistent.po.TaskPO;
 import cn.learn.infrastructure.persistent.po.UserAwardRecordPO;
+import cn.learn.infrastructure.persistent.po.UserRaffleOrderPO;
 import cn.learn.types.enums.ResponseCode;
 import cn.learn.types.exception.AppException;
 import com.alibaba.fastjson.JSON;
@@ -34,6 +36,9 @@ public class AwardRepository implements IAwardRepository {
 
     @Resource
     private IUserAwardRecordDao userAwardRecordDao;
+
+    @Resource
+    private IUserRaffleOrderDao userRaffleOrderDao; // 用于更新订单状态
 
     @Resource
     private IDBRouterStrategy dbRouter; // 分库分表
@@ -69,6 +74,11 @@ public class AwardRepository implements IAwardRepository {
                 .state(taskEntity.getState().getCode())
                 .build();
 
+        UserRaffleOrderPO userRaffleOrderReq = UserRaffleOrderPO.builder()
+                .userId(userAwardRecordEntity.getUserId())
+                .orderId(userAwardRecordEntity.getOrderId())
+                .build();
+
         // 获取后续逻辑会使用到的一些值
         String userId = userAwardRecordEntity.getUserId();
         Long activityId = userAwardRecordEntity.getActivityId();
@@ -76,16 +86,23 @@ public class AwardRepository implements IAwardRepository {
 
         try {
             dbRouter.doRouter(userId);
-            // 执行事务， 写入 1.用户中奖订单记录 2.MQ事件消息任务
+            // 执行事务: 写入 1.用户中奖订单记录 2.MQ事件消息任务
             transactionTemplate.execute(
                     new TransactionCallback<Object>() {
                         @Override
                         public Object doInTransaction(TransactionStatus status) {
                             try {
-                                // 写入用户中奖订单记录
+                                // 1. 写入用户中奖订单记录
                                 userAwardRecordDao.insert(userAwardRecord);
-                                // 写入MQ事件消息任务
+                                // 2. 写入MQ事件消息任务
                                 taskDao.insert(task);
+                                // 3. 更新用户抽奖单状态：created -> used
+                                int count = userRaffleOrderDao.updateUserRaffleOrderStateUsed(userRaffleOrderReq);
+                                if (1 != count) {
+                                    status.setRollbackOnly();
+                                    log.error("写入中奖记录，用户抽奖单已使用过，不可重复抽奖 userId: {} activityId: {} awardId: {}", userId, activityId, awardId);
+                                    throw new AppException(ResponseCode.ACTIVITY_ORDER_ERROR.getCode(), ResponseCode.ACTIVITY_ORDER_ERROR.getInfo());
+                                }
                                 return 1;
                             } catch (DuplicateKeyException e) {
                                 status.setRollbackOnly();

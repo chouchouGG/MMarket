@@ -5,6 +5,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
@@ -39,5 +40,12 @@ public class RaffleActivityAccountDayPO {
 
     /** 更新时间 */
     private Date updateTime;
+
+    /**
+     * @return 当日的格式化日期：yyyy-MM-dd
+     */
+    public static String currentFormatedDay() {
+        return new SimpleDateFormat("yyyy-MM-dd").format(new Date());
+    }
 
 }

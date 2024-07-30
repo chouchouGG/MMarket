@@ -52,4 +52,14 @@
           title="模拟客户端接受发奖的处理"/>
     <tree path="/MMarket-trigger/src/main/java/cn/learn/trigger/listener/ActivitySkuStockZeroCustomer.java"
           title="抽奖系统内部使用"/>
+    <tree path="/MMarket-domain/src/main/java/cn/learn/domain/activity/service/IRaffleActivityAccountQuotaService.java"
+          title="用户抽奖额度相关"/>
+    <tree path="/MMarket-domain/src/main/java/cn/learn/domain/activity/service/IRaffleActivityPartakeService.java"
+          title="用户参与抽奖相关"/>
+    <tree path="/MMarket-domain/src/main/java/cn/learn/domain/activity/service/IRaffleActivitySkuStockService.java"
+          title="sku库存模块" extension="" presentableText="" tooltipTitle="" icon="" textColor="" backgroundColor=""/>
+    <tree path="/MMarket-domain/src/main/java/cn/learn/domain/award" title="中奖记录入库 & 发奖" extension=""
+          presentableText="" tooltipTitle="" icon="" textColor="" backgroundColor=""/>
+    <tree path="/MMarket-domain/src/main/java/cn/learn/domain/strategy/service/rule/tree/impl/CompositeNode.java"
+          title="组合节点"/>
 </trees>

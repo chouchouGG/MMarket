@@ -12,8 +12,22 @@ import org.apache.ibatis.annotations.Mapper;
 @DBRouterStrategy(splitTable = true)
 public interface IUserRaffleOrderDao {
 
-    void insert(UserRaffleOrderPO build);
+    /**
+     * 插入新的用户抽奖订单记录。
+     */
+    void insert(UserRaffleOrderPO userRaffleOrder);
 
+    /**
+     * 查询未使用的用户抽奖订单。
+     */
     @DBRouter
     UserRaffleOrderPO queryNoUsedRaffleOrder(UserRaffleOrderPO userRaffleOrderReq);
+
+    /**
+     * 更新用户抽奖订单的状态为已使用。
+     *
+     * @return 更新成功的记录数
+     */
+    int updateUserRaffleOrderStateUsed(UserRaffleOrderPO userRaffleOrderReq);
+
 }

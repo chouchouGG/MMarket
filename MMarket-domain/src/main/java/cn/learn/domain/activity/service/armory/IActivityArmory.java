@@ -9,4 +9,9 @@ public interface IActivityArmory {
 
     boolean assembleActivitySku(Long sku);
 
+    /**
+     * 通过活动ID进行装配
+     */
+    boolean assembleActivitySkuByActivityId(Long activityId);
+
 }

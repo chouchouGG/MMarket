@@ -25,7 +25,9 @@ import org.springframework.stereotype.Repository;
 import org.springframework.transaction.support.TransactionTemplate;
 
 import javax.annotation.Resource;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -204,7 +206,8 @@ public class ActivityRepository implements IActivityRepository {
     }
 
     @Override
-    public void cacheActivitySkuStockCount(String cacheKey, Integer stockCount) {
+    public void cacheActivitySkuStockCount(Long sku, Integer stockCount) {
+        String cacheKey = Constants.RedisKey.acquireKey_skuStockCount(sku);
         if (redisService.isExists(cacheKey)) {
             return;
         }
@@ -473,5 +476,21 @@ public class ActivityRepository implements IActivityRepository {
         }
         // 2. 转换对象
         return UserRaffleOrderEntity.builder().userId(res.getUserId()).activityId(res.getActivityId()).activityName(res.getActivityName()).strategyId(res.getStrategyId()).orderId(res.getOrderId()).orderTime(res.getOrderTime()).orderState(UserRaffleOrderStateVO.valueOf(res.getOrderState())).build();
+    }
+
+    @Override
+    public List<ActivitySkuEntity> queryActivitySkuListByActivityId(Long activityId) {
+        List<RaffleActivitySkuPO> raffleActivitySkus = raffleActivitySkuDao.queryActivitySkuListByActivityId(activityId);
+        List<ActivitySkuEntity> list = new ArrayList<>(raffleActivitySkus.size());
+        for (RaffleActivitySkuPO raffleActivitySku : raffleActivitySkus) {
+            ActivitySkuEntity activitySkuEntity = ActivitySkuEntity.builder()
+                    .sku(raffleActivitySku.getSku())
+                    .activityCountId(raffleActivitySku.getActivityCountId())
+                    .stockCount(raffleActivitySku.getStockCount())
+                    .stockCountSurplus(raffleActivitySku.getStockCountSurplus())
+                    .build();
+            list.add(activitySkuEntity);
+        }
+        return list;
     }
 }

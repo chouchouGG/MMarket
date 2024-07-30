@@ -17,19 +17,24 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class RaffleAwardEntity {
 
-    // 抽奖奖品ID - 内部流转使用
+    /**
+     * 奖品ID
+     */
     private Integer awardId;
 
-    // 奖品配置信息
-    private String awardRuleValue;
+    /**
+     * 抽奖奖品标题
+     */
+    private String awardTitle;
 
-    // 规则模型
-    private String ruleModel;
+    /**
+     * 奖品配置信息
+     */
+    private String awardConfig;
 
-    // 处理流程的结果描述，用于提供反馈
-    private String resultDesc;
-
-    // 排序
+    /**
+     * 奖品顺序号
+     */
     private Integer sort;
 
 }

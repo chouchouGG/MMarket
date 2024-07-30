@@ -6,15 +6,13 @@ import cn.learn.domain.strategy.model.entity.StrategyRuleEntity;
 import cn.learn.domain.strategy.model.vo.StrategyAwardRuleModelVO;
 import cn.learn.domain.strategy.model.vo.StrategyAwardStockKeyVO;
 import cn.learn.domain.strategy.respository.IStrategyRepository;
-import cn.learn.infrastructure.persistent.dao.IStrategyAwardDao;
-import cn.learn.infrastructure.persistent.dao.IStrategyDao;
-import cn.learn.infrastructure.persistent.dao.IStrategyRuleDao;
+import cn.learn.infrastructure.persistent.dao.*;
+import cn.learn.infrastructure.persistent.po.RaffleActivityAccountDayPO;
 import cn.learn.infrastructure.persistent.po.StrategyAwardPO;
 import cn.learn.infrastructure.persistent.po.StrategyPO;
 import cn.learn.infrastructure.persistent.po.StrategyRulePO;
 import cn.learn.infrastructure.persistent.redis.IRedisService;
 import cn.learn.types.common.Constants;
-import cn.learn.types.enums.ResponseCode;
 import cn.learn.types.exception.AppException;
 import lombok.extern.slf4j.Slf4j;
 import org.redisson.api.RBlockingQueue;
@@ -28,7 +26,6 @@ import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 import static cn.learn.types.enums.ResponseCode.UN_ASSEMBLED_STRATEGY_ARMORY;
-import static com.sun.xml.internal.ws.api.message.Packet.Status.Response;
 
 /*
  *  Note: 工程模块的依赖关系是 infrastructure 模块依赖于 domain 模块，
@@ -63,6 +60,13 @@ public class StrategyRepository implements IStrategyRepository {
     // redisClient 客户端
     @Resource
     private IRedisService redisService;
+
+    // note：为组合抽奖活动接口和抽奖策略接口使用
+    @Resource
+    private IRaffleActivityDao raffleActivityDao;
+
+    @Resource
+    private IRaffleActivityAccountDayDao raffleActivityAccountDayDao; // 用于查询当日次数相关
 
 
 
@@ -284,7 +288,29 @@ public class StrategyRepository implements IStrategyRepository {
 
         return strategyAwardEntity;
     }
+    @Override
+    public Long queryStrategyIdByActivityId(Long activityId) {
+        return raffleActivityDao.queryStrategyIdByActivityId(activityId);
+    }
 
+    @Override
+    public Integer queryTodayUserRaffleCount(String userId, Long strategyId) {
+        // 活动ID
+        Long activityId = raffleActivityDao.queryActivityIdByStrategyId(strategyId);
+        // 查询用户日剩余次数
+        RaffleActivityAccountDayPO raffleActivityAccountDay = raffleActivityAccountDayDao.queryActivityAccountDay(
+                RaffleActivityAccountDayPO.builder()
+                        .userId(userId)
+                        .activityId(activityId)
+                        .day(RaffleActivityAccountDayPO.currentFormatedDay())
+                        .build()
+        );
+        if (null == raffleActivityAccountDay) {
+            return 0;
+        }
+        // 今日参与抽奖次数 = 日限额次数 - 日剩余次数
+        return raffleActivityAccountDay.getDayCount() - raffleActivityAccountDay.getDayCountSurplus();
+    }
 
 }
 

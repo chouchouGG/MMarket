@@ -51,7 +51,7 @@ public abstract class AbstractRaffleStrategy implements IRaffleStrategy {
         // 2. 构建责任链节点和决策树节点的状态流转对象context
         ProcessingContext context = ProcessingContext.builder().userId(userId).strategyId(strategyId).build();
 
-        // 3. 责任链抽奖计算【这步，拿到的是初步的抽奖ID，之后需要根据ID处理抽奖】注意；黑名单、权重等非默认抽奖的直接返回抽奖结果
+        // 3. 责任链抽奖计算
         raffleLogicChain(context);
         log.info("抽奖策略计算-责任链：用户ID: {} 策略ID: {} 奖品ID: {} 规则模型: {} 处理状态: {} 结果描述: {}",
                 context.getUserId(), context.getStrategyId(), context.getAwardId(), context.getRuleModel(), context.getStatus().getInfo(), context.getResultDesc());
@@ -64,10 +64,9 @@ public abstract class AbstractRaffleStrategy implements IRaffleStrategy {
         // 5. 返回抽奖结果
         StrategyAwardEntity entity = repository.queryStrategyAwardEntity(context.getStrategyId(), context.getAwardId());
         return RaffleAwardEntity.builder()
-                .awardId(context.getAwardId())
-                .awardRuleValue(context.getAwardRuleValue())
-                .ruleModel(context.getRuleModel())
-                .resultDesc(context.getResultDesc())
+                .awardId(entity.getAwardId())
+                .awardTitle(entity.getAwardTitle())
+                .awardConfig(context.getAwardRuleValue())
                 .sort(entity.getSort())
                 .build();
     }

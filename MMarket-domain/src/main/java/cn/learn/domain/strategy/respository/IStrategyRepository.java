@@ -127,4 +127,24 @@ public interface IStrategyRepository {
      * @return 返回对应的策略奖品实体 {@code StrategyAwardEntity}。
      */
     StrategyAwardEntity queryStrategyAwardEntity(Long strategyId, Integer awardId);
+
+    /**
+     * 查询策略ID
+     *
+     * @param activityId 活动ID
+     * @return 策略ID
+     */
+    Long queryStrategyIdByActivityId(Long activityId);
+
+    /**
+     * <p>查询用户当天的抽奖次数，分为两步操作。</p>
+     * <p> 目前，（活动ID:策略ID）采取（1:1） 的配置，所以直接用 strategyId 查询活动ID是可以的。</p>
+     * <p>step 1: 根据策略ID查到活动ID</p>
+     * <p>step 2: 根据活动ID和用户ID，查询到当日的用户抽奖次数</p>
+     * <br>
+     *
+     * @return 用户今日参与抽奖的次数
+     */
+    Integer queryTodayUserRaffleCount(String userId, Long strategyId);
+
 }

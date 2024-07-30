@@ -2,8 +2,8 @@ package cn.learn.trigger.api;
 
 import cn.learn.trigger.api.dto.RaffleAwardListReqDTO;
 import cn.learn.trigger.api.dto.RaffleAwardListResDTO;
-import cn.learn.trigger.api.dto.RaffleReqDTO;
-import cn.learn.trigger.api.dto.RaffleResDTO;
+import cn.learn.trigger.api.dto.RaffleStrategyReqDTO;
+import cn.learn.trigger.api.dto.RaffleStrategyResDTO;
 import cn.learn.types.model.Response;
 
 import java.util.List;
@@ -14,7 +14,7 @@ import java.util.List;
  * @author: chouchouGG
  * @create: 2024-06-23 15:38
  **/
-public interface IRaffleService {
+public interface IRaffleStrategyService {
 
 
     /**
@@ -39,5 +39,5 @@ public interface IRaffleService {
      * @param requestDTO 请求参数
      * @return 抽奖结果
      */
-    Response<RaffleResDTO> randomRaffle(RaffleReqDTO requestDTO);
+    Response<RaffleStrategyResDTO> randomRaffle(RaffleStrategyReqDTO requestDTO);
 }
