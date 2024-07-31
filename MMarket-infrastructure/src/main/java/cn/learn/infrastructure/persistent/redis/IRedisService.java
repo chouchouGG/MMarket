@@ -8,9 +8,7 @@ import java.util.concurrent.TimeUnit;
  * @author chouchouGG
  * NOTE: 项目代码依赖抽象接口，而不是直接使用 redissonClient，可以在后续需要时更换 redis客户端为其他第三方库
  *  使用第三方库时，最好都封装一下，项目使用封装好的接口，而不直接具体某个第三方库提供的API，提高可维护性，实现解耦。
- * @author Fuzhengwei bugstack.cn @xfg
  */
-
 public interface IRedisService {
 
     /**
@@ -242,12 +240,10 @@ public interface IRedisService {
      */
     <T> RBloomFilter<T> getBloomFilter(String key);
 
-
     /**
      *
      */
     <K, V> RMap<K, V> getMap(String key);
-
 
     /**
      * 设置值
@@ -260,4 +256,5 @@ public interface IRedisService {
     Boolean setNx(String key);
 
     Boolean setNx(String key, long expired, TimeUnit timeUnit);
+
 }

@@ -25,7 +25,6 @@
         where user_id = #{userId} and message_id = #{messageId}
     </update>
 
-    <!--fixme：参数类型xfg用的是UserAwardRecord-->
     <update id="updateTaskSendMessageFail" parameterType="cn.learn.infrastructure.persistent.po.TaskPO">
         update task
         set state = 'fail', update_time = now()

@@ -2,6 +2,8 @@ package cn.learn.domain.strategy.model.entity;
 
 import lombok.*;
 
+import java.util.Date;
+
 /**
  * @program: MMarket
  * @description: 封装责任链节点处理过程中所需的所有参数和状态。在增添了决策树的组合模式后也用于决策树中保存状态和控制程序执行流。
@@ -36,6 +38,9 @@ public class ProcessingContext {
     // 标记是否需要分配兜底奖品
     @Builder.Default
     private boolean needsFallbackAward = false;
+
+    /** 活动结束时间：用于设置redis中的缓存key */
+    private Date endDateTime;
 
     /**
      * @program: MMarket

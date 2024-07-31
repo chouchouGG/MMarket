@@ -49,7 +49,11 @@ public abstract class AbstractRaffleStrategy implements IRaffleStrategy {
         }
 
         // 2. 构建责任链节点和决策树节点的状态流转对象context
-        ProcessingContext context = ProcessingContext.builder().userId(userId).strategyId(strategyId).build();
+        ProcessingContext context = ProcessingContext.builder()
+                .userId(userId)
+                .strategyId(strategyId)
+                .endDateTime(raffleFactorEntity.getEndDateTime())
+                .build();
 
         // 3. 责任链抽奖计算
         raffleLogicChain(context);

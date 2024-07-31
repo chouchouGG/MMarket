@@ -9,7 +9,6 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * @author chouchouGG
- * @author Fuzhengwei bugstack.cn @xfg
  * @description 对 Redisson 客户端api的封装
  * note：需要分析该类的实现
  */

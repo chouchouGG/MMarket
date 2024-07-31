@@ -43,6 +43,8 @@ public class ActivitySkuStockZeroCustomer {
             log.info("MQ 消息处理：设置数据库 sku 缓存为 0");
 
             // 清空队列（此时就不需要延迟更新数据库记录了）
+            // fixme: 所有的sku使用的是同一个队列，所以这里清空会将所有sku都清空，而我们的目的是只将当前sku相关的记录清楚，而不是全部清空。（21jie）
+            // todo: 优化的措施是，为每个SKU设置一个队列
             skuStock.clearQueueValue();
             log.info("MQ 消息处理：清空延迟队列中待更新的 sku 库存数据");
         } catch (Exception e) {

@@ -38,7 +38,7 @@ public class RuleStockNode implements ILogicTreeNode {
 
         // note: 奖品库存扣减是重点内容，需要【深入理解】
         // 1. 扣减Reids中库存
-        Boolean isSuccessful = repository.subtractionAwardStock(context.getStrategyId(), context.getAwardId());
+        Boolean isSuccessful = repository.subtractionAwardStock(context.getStrategyId(), context.getAwardId(), context.getEndDateTime());
 
         // 2. 检查是否扣减成功
         context.setRuleModel(RULE_STOCK);

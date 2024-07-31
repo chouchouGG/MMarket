@@ -6,6 +6,7 @@ import cn.learn.domain.strategy.model.entity.StrategyRuleEntity;
 import cn.learn.domain.strategy.model.vo.StrategyAwardRuleModelVO;
 import cn.learn.domain.strategy.model.vo.StrategyAwardStockKeyVO;
 
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
@@ -94,6 +95,7 @@ public interface IStrategyRepository {
      */
     Boolean subtractionAwardStock(Long strategyId, Integer awardId);
 
+    Boolean subtractionAwardStock(Long strategyId, Integer awardId, Date endDateTime);
 
     /**
      * 写入奖品库存消费队列
