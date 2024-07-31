@@ -147,4 +147,10 @@ public interface IStrategyRepository {
      */
     Integer queryTodayUserRaffleCount(String userId, Long strategyId);
 
+    /**
+     * 给定一个策略下的所有奖品实体，根据策略id、奖品id，查询出所有配置了解锁规则的奖品对应的解锁次数
+     * @param strategyAwardEntities 一个策略下的所有奖品实体
+     * @return
+     */
+    Map<Integer, Integer> queryAwardRuleLockCount(List<StrategyAwardEntity> strategyAwardEntities);
 }

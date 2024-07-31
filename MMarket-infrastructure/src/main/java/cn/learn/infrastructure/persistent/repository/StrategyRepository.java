@@ -21,6 +21,7 @@ import org.springframework.stereotype.Repository;
 
 import javax.annotation.Resource;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
@@ -95,6 +96,7 @@ public class StrategyRepository implements IStrategyRepository {
                     .awardRate(strategyAward.getAwardRate())
                     .awardTitle(strategyAward.getAwardTitle())
                     .awardSubtitle(strategyAward.getAwardSubtitle())
+                    .ruleModels(strategyAward.getRuleModels())
                     .sort(strategyAward.getSort())
                     .build();
             strategyAwardEntities.add(strategyAwardEntity);
@@ -310,6 +312,33 @@ public class StrategyRepository implements IStrategyRepository {
         }
         // 今日参与抽奖次数 = 日限额次数 - 日剩余次数
         return raffleActivityAccountDay.getDayCount() - raffleActivityAccountDay.getDayCountSurplus();
+    }
+
+    @Override
+    public Map<Integer, Integer> queryAwardRuleLockCount(List<StrategyAwardEntity> strategyAwardEntities) {
+        if (null == strategyAwardEntities || strategyAwardEntities.isEmpty()) {
+            return new HashMap<>();
+        }
+
+        // 获取所有配置的解锁规则的奖品ID，以及与之对应的解锁次数
+        List<StrategyRulePO> awardRuleLockCountList = null;
+        for (StrategyAwardEntity strategyAwardEntity : strategyAwardEntities) {
+            // 只要有一个奖品设置了解锁规则，就将当前策略下所有的解锁奖品全都查出来
+            if (strategyAwardEntity.getRuleModels().contains(Constants.RuleModel.RULE_LOCK)) {
+                awardRuleLockCountList = strategyRuleDao.queryAwardRuleLockCount(strategyAwardEntity.getStrategyId());
+                break;
+            }
+        }
+
+        // 将奖品ID与解锁次数以键值对的形式保存
+        if (awardRuleLockCountList == null) {
+            return new HashMap<>();
+        }
+        Map<Integer, Integer> resultMap = new HashMap<>();
+        for (StrategyRulePO awardRuleLockCount : awardRuleLockCountList) {
+            resultMap.put(awardRuleLockCount.getAwardId(), Integer.valueOf(awardRuleLockCount.getRuleValue()));
+        }
+        return resultMap;
     }
 
 }

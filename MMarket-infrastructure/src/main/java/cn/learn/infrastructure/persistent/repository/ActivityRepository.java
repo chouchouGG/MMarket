@@ -493,4 +493,16 @@ public class ActivityRepository implements IActivityRepository {
         }
         return list;
     }
+
+    @Override
+    public Integer queryAccountDayPartakeCount(Long activityId, String userId) {
+        RaffleActivityAccountDayPO raffleActivityAccountDay = RaffleActivityAccountDayPO.builder()
+                .activityId(activityId)
+                .userId(userId)
+                .day(RaffleActivityAccountDayPO.currentFormatedDay())
+                .build();
+        Integer dayPartakeCount = raffleActivityAccountDayDao.queryAccountDayPartakeCount(raffleActivityAccountDay);
+        // 当日未参与抽奖则默认为 0 次
+        return null == dayPartakeCount ? 0 : dayPartakeCount;
+    }
 }

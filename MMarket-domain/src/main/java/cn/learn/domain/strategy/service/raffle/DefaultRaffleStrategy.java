@@ -6,6 +6,7 @@ import cn.learn.domain.strategy.model.vo.StrategyAwardStockKeyVO;
 import cn.learn.domain.strategy.respository.IStrategyRepository;
 import cn.learn.domain.strategy.service.AbstractRaffleStrategy;
 import cn.learn.domain.strategy.service.IRaffleAward;
+import cn.learn.domain.strategy.service.IRaffleRule;
 import cn.learn.domain.strategy.service.IRaffleStock;
 import cn.learn.domain.strategy.service.rule.chain.factory.DefaultChainFactory;
 import cn.learn.domain.strategy.service.rule.chain.logicChain.ILogicChain;
@@ -15,6 +16,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * @program: MMarket
@@ -24,7 +26,7 @@ import java.util.List;
  **/
 @Slf4j
 @Service
-public class DefaultRaffleStrategy extends AbstractRaffleStrategy implements IRaffleStock, IRaffleAward {
+public class DefaultRaffleStrategy extends AbstractRaffleStrategy implements IRaffleStock, IRaffleAward, IRaffleRule {
 
     public DefaultRaffleStrategy(DefaultChainFactory defaultChainFactory, DefaultTreeFactory defaultTreeFactory, IStrategyRepository repository) {
         super(defaultChainFactory, defaultTreeFactory, repository);
@@ -69,5 +71,16 @@ public class DefaultRaffleStrategy extends AbstractRaffleStrategy implements IRa
     @Override
     public List<StrategyAwardEntity> queryRaffleStrategyAwardList(Long strategyId) {
         return repository.queryStrategyAwardList(strategyId);
+    }
+
+    @Override
+    public List<StrategyAwardEntity> queryRaffleStrategyAwardListByActivityId(Long activityId) {
+        Long strategyId = repository.queryStrategyIdByActivityId(activityId);
+        return queryRaffleStrategyAwardList(strategyId);
+    }
+
+    @Override
+    public Map<Integer, Integer> queryAwardRuleLockCount(List<StrategyAwardEntity> strategyAwardEntities) {
+        return repository.queryAwardRuleLockCount(strategyAwardEntities);
     }
 }

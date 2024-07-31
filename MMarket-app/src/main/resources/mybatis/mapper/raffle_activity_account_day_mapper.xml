@@ -31,8 +31,15 @@
           and day_count_surplus > 0
     </update>
     <select id="queryActivityAccountDay"
-            resultType="cn.learn.infrastructure.persistent.po.RaffleActivityAccountDayPO" resultMap="dataMap">
+            parameterType="cn.learn.infrastructure.persistent.po.RaffleActivityAccountDayPO" resultMap="dataMap">
         select user_id, activity_id, day, day_count, day_count_surplus
+        from raffle_activity_account_day
+        where user_id = #{userId}
+          and activity_id = #{activityId}
+          and day = #{day}
+    </select>
+    <select id="queryAccountDayPartakeCount" parameterType="cn.learn.infrastructure.persistent.po.RaffleActivityAccountDayPO" resultType="java.lang.Integer">
+        select day_count - day_count_surplus
         from raffle_activity_account_day
         where user_id = #{userId}
           and activity_id = #{activityId}

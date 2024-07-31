@@ -40,6 +40,9 @@ public class StrategyAwardEntity {
     // 奖品中奖概率
     private BigDecimal awardRate;
 
+    // 规则模型，rule配置的模型同步到此表，便于使用
+    private String ruleModels;
+
     // 排序
     private Integer sort;
 
