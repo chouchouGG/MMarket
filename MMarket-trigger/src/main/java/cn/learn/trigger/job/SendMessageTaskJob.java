@@ -57,7 +57,7 @@ public class SendMessageTaskJob {
                                         try {
                                             // 发送消息
                                             taskService.sendMessage(taskEntity);
-                                            // 更新状态（成功）
+                                            // 更新状态（完成）
                                             taskService.updateTaskSendMessageCompleted(taskEntity.getUserId(), taskEntity.getMessageId());
                                             log.error("【定时任务】发送MQ消息 - 成功 userId: {} topic: {}", taskEntity.getUserId(), taskEntity.getTopic());
                                         } catch (Exception e) {

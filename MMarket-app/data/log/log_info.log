@@ -399,3 +399,57 @@ java.lang.ClassCastException: com.alibaba.fastjson.JSONObject cannot be cast to 
 24-07-31.10:47:55.595 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-2] INFO  SimpleMessageListenerContainer - Successfully waited for workers to finish.
 24-07-31.10:47:55.598 [SpringApplicationShutdownHook] INFO  SimpleMessageListenerContainer - Shutdown ignored - container is already stopped
 24-07-31.10:47:55.599 [SpringApplicationShutdownHook] INFO  SimpleMessageListenerContainer - Shutdown ignored - container is already stopped
+24-08-03.16:39:52.179 [main            ] INFO  BehaviorRebateServiceTest - Starting BehaviorRebateServiceTest using Java 1.8.0_402 on wyh-machine with PID 31988 (started by 98389 in E:\Java_code\MMarket\MMarket-app)
+24-08-03.16:39:52.180 [main            ] INFO  BehaviorRebateServiceTest - The following 1 profile is active: "dev"
+24-08-03.16:39:53.297 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-08-03.16:39:53.300 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-08-03.16:39:53.357 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 39 ms. Found 0 Redis repository interfaces.
+24-08-03.16:39:55.968 [main            ] INFO  Version                - Redisson 3.23.4
+24-08-03.16:39:57.012 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 117.72.77.81/117.72.77.81:16379
+24-08-03.16:39:57.264 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 117.72.77.81/117.72.77.81:16379
+24-08-03.16:39:59.908 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-08-03.16:39:59.994 [main            ] INFO  CachingConnectionFactory - Attempting to connect to: [117.72.77.81:5672]
+24-08-03.16:40:00.218 [main            ] INFO  CachingConnectionFactory - Created new connection: rabbitConnectionFactory#72a7aa4f:0/SimpleConnection@5d7ff311 [delegate=amqp://admin@117.72.77.81:5672/, localPort= 61594]
+24-08-03.16:40:00.677 [main            ] INFO  BehaviorRebateServiceTest - Started BehaviorRebateServiceTest in 8.891 seconds (JVM running for 9.899)
+24-08-03.16:40:00.923 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Starting...
+24-08-03.16:40:01.517 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Start completed.
+24-08-03.16:40:01.590 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Starting...
+24-08-03.16:40:01.893 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Start completed.
+24-08-03.16:40:02.396 [main            ] INFO  EventPublisher         - 发送MQ消息 topic:send_rebate message:{"data":{"bizId":"joyboy_sku_2024-08-03","rebateConfig":"9011","rebateDesc":"签到返利-sku额度","rebateType":"sign","userId":"joyboy"},"id":"36622899939","timestamp":1722674401584}
+24-08-03.16:40:02.459 [main            ] INFO  EventPublisher         - 发送MQ消息 topic:send_rebate message:{"data":{"bizId":"joyboy_integral_2024-08-03","rebateConfig":"10","rebateDesc":"签到返利-积分","rebateType":"sign","userId":"joyboy"},"id":"45293272658","timestamp":1722674401586}
+24-08-03.16:40:02.527 [main            ] INFO  BehaviorRebateServiceTest - 请求参数：{"behaviorType":"SIGN","outBusinessNo":"2024-08-03","userId":"joyboy"}
+24-08-03.16:40:02.531 [main            ] INFO  BehaviorRebateServiceTest - 测试结果：["593046105270","125664407306"]
+24-08-03.16:40:02.572 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] INFO  SimpleMessageListenerContainer - Waiting for workers to finish.
+24-08-03.16:40:02.608 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-2] INFO  SimpleMessageListenerContainer - Waiting for workers to finish.
+24-08-03.16:40:02.723 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-2] INFO  SimpleMessageListenerContainer - Successfully waited for workers to finish.
+24-08-03.16:40:03.540 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] INFO  SimpleMessageListenerContainer - Successfully waited for workers to finish.
+24-08-03.16:40:03.542 [SpringApplicationShutdownHook] INFO  SimpleMessageListenerContainer - Shutdown ignored - container is already stopped
+24-08-03.16:40:03.542 [SpringApplicationShutdownHook] INFO  SimpleMessageListenerContainer - Shutdown ignored - container is already stopped
+24-08-03.17:08:00.276 [main            ] INFO  BehaviorRebateServiceTest - Starting BehaviorRebateServiceTest using Java 1.8.0_402 on wyh-machine with PID 18328 (started by 98389 in E:\Java_code\MMarket\MMarket-app)
+24-08-03.17:08:00.277 [main            ] INFO  BehaviorRebateServiceTest - The following 1 profile is active: "dev"
+24-08-03.17:08:01.315 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-08-03.17:08:01.317 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-08-03.17:08:01.368 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 31 ms. Found 0 Redis repository interfaces.
+24-08-03.17:08:03.785 [main            ] INFO  Version                - Redisson 3.23.4
+24-08-03.17:08:04.786 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 117.72.77.81/117.72.77.81:16379
+24-08-03.17:08:05.030 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 117.72.77.81/117.72.77.81:16379
+24-08-03.17:08:07.613 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-08-03.17:08:07.695 [main            ] INFO  CachingConnectionFactory - Attempting to connect to: [117.72.77.81:5672]
+24-08-03.17:08:07.874 [main            ] INFO  CachingConnectionFactory - Created new connection: rabbitConnectionFactory#72a7aa4f:0/SimpleConnection@5d7ff311 [delegate=amqp://admin@117.72.77.81:5672/, localPort= 63430]
+24-08-03.17:08:08.300 [main            ] INFO  BehaviorRebateServiceTest - Started BehaviorRebateServiceTest in 8.405 seconds (JVM running for 9.268)
+24-08-03.17:08:08.548 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Starting...
+24-08-03.17:08:09.075 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Start completed.
+24-08-03.17:08:09.136 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Starting...
+24-08-03.17:08:09.459 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Start completed.
+24-08-03.17:08:10.003 [main            ] INFO  EventPublisher         - 发送MQ消息 topic:send_rebate message:{"data":{"bizId":"joyboy_sku_2024-08-02","rebateConfig":"9011","rebateType":"sign","userId":"joyboy"},"id":"28427236182","timestamp":1722676089133}
+24-08-03.17:08:10.019 [pool-3-thread-1 ] INFO  HikariDataSource       - Retail_HikariCP - Starting...
+24-08-03.17:08:10.090 [main            ] INFO  EventPublisher         - 发送MQ消息 topic:send_rebate message:{"data":{"bizId":"joyboy_integral_2024-08-02","rebateConfig":"10","rebateType":"sign","userId":"joyboy"},"id":"96594968349","timestamp":1722676089134}
+24-08-03.17:08:10.171 [main            ] INFO  BehaviorRebateServiceTest - 请求参数：{"behaviorType":"SIGN","outBusinessNo":"2024-08-02","userId":"joyboy"}
+24-08-03.17:08:10.174 [main            ] INFO  BehaviorRebateServiceTest - 测试结果：["849846496638","074916886728"]
+24-08-03.17:08:10.212 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] INFO  SimpleMessageListenerContainer - Waiting for workers to finish.
+24-08-03.17:08:10.240 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-2] INFO  SimpleMessageListenerContainer - Waiting for workers to finish.
+24-08-03.17:08:10.328 [pool-3-thread-1 ] INFO  HikariDataSource       - Retail_HikariCP - Start completed.
+24-08-03.17:08:10.334 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-2] INFO  SimpleMessageListenerContainer - Successfully waited for workers to finish.
+24-08-03.17:08:11.192 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] INFO  SimpleMessageListenerContainer - Successfully waited for workers to finish.
+24-08-03.17:08:11.201 [SpringApplicationShutdownHook] INFO  SimpleMessageListenerContainer - Shutdown ignored - container is already stopped
+24-08-03.17:08:11.203 [SpringApplicationShutdownHook] INFO  SimpleMessageListenerContainer - Shutdown ignored - container is already stopped

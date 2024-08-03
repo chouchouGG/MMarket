@@ -63,4 +63,5 @@
     <tree path="/MMarket-domain/src/main/java/cn/learn/domain/strategy/service/rule/tree/impl/CompositeNode.java"
           title="组合节点"/>
     <tree path="/MMarket-domain/src/main/java/cn/learn/domain/activity"/>
+    <tree path="/MMarket-domain/src/main/java/cn/learn/domain/rebate" title="行为返利"/>
 </trees>
