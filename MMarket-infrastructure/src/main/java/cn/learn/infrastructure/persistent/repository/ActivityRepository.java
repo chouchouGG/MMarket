@@ -315,13 +315,15 @@ public class ActivityRepository implements IActivityRepository {
                                     .userId(userId)
                                     .activityId(activityId)
                                     .build());
+                    // 判断总额度是否收到影响，1：收到影响，0：未收到影响
                     if (1 != totalCount) {
                         status.setRollbackOnly();
                         log.warn("写入创建参与活动记录，更新总账户额度不足，异常 userId: {} activityId: {}", userId, activityId);
                         throw new AppException(ResponseCode.ACCOUNT_QUOTA_ERROR.getCode(), ResponseCode.ACCOUNT_QUOTA_ERROR.getInfo());
                     }
 
-                    // 2. 检查之前是否存在月账户：true - 存在则更新，false - 不存在则创建（插入）
+                    // 2. 检查之前是否存在月账户：
+                    // true - 存在则更新，
                     if (createPartakeOrderAggregate.isExistAccountMonth()) {
                         int updateMonthCount = raffleActivityAccountMonthDao.updateActivityAccountMonthSubtractionQuota(
                                 RaffleActivityAccountMonthPO.builder()
@@ -330,7 +332,6 @@ public class ActivityRepository implements IActivityRepository {
                                         .month(month)
                                         .build());
                         if (1 != updateMonthCount) {
-                            // 未更新成功则回滚
                             status.setRollbackOnly();
                             log.warn("写入创建参与活动记录，更新月账户额度不足，异常 userId: {} activityId: {} month: {}", userId, activityId, month);
                             throw new AppException(ResponseCode.ACCOUNT_MONTH_QUOTA_ERROR.getCode(), ResponseCode.ACCOUNT_MONTH_QUOTA_ERROR.getInfo());
@@ -341,7 +342,9 @@ public class ActivityRepository implements IActivityRepository {
                                         .userId(userId)
                                         .activityId(activityId)
                                         .build());
+                    // false - 不存在则创建（插入）
                     } else {
+                        // note： '账户月次数表' 中还未配置，应该采用 insert 操作。'账户日次数表' 同理。
                         raffleActivityAccountMonthDao.insertActivityAccountMonth(
                                 RaffleActivityAccountMonthPO.builder()
                                         .userId(userId)
@@ -461,7 +464,13 @@ public class ActivityRepository implements IActivityRepository {
             return null;
         }
         // 2. 转换对象
-        return ActivityAccountDayEntity.builder().userId(res.getUserId()).activityId(res.getActivityId()).day(res.getDay()).dayCount(res.getDayCount()).dayCountSurplus(res.getDayCountSurplus()).build();
+        return ActivityAccountDayEntity.builder()
+                .userId(res.getUserId())
+                .activityId(res.getActivityId())
+                .day(res.getDay())
+                .dayCount(res.getDayCount())
+                .dayCountSurplus(res.getDayCountSurplus())
+                .build();
     }
 
     @Override
@@ -475,7 +484,15 @@ public class ActivityRepository implements IActivityRepository {
             return null;
         }
         // 2. 转换对象
-        return UserRaffleOrderEntity.builder().userId(res.getUserId()).activityId(res.getActivityId()).activityName(res.getActivityName()).strategyId(res.getStrategyId()).orderId(res.getOrderId()).orderTime(res.getOrderTime()).orderState(UserRaffleOrderStateVO.valueOf(res.getOrderState())).build();
+        return UserRaffleOrderEntity.builder()
+                .userId(res.getUserId())
+                .activityId(res.getActivityId())
+                .activityName(res.getActivityName())
+                .strategyId(res.getStrategyId())
+                .orderId(res.getOrderId())
+                .orderTime(res.getOrderTime())
+                .orderState(UserRaffleOrderStateVO.valueOf(res.getOrderState()))
+                .build();
     }
 
     @Override

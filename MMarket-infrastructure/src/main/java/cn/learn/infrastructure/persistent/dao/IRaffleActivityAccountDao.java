@@ -14,36 +14,40 @@ public interface IRaffleActivityAccountDao {
 
     /**
      * 更新操作是将增量直接添加
-     * @param raffleActivityAccount
-     * @return
      */
     int updateAccountQuota(RaffleActivityAccountPO raffleActivityAccount);
 
     /**
      * 更新账户总额度
-     * <p><strong>具体操作：</strong>将总、月、日的剩余额度减一</p>
+     * <p>操作：总剩余额度 - 1</p>
      */
     int updateActivityAccountSubtractionQuota(RaffleActivityAccountPO raffleActivityAccount);
 
+    /**
+     * 更新账户总额度
+     * <p>操作：月剩余额度 - 1</p>
+     */
+    int updateActivityAccountMonthSubtractionQuota(RaffleActivityAccountPO raffleActivityAccount);
+
+    /**
+     * 更新账户总额度
+     * <p>操作：日剩余额度 - 1</p>
+     */
+    int updateActivityAccountDaySubtractionQuota(RaffleActivityAccountPO raffleActivityAccount);
 
     /**
      * 更新账户月的镜像额度
-     * @param raffleActivityAccount
+     * <p>操作：传入参数的月剩余额度 - 1</p>
      */
     void updateActivityAccountMonthSurplusImageQuota(RaffleActivityAccountPO raffleActivityAccount);
 
-
     /**
      * 更新账户日的镜像额度
-     * @param raffleActivityAccount
+     * <p>操作：传入参数的日剩余额度 - 1</p>
      */
     void updateActivityAccountDaySurplusImageQuota(RaffleActivityAccountPO raffleActivityAccount);
 
     @DBRouter // 分库分表路由
     RaffleActivityAccountPO queryActivityAccount(RaffleActivityAccountPO param);
-
-    int updateActivityAccountMonthSubtractionQuota(RaffleActivityAccountPO raffleActivityAccount);
-
-    int updateActivityAccountDaySubtractionQuota(RaffleActivityAccountPO raffleActivityAccount);
 
 }

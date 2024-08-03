@@ -48,16 +48,16 @@ public class RaffleActivityPartakeService extends AbstractRaffleActivityPartake 
         if (null != activityAccountMonthEntity && activityAccountMonthEntity.getMonthCountSurplus() <= 0) {
             throw new AppException(ResponseCode.ACCOUNT_MONTH_QUOTA_ERROR.getCode(), ResponseCode.ACCOUNT_MONTH_QUOTA_ERROR.getInfo());
         }
-        // note：activityAccountMonthEntity 为 null 时，代表 '账户月次数表' 中还未配置，应该采用 insert 操作。'账户日次数表' 同理。
         // 创建月账户额度镜像；true = 存在月账户、false = 不存在月账户
         boolean isExistAccountMonth = (null != activityAccountMonthEntity);
         if (null == activityAccountMonthEntity) {
-            activityAccountMonthEntity = new ActivityAccountMonthEntity();
-            activityAccountMonthEntity.setUserId(userId);
-            activityAccountMonthEntity.setActivityId(activityId);
-            activityAccountMonthEntity.setMonth(month);
-            activityAccountMonthEntity.setMonthCount(activityAccountEntity.getMonthCount());
-            activityAccountMonthEntity.setMonthCountSurplus(activityAccountEntity.getMonthCountSurplus()); // fixme: 账户月额度表和日额度表为空时，算当月或当日第一次抽奖，月剩余和日剩余赋值不应该是月限额-1和日限额-1嘛
+            activityAccountMonthEntity = ActivityAccountMonthEntity.builder()
+                                            .userId(userId)
+                                            .activityId(activityId)
+                                            .month(month)
+                                            .monthCount(activityAccountEntity.getMonthCount())
+                                            .monthCountSurplus(activityAccountEntity.getMonthCount())
+                                            .build();
         }
 
         // 查询出账户配置的【日账户额度】
@@ -68,42 +68,42 @@ public class RaffleActivityPartakeService extends AbstractRaffleActivityPartake 
         // 创建日账户额度镜像；true = 存在日账户、false = 不存在日账户
         boolean isExistAccountDay = (null != activityAccountDayEntity);
         if (null == activityAccountDayEntity) {
-            activityAccountDayEntity = new ActivityAccountDayEntity();
-            activityAccountDayEntity.setUserId(userId);
-            activityAccountDayEntity.setActivityId(activityId);
-            activityAccountDayEntity.setDay(day);
-            activityAccountDayEntity.setDayCount(activityAccountEntity.getDayCount());
-            activityAccountDayEntity.setDayCountSurplus(activityAccountEntity.getDayCountSurplus()); // fixme: 账户月额度表和日额度表为空时，算当月或当日第一次抽奖，月剩余和日剩余赋值不应该是月限额-1和日限额-1嘛
+            activityAccountDayEntity = ActivityAccountDayEntity.builder()
+                                            .userId(userId)
+                                            .activityId(activityId)
+                                            .day(day)
+                                            .dayCount(activityAccountEntity.getDayCount())
+                                            .dayCountSurplus(activityAccountEntity.getDayCount())
+                                            .build();
         }
 
         // 构建对象
-        CreatePartakeOrderAggregate createPartakeOrderAggregate = new CreatePartakeOrderAggregate();
-        createPartakeOrderAggregate.setUserId(userId);
-        createPartakeOrderAggregate.setActivityId(activityId);
-        createPartakeOrderAggregate.setActivityAccountEntity(activityAccountEntity);
-        createPartakeOrderAggregate.setExistAccountMonth(isExistAccountMonth);
-        createPartakeOrderAggregate.setActivityAccountMonthEntity(activityAccountMonthEntity);
-        createPartakeOrderAggregate.setExistAccountDay(isExistAccountDay);
-        createPartakeOrderAggregate.setActivityAccountDayEntity(activityAccountDayEntity);
-
-        return createPartakeOrderAggregate;
+        return CreatePartakeOrderAggregate.builder()
+                .userId(userId)
+                .activityId(activityId)
+                .activityAccountEntity(activityAccountEntity)
+                .isExistAccountMonth(isExistAccountMonth)
+                .activityAccountMonthEntity(activityAccountMonthEntity)
+                .isExistAccountDay(isExistAccountDay)
+                .activityAccountDayEntity(activityAccountDayEntity)
+                .build();
     }
 
     @Override
     protected UserRaffleOrderEntity buildUserRaffleOrder(String userId, Long activityId, Date currentDate) {
         ActivityEntity activityEntity = activityRepository.queryRaffleActivityByActivityId(activityId);
         // 构建订单
-        UserRaffleOrderEntity userRaffleOrder = new UserRaffleOrderEntity();
-        userRaffleOrder.setUserId(userId);
-        userRaffleOrder.setActivityId(activityId);
-        userRaffleOrder.setActivityName(activityEntity.getActivityName());
-        userRaffleOrder.setStrategyId(activityEntity.getStrategyId());
-        // fixme: 后期对于这种订单ID都可以使用雪花算法进行优化
-        userRaffleOrder.setOrderId(RandomStringUtils.randomNumeric(12));
-        userRaffleOrder.setOrderTime(currentDate);
-        userRaffleOrder.setOrderState(UserRaffleOrderStateVO.create);
-        userRaffleOrder.setEndDateTime(activityEntity.getEndDateTime());
-        return userRaffleOrder;
+        return UserRaffleOrderEntity.builder()
+                .userId(userId)
+                .activityId(activityId)
+                .activityName(activityEntity.getActivityName())
+                .strategyId(activityEntity.getStrategyId())
+                .orderId(RandomStringUtils.randomNumeric(12)) // fixme: 后期对于这种订单ID都可以使用雪花算法进行优化
+                .orderTime(currentDate)
+                .orderState(UserRaffleOrderStateVO.create) // 用户抽奖订单状态为：create
+                .endDateTime(activityEntity.getEndDateTime())
+                .build();
     }
+
 
 }
