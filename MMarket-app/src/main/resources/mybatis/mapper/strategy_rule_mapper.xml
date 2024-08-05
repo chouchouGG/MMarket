@@ -32,7 +32,7 @@
         select rule_value
         from strategy_rule
         where strategy_id = #{strategyId} and rule_model = #{ruleModel}
-        # note: 动态 SQL：使用 if 标签根据条件动态生成部分 SQL 语句。
+        # 规则分为两种：一种是策略规则没有awardId，另一种是奖品规则需要指明awardId
         <if test="awardId != null">
             and award_id = #{awardId}
         </if>

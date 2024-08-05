@@ -12,6 +12,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import javax.annotation.Resource;
+import java.util.concurrent.CountDownLatch;
 
 /**
  * @author Fuzhengwei bugstack.cn @小傅哥
@@ -43,4 +44,23 @@ public class RaffleActivityControllerTest {
         log.info("测试结果：{}", JSON.toJSONString(response));
     }
 
+    /**
+     * 进行签到
+     */
+    @Test
+    public void test_calendarSignRebate() throws InterruptedException {
+        Response<Boolean> response = raffleActivityService.calendarSignRebate("joyboy");
+        // note：主线程等待MQ消息的处理线程处理完MQ消息，否则有可能看不到账户额度的变化
+        new CountDownLatch(1).await();
+        log.info("测试结果：{}", JSON.toJSONString(response));
+    }
+
+    /**
+     * 检查是否进行了签到
+     */
+    @Test
+    public void test_isCalendarSignRebate() {
+        Response<Boolean> response = raffleActivityService.isCalendarSignRebate("joyboy");
+        log.info("测试结果：{}", JSON.toJSONString(response));
+    }
 }

@@ -1,6 +1,9 @@
 package cn.learn.infrastructure.persistent.po;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.Date;
 
@@ -9,6 +12,9 @@ import java.util.Date;
  * @description 抽奖活动单 持久化对象
  */
 @Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class RaffleActivityOrderPO {
 
     private Long id;                // 自增ID

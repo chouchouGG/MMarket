@@ -31,10 +31,12 @@ public abstract class AbstractRaffleActivityPartake implements IRaffleActivityPa
 
     @Override
     public UserRaffleOrderEntity createOrder(String userId, Long activityId) {
-        return createOrder(PartakeRaffleActivityEntity.builder()
-                .userId(userId)
-                .activityId(activityId)
-                .build());
+        return createOrder(
+                PartakeRaffleActivityEntity.builder()
+                        .userId(userId)
+                        .activityId(activityId)
+                        .build()
+        );
     }
 
     // note：创建抽奖订单，类比于电商系统中的商品下单但是还未支付的状态

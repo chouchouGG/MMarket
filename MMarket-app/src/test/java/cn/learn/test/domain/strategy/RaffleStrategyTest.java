@@ -2,6 +2,8 @@ package cn.learn.test.domain.strategy;
 
 import cn.learn.domain.strategy.model.entity.RaffleAwardEntity;
 import cn.learn.domain.strategy.model.entity.RaffleFactorEntity;
+import cn.learn.domain.strategy.model.vo.RuleWeightVO;
+import cn.learn.domain.strategy.service.IRaffleRule;
 import cn.learn.domain.strategy.service.IRaffleStrategy;
 import cn.learn.domain.strategy.service.armory.StrategyArmoryDispatch;
 import cn.learn.domain.strategy.service.rule.chain.impl.RuleWeightLogicChain;
@@ -17,6 +19,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.util.ReflectionTestUtils;
 
 import javax.annotation.Resource;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -41,20 +44,23 @@ public class RaffleStrategyTest {
     @Resource
     RuleLockNode ruleLockNode;
 
+    @Resource
+    private IRaffleRule raffleRule;
+
 
     @Before
     public void setUp() {
         log.info("策略装配结果：{}", strategyArmory.assembleLotteryStrategy(100001L));
         log.info("策略装配结果：{}", strategyArmory.assembleLotteryStrategy(100003L));
-        // fixme：mock测试
-        // 1. 设置用户累计积分
-        long lucky_value = 100L;
-        ReflectionTestUtils.setField(ruleWeightLogicChain, "userScore", lucky_value);
-        log.info("当前用户幸运值为：{}", lucky_value);
-        // 2. 设置用户抽奖次数
-        long raffleCount = 1L;
-        ReflectionTestUtils.setField(ruleLockNode, "userRaffleCount", raffleCount);
-        log.info("当前用户抽奖次数为：{}", raffleCount);
+//        // fixme：mock测试
+//        // 1. 设置用户累计积分
+//        long lucky_value = 100L;
+//        ReflectionTestUtils.setField(ruleWeightLogicChain, "userScore", lucky_value);
+//        log.info("当前用户幸运值为：{}", lucky_value);
+//        // 2. 设置用户抽奖次数
+//        long raffleCount = 1L;
+//        ReflectionTestUtils.setField(ruleLockNode, "userRaffleCount", raffleCount);
+//        log.info("当前用户抽奖次数为：{}", raffleCount);
     }
 
     @Test
@@ -85,5 +91,10 @@ public class RaffleStrategyTest {
         log.info("测试结果：{}", JSON.toJSONString(raffleAwardEntity));
     }
 
+    @Test
+    public void test_raffleRule() {
+        List<RuleWeightVO> ruleWeightVOS = raffleRule.queryAwardRuleWeightByActivityId(100301L);
+        log.info("测试结果：{}", JSON.toJSONString(ruleWeightVOS));
+    }
 
 }

@@ -19,7 +19,8 @@
           title="活动状态"/>
     <tree path="/MMarket-infrastructure/src/main/java/cn/learn/infrastructure/event" title="工具包，发送RabbitMQ消息"/>
     <tree path="/MMarket-trigger/src/main/java/cn/learn/trigger/job/UpdateActivitySkuStockJob.java"
-          title="趋势更新库存的定时任务"/>
+          title="趋势更新sku库存" extension="" presentableText="" tooltipTitle="" icon="" textColor=""
+          backgroundColor=""/>
     <tree path="/MMarket-infrastructure/src/main/java/cn/learn/infrastructure/persistent/po/RaffleActivityOrderPO.java"
           title="充值订单表"/>
     <tree path="/MMarket-infrastructure/src/main/java/cn/learn/infrastructure/persistent/po/RaffleActivityPO.java"
@@ -64,4 +65,8 @@
           title="组合节点"/>
     <tree path="/MMarket-domain/src/main/java/cn/learn/domain/activity"/>
     <tree path="/MMarket-domain/src/main/java/cn/learn/domain/rebate" title="行为返利"/>
+    <tree path="/MMarket-trigger/src/main/java/cn/learn/trigger/http"
+          title="封装domain层中的接口，对外部提供RESTful风格调用接口" extension="" presentableText="" tooltipTitle=""
+          icon="" textColor="" backgroundColor=""/>
+    <tree path="/MMarket-domain/src/main/java/cn/learn/domain/strategy/service/rule/tree" title="奖品的过滤"/>
 </trees>

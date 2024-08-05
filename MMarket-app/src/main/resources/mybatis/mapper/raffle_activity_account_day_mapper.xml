@@ -45,6 +45,14 @@
           and activity_id = #{activityId}
           and day = #{day}
     </select>
-
+    <update id="addAccountQuota" parameterType="cn.learn.infrastructure.persistent.po.RaffleActivityAccountDayPO">
+        update raffle_activity_account_day
+        set day_count_surplus = day_count_surplus + #{dayCountSurplus},
+            day_count         = day_count + #{dayCount},
+            update_time       = now()
+        where user_id = #{userId}
+          and activity_id = #{activityId}
+          and day = #{day}
+    </update>
 
 </mapper>

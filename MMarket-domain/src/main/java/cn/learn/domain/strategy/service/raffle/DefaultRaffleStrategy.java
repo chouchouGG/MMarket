@@ -2,6 +2,7 @@ package cn.learn.domain.strategy.service.raffle;
 
 import cn.learn.domain.strategy.model.entity.ProcessingContext;
 import cn.learn.domain.strategy.model.entity.StrategyAwardEntity;
+import cn.learn.domain.strategy.model.vo.RuleWeightVO;
 import cn.learn.domain.strategy.model.vo.StrategyAwardStockKeyVO;
 import cn.learn.domain.strategy.respository.IStrategyRepository;
 import cn.learn.domain.strategy.service.AbstractRaffleStrategy;
@@ -82,5 +83,11 @@ public class DefaultRaffleStrategy extends AbstractRaffleStrategy implements IRa
     @Override
     public Map<Integer, Integer> queryAwardRuleLockCount(List<StrategyAwardEntity> strategyAwardEntities) {
         return repository.queryAwardRuleLockCount(strategyAwardEntities);
+    }
+
+    @Override
+    public List<RuleWeightVO> queryAwardRuleWeightByActivityId(Long activityId) {
+        Long strategyId = repository.queryStrategyIdByActivityId(activityId);
+        return repository.queryAwardRuleWeight(strategyId);
     }
 }

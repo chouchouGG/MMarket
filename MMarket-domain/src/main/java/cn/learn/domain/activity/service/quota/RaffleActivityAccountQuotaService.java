@@ -25,12 +25,10 @@ public class RaffleActivityAccountQuotaService extends AbstractRaffleActivityAcc
     }
 
     @Override
-    protected CreateQuotaOrderAggregate buildOrderAggregate(SkuRechargeEntity skuRechargeEntity, ActivitySkuEntity activitySkuEntity,
-                                                            ActivityEntity activityEntity, ActivityCountEntity activityCountEntity) {
+    protected CreateQuotaOrderAggregate buildOrderAggregate(SkuRechargeEntity skuRechargeEntity, ActivityEntity activityEntity, ActivityCountEntity activityCountEntity) {
         // 创建活动订单实体对象
-        ActivityOrderEntity activityOrderEntity = ActivityOrderEntity.builder()
-                .userId(skuRechargeEntity.getUserId())                  // （1）设置用户ID
-                .sku(activitySkuEntity.getSku())                        // （2）设置商品SKU
+        ActivityOrderEntity activityOrderEntity = ActivityOrderEntity.builder().userId(skuRechargeEntity.getUserId())                  // （1）设置用户ID
+                .sku(skuRechargeEntity.getSku())                        // （2）设置商品SKU
                 .activityId(activityEntity.getActivityId())             // （3）设置活动ID
                 .activityName(activityEntity.getActivityName())         // （4）设置活动名称
                 .strategyId(activityEntity.getStrategyId())             // （5）设置抽奖策略ID
@@ -41,12 +39,15 @@ public class RaffleActivityAccountQuotaService extends AbstractRaffleActivityAcc
                 .dayCount(activityCountEntity.getDayCount())            // （9）设置日次数
                 .monthCount(activityCountEntity.getMonthCount())        // （10）设置月次数
                 .state(OrderStateVO.completed)                          // （11）设置订单状态为已完成
-                .outBusinessNo(skuRechargeEntity.getOutBusinessNo())    // （12）设置外部业务唯一标识 fixme: 由外部生成？
+                // fixme: outBusinessNo由外部生成？答：是的，用户抽奖次数的增加是和别的业务流程有关，整个业务流程有一个统一的业务ID用来保证幂等性，一个业务流程中又由多个订单构成，每个订单ID只负责当前模块的唯一标识。
+                .outBusinessNo(skuRechargeEntity.getOutBusinessNo())    // （12）设置外部业务唯一标识 note：外部透传进来的业务ID
                 .build();
 
 
         // 构建聚合对象
         return CreateQuotaOrderAggregate.builder()
+                .userId(skuRechargeEntity.getUserId())
+                .activityId(activityEntity.getActivityId())
                 .totalCount(activityCountEntity.getTotalCount())    // （8）设置总次数
                 .dayCount(activityCountEntity.getDayCount())        // （9）设置日次数
                 .monthCount(activityCountEntity.getMonthCount())    // （10）设置月次数
@@ -82,5 +83,15 @@ public class RaffleActivityAccountQuotaService extends AbstractRaffleActivityAcc
     @Override
     public Integer queryAccountDayPartakeCount(Long activityId, String userId) {
         return activityRepository.queryAccountDayPartakeCount(activityId, userId);
+    }
+
+    @Override
+    public ActivityAccountEntity queryActivityAccountEntity(Long activityId, String userId) {
+        return activityRepository.queryActivityAccountEntity(activityId, userId);
+    }
+
+    @Override
+    public Integer queryAccountTotalPartakeCount(Long activityId, String userId) {
+        return activityRepository.queryRaffleActivityAccountPartakeCount(activityId, userId);
     }
 }

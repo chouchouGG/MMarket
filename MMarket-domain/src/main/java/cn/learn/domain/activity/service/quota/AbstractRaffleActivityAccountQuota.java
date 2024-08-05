@@ -31,22 +31,24 @@ public abstract class AbstractRaffleActivityAccountQuota extends RaffleActivityA
      * @return
      */
     @Override
-    public String createSkuRechargeOrder(SkuRechargeEntity skuRechargeEntity) {
+    public String createAccountQuotaRechargeOrder(SkuRechargeEntity skuRechargeEntity) {
         // 1. 参数校验
         paramCheck(skuRechargeEntity);
 
         // 2. 查询基础信息（通过继承的 RaffleActivitySupport 类中方法获取）
         // note：对于这种和具体业务无关，与功能有关的方法，可以增加一个 Support 类将功能性的方法封装起来
-        ActivitySkuEntity activitySku = super.queryActivitySku(skuRechargeEntity.getSku()); // 其中的剩余库存是从缓存中获取的
-        activitySku.setStockCountSurplus(super.querySkuStockCountSurplus(skuRechargeEntity.getSku())); // 更新当前的剩余的sku缓存，而不是装配时的sku缓存
+        ActivitySkuEntity activitySku = super.queryActivitySku(skuRechargeEntity.getSku()); // 其中的剩余库存是从数据库中获取的
+        activitySku.setStockCountSurplus(super.querySkuStockCountSurplus(skuRechargeEntity.getSku())); // 更新当前的剩余的sku库存为缓存中最新的数据
+
         ActivityEntity activity = super.queryRaffleActivityByActivityId(activitySku.getActivityId());
+
         ActivityCountEntity activityCount = super.queryRaffleActivityCountByActivityCountId(activitySku.getActivityCountId());
 
         // 3. 责任链处理（活动校验、sku库存扣减）「过滤失败则直接抛异常」
         defaultActivityChainFactory.openActionChain().handle(activitySku, activity, activityCount);
 
         // 4. 构建订单聚合对象
-        CreateQuotaOrderAggregate createOrderAggregate = buildOrderAggregate(skuRechargeEntity, activitySku, activity, activityCount);
+        CreateQuotaOrderAggregate createOrderAggregate = buildOrderAggregate(skuRechargeEntity, activity, activityCount);
 
         // 5. 两步操作，一个事务下完成（1.保存订单，2.更新账户）
         doSaveOrder(createOrderAggregate);
@@ -66,7 +68,7 @@ public abstract class AbstractRaffleActivityAccountQuota extends RaffleActivityA
         }
     }
 
-    protected abstract CreateQuotaOrderAggregate buildOrderAggregate(SkuRechargeEntity skuRechargeEntity, ActivitySkuEntity activitySku, ActivityEntity activity, ActivityCountEntity activityCount);
+    protected abstract CreateQuotaOrderAggregate buildOrderAggregate(SkuRechargeEntity skuRechargeEntity, ActivityEntity activity, ActivityCountEntity activityCount);
 
     protected abstract void doSaveOrder(CreateQuotaOrderAggregate createOrderAggregate);
 

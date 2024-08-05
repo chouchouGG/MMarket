@@ -30,6 +30,7 @@ public class UpdateActivitySkuStockJob {
                 return;
             }
             // 2. 更新数据库中的库存信息
+            // note：每次用户的额度充值操作，对应sku库存扣减1个，目前来看sku库存有些鸡肋，暂时不用深究。
             skuStock.updateActivitySkuStock(activitySkuStockKeyVO.getSku());
             log.info("【定时任务-2】 - 更新活动sku库存，sku: {} activityId: {}", activitySkuStockKeyVO.getSku(), activitySkuStockKeyVO.getActivityId());
         } catch (Exception e) {

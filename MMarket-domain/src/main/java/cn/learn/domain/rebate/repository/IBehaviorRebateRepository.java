@@ -1,6 +1,7 @@
 package cn.learn.domain.rebate.repository;
 
 import cn.learn.domain.rebate.model.aggregate.BehaviorRebateAggregate;
+import cn.learn.domain.rebate.model.entity.BehaviorRebateOrderEntity;
 import cn.learn.domain.rebate.model.entity.DailyBehaviorRebateEntity;
 import cn.learn.domain.rebate.model.valobj.BehaviorTypeVO;
 
@@ -19,4 +20,8 @@ public interface IBehaviorRebateRepository {
      * @param behaviorRebateAggregates
      */
     void saveUserRebateRecord(String userId, List<BehaviorRebateAggregate> behaviorRebateAggregates);
+
+
+    List<BehaviorRebateOrderEntity> queryOrderByOutBusinessNo(String userId, String outBusinessNo);
+
 }

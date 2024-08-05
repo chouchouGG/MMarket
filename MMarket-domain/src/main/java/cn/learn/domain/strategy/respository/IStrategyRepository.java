@@ -3,6 +3,7 @@ package cn.learn.domain.strategy.respository;
 import cn.learn.domain.strategy.model.entity.StrategyAwardEntity;
 import cn.learn.domain.strategy.model.entity.StrategyEntity;
 import cn.learn.domain.strategy.model.entity.StrategyRuleEntity;
+import cn.learn.domain.strategy.model.vo.RuleWeightVO;
 import cn.learn.domain.strategy.model.vo.StrategyAwardRuleModelVO;
 import cn.learn.domain.strategy.model.vo.StrategyAwardStockKeyVO;
 
@@ -155,4 +156,9 @@ public interface IStrategyRepository {
      * @return
      */
     Map<Integer, Integer> queryAwardRuleLockCount(List<StrategyAwardEntity> strategyAwardEntities);
+
+    /**
+     * 查询奖品权重配置
+     */
+    List<RuleWeightVO> queryAwardRuleWeight(Long strategyId);
 }

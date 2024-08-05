@@ -1,5 +1,7 @@
 package cn.learn.domain.strategy.service.rule.chain.impl;
 
+import cn.learn.domain.activity.repository.IActivityRepository;
+import cn.learn.domain.activity.service.IRaffleActivityAccountQuotaService;
 import cn.learn.domain.strategy.model.entity.ProcessingContext;
 import cn.learn.domain.strategy.respository.IStrategyRepository;
 import cn.learn.domain.strategy.service.armory.IStrategyDispatch;
@@ -27,8 +29,8 @@ public class RuleWeightLogicChain extends AbstractLogicChain {
     @Resource
     protected IStrategyDispatch strategyDispatch;
 
-    // fixme: 当前测试阶段使用的是固定值,根据用户ID查询用户抽奖消耗的积分值，本章节我们先写死为固定的值。后续需要从数据库中查询。
-    public final Long userScore = 0L;
+    @Resource
+    private IActivityRepository activityRepository;
 
     /**
      * 权重责任链过滤；
@@ -57,15 +59,17 @@ public class RuleWeightLogicChain extends AbstractLogicChain {
         List<Long> analyticalSortedKeys = new ArrayList<>(analyticalValueGroup.keySet());
         Collections.sort(analyticalSortedKeys);
 
+        Integer userCount = activityRepository.queryRaffleActivityAccountPartakeCount(strategyId, userId);
+
         // 3. 找到不超过 userScore 的最大值存储在 prevValue中，也就是【4500 积分，能找到 4000:102,103,104,105】
         Long prevValue = null;
         for (Long score : analyticalSortedKeys) {
-            if (userScore < score) {
+            if (userCount < score) {
                 break;
             }
             prevValue = score;
         }
-        log.info("当前用户的积分为{}，将采取权重规则：{}", userScore, analyticalValueGroup.get(prevValue));
+        log.info("当前用户的抽奖次数为{}，将采取权重规则：{}", userCount, analyticalValueGroup.get(prevValue));
 
         // 4. 权重抽奖
         if (null != prevValue) {

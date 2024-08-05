@@ -31,6 +31,9 @@ public class Constants {
 
         public static final String ACTIVITY_SKU_STOCK_COUNT_KEY = "activity_sku_stock_count_surplus_key_";
 
+        public static final String STRATEGY_RULE_WEIGHT_KEY = "strategy_rule_weight_key_";
+
+
         /**
          * 抽奖活动相关的key
          */
@@ -38,12 +41,16 @@ public class Constants {
         public static String ACTIVITY_SKU_KEY = "big_market_activity_sku_key_";
         public static String ACTIVITY_COUNT_KEY = "big_market_activity_count_key_";
 
+        public static String acquireKey_strategyRuleWeight(Long strategyId) {
+            return STRATEGY_RULE_WEIGHT_KEY + strategyId;
+        }
+
 
         /**
          * @return "big_market_activity_sku_key_" + sku
          */
         public static String acquireKey_activitySku(Long sku) {
-            return Constants.RedisKey.ACTIVITY_SKU_KEY + sku;
+            return ACTIVITY_SKU_KEY + sku;
         }
 
 
@@ -54,7 +61,7 @@ public class Constants {
          * @return 返回策略奖品概率表的缓存键。
          */
         public static String acquireKey_strategyRateTable(String assembleKey) {
-            return Constants.RedisKey.STRATEGY_RATE_TABLE_KEY + assembleKey;
+            return STRATEGY_RATE_TABLE_KEY + assembleKey;
         }
 
         /**

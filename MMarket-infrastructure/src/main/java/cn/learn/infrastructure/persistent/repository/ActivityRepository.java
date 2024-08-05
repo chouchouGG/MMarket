@@ -20,6 +20,7 @@ import cn.learn.types.exception.AppException;
 import lombok.extern.slf4j.Slf4j;
 import org.redisson.api.RBlockingQueue;
 import org.redisson.api.RDelayedQueue;
+import org.springframework.boot.autoconfigure.info.ProjectInfoProperties;
 import org.springframework.dao.DuplicateKeyException;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.support.TransactionTemplate;
@@ -124,7 +125,15 @@ public class ActivityRepository implements IActivityRepository {
         }
         // 从库中获取数据
         RaffleActivityPO raffleActivity = raffleActivityDao.queryRaffleActivityByActivityId(activityId);
-        activityEntity = ActivityEntity.builder().activityId(raffleActivity.getActivityId()).activityName(raffleActivity.getActivityName()).activityDesc(raffleActivity.getActivityDesc()).beginDateTime(raffleActivity.getBeginDateTime()).endDateTime(raffleActivity.getEndDateTime()).strategyId(raffleActivity.getStrategyId()).state(ActivityStateVO.valueOf(raffleActivity.getState())).build();
+        activityEntity = ActivityEntity.builder()
+                .activityId(raffleActivity.getActivityId())
+                .activityName(raffleActivity.getActivityName())
+                .activityDesc(raffleActivity.getActivityDesc())
+                .beginDateTime(raffleActivity.getBeginDateTime())
+                .endDateTime(raffleActivity.getEndDateTime())
+                .strategyId(raffleActivity.getStrategyId())
+                .state(ActivityStateVO.valueOf(raffleActivity.getState()))
+                .build();
         redisService.setValue(cacheKey, activityEntity);
         return activityEntity;
     }
@@ -148,33 +157,58 @@ public class ActivityRepository implements IActivityRepository {
     public void doSaveOrder(CreateQuotaOrderAggregate createOrderAggregate) {
         try {
             ActivityOrderEntity activityOrderEntity = createOrderAggregate.getActivityOrderEntity();
+            String userId = createOrderAggregate.getUserId();
+            Long activityId = createOrderAggregate.getActivityId();
+            Integer totalCount = createOrderAggregate.getTotalCount();
+            Integer monthCount = createOrderAggregate.getMonthCount();
+            Integer dayCount = createOrderAggregate.getDayCount();
 
-            // 订单对象
-            RaffleActivityOrderPO raffleActivityOrder = new RaffleActivityOrderPO();
-            raffleActivityOrder.setUserId(activityOrderEntity.getUserId());
-            raffleActivityOrder.setSku(activityOrderEntity.getSku());
-            raffleActivityOrder.setActivityId(activityOrderEntity.getActivityId());
-            raffleActivityOrder.setActivityName(activityOrderEntity.getActivityName());
-            raffleActivityOrder.setStrategyId(activityOrderEntity.getStrategyId());
-            raffleActivityOrder.setOrderId(activityOrderEntity.getOrderId());
-            raffleActivityOrder.setOrderTime(activityOrderEntity.getOrderTime());
-            raffleActivityOrder.setTotalCount(createOrderAggregate.getTotalCount());    // 设置本次订单增加的总次数
-            raffleActivityOrder.setDayCount(createOrderAggregate.getDayCount());        // 设置本次订单增加的日次数
-            raffleActivityOrder.setMonthCount(createOrderAggregate.getMonthCount());    // 设置本次订单增加的月次数
-            raffleActivityOrder.setState(activityOrderEntity.getState().getCode());
-            raffleActivityOrder.setOutBusinessNo(activityOrderEntity.getOutBusinessNo());
+            // 抽奖活动订单（额度增加订单）PO对象
+            RaffleActivityOrderPO raffleActivityOrder = RaffleActivityOrderPO.builder()
+                    .userId(userId)
+                    .activityId(activityId)
+                    .totalCount(totalCount) // 设置本次订单增加的总次数
+                    .monthCount(monthCount) // 设置本次订单增加的月次数
+                    .dayCount(dayCount)     // 设置本次订单增加的日次数
+                    .sku(activityOrderEntity.getSku())
+                    .activityName(activityOrderEntity.getActivityName())
+                    .strategyId(activityOrderEntity.getStrategyId())
+                    .orderId(activityOrderEntity.getOrderId())
+                    .orderTime(activityOrderEntity.getOrderTime())
+                    .state(activityOrderEntity.getState().getCode())
+                    .outBusinessNo(activityOrderEntity.getOutBusinessNo())
+                    .build();
 
-            // 账户对象
-            RaffleActivityAccountPO raffleActivityAccount = new RaffleActivityAccountPO();
-            raffleActivityAccount.setUserId(activityOrderEntity.getUserId());
-            raffleActivityAccount.setActivityId(activityOrderEntity.getActivityId());
-            // fixme：这里不太懂如下的设置
-            raffleActivityAccount.setTotalCount(createOrderAggregate.getTotalCount());
-            raffleActivityAccount.setTotalCountSurplus(createOrderAggregate.getTotalCount());
-            raffleActivityAccount.setDayCount(createOrderAggregate.getDayCount());
-            raffleActivityAccount.setDayCountSurplus(createOrderAggregate.getDayCount());
-            raffleActivityAccount.setMonthCount(createOrderAggregate.getMonthCount());
-            raffleActivityAccount.setMonthCountSurplus(createOrderAggregate.getMonthCount());
+            // 总账户PO对象
+            RaffleActivityAccountPO raffleActivityAccount = RaffleActivityAccountPO.builder()
+                    .userId(userId)
+                    .activityId(activityId)
+                    .totalCount(totalCount)
+                    .totalCountSurplus(totalCount)
+                    .monthCount(monthCount)
+                    .monthCountSurplus(monthCount)
+                    .dayCount(dayCount)
+                    .dayCountSurplus(dayCount)
+                    .build();
+
+            // 月账户PO对象
+            RaffleActivityAccountMonthPO raffleActivityAccountMonth = RaffleActivityAccountMonthPO.builder()
+                    .userId(userId)
+                    .activityId(activityId)
+                    .month(RaffleActivityAccountMonthPO.currentFormatedMonth())
+                    .monthCount(monthCount)
+                    .monthCountSurplus(monthCount)
+                    .build();
+
+            // 账户对象 - 日
+            RaffleActivityAccountDayPO raffleActivityAccountDay = RaffleActivityAccountDayPO.builder()
+                    .userId(userId)
+                    .activityId(activityId)
+                    .day(RaffleActivityAccountDayPO.currentFormatedDay())
+                    .dayCount(dayCount)
+                    .dayCountSurplus(dayCount)
+                    .build();
+
 
             // 以用户ID作为切分键，通过 doRouter 设定路由【这样就保证了下面的操作，都是同一个链接下，也就保证了事务的特性】
             dbRouter.doRouter(activityOrderEntity.getUserId());
@@ -184,19 +218,22 @@ public class ActivityRepository implements IActivityRepository {
                 try {
                     // 1. 订单写入
                     raffleActivityOrderDao.insert(raffleActivityOrder);
-
-
-                    // 2. 账户更新（尝试更新表 raffle_activity_account，updata 语句的返回值为受影响的行数 count）
+                    // 2. 账户更新 - 总：note（尝试更新表 raffle_activity_account，updata 语句的返回值为受影响的行数 count）
                     // 如果受影响的行数 count 为 0，则账户不存在，需要为创新新账户
                     // note：更新是基于用户id和活动id，这两个属性有联合唯一索引，所以count的返回值要么为1，要么为0
                     int count = raffleActivityAccountDao.updateAccountQuota(raffleActivityAccount);
                     if (0 == count) {
                         raffleActivityAccountDao.insert(raffleActivityAccount);
                     }
+                    // 4. 更新账户 - 月
+                    raffleActivityAccountMonthDao.addAccountQuota(raffleActivityAccountMonth);
+                    // 5. 更新账户 - 日
+                    raffleActivityAccountDayDao.addAccountQuota(raffleActivityAccountDay);
                     return 1;
                 } catch (DuplicateKeyException e) {
                     status.setRollbackOnly();
-                    log.error("写入订单记录，唯一索引冲突 userId: {} activityId: {} sku: {}", activityOrderEntity.getUserId(), activityOrderEntity.getActivityId(), activityOrderEntity.getSku(), e);
+                    log.error("写入订单记录，唯一索引冲突 userId: {} activityId: {} sku: {}",
+                            activityOrderEntity.getUserId(), activityOrderEntity.getActivityId(), activityOrderEntity.getSku(), e);
                     throw new AppException(ResponseCode.INDEX_DUP.getCode(), e);
                 }
             });
@@ -231,8 +268,6 @@ public class ActivityRepository implements IActivityRepository {
             String topic = activitySkuStockZeroMessageEvent.topic(); // 获取topic
             BaseEvent.EventMessage<Long> eventMessage = activitySkuStockZeroMessageEvent.buildEventMessage(sku); // 构建消息
             eventPublisher.publish(topic, eventMessage);
-            // fixme: 使用decr扣减库存，当surplus==0时，也就是从1到0，这时候会发布消息直接返回false，也就是判定为库存不足，也就是20个库存，实际能用的库存就19个。
-//            return false;
         } else if (surplus < 0) {
             // note：库存小于0，恢复为0个（有可能是有一些并发同时进入了，造成库存为负数的情况）
             redisService.setAtomicLong(cacheKey, 0);
@@ -342,7 +377,7 @@ public class ActivityRepository implements IActivityRepository {
                                         .userId(userId)
                                         .activityId(activityId)
                                         .build());
-                    // false - 不存在则创建（插入）
+                        // false - 不存在则创建（插入）
                     } else {
                         // note： '账户月次数表' 中还未配置，应该采用 insert 操作。'账户日次数表' 同理。
                         raffleActivityAccountMonthDao.insertActivityAccountMonth(
@@ -426,15 +461,24 @@ public class ActivityRepository implements IActivityRepository {
     @Override
     public ActivityAccountEntity queryActivityAccount(String userId, Long activityId) {
         // 1. 查询账户
-        RaffleActivityAccountPO param = new RaffleActivityAccountPO();
-        param.setUserId(userId);
-        param.setActivityId(activityId);
-        RaffleActivityAccountPO res = raffleActivityAccountDao.queryActivityAccount(param);
+        RaffleActivityAccountPO res = raffleActivityAccountDao.queryActivityAccount(RaffleActivityAccountPO.builder()
+                .userId(userId)
+                .activityId(activityId)
+                .build());
         if (null == res) {
             return null;
         }
         // 2. 转换对象
-        return ActivityAccountEntity.builder().userId(res.getUserId()).activityId(res.getActivityId()).totalCount(res.getTotalCount()).totalCountSurplus(res.getTotalCountSurplus()).dayCount(res.getDayCount()).dayCountSurplus(res.getDayCountSurplus()).monthCount(res.getMonthCount()).monthCountSurplus(res.getMonthCountSurplus()).build();
+        return ActivityAccountEntity.builder()
+                .userId(res.getUserId())
+                .activityId(res.getActivityId())
+                .totalCount(res.getTotalCount())
+                .totalCountSurplus(res.getTotalCountSurplus())
+                .dayCount(res.getDayCount())
+                .dayCountSurplus(res.getDayCountSurplus())
+                .monthCount(res.getMonthCount())
+                .monthCountSurplus(res.getMonthCountSurplus())
+                .build();
     }
 
     @Override
@@ -449,7 +493,13 @@ public class ActivityRepository implements IActivityRepository {
             return null;
         }
         // 2. 转换对象
-        return ActivityAccountMonthEntity.builder().userId(res.getUserId()).activityId(res.getActivityId()).month(res.getMonth()).monthCount(res.getMonthCount()).monthCountSurplus(res.getMonthCountSurplus()).build();
+        return ActivityAccountMonthEntity.builder()
+                .userId(res.getUserId())
+                .activityId(res.getActivityId())
+                .month(res.getMonth())
+                .monthCount(res.getMonthCount())
+                .monthCountSurplus(res.getMonthCountSurplus())
+                .build();
     }
 
     @Override
@@ -521,5 +571,81 @@ public class ActivityRepository implements IActivityRepository {
         Integer dayPartakeCount = raffleActivityAccountDayDao.queryAccountDayPartakeCount(raffleActivityAccountDay);
         // 当日未参与抽奖则默认为 0 次
         return null == dayPartakeCount ? 0 : dayPartakeCount;
+    }
+
+    @Override
+    public ActivityAccountEntity queryActivityAccountEntity(Long activityId, String userId) {
+        // 1. 查询总账户额度
+        RaffleActivityAccountPO raffleActivityAccount =
+                raffleActivityAccountDao.queryActivityAccount(RaffleActivityAccountPO.builder()
+                        .activityId(activityId)
+                        .userId(userId)
+                        .build());
+
+        if (null == raffleActivityAccount) {
+            return ActivityAccountEntity.builder()
+                    .activityId(activityId)
+                    .userId(userId)
+                    .totalCount(0)
+                    .totalCountSurplus(0)
+                    .monthCount(0)
+                    .monthCountSurplus(0)
+                    .dayCount(0)
+                    .dayCountSurplus(0)
+                    .build();
+        }
+
+        // 2. 查询月账户额度
+        RaffleActivityAccountMonthPO raffleActivityAccountMonth =
+                raffleActivityAccountMonthDao.queryActivityAccountMonth(RaffleActivityAccountMonthPO.builder()
+                        .activityId(activityId)
+                        .userId(userId)
+                        .build());
+
+        // 3. 查询日账户额度
+        RaffleActivityAccountDayPO raffleActivityAccountDay =
+                raffleActivityAccountDayDao.queryActivityAccountDay(RaffleActivityAccountDayPO.builder()
+                        .activityId(activityId)
+                        .userId(userId)
+                        .build());
+
+        // 组装对象
+        ActivityAccountEntity activityAccountEntity = new ActivityAccountEntity();
+        activityAccountEntity.setUserId(userId);
+        activityAccountEntity.setActivityId(activityId);
+        activityAccountEntity.setTotalCount(raffleActivityAccount.getTotalCount());
+        activityAccountEntity.setTotalCountSurplus(raffleActivityAccount.getTotalCountSurplus());
+
+        // 如果没有创建日账户，则从总账户中获取日总额度填充。
+        if (null == raffleActivityAccountDay) {
+            activityAccountEntity.setDayCount(raffleActivityAccount.getDayCount());
+            activityAccountEntity.setDayCountSurplus(raffleActivityAccount.getDayCount());
+        } else {
+            activityAccountEntity.setDayCount(raffleActivityAccountDay.getDayCount());
+            activityAccountEntity.setDayCountSurplus(raffleActivityAccountDay.getDayCountSurplus());
+        }
+
+        // 如果没有创建月账户，则从总账户中获取月总额度填充。「当新创建日账户时，会获得总账户额度」
+        if (null == raffleActivityAccountMonth) {
+            activityAccountEntity.setMonthCount(raffleActivityAccount.getMonthCount());
+            activityAccountEntity.setMonthCountSurplus(raffleActivityAccount.getMonthCount());
+        } else {
+            activityAccountEntity.setMonthCount(raffleActivityAccountMonth.getMonthCount());
+            activityAccountEntity.setMonthCountSurplus(raffleActivityAccountMonth.getMonthCountSurplus());
+        }
+
+        return activityAccountEntity;
+    }
+
+    @Override
+    public Integer queryRaffleActivityAccountPartakeCount(Long activityId, String userId) {
+        RaffleActivityAccountPO raffleActivityAccount =
+                raffleActivityAccountDao.queryActivityAccount(RaffleActivityAccountPO.builder()
+                        .activityId(activityId)
+                        .userId(userId)
+                        .build());
+        // 用户的抽奖次数为总次数 - 总剩余次数。（这种实现方式还存在一定bug，不好重新记录参与次数，改进思路见如下fixme）
+        // fixme：后续可以为用户账户增加一个属性专门用于记录用户的总参与次数，这样就方便在达到一定抽奖次数完成权重值抽奖后直接将参与次数清零，并重新开始记录总参与次数。
+        return raffleActivityAccount.getTotalCount() - raffleActivityAccount.getTotalCountSurplus();
     }
 }

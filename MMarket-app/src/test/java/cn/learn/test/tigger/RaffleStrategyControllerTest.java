@@ -3,6 +3,8 @@ package cn.learn.test.tigger;
 import cn.learn.trigger.api.IRaffleStrategyService;
 import cn.learn.trigger.api.dto.RaffleAwardListReqDTO;
 import cn.learn.trigger.api.dto.RaffleAwardListResDTO;
+import cn.learn.trigger.api.dto.RaffleStrategyRuleWeightReqDTO;
+import cn.learn.trigger.api.dto.RaffleStrategyRuleWeightResDTO;
 import cn.learn.types.model.Response;
 import com.alibaba.fastjson.JSON;
 import lombok.extern.slf4j.Slf4j;
@@ -39,4 +41,14 @@ public class RaffleStrategyControllerTest {
         log.info("测试结果：{}", JSON.toJSONString(response));
     }
 
+    @Test
+    public void test_queryRaffleStrategyRuleWeight() {
+        RaffleStrategyRuleWeightReqDTO request = new RaffleStrategyRuleWeightReqDTO();
+        request.setUserId("joyboy");
+        request.setActivityId(100301L);
+
+        Response<List<RaffleStrategyRuleWeightResDTO>> response = raffleStrategyService.queryRaffleStrategyRuleWeight(request);
+        log.info("请求参数：{}", JSON.toJSONString(request));
+        log.info("测试结果：{}", JSON.toJSONString(response));
+    }
 }

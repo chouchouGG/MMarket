@@ -18,6 +18,16 @@ import lombok.NoArgsConstructor;
 public class CreateQuotaOrderAggregate {
 
     /**
+     * 用户ID
+     */
+    private String userId;
+
+    /**
+     * 活动ID
+     */
+    private Long activityId;
+
+    /**
      * 活动订单实体
       */
     private ActivityOrderEntity activityOrderEntity;

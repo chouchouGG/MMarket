@@ -15,13 +15,13 @@ import java.util.List;
 @Mapper
 public interface IStrategyAwardDao {
 
-    List<StrategyAwardPO> queryStrategyAwardList();
-
     List<StrategyAwardPO> queryStrategyAwardListByStrategyId(Long strategyId);
 
     String queryStrategyAwardRuleModelVO(StrategyAwardPO strategyAward);
 
     void updateStrategyAwardStock(StrategyAwardPO strategyAward);
 
-    StrategyAwardPO queryStrategyAwardPO(@Param("strategyId") Long strategyId, @Param("awardId") Integer awardId);
+    StrategyAwardPO queryStrategyAwardPO(Long strategyId, Integer awardId);
+
+    StrategyAwardPO queryStrategyAward(StrategyAwardPO strategyAwardReq);
 }

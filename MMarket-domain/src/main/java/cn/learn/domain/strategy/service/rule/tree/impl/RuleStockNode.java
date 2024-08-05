@@ -51,23 +51,16 @@ public class RuleStockNode implements ILogicTreeNode {
             // 成功
             context.setStatus(CONTINUE);
             context.setResultDesc("奖品库存数量足够，库存扣减成功");
-            // 3. 写入延迟队列，延迟消费更新数据库记录。【在trigger的job；UpdateAwardStockJob 下消费队列，更新数据库记录】
-            delayStockUpdate(context.getStrategyId(), context.getAwardId());
+            // 3. 写入延迟队列，延迟消费更新数据库记录。【在 trigger 的job；UpdateAwardStockJob 下消费队列，更新数据库记录】
+            repository.awardStockConsumeSendQueue(StrategyAwardStockKeyVO.builder()
+                    .strategyId(context.getStrategyId())
+                    .awardId(context.getAwardId())
+                    .build());
         }
 
         log.info("抽奖决策树-【库存扣减节点】 规则模型：{} 奖品ID：{} 执行状态：{} 结果描述：{}",
                 context.getRuleModel(), context.getAwardId(), context.getStatus(), context.getResultDesc());
         return;
-    }
-
-    private void delayStockUpdate(Long strategyId, Integer awardId) {
-        // 构建策略奖品库存键值对象
-        StrategyAwardStockKeyVO strategyAwardStockKeyVO = StrategyAwardStockKeyVO.builder()
-                .strategyId(strategyId)
-                .awardId(awardId).build();
-
-        // 将库存更新操作发送到延迟队列
-        repository.awardStockConsumeSendQueue(strategyAwardStockKeyVO);
     }
 
 }

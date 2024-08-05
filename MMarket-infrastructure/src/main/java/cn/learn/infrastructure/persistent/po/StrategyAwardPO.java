@@ -1,6 +1,9 @@
 package cn.learn.infrastructure.persistent.po;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
 import java.util.Date;
@@ -12,6 +15,9 @@ import java.util.Date;
  * @create: 2024-05-29 13:52
  **/
 @Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class StrategyAwardPO {
 
 

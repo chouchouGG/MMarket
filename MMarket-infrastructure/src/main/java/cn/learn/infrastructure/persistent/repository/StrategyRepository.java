@@ -3,9 +3,11 @@ package cn.learn.infrastructure.persistent.repository;
 import cn.learn.domain.strategy.model.entity.StrategyAwardEntity;
 import cn.learn.domain.strategy.model.entity.StrategyEntity;
 import cn.learn.domain.strategy.model.entity.StrategyRuleEntity;
+import cn.learn.domain.strategy.model.vo.RuleWeightVO;
 import cn.learn.domain.strategy.model.vo.StrategyAwardRuleModelVO;
 import cn.learn.domain.strategy.model.vo.StrategyAwardStockKeyVO;
 import cn.learn.domain.strategy.respository.IStrategyRepository;
+import cn.learn.domain.strategy.service.rule.chain.factory.DefaultChainFactory;
 import cn.learn.infrastructure.persistent.dao.*;
 import cn.learn.infrastructure.persistent.po.RaffleActivityAccountDayPO;
 import cn.learn.infrastructure.persistent.po.StrategyAwardPO;
@@ -353,6 +355,63 @@ public class StrategyRepository implements IStrategyRepository {
         return resultMap;
     }
 
+
+    @Override
+    public List<RuleWeightVO> queryAwardRuleWeight(Long strategyId) {
+        // 优先从缓存获取
+        String cacheKey = Constants.RedisKey.acquireKey_strategyRuleWeight(strategyId);
+        List<RuleWeightVO> ruleWeightVOS = redisService.getValue(cacheKey);
+        // 缓存命中直接返回
+        if (null != ruleWeightVOS) {
+            return ruleWeightVOS;
+        }
+
+        // 【数据库查询流程】
+        ruleWeightVOS = new ArrayList<>();
+        // 1. 查询权重规则配置的字段值
+        String ruleWeightValue = strategyRuleDao.queryStrategyRuleValue(StrategyRulePO.builder()
+                .strategyId(strategyId)
+                .ruleModel(Constants.RuleModel.RULE_WEIGHT)
+                .build());
+
+        // 2. 解析权重规则配置的字段值（借助借助 StrategyRuleEntity 实体对象进行解析）
+        Map<String, List<Integer>> ruleWeightValues = StrategyRuleEntity.builder()
+                .ruleModel(Constants.RuleModel.RULE_WEIGHT)
+                .ruleValue(ruleWeightValue)
+                .build().getRuleWeightItem();
+
+        // 3. 根据解析的奖品ID，组装完整的奖品信息
+        for (String ruleWeightKey : ruleWeightValues.keySet()) {
+            // ruleWeightKey 对应 '4000:102,103,104,105'，awardIds 对应 [102, 103, 104, 105]
+            List<Integer> awardIds = ruleWeightValues.get(ruleWeightKey);
+            List<RuleWeightVO.Award> awardList = new ArrayList<>();
+            // TODO: 后续可以修改为一次性从数据库查询
+            for (Integer awardId : awardIds) {
+                StrategyAwardPO strategyAward = strategyAwardDao.queryStrategyAward(StrategyAwardPO.builder()
+                        .strategyId(strategyId)
+                        .awardId(awardId)
+                        .build());
+                awardList.add(RuleWeightVO.Award.builder()
+                        .awardId(strategyAward.getAwardId())
+                        .awardTitle(strategyAward.getAwardTitle())
+                        .build());
+            }
+
+            ruleWeightVOS.add(
+                    RuleWeightVO.builder()
+                            .ruleValue(ruleWeightKey)
+                            .weight(Integer.valueOf(ruleWeightKey.split(Constants.COLON)[0]))  // 抽奖次数
+                            .awardIds(awardIds)
+                            .awardList(awardList)
+                            .build()
+            );
+        }
+
+        // 设置缓存 - 实际场景中，这类数据，可以在活动下架的时候统一清空缓存。
+        redisService.setValue(cacheKey, ruleWeightVOS);
+
+        return ruleWeightVOS;
+    }
 }
 
 
