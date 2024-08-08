@@ -28,7 +28,7 @@ public class AwardService implements IAwardService {
 
     @Override
     public void saveUserAwardRecord(UserAwardRecordEntity userAwardRecordEntity) {
-        // 1. 构建MQ消息事件对象
+        // 1. 构建MQ消息事件对象（为构建任务对象使用）
         BaseEvent.EventMessage<SendAwardMessageEvent.SendAwardMessage> sendAwardMessageEventMessage = sendAwardMessageEvent.buildEventMessage(
                 SendAwardMessageEvent.SendAwardMessage.builder()
                         .userId(userAwardRecordEntity.getUserId())

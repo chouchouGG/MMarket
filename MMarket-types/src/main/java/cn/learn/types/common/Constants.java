@@ -95,7 +95,10 @@ public class Constants {
             return STRATEGY_AWARD_LIST_KEY + strategyId;
         }
 
-        // 获取奖品库存数量缓存的key
+        /**
+         * 获取奖品库存数量缓存的key
+         * @return "strategy_award_count_key_" + strategyId + "_" + awardId
+         */
         public static String acquireKey_strategyAwardCount(Long strategyId, Integer awardId) {
             return STRATEGY_AWARD_COUNT_KEY + strategyId + "_" + awardId;
         }

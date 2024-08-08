@@ -1,7 +1,6 @@
 package cn.learn.domain.strategy.service.rule.chain.impl;
 
 import cn.learn.domain.activity.repository.IActivityRepository;
-import cn.learn.domain.activity.service.IRaffleActivityAccountQuotaService;
 import cn.learn.domain.strategy.model.entity.ProcessingContext;
 import cn.learn.domain.strategy.respository.IStrategyRepository;
 import cn.learn.domain.strategy.service.armory.IStrategyDispatch;
@@ -13,6 +12,8 @@ import org.springframework.stereotype.Component;
 import javax.annotation.Resource;
 import java.util.*;
 
+import static cn.learn.types.common.Constants.RuleModel.RULE_WEIGHT;
+
 /**
  * @program: MMarket
  * @description: 权重责任链节点
@@ -20,7 +21,7 @@ import java.util.*;
  * @create: 2024-06-16 09:39
  **/
 @Slf4j
-@Component(value = Constants.RuleModel.RULE_WEIGHT)
+@Component(value = RULE_WEIGHT)
 public class RuleWeightLogicChain extends AbstractLogicChain {
 
     @Resource
@@ -59,6 +60,7 @@ public class RuleWeightLogicChain extends AbstractLogicChain {
         List<Long> analyticalSortedKeys = new ArrayList<>(analyticalValueGroup.keySet());
         Collections.sort(analyticalSortedKeys);
 
+        // 获取用户当前的抽奖次数
         Integer userCount = activityRepository.queryRaffleActivityAccountPartakeCount(strategyId, userId);
 
         // 3. 找到不超过 userScore 的最大值存储在 prevValue中，也就是【4500 积分，能找到 4000:102,103,104,105】

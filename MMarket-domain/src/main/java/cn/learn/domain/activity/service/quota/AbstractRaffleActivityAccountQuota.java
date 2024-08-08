@@ -44,7 +44,7 @@ public abstract class AbstractRaffleActivityAccountQuota extends RaffleActivityA
 
         ActivityCountEntity activityCount = super.queryRaffleActivityCountByActivityCountId(activitySku.getActivityCountId());
 
-        // 3. 责任链处理（活动校验、sku库存扣减）「过滤失败则直接抛异常」
+        // 3. 责任链处理（活动校验、sku库存扣减）「过滤失败则直接抛异常」(逻辑不是很重要)
         defaultActivityChainFactory.openActionChain().handle(activitySku, activity, activityCount);
 
         // 4. 构建订单聚合对象

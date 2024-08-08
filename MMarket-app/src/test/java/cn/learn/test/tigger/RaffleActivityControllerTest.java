@@ -37,7 +37,8 @@ public class RaffleActivityControllerTest {
     public void test_draw() {
         ActivityDrawReqDTO request = new ActivityDrawReqDTO();
         request.setActivityId(100301L);
-        request.setUserId("joyboy");
+        request.setUserId("joyboy01");
+
         Response<ActivityDrawResDTO> response = raffleActivityService.draw(request);
 
         log.info("请求参数：{}", JSON.toJSONString(request));
@@ -55,12 +56,12 @@ public class RaffleActivityControllerTest {
         log.info("测试结果：{}", JSON.toJSONString(response));
     }
 
-    /**
-     * 检查是否进行了签到
-     */
-    @Test
-    public void test_isCalendarSignRebate() {
-        Response<Boolean> response = raffleActivityService.isCalendarSignRebate("joyboy");
-        log.info("测试结果：{}", JSON.toJSONString(response));
-    }
+//    /**
+//     * 检查是否进行了签到
+//     */
+//    @Test
+//    public void test_isCalendarSignRebate() {
+//        Response<Boolean> response = raffleActivityService.isCalendarSignRebate("joyboy");
+//        log.info("测试结果：{}", JSON.toJSONString(response));
+//    }
 }

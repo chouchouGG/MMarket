@@ -15,6 +15,7 @@ import cn.learn.infrastructure.persistent.po.StrategyPO;
 import cn.learn.infrastructure.persistent.po.StrategyRulePO;
 import cn.learn.infrastructure.persistent.redis.IRedisService;
 import cn.learn.types.common.Constants;
+import cn.learn.types.event.BaseEvent;
 import cn.learn.types.exception.AppException;
 import lombok.extern.slf4j.Slf4j;
 import org.redisson.api.RBlockingQueue;
@@ -224,6 +225,8 @@ public class StrategyRepository implements IStrategyRepository {
         if (surplus < 0) {
             redisService.setValue(cacheKey, 0);
             return false;
+        } else if (surplus == 0) {
+            // fixme：库存消耗没了以后，发送 MQ 消息，直接更新数据库库存（中断趋势更新流程）
         }
 
         // 使用 cacheKey 和当前库存值生成一个唯一的锁Key

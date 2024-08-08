@@ -70,7 +70,7 @@ mini-db-router:
       default: db00 # 默认数据源（用于无法路由到特定数据源时的备用）
       routerKey: userId # 路由键，用于决定数据存储在具体哪个数据库表中
       list: db01,db02 # 数据源列表，标识所有数据库实例
-      # 数据源 db00 配置
+      # 数据源 db00 配置 (当前系统中不需要分库分表的数据源)
       db00:
         driver-class-name: com.mysql.cj.jdbc.Driver  # 数据库驱动类名
         url: jdbc:mysql://117.72.77.81:13306/big-market # 数据库连接 URL
@@ -86,7 +86,7 @@ mini-db-router:
           max-lifetime: 1800000 # 连接在连接池中允许的最长生命周期（毫秒），值0表示无限生命周期，默认1800000毫秒，即30分钟
           connection-timeout: 30000 # 获取数据库连接超时时间（毫秒），默认30000毫秒，即30秒
           connection-test-query: SELECT 1 # 测试连接的查询语句
-      # 数据源 db01 配置
+      # 数据源 db01 配置 (作为分库分表使用)
       db01:
         driver-class-name: com.mysql.cj.jdbc.Driver
         url: jdbc:mysql://117.72.77.81:13306/big_market_01 # 数据库连接 URL
@@ -102,7 +102,7 @@ mini-db-router:
           max-lifetime: 1800000
           connection-timeout: 30000
           connection-test-query: SELECT 1
-      # 数据源 db02 配置
+      # 数据源 db02 配置 (作为分库分表使用)
       db02:
         driver-class-name: com.mysql.cj.jdbc.Driver
         url: jdbc:mysql://117.72.77.81:13306/big_market_02 # 数据库连接 URL

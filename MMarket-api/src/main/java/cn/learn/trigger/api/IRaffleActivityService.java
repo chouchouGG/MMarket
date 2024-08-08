@@ -35,6 +35,7 @@ public interface IRaffleActivityService {
      * @param userId 用户ID
      * @return 签到结果 true 已签到，false 未签到
      */
+    @Deprecated
     Response<Boolean> isCalendarSignRebate(String userId);
 
     /**
@@ -43,6 +44,7 @@ public interface IRaffleActivityService {
      * @param request 请求对象「活动ID、用户ID」
      * @return 返回结果「总额度、月额度、日额度」
      */
+    @Deprecated
     Response<UserActivityAccountResDTO> queryUserActivityAccount(UserActivityAccountReqDTO request);
 
 }

@@ -28,6 +28,7 @@ public class UserAwardRecordEntity {
     private String awardTitle;
     /** 中奖时间 */
     private Date awardTime;
+
     /** 奖品状态；create-创建、completed-发奖完成 */
     private AwardStateVO awardState;
 

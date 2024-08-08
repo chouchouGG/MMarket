@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 
 /**
  * <h1>奖品记录消息消费者</h1>
- * <h2>模拟客户端接受MQ消息流程</h2>
+ * <h2>MQ消息处理发奖流程</h2>
  */
 @Slf4j
 @Component

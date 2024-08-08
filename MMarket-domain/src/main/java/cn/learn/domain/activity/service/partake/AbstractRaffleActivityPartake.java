@@ -50,11 +50,12 @@ public abstract class AbstractRaffleActivityPartake implements IRaffleActivityPa
         // 活动查询
         ActivityEntity activityEntity = activityRepository.queryRaffleActivityByActivityId(activityId);
 
-        // fixme：抽奖过程也需要活动校验？活动订单使用责任链进行了校验
-        // 校验；活动状态
+        // fixme：抽奖过程也需要活动校验？活动订单使用责任链进行了校验，这里因为校验逻辑不复杂，故没有使用责任链模式
+        // 校验；活动状态开启（open）
         if (!ActivityStateVO.open.equals(activityEntity.getState())) {
             throw new AppException(ResponseCode.ACTIVITY_STATE_ERROR.getCode(), ResponseCode.ACTIVITY_STATE_ERROR.getInfo());
         }
+
         // 校验；活动日期「开始时间 <- 当前时间 -> 结束时间」
         if (activityEntity.getBeginDateTime().after(currDate) || activityEntity.getEndDateTime().before(currDate)) {
             throw new AppException(ResponseCode.ACTIVITY_DATE_ERROR.getCode(), ResponseCode.ACTIVITY_DATE_ERROR.getInfo());

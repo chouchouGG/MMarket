@@ -148,7 +148,11 @@ public class ActivityRepository implements IActivityRepository {
         }
         // 从库中获取数据
         RaffleActivityCountPO raffleActivityCount = raffleActivityCountDao.queryRaffleActivityCountByActivityCountId(activityCountId);
-        activityCountEntity = ActivityCountEntity.builder().activityCountId(raffleActivityCount.getActivityCountId()).totalCount(raffleActivityCount.getTotalCount()).dayCount(raffleActivityCount.getDayCount()).monthCount(raffleActivityCount.getMonthCount()).build();
+        activityCountEntity = ActivityCountEntity.builder()
+                .activityCountId(raffleActivityCount.getActivityCountId())
+                .totalCount(raffleActivityCount.getTotalCount())
+                .dayCount(raffleActivityCount.getDayCount())
+                .monthCount(raffleActivityCount.getMonthCount()).build();
         redisService.setValue(cacheKey, activityCountEntity);
         return activityCountEntity;
     }
@@ -435,7 +439,7 @@ public class ActivityRepository implements IActivityRepository {
                                         .build());
                     }
 
-                    // 4. 写入参与活动订单
+                    // 4. 写入【用户抽奖参与订单】
                     userRaffleOrderDao.insert(UserRaffleOrderPO.builder()
                             .userId(userId)
                             .activityId(activityId)
@@ -465,7 +469,7 @@ public class ActivityRepository implements IActivityRepository {
                 .userId(userId)
                 .activityId(activityId)
                 .build());
-        if (null == res) {
+        if (null == res) {  // 用户没有参与活动的话返回null
             return null;
         }
         // 2. 转换对象

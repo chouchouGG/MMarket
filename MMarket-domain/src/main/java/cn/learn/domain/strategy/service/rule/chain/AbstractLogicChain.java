@@ -43,6 +43,10 @@ public abstract class AbstractLogicChain implements ILogicChain, ILogicChainAwar
         return next;
     }
 
+    /**
+     * note：这个方法用于再责任链节点中获取当前节点对应的规则，不使用这个方法，直接讲规则写死在责任链节点中也是可以的
+     * @return
+     */
     @Override
     public String getRuleModelName() {
         Component component = this.getClass().getAnnotation(Component.class);

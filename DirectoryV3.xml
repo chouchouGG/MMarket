@@ -69,4 +69,14 @@
           title="封装domain层中的接口，对外部提供RESTful风格调用接口" extension="" presentableText="" tooltipTitle=""
           icon="" textColor="" backgroundColor=""/>
     <tree path="/MMarket-domain/src/main/java/cn/learn/domain/strategy/service/rule/tree" title="奖品的过滤"/>
+    <tree path="/MMarket-domain/src/main/java/cn/learn/domain/activity/model/valobj/UserRaffleOrderStateVO.java"
+          title="用户抽奖订单状态"/>
+    <tree path="/MMarket-domain/src/main/java/cn/learn/domain/award/model/valobj/AwardStateVO.java" title="发放的中奖奖品状态"
+          extension="" presentableText="" tooltipTitle="" icon="" textColor="" backgroundColor=""/>
+    <tree path="/MMarket-domain/src/main/java/cn/learn/domain/strategy/service/rule/tree/impl/DailyLimitNode.java"
+          title="未实现"/>
+    <tree path="/MMarket-domain/src/main/java/cn/learn/domain/strategy/service/rule/tree/impl/PrizeTypeRestrictionNode.java"
+          title="未实现"/>
+    <tree path="/MMarket-domain/src/main/java/cn/learn/domain/strategy/service/rule/tree/impl/WinFrequencyNode.java"
+          title="未实现"/>
 </trees>

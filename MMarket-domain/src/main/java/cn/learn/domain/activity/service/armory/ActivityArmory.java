@@ -49,10 +49,10 @@ public class ActivityArmory implements IActivityArmory, IActivityDispatch {
         for (ActivitySkuEntity activitySkuEntity : activitySkuEntities) {
             // 缓存SKU的库存剩余（note：sku库存是交给运维进行营销成本控制的）
             activityRepository.cacheActivitySkuStockCount(activitySkuEntity.getSku(), activitySkuEntity.getStockCountSurplus());
-            // 预热活动次数【查询时预热到缓存】
+            // 预热活动对应的初始化次数（总、月、日）【查询时预热到缓存】
             activityRepository.queryRaffleActivityCountByActivityCountId(activitySkuEntity.getActivityCountId());
         }
-        // 预热活动【查询时预热到缓存】
+        // 预热活动（开始日期、截止日期、抽奖活动对应的抽奖策略Id）【查询时预热到缓存】
         activityRepository.queryRaffleActivityByActivityId(activityId);
         return true;
     }

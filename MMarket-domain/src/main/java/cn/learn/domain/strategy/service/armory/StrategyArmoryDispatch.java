@@ -111,14 +111,14 @@ public class StrategyArmoryDispatch implements IStrategyArmory, IStrategyDispatc
         // 3.1. 装配默认的奖品列表
         assembleLotteryStrategy(String.valueOf(strategyId), strategyAwardEntities);
 
-        // 3.2. 装配幸运值抽奖表
+        // 3.2. 装配阈值抽奖表（抽奖达到40次自动参与、抽奖达到100次自动参与）
         StrategyEntity strategyEntity = strategyRepository.queryStrategyEntityByStrategyId(strategyId);
         // 判断当前策略是否设置了权重规则，若没有设置权重规则，则直接返回，无需装配【幸运值抽奖表】（权重抽奖表）
         boolean isSetRuleWeight = strategyEntity.getRuleWeight();
         if (!isSetRuleWeight) {
             return true;
         }
-        // 获取幸运值规则的配置
+        // 获取权重规则的配置
         StrategyRuleEntity strategyRuleEntity = strategyRepository.queryStrategyRule(strategyId, Constants.RuleModel.RULE_WEIGHT);
         // 提高代码健壮性：防止 strategy 表中配置了 rule_weight，但是 strategy_rule 中没有配置的异常
         if (null == strategyRuleEntity) {

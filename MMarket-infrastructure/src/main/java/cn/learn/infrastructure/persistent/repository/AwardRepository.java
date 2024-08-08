@@ -56,6 +56,7 @@ public class AwardRepository implements IAwardRepository {
         TaskEntity taskEntity = userAwardRecordAggregate.getTaskEntity();
 
         // 2.【对象转换】：实体对象 -> 持久化对象
+        // 用户中奖记录
         UserAwardRecordPO userAwardRecord = UserAwardRecordPO.builder()
                 .userId(userAwardRecordEntity.getUserId())
                 .activityId(userAwardRecordEntity.getActivityId())
@@ -66,6 +67,7 @@ public class AwardRepository implements IAwardRepository {
                 .awardTime(userAwardRecordEntity.getAwardTime())
                 .awardState(userAwardRecordEntity.getAwardState().getCode())
                 .build();
+        // MQ消息任务记录
         TaskPO task = TaskPO.builder()
                 .userId(taskEntity.getUserId())
                 .topic(taskEntity.getTopic())
@@ -73,7 +75,7 @@ public class AwardRepository implements IAwardRepository {
                 .message(JSON.toJSONString(taskEntity.getMessage()))
                 .state(taskEntity.getState().getCode())
                 .build();
-
+        // 用户抽奖订单
         UserRaffleOrderPO userRaffleOrderReq = UserRaffleOrderPO.builder()
                 .userId(userAwardRecordEntity.getUserId())
                 .orderId(userAwardRecordEntity.getOrderId())
@@ -92,9 +94,9 @@ public class AwardRepository implements IAwardRepository {
                         @Override
                         public Object doInTransaction(TransactionStatus status) {
                             try {
-                                // 1. 写入用户中奖订单记录
+                                // 1. 写入用户中奖记录
                                 userAwardRecordDao.insert(userAwardRecord);
-                                // 2. 写入MQ事件消息任务
+                                // 2. 写入MQ消息任务记录
                                 taskDao.insert(task);
                                 // 3. 更新用户抽奖单状态：created -> used
                                 int count = userRaffleOrderDao.updateUserRaffleOrderStateUsed(userRaffleOrderReq);

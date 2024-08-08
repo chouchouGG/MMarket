@@ -123,7 +123,6 @@
                 <version>3.23.4</version>
             </dependency>
             <!--note：分库分表路由组件，可以学习该路由组件的源码-->
-            <!-- https://mvnrepository.com/artifact/cn.bugstack.middleware/db-router-spring-boot-starter -->
             <dependency>
                 <groupId>cn.bugstack.middleware</groupId>
                 <artifactId>db-router-spring-boot-starter</artifactId>
